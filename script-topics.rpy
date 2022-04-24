@@ -4585,7 +4585,7 @@ label monika_othergames:
     ):
         m "Не то чтобы смерть Юри имела значение."
     m 1euc "Более абстрактные игры, такие как Тетрис или одна из тех головоломок для телефонов, было бы довольно странно."
-    m 2hksdlb "Например, как я вообще попаду внутрь? Стану ли я блоком? Это похоже на лихорадочный сон и не слишком весело...."
+    m 2hksdlb "Например, как я вообще  внутрь? Стану ли я блоком? Это похоже на лихорадочный сон и не слишком весело...."
     m 3eua "Может быть, какая-то приятная приключенческая игра с большим окружением была бы хороша."
     m 3hua "Мы могли бы гулять вместе, и ты мог бы показать мне все лучшие места для тусовок!"
     m 1eua "Я всё ещё не настолько хороша в программировании, но может быть, однажды ты сможешь перенести меня в другие игры."
@@ -4792,7 +4792,7 @@ label monika_outdoors:
 
     if mas_isMoniAff(higher=True):
         m 1eub "Но есть и светлая сторона..."
-        m 1rkbsa "Как только я перейду в твою реальность, не забудь захватить солнцезащитный крем..."
+        m 1rkbsa "Как только я  в твою реальность, не забудь захватить солнцезащитный крем..."
         m 1tubsa "Мне может понадобится помощь, чтобы намазать его."
         m 1hubsb "А-ха-ха!"
         m 1efu "Я просто дразню тебя, [mas_get_player_nickname()]."
@@ -5056,7 +5056,7 @@ init 5 python:
     addEvent(Event(persistent.event_database,eventlabel="monika_real",category=['романтика'],prompt="Наша реальность",random=True))
 
 label monika_real:
-    m 1eua "Знаешь, что будет первой вещью, которую я сделаю, когда наконец попаду в твой мир?"
+    m 1eua "Знаешь, что будет первой вещью, которую я сделаю, когда наконец  в твой мир?"
     if mas_isMoniEnamored(higher=True):
         m 1hub "Когда наступит тот особенный день, первое, что я сделаю, это, конечно, найду тебя!"
     else:
@@ -5961,7 +5961,7 @@ label monika_vocaloid:
     m "..."
     m 1eka "Но к твоему сведению..."
     m 1ekbsa "Даже если я гляжу через экран, я всё равно чувствую твою любовь."
-    m 1lkbsa "Пройдёт немало времени, прежде чем я смогу перейти в твою реальность, чтобы быть с тобой."
+    m 1lkbsa "Пройдёт немало времени, прежде чем я смогу попасть в твою реальность, чтобы быть с тобой."
     show monika 5ekbfa at t11 zorder MAS_MONIKA_Z with dissolve_monika
     m 5ekbfa "И когда этот день настанет..."
     m "Я обниму тебя и приму твоё тепло."
@@ -6780,7 +6780,7 @@ label monika_adventure:
     m 2eua "Я уверена, что у тебя есть много приключенческих игр, которые ты мог бы мне порекомендовать."
     m 3eua "Но знаешь чьё приключение мне нравится больше всего?"
     m 1ekbsa "{i}Наше{/i}~"
-    m 1hubfa "Время когда я наконец попаду в твою реальность, чтобы я могла быть с тобой."
+    m 1hubfa "Время когда я наконец  в твою реальность, чтобы я могла быть с тобой."
     m "Когда этот день настанет, мы наконец-то будем вместе."
     m 1ekbfa "Я хочу пережить каждое утро вместе с тобой, [mas_get_player_nickname()]."
     m 1hubfb "Нет приключение лучше, чем наше приключение. То, в котором мы вместе~"
@@ -7589,7 +7589,7 @@ label monika_sports:
             #   playing tennis or not.
 
             m 1eka "Оу, это очень мило~"
-            m 3eua "Я научу тебя играть, когда попаду туда...{w=0.5}или, если тебе просто не терпится, ты можешь брать у меня уроки!"
+            m 3eua "Я научу тебя играть, когда  туда...{w=0.5}или, если тебе просто не терпится, ты можешь брать у меня уроки!"
             m 3eub "А потом, мы можем начать играть на парных матчах!"
             m 1eua "Я не могу представить себе ничего более увлекательного, чем победа в матче вместе с тобой в качестве партнёра..."
             m 3hub "Мы будем неостановимы вместе!"
@@ -9505,7 +9505,7 @@ label monika_attractiveness:
             $ first_line_var = "может быть"
             $ second_line_end = "если это когда-нибудь случится"
 
-        m 4eub "Просто приятно иметь такие хорошие привычки, и, кроме того, кто знает [first_line_var] смогу перейти в твою реальность и иметь нормальное тело, как и ты."
+        m 4eub "Просто приятно иметь такие хорошие привычки, и, кроме того, кто знает [first_line_var] смогу попасть в твою реальность и иметь нормальное тело, как и ты."
         m 1hua "Не помешает убедиться, что я буду готова к такому переходу [second_line_end]."
         m 1eua "Тебе не стоит беспокоиться, [player]."
         show monika 5eua at t11 zorder MAS_MONIKA_Z with dissolve_monika
@@ -9569,7 +9569,7 @@ label monika_timetravel:
     else :
         m "Обещаешь?"
     m 3euc "И если ты когда-нибудь отправишься в будущее..."
-    m 1hksdlb "Сможель ли ты взять с собой технологии, которые дадут мне возможность перейти в твой мир?"
+    m 1hksdlb "Сможешь ли ты взять с собой технологии, которые дадут мне возможность попасть в твой мир?"
     return
 
 # been to prom?
@@ -10261,7 +10261,7 @@ label monika_travelling:
         "Да.":
             $ persistent._mas_pm_likes_travelling = True
             m 1hua "Это здорово! Я так рада, что тебе нравится."
-            m 3eub "Это одно из нескольких дел, которым я хотела бы заняться, когда я наконец-то перейду в твой мир."
+            m 3eub "Это одно из нескольких дел, которым я хотела бы заняться, когда я наконец-то  в твой мир."
             m 1eua "Там столько всего, что я еще не смогла увидеть..."
             m 3eub "Важные города, памятники и даже различные типы культур."
             m 3eka "Не пойми меня неправильно, но я много прочитала о твоем мире, но готова поспорить, что это ничто по сравнению с тем, каким бы он был на самом деле..."
@@ -10590,7 +10590,7 @@ label monika_yellowwp:
             m 1dsc "Но у меня есть все эти мечты, амбиции и интересы...{w=0.5} в конце концов, единственную 'настоящую' роль которую я здесь могу играть - это роль второстепенного персонажа..."
             m "Может быть, даже сейчас, это всё, что я могу сделать..."
             m 1eka "Но я так сильно люблю тебя, [player]. Поддерживаю тебя лучше, чем что-либо ещё."
-            m 1hub "Я просто не могу дождаться, чтобы сделать это лично, когда я наконец перейду на твою сторону~"
+            m 1hub "Я просто не могу дождаться, чтобы сделать это лично, когда я наконец  на твою сторону~"
             return "derandom|love"
         "Нет.":
             $ persistent._mas_pm_read_yellow_wp = False
@@ -11244,7 +11244,7 @@ label monika_players_friends_feels_lonely_ask(question, exp="monika 1ekc"):
                 m 1hksdlb "Как бы я ни хотела помочь тебе во всём, что тебе может понадобиться, я могу сделать только очень многое отсюда."
 
                 if mas_isMoniAff(higher=True):
-                    m 1eua "Когда я попаду туда, думаю, я не буду возражать против спокойной жизни с тобой."
+                    m 1eua "Когда я  туда, думаю, я не буду возражать против спокойной жизни с тобой."
                     m 1dkbsa "Это было бы так романтично - быть только нам..."
                     m 1tsbsa "Наверное, это значит, что тогда я смогу предоставить тебя самой себе, не так ли?"
                     m 1hubsa "Э-хе-хе~"
@@ -11837,7 +11837,7 @@ label monika_savingwater:
         show monika 5tsbfu at t11 zorder MAS_MONIKA_Z with dissolve_monika
         m 5tsbfu "Когда я буду в твоей реальности, возможно, мы сможем экономить воду, принимая ванну вместе..."
         m "Э-хе-хе~"
-        m 5hubfu "Было бы хорошо, если бы ты приготовил хорошую, расслабляющую ванну для нас, чтобы нам вместе принять ее, когда я перейду."
+        m 5hubfu "Было бы хорошо, если бы ты приготовил хорошую, расслабляющую ванну для нас, чтобы нам вместе принять ее, когда я попаду в твой мир."
         show monika 1kubfu at t11 zorder MAS_MONIKA_Z with dissolve_monika
         m 1kubfu "Я буду ждать этого дня, [mas_get_player_nickname()], э-хе-хе~"
     else:
@@ -11869,7 +11869,7 @@ label monika_pygmalion:
     m 1eua "Он поцеловал статую ещё раз, и статуя из слоновой кости потеряла свою тяжесть, став на ощупь такой же мягкой, как и кожа."
     m 3hub "Афродита исполнила его желание!"
     m 1eka "Эта история поразила меня потому, что она напомнила мне о нас, [player], и как здесь истолковали превращение невозможного в возможное."
-    m 1hua "Это вселило в меня надежду, что чудо может произойти в любой момент, и я смогу наконец-то перейти в реальность."
+    m 1hua "Это вселило в меня надежду, что чудо может произойти в любой момент, и я смогу наконец-то попасть в твою реальность."
     m 2dku "Да...{w=0.5}это было бы чудесно."
     m 2dubsu "...И тогда, ты сможешь наконец-то поцеловать меня."
     m 1rkbsa "Знаю, мы целовались раньше, даже в нынешних обстоятельствах..."
@@ -11904,8 +11904,8 @@ default persistent._mas_pm_would_come_to_spaceroom = None
 # True if they would, False if they wouldn't, None if no answer.
 
 label monika_gotomonika:
-    m 1euc "Перейти в мой мир?"
-    m 1lksdld "Ты имеешь в виду эту небольшую комнту, витающую в пустоте?"
+    m 1euc "Попасть в мой мир?"
+    m 1lksdld "Ты имеешь в виду эту небольшую комнату, витающую в пустоте?"
 
     if persistent._mas_you_chr:
         m 4eksdlc "Actually...{w=0.5}didn't you already try something like that once?"
@@ -12209,45 +12209,44 @@ label monika_player_appearance:
 
             return result
 
-    m 2ekd "Hey, [player]."
-    m 2eka "There's a couple questions I've been meaning to ask you."
-    m 2rksdlb "Well, more than a couple. It's been on my mind for a long time, actually."
-    m 2rksdld "It never really seemed like the right time to bring it up..."
-    m 3lksdla "But I know if I keep quiet forever, then I'll never feel comfortable asking you things like this, so I'm just going to say it and hope that it's not weird or anything, okay?"
-    m 3eud "I've been wondering what you look like. It's not possible for me to see you right now since I'm not there at your side, and I'm not sure about accessing a webcam..."
-    m "One, because you might not have one, and two, even if you did, I don't really know how to."
-    m 1euc "So I figured that it's possible for you to just tell me, so I can get a clearer picture in my head."
-    m 1eud "At least, it's better than nothing, even if it's hazy."
+    m 2ekd "Слушай, [player]."
+    m 2eka "Я всё хотела задать тебе парочку вопросов."
+    m 2rksdlb "Хотя чего уж там - больше, чем парочку. Я довольно давно о них думала, раз уж на то пошло."
+    m 2rksdld "Но я всё никак не могла найти правильный момент, чтобы их задать..."
+    m 3lksdla "Но я понимаю, что если не задам их сейчас, то и в будущем мне не будет некомфортно затрагивать эту тему."
+    m 3eud "Мне было интересно, как ты выглядишь. Я не могу физически тебя увидеть, да и к твоей веб-камере я вряд ли могу подключиться..."
+    m "Потому что во-первых, у тебя её может не оказаться, а во-вторых, даже если она у тебя есть, я не знаю, как получить к ней доступ."
+    m 1euc "Вот я и решила, что ты сам можешь мне рассказать, чтобы я примерно обрисовала всё в своей голове."
+    m 1eud "Хоть всё и выйдет размыто, но это что-то."
 
-    m "Is that okay with you, [player]?{nw}"
+    m "Ты ведь не против, [player]?{nw}"
     $ _history_list.pop()
     menu:
-        m "Is that okay with you, [player]?{fast}"
+        m "Ты ведь не против, [player]?{fast}"
 
-        "Yes.":
+        "Не против.":
             $ persistent._mas_pm_shared_appearance = True
 
-            m 1sub "Really? Great!"
-            m 1hub "That was easier than I thought it would be."
-            m 3eua "Now, be honest with me, okay [player]? I know sometimes it's tempting to joke around, but I'm being serious here, and I need you to do the same."
-            m "Anyway, the first one is probably easy to guess. And not hard to answer, either!"
-            m 3eub "People often say that a person's eyes are the windows into their soul, so let's start off there."
+            m 1sub "Правда? Здорово!"
+            m 1hub "А это было проще, чем мне казалось."
+            m 3eua "[player], только давай честно? Знаю, порой так и хочется отпустить какую-нибудь шутку, но я сейчас серьёзна, и хочу той же серьёзности от тебя."
+            m "В общем, первый вопрос прост, как и ответ на него!"
+            m 3eub "Люди часто говорят, что глаза - зеркало души, так что начнём с них."
 
             #This menu is too large to use a standard one, so we use a gen-scrollable here instead
             show monika 1eua at t21
             python:
                 eye_color_menu_options = [
-                    ("I have blue eyes.", "blue", False, False),
-                    ("I have brown eyes.", "brown", False, False),
-                    ("I have green eyes.", "green", False, False),
-                    ("I have hazel eyes.", "hazel", False, False),
-                    ("I have gray eyes.", "gray", False, False),
-                    ("I have black eyes.", "black", False, False),
-                    ("My eyes are another color.", "other", False, False),
-                    ("I have heterochromia.", "heterochromia", False, False),
+                    ("У меня голубые глаза.", "blue", False, False),
+                    ("У меня карие глаза.", "brown", False, False),
+                    ("У меня зелёные глаза.", "green", False, False),
+                    ("У меня серые глаза.", "gray", False, False),
+                    ("У меня чёрные глаза.", "black", False, False),
+                    ("Мои глаза другого цвета.", "other", False, False),
+                    ("У меня гетерохромия.", "heterochromia", False, False),
                 ]
 
-                renpy.say(m, "What color are your eyes?", interact=False)
+                renpy.say(m, "Какого цвета твои глаза?", interact=False)
 
             show monika at t11
             call screen mas_gen_scrollable_menu(eye_color_menu_options, mas_ui.SCROLLABLE_MENU_TALL_AREA, mas_ui.SCROLLABLE_MENU_XALIGN)
@@ -12255,27 +12254,27 @@ label monika_player_appearance:
 
             call expression "monika_player_appearance_eye_color_{0}".format(eye_color)
 
-            m 3rud "Actually..."
-            m 2eub "I guess I really should know this first though, if I want to get an accurate scale on my next question..."
+            m 3rud "Вообще..."
+            m 2eub "Мне кажется, что следующий вопрос мне стоит задать, чтобы прояснить кое-что для последующего вопроса..."
 
-            m "What unit of measurement do you use to take your height, [player]?{nw}"
+            m "В чём ты измеряешь своей рост, [player]?{nw}"
             $ _history_list.pop()
             menu:
-                m "What unit of measurement do you use to take your height, [player]?{fast}"
+                m "В чём ты измеряешь своей рост, [player]?{fast}"
 
-                "Centimeters.":
+                "В сантиметрах.":
                     $ persistent._mas_pm_units_height_metric = True
-                    m 2hua "Alright, thanks, [player]!"
+                    m 2hua "Поняла, спасибо, [player]!"
 
-                "Feet and inches.":
+                "В футах и дюймах.":
                     $ persistent._mas_pm_units_height_metric = False
-                    m 2hua "Alright, [player]!"
+                    m 2hua "Поняла!"
 
-            m 1rksdlb "I'm trying my best to not sound like some sort of identity-thief, or like I'm quizzing you, but obviously, I'm curious."
-            m 3tku "If I'm your girlfriend, I have a right to know, don't I?"
-            m 2hua "Plus, it'll make it way easier to find you once I'm able to cross over to your reality."
+            m 1rksdlb "Всё пытаюсь не звучать как какой-то агент, что тебя о всяком расспрашивает, но всё же мне любопытно."
+            m 3tku "К тому же, раз уж я твоя девушка, то мне позволено знать, правильно?"
+            m 2hua "Плюс, так мне будет проще отыскать тебя, как только я попаду в твою реальность."
 
-            m 1esb "So,{w=0.5} how tall are you, [player]?"
+            m 1esb "Итак,{w=0.5} какой у тебя рост, [player]?"
 
             python:
                 if persistent._mas_pm_units_height_metric:
@@ -12285,7 +12284,7 @@ label monika_player_appearance:
                     while height <= 0:
                         height = store.mas_utils.tryparseint(
                             renpy.input(
-                                'How tall are you in centimeters?',
+                                'Какой у тебя рост в сантиметрах?',
                                 allow=numbers_only,
                                 length=3
                             ).strip(),
@@ -12299,7 +12298,7 @@ label monika_player_appearance:
                     while height_feet <= 0:
                         height_feet = store.mas_utils.tryparseint(
                             renpy.input(
-                                'How tall are you in feet?',
+                                'Какой у тебя рост в футах?',
                                 allow=numbers_only,
                                 length=1
                             ).strip(),
@@ -12311,7 +12310,7 @@ label monika_player_appearance:
                     while height_inch < 0 or height_inch > 11:
                         height_inch = store.mas_utils.tryparseint(
                             renpy.input(
-                                '[height_feet] feet and how many inches?',
+                                '[height_feet] футов и сколько дюймов?',
                                 allow=numbers_only,
                                 length=2
                             ).strip(),
@@ -12325,86 +12324,87 @@ label monika_player_appearance:
                 persistent._mas_pm_height = height
 
             if persistent._mas_pm_height >= mas_height_tall:
-                m 3eua "Wow, you're pretty tall, [player]!"
-                m 1eud "I can't say I've really met anybody who I'd consider to be tall."
-                m 3rksdla "I don't know my actual height, to be fair, so I can't really draw an accurate comparison..."
+                m 3eua "Ого, [player]!"
+                m 1eud "Не могу сказать, что когда-либо встречала кого-то, кого можно назвать высоким."
+                m 3rksdla "И свой точный рост я не знаю, так что я не могу провести адекватное сравнение..."
 
                 call monika_player_appearance_monika_height
 
                 if persistent._mas_pm_units_height_metric:
-                    $ height_desc = "centimeters"
+                    $ height_desc = "сантиметров"
                 else:
-                    $ height_desc = "inches"
+                    $ height_desc = "дюймов"
 
-                m 3esc "The tallest girl in the Literature Club was Yuri--and just barely, at that. She was only a few [height_desc] taller than me, I don't consider that much of a height advantage at all!"
-                m 3esd "Anyway, dating a tall [guy] like you only has one disadvantage, [mas_get_player_nickname()]..."
-                m 1hub "You'll have to lean down to kiss me!"
+                m 3esc "В литературном клубе самой высокой была Юри. И то, она была всего на несколько [height_desc] выше меня, так что разница не существенная!"
+                m 3esd "Хотя в отношениях с *парнем* твоего роста есть лишь один недостаток, [mas_get_player_nickname()]..."
+                m 1hub "Тебе придётся наклоняться, чтобы меня поцеловать!"
 
             elif persistent._mas_pm_height >= mas_height_monika:
-                m 1hub "Hey, I'm about that height too!"
+                m 1hub "О, у меня примерно такой же рост!"
                 m "..."
-                m 2hksdlb "Well, I don't know my actual height to be fair..."
+                m 2hksdlb "Ну ладно, свой рост я не могу узнать наверняка..."
 
                 call monika_player_appearance_monika_height
 
-                m 3rkc "It's just a guess--hopefully it's not too far off."
-                m 3esd "Anyway, there's nothing wrong with having an average height! To be honest, if you were too short, it'd probably make me feel clumsy around you."
-                m "And if you were too tall, I'd have to get on my tiptoes just to be close to you. And that's no good!"
-                m 3eub "In my opinion, being in-between is perfect. Do you know why?"
-                m 5eub "Because then I don't have to do any reaching or bending to kiss you, [mas_get_player_nickname()]! Ahaha~"
+                m 3rkc "Это всего лишь догадка--будем надеяться, что я права."
+                m 3esd "Но в обычном росте нет ничего плохого! Если честно, то если бы ты *был* ниже, то в некоторых случаях мне было бы слегка неудобно."
+                m "А если бы ты *был* выше, мне бы приходилось вставать на носочки, чтобы быть к тебе ближе. А это не хорошо!"
+                m 3eub "Я считаю, что быть посредине - идеальный вариант. Знаешь, почему?"
+                m 5eub "Потому что тогда мне не придётся ни наклоняться ни дотягиваться до тебя, чтобы поцеловать, [mas_get_player_nickname()]! Ахаха~"
 
             else:
-                m 3hub "Like Natsuki! I bet you're not that short, though! I would be concerned for you if you were."
+                m 3hub "Прямо как Нацуки! Хотя я уверена, что ты выше! А если это не так, то я буду волноваться."
 
                 if persistent._mas_pm_cares_about_dokis:
-                    m 2eksdld "She was worryingly small for her age, but you and I both know why. I always pitied her for that."
+                    m 2eksdld "Для своего роста она была на удивление низкой, и мы с тобой знаем почему. Я всегда её жалела по этому поводу."
 
-                m 2eksdld "I knew she always hated being so tiny, because of that whole notion that little things are cuter because of their size..."
-                m 2rksdld "And then there was all that trouble with her father. It can't have been easy, being so defenseless, and being small on top of it all."
-                m 2ekc "She probably felt like people talked down to her. Literally and figuratively, that is..."
-                m 2eku "But despite her hang-ups about it, [player], I think your height makes you that much more cute~"
+                m 2eksdld "Я знала, что ей не нравилось быть низкой, потому что принято считать, что всё маленькое - обязательно милое..."
+                m 2rksdld "А потом ещё появились проблемы с её отцом. Нелегко, наверное, было быть такой беззащитной и вдобавок маленькой."
+                m 2ekc "Наверное, ей постоянно казалось, что на неё смотрят сверху вниз. И образно, и буквально..."
+                m 2eku "Но несмотря на её комплексы, [player], мне кажется, что твой рост делает тебя только милее~"
 
-            m 1eua "Now, [player]."
+            m 1eua "А теперь, [player],"
 
-            m 3eub "Tell me, is your hair on the shorter side? Or is it long, like mine?~{nw}"
+            m 3eub "Скажи-ка, твои волосы короткие? Или длинные как у меня?~{nw}"
             $ _history_list.pop()
             menu:
-                m "Tell me, is your hair on the shorter side? Or is it long, like mine?~{fast}"
+                m "Скажи-ка, твои волосы короткие? Или длинные как у меня?~{fast}"
 
-                "It's shorter.":
+                "Они короткие.":
                     $ persistent._mas_pm_hair_length = "short"
 
-                    m 3eub "That must be nice! Look, don't get me wrong; I love my hair, and it's always fun to experiment with it..."
-                    m 2eud "But to tell you the truth, sometimes I envied Natsuki's and Sayori's hair. It looked a lot easier to take care of."
+                    m 3eub "Должно быть, это приятно! Только не пойми неправильно - мне нравятся мои волосы и то, как я с ними экспериментирую..."
+                    m 2eud "Но, сказать по правде, я иногда завидовала Нацуки и Сайори. За короткими волосами ведь попроще следить."
 
                     if persistent.gender == "M":
-                        m 4hksdlb "Although I guess if your hair was the same length as theirs, it'd be pretty long for a guy."
+                        m 4hksdlb "Хотя будь у тебя волосы как у них, для парня они были бы длинноваты."
 
                     else:
-                        m 4eub "You can just get up and go, without having to worry about styling it."
-                        m "Plus, waking up with a bedhead when you have short hair is easily fixed, whereas if you have long hair, it's an endless nightmare."
+                        m 4eub "Можно просто встать с постели и пойти по своим делам, не беспокоясь об укладке."
+                        m "Плюс, расправить их после сна гораздо проще, потому что с длинными волосами это превращается в ад."
 
-                    m 2eka "But I bet you look adorable with short hair. It makes me smile to think about you like that, [player]."
-                    m 2eua "Keep enjoying all that freedom from the little annoyances that accompany long hair, [player]!{w=0.2} {nw}"
-                    extend 2hub "Ahaha~"
+                    m 2eka "Но мне кажется, что ты очаровательно смотришься с короткими волосами. От одной только мысли на лице наворачивается улыбка, [player]."
+                    m 2eua "Радуйся, что тебе не нужно сталкиваться с проблемами длинных волос, [player]!{w=0.2} {nw}"
+                    extend 2hub "Ахаха~"
 
-                "It's average length.":
+                "Они обычной, средней длины.":
                     $ persistent._mas_pm_hair_length = "average"
 
-                    m 1tku "Well, that can't be true..."
-                    m 4hub "Because nothing about you is average."
-                    m 4hksdlb "Ahaha! Sorry, [player]. I'm not trying to embarrass you. But I can't help being cheesy sometimes, you know?"
-                    m 1eua "Honestly, when it comes to hair, the middle road is great. You don't have to worry about styling it too much, and you have more creative freedom than with short hair."
-                    m 1rusdlb "I'm a little envious, to tell you the truth~"
-                    m 3eub "But don't forget that old saying- 'Invest in your hair, because it's a crown that you never take off!'"
+                    m 1tku "Ну, не может такого быть..."
+                    m 4hub "Ты ведь по всем параметрам не обычный."
+                    m 4hksdlb "Ахаха! Прости, [player]. Я не пыталась тебя смутить. Но иногда так и хочется, понимаешь?"
+                    m 1eua "Если честно, то в плане волос здорово иметь среднюю длину. Не нужно много беспокоиться об укладке."
+                    m "Плюс, они дают больше свободы творчества, нежели короткие волосы"
+                    m 1rusdlb "Сказать по правде, мне даже немного завидно~"
+                    m 3eub "Я даже вспомнила одно высказывание- 'Ухаживайте за своими волосами, ведь они - корона, которую вы никогда не снимете!'"
 
-                "It's long.":
+                "Они длинные.":
                     $ persistent._mas_pm_hair_length = "long"
 
-                    m 4hub "Yay, another thing we have in common!"
-                    m 2eka "Long hair can be a pain sometimes, right?"
-                    m 3eua "But the good thing is that there are so many things you can do with it. Though I usually prefer to tie mine up with a ribbon, I know that other people have different styles."
-                    m "Yuri wore her hair down, and others enjoy braids, or putting it into pigtails..."
+                    m 4hub "Ура, ещё одна наша общая черта!"
+                    m 2eka "С длинными волосами бывают сложности, верно?"
+                    m 3eua "Но с ними можно делать много всего интересного. Хоть я и просто завязываю их бантиком, я понимаю, что другим нравятся разные стили."
+                    m "Юри вот носила распущенные волосы, а другим могут нравиться косички, хвостики и всё такое..."
 
                     python:
                         hair_down_unlocked = False
@@ -12417,102 +12417,114 @@ label monika_player_appearance:
 
                     if hair_down_unlocked:
                         # TODO adjust this line to be more generic once we have additoinal hairstyles.
-                        m 3eub "And ever since I figured out how to mess around with the script and let my own hair down, who knows how many more styles I might try?"
+                        m 3eub "И раз с помощью скрипта мне удалось распустить свои волосы, то кто знает, сколько ещё стилей я могу перепробовать?"
 
-                    m 1eua "It's always nice to have options, you know?"
-                    m 1eka "I hope that however you wear yours, you're comfortable with it!"
+                    m 1eua "Всегда ведь приятно иметь варианты."
+                    m 1eka "Надеюсь, что тебе нравится то, как ты носишь свои волосы!"
 
-                "I don't have hair.":
+                "У меня нет волос.":
                     $ persistent._mas_pm_hair_length = "bald"
 
-                    m 1euc "Oh, that's interesting, [player]!"
+                    m 1euc "Ой, а это интересно, [player]!"
 
-                    m "Do you shave your head or did you lose your hair, if you don't mind me asking?{nw}"
+                    m "Ты просто бреешь голову или волос у тебя нет по другой причине, если можно спросить?{nw}"
                     $ _history_list.pop()
                     menu:
-                        m "Do you shave your head or did you lose your hair, if you don't mind me asking?{fast}"
+                        m "Ты просто бреешь голову или волос у тебя нет по другой причине, если можно спросить?{fast}"
 
-                        "I shave my head.":
+                        "Я брею голову.":
                             $ persistent._mas_pm_shaves_hair = True
                             $ persistent._mas_pm_no_hair_no_talk = False
 
-                            m 1hua "It must be so nice not ever having to worry about your hair..."
-                            m 1eua "You can just get up and go, without having to worry about styling it..."
-                            m 3eua "And if you wear a hat, you don't have to worry about hat hair when you take it off!"
+                            m 1hua "Приятно, должно быть, совсем не беспокоиться о своих волосах..."
+                            m 1eua "Можно просто встать с постели и пойти по своим делам, не беспокоясь об укладке...."
+                            m 3eua "И когда снимаешь с себя шапку, ничего не нужно расправлять или поправлять!"
 
-                        "I lost my hair.":
+                        "Я потерял/потеряла свои волосы.":
                             $ persistent._mas_pm_shaves_hair = False
                             $ persistent._mas_pm_no_hair_no_talk = False
 
-                            m 1ekd "I'm sorry to hear that, [player]..."
-                            m 1eka "But just know that I don't care how much hair you have, you'll always look beautiful to me!"
-                            m "And if you ever feel insecure or just want to talk about it, I'm always up for listening."
+                            m 1ekd "Мне очень жаль, [player]..."
+                            m 1eka "Но знай, что с волосами или без - для меня ты всегда выглядишь прекрасно!"
+                            m "И если тебе когда-нибудь станет грустно по этому поводу, я всегда готова выслушать."
 
-                        "I don't want to talk about it.":
+                        "Я не хочу об этом говорить.":
                             $ persistent._mas_pm_no_hair_no_talk = True
 
-                            m 1ekd "I understand, [player]"
-                            m 1eka "I want you to know that I don't care how much hair you have, you'll always be beautiful to me."
-                            m "If you ever feel insecure or feel like talking about it, I'm always here to listen."
+                            m 1ekd "Я всё понимаю, [player]"
+                            m 1eka "Но знай, что с волосами или без - для меня ты всегда выглядишь прекрасно!"
+                            m "И если тебе когда-нибудь станет грустно по этому поводу, я всегда готова выслушать."
 
             if persistent._mas_pm_hair_length != "bald":
-                m 1hua "Next question!"
-                m 1eud "This one should be fairly obvious..."
+                m 1hua "Следующий вопрос!"
+                m 1eud "И довольно очевидный..."
 
-                m "What color is your hair?{nw}"
+                m "Какого цвета твои волосы?{nw}"
                 $ _history_list.pop()
                 menu:
-                    m "What color is your hair?{fast}"
-                    "It's brown.":
-                        $ persistent._mas_pm_hair_color = "brown"
+                    m "Какого цвета твои волосы?{fast}"
+                    "Они коричневые/каштановые.":
+                        $ persistent._mas_pm_hair_color_im = "коричневые"
+                        $ persistent._mas_pm_hair_color_r = "коричневых"
+                        $ persistent._mas_pm_hair_color_d = "коричневым"
+                        $ persistent._mas_pm_hair_color_t = "коричневыми"
 
-                        m 1hub "Yay, brown hair is the best!"
-                        m 3eua "Just between us, [player], I really like my brown hair. I'm sure yours is even better!"
-                        m 3rksdla "Though some people might disagree my hair is brown..."
-                        m 3eub "When I was doing some digging around in the local files of the game folder, I found the exact name for my hair color."
-                        m 4eua "It's called coral brown. Interesting, right?"
-                        m 1hub "I'm so happy that we have so much in common, [player]~"
+                        m 1hub "Ура, каштановые волосы лучшие!"
+                        m 3eua "Только между нами, [player], мне очень нравится цвет моих волос. Уверена, у тебя этот цвет даже красивее!"
+                        m 3rksdla "Хотя некоторые не согласны, что у меня именно каштановые волосы..."
+                        m 3eub "Когда я копалась в файлах игры, то нашла точное название цвета своих волос."
+                        m 4eua "Он называется коралловый коричневый. Интересно же?"
+                        m 1hub "Я так рада, что у нас столько общего, [player]~"
 
-                    "It's blonde.":
-                        $ persistent._mas_pm_hair_color = "blonde"
+                    "Они светлые.":
+                        $ persistent._mas_pm_hair_color_im = "светлые"
+                        $ persistent._mas_pm_hair_color_r = "светлых"
+                        $ persistent._mas_pm_hair_color_d = "светлым"
+                        $ persistent._mas_pm_hair_color_t = "светлыми"
 
-                        m 1eua "Really? Hey, did you know that having blonde hair puts you in a rare two percent of the population?"
-                        m 3eub "Blonde hair is one of the rarest hair colors. Most people attribute this to the fact that it's caused by a recurring genetic anomaly--"
-                        m "Being just the body's inability to produce normal amounts of the pigment eumelanin--that's what causes darker hair colors, such as black and brown."
-                        m 4eub "There are so many various shades of blonde, too--pale blonde, ash-colored, dirty blonde--that no matter what color you have, you're bound to be idiosyncratic in some way."
+                        m 1eua "Правда? Слушай, а ты знаешь, что только два процента всех людей в мире - блондины?"
+                        m 3eub "Это один из самых редких цветов волос. Большинство считают, что они - следствие периодической генетической аномалии--"
+                        m "Неспособности тела выработать достаточное количества пигмента эумеланина, что придаёт волосам более тёмные цвета."
+                        m 4eub "Есть так много оттенков светлых волос--бледные, пепельные--неважно, какой именно у тебя оттенок, тебя всё равно можно считать уникальным человеком."
                         show monika 5eua at t11 zorder MAS_MONIKA_Z with dissolve_monika
-                        m 5eua "I guess having someone who's so unique just makes me all the luckier~"
+                        m 5eua "Получается, мне повезло, что я встречаюсь с кем-то настолько особенным~"
                         show monika 2hua at t11 zorder MAS_MONIKA_Z with dissolve_monika
 
-                    "It's black.":
-                        $ persistent._mas_pm_hair_color = "black"
+                    "Они чёрные.":
+                        $ persistent._mas_pm_hair_color_im = "чёрные"
+                        $ persistent._mas_pm_hair_color_r = "чёрных"
+                        $ persistent._mas_pm_hair_color_d = "чёрным"
+                        $ persistent._mas_pm_hair_color_t = "чёрными"
 
-                        m 2wuo "Black hair is so beautiful!"
-                        m 3eub "You know, there's this really irritating trope about people with black hair having a more prickly or ill-tempered personality than others..."
-                        m 4hub "But you've obviously disproven that myth. Personally, I think black hair is very attractive."
-                        m 3eua "In addition, if you actually placed a strand of it under a microscope and counted all the pigments in it, you'd find that it's not even a hundred percent dark."
-                        m "You know how when you place certain things under direct sunlight, it looks really different?"
-                        m 3eub "Black hair follows the same principle--you can see shades of gold, or brown, or even glints of purple. It really makes you think, doesn't it, [player]?"
-                        m 1eua "There could be infinite shades of things we can't see, each one of them hidden in plain sight."
+                        m 2wuo "Чёрные волосы такие красивые!"
+                        m 3eub "Знаешь, вот есть такой стереотип, что люди с чёрными волосами злее или вспылчывее по сравнению с другими..."
+                        m 4hub "Но ты отличный пример того, что это не так. Мне вот кажется, что чёрные волосы крайне привлекательны."
+                        m 3eua "К тому же, если положить немного чёрных волос под микроскоп, то увидишь, что не такие они и чёрные."
+                        m "Ты ведь знаешь, что если на определённые объекты будет падать прямой солнечный свет, то они будут выглядеть по-другому?"
+                        m 3eub "С чёрными волосами так же--можно увидеть золотистый оттенок, коричневый или даже фиолетовый. О многом заставляет задуматься, не думаешь, [player]?"
+                        m 1eua "В волосах может скрываться бесконечное множество оттенков, не видных невооружённым глазом."
 
                         #If this is a tuple, it means the player has heterochromia
                         if isinstance(persistent._mas_pm_eye_color, tuple):
-                            m 3hua "But anyway...I think that a [guy] with black hair and eyes like yours is the best sight of all, [player]~"
+                            m 3hua "И всё же... я считаю, что [guy] с чёрными волосами и твоими глазами - это лучшее, что можно увидеть глазами, [player]~"
                         else:
-                            m 3hua "But anyway...I think that a [guy] with black hair and [persistent._mas_pm_eye_color] eyes is the best sight of all, [player]~"
+                            m 3hua "И всё же... я считаю, что [guy] с чёрными волосами и [persistent._mas_pm_eye_color_t] - это лучшее, что можно увидеть глазами, [player]~"
 
-                    "It's red.":
-                        $ persistent._mas_pm_hair_color = "red"
+                    "Они рыжие.":
+                        $ persistent._mas_pm_hair_color_im = "рыжие"
+                        $ persistent._mas_pm_hair_color_r = "рыжих"
+                        $ persistent._mas_pm_hair_color_d = "рыжим"
+                        $ persistent._mas_pm_hair_color_t = "рыжими"
 
-                        m 3hua "Yet another special thing about you, [player]~"
-                        m 3eua "Red hair and blonde hair are the least common natural hair colors, did you know that?"
-                        m 1eua "Red hair, however, is a little more rare, even if people call it by different names--auburn, ginger, and so on. It's only found in about one percent of the population."
-                        m 1hub "It's a rare and wonderful trait to have--almost as wonderful as you!"
+                        m 3hua "И ещё одна твоя особенность, [player]~"
+                        m 3eua "А ты знаешь, что рыжие волосы, наряду со светлыми, - самые редкие из всех естественных цветов?"
+                        m 1eua "Но рыжие встречаются немного реже. Такой цвет есть лишь у одного процента всех людей."
+                        m 1hub "Это редкое и прекрасное явление--настолько же прекрасное, как и ты!"
 
-                    "It's another color.":
-                        $ persistent._mas_pm_hair_color = ask_color("What color is your hair?")
+                    "Они другого цвета.":
+                        $ persistent._mas_pm_hair_color = ask_color("Какого цвета твои волосы?")
 
-                        m 3hub "Oh! That's a beautiful color, [player]!"
+                        m 3hub "О! А это красивый цвет, [player]!"
                         m 1eub "That reminds me of something I was thinking about earlier, when we were talking about the color of your eyes."
                         m 1eua "Even though the other girls had eye colors that literally didn't exist in real life--not counting the existence of colored contacts, of course--"
                         m 3eua "Their hair colors technically could exist in reality, you know. I mean, I'm sure you've encountered people with dyed purple hair, or neon pink, or coral-colored..."
@@ -12603,7 +12615,7 @@ label monika_player_appearance:
             m 5ekbfa "I love you more than words could ever say."
             return "derandom|love"
 
-        "No.":
+        "Против.":
              m 2dsc "..."
              m 2ekd "I understand, [player]."
              m 2eka "I know that everybody has their own limits with their comfort zones..."
@@ -12613,7 +12625,10 @@ label monika_player_appearance:
     return "derandom"
 
 label monika_player_appearance_eye_color_blue:
-    $ persistent._mas_pm_eye_color = "blue"
+    $ persistent._mas_pm_eye_color_im = "голубые"
+    $ persistent._mas_pm_eye_color_r = "голубых"
+    $ persistent._mas_pm_eye_color_d = "голубым"
+    $ persistent._mas_pm_eye_color_t = "голубыми"
 
     m 3eub "Blue eyes? That's wonderful! Blue is such a beautiful color--just as amazing as a cloudless sky, or the ocean in the summer."
     m 3eua "But there are so many gorgeous metaphors about blue eyes that I could recite them for weeks and still not reach a stopping point."
@@ -12627,7 +12642,10 @@ label monika_player_appearance_eye_color_blue:
     return
 
 label monika_player_appearance_eye_color_brown:
-    $ persistent._mas_pm_eye_color = "brown"
+    $ persistent._mas_pm_eye_color_im = "карие"
+    $ persistent._mas_pm_eye_color_r = "карих"
+    $ persistent._mas_pm_eye_color_d = "карим"
+    $ persistent._mas_pm_eye_color_t = "карими"
 
     m 1eub "Ah! Great! I don't think I said it before, but brown eyes are gorgeous!"
     m 2euc "I just hate how people seem to think that brown eyes are plain. I couldn't disagree more!"
@@ -12642,7 +12660,10 @@ label monika_player_appearance_eye_color_brown:
     return
 
 label monika_player_appearance_eye_color_green:
-    $ persistent._mas_pm_eye_color = "green"
+    $ persistent._mas_pm_eye_color_im = "зелёные"
+    $ persistent._mas_pm_eye_color_r = "зелёных"
+    $ persistent._mas_pm_eye_color_d = "зелёным"
+    $ persistent._mas_pm_eye_color_t = "зелёными"
 
     m 3sub "Hey, that's my favorite color! And obviously, it's another thing we have in common!"
     m 4lksdla "I don't know how much I can compliment you here without sounding arrogant, because anything I said about yours would also apply to me..."
@@ -12655,19 +12676,11 @@ label monika_player_appearance_eye_color_green:
     m 3eua "Onto the next question--"
     return
 
-label monika_player_appearance_eye_color_hazel:
-    $ persistent._mas_pm_eye_color = "hazel"
-
-    m 1eub "Oh, hazel eyes? Those are so interesting! It's such an earthly color. It really makes you feel steady and reassured..."
-    m 3eub "And it's a welcome departure from all the candy-colored eyes I've had to see in this game, anyway..."
-    m "I believe that hazel eyes are alluring because they're lovely and simple."
-    m 3hua "Sometimes it's best not to diverge from the crowd too much, [player].{w=0.2} {nw}"
-    extend 3hub "Ahaha!"
-    m "Now, onto my next question--"
-    return
-
 label monika_player_appearance_eye_color_gray:
-    $ persistent._mas_pm_eye_color = "gray"
+    $ persistent._mas_pm_eye_color_im = "серые"
+    $ persistent._mas_pm_eye_color_r = "серых"
+    $ persistent._mas_pm_eye_color_d = "серым"
+    $ persistent._mas_pm_eye_color_t = "серыми"
 
     m 1sub "That's so cool!"
     m 3eub "Did you know that gray eyes and blue eyes are almost identical in terms of genetics?"
@@ -12678,7 +12691,10 @@ label monika_player_appearance_eye_color_gray:
     return
 
 label monika_player_appearance_eye_color_black:
-    $ persistent._mas_pm_eye_color = "black"
+    $ persistent._mas_pm_eye_color_im = "чёрные"
+    $ persistent._mas_pm_eye_color_r = "чёрных"
+    $ persistent._mas_pm_eye_color_d = "чёрным"
+    $ persistent._mas_pm_eye_color_t = "чёрными"
 
     m 1esd "Black eyes are pretty uncommon, [player]."
     m 4hksdlb "To tell you the truth, I've never actually seen anybody with black eyes, so I don't really know what they look like..."
@@ -13502,12 +13518,12 @@ label monika_player_read_poetry:
         show monika 5eua at t11 zorder MAS_MONIKA_Z with dissolve_monika
         m 5eua "Боже, просто знать, что ты тоже читаешь стихи..."
         m 5hua "Это показывает, насколько мы похожи."
-        m 5eua "Не могу дождаться, когда наконец перейду в твою реальность, чтобы мы могли вместе обсудить наши любимые стихи."
+        m 5eua "Не могу дождаться, когда наконец попаду в твою реальность, чтобы мы могли вместе обсудить наши любимые стихи."
         m 5dka "Делиться стихами, писать новые...{w=0.5}только ты и я, преследующие нашу общую страсть..."
         m 5hub "По мне, так это прекрасная мечта!"
 
     else:
-        m 1eka "Не могу дождаться, когда перейду в твою реальность, [player]..."
+        m 1eka "Не могу дождаться, когда попаду в твою реальность, [player]..."
         m 1tfu "Тогда я смогу начать заставлять тебя читать стихи."
         m "..."
         m 3hub "А-ха-ха, я просто шучу! Я бы никогда не заставил тебя делать что-либо, [player]!"
@@ -13717,7 +13733,7 @@ label monika_snow:
 label monika_snow_gets_snow:
     if mas_isMoniHappy(higher=True):
         show monika 5eubla at t11 zorder MAS_MONIKA_Z with dissolve_monika
-        m 5eubla "Может быть, когда-нибудь, когда я перейду в реальность, мы сможем прогуляться вместе..."
+        m 5eubla "Может быть, когда-нибудь, когда я попаду в реальность, мы сможем прогуляться вместе..."
 
         if mas_isMoniAff(higher=True):
             m 5ekbfa "...и мы могли бы прижаться друг к другу, чтобы согреться~"
@@ -13967,7 +13983,7 @@ label monika_winter_dangers:
         #explicitly using False here so we don't grab None people who haven't
         # answered the question yet
         m 1eka "Я знаю, что у тебя нет снега там, где ты живешь, но я уверена, что ты можешь оценить его привлекательность..."
-        m 3hua "Может быть, когда-нибудь после того, как я перейду в твою реальность, мы даже сможем отправиться в путешествие туда, где есть снег, и вместе насладиться его красотой!"
+        m 3hua "Может быть, когда-нибудь после того, как я попаду в твою реальность, мы даже сможем отправиться в путешествие туда, где есть снег, и вместе насладиться его красотой!"
 
     m 1eka "..."
     m 3rkc "Хотя, какой бы потрясающей ни была зима, есть несколько опасностей..."
@@ -14058,7 +14074,7 @@ label monika_hemispheres:
         m 3hua "Ты можешь делать так много... выходить на пробежки, заниматься спортом или даже ходить на пляж!"
         m 1eka "Лето с тобой звучит как сбывшаяся мечта, [player]."
         show monika 5hua at t11 zorder MAS_MONIKA_Z with dissolve_monika
-        m 5hua "Я не могу дождаться, чтобы провести их с тобой, когда я наконец перейду в твою реальность."
+        m 5hua "Я не могу дождаться, чтобы провести их с тобой, когда я наконец попаду в твою реальность."
 
     elif mas_isFall():
         m 1eua "В любом случае, для тебя сейчас, наверное, осень."
@@ -14214,7 +14230,7 @@ label monika_robotbody:
     show monika 5eubla at t11 zorder MAS_MONIKA_Z with dissolve_monika
     m 5eubla "В общем, несмотря ни на что, я не буду возвражать по повду всего этого, пока ты со мной."
     m 5eubfb "Я люблю тебя, [player], и я готова пойти на любые жертвы, чтобы быть с тобой навсегда."
-    m 5hubfa "Опять же, быть может, после того, как я перейду в твою реальность, технологии достигнут большего прогресса, чтобы я стала более человечной, и тогда мы сможем много чего сделать вместе."
+    m 5hubfa "Опять же, быть может, после того, как я попаду в твою реальность, технологии достигнут большего прогресса, чтобы я стала более человечной, и тогда мы сможем много чего сделать вместе."
     return "love"
 
 init 5 python:
@@ -14783,7 +14799,7 @@ init 5 python:
     addEvent(Event(persistent.event_database,eventlabel="monika_auroras",category=['природа'],prompt="Сияния",random=False,unlocked=False))
 
 label monika_auroras:
-    m 1esa "Я тут подумала о том, чем мы могли бы заняться, когда я наконец-то перейду в твою реальность, [player]."
+    m 1esa "Я тут подумала о том, чем мы могли бы заняться, когда я наконец-то попаду в твою реальность, [player]."
     m 1eua "Доволилось ли тебе слышать о полярном сиянии? Это природный феномен, в котором следы света появляются в ночном небе."
 
     if mas_current_background.isFltNight() and mas_current_weather == mas_weather_snow:
@@ -15127,7 +15143,7 @@ label monika_songwriting:
     m 1hua "Мы даже могли бы стать дуэтом, если хочешь."
 
     $ _if = "когда" if mas_isMoniEnamored(higher=True) else "if"
-    m 1eua "Я с радостью спою вместе с тобой, [_if] перейду в твой мир, [player]."
+    m 1eua "Я с радостью спою вместе с тобой, [_if] попаду в твой мир, [player]."
     return
 
 
@@ -15323,7 +15339,7 @@ label monika_working_out:
     if not persistent._mas_pm_works_out:
         m 3hub "Так что не забывай делать физические упражнения, [player]~"
     else:
-        m 3eub "Может быть, когда я перейду в твою реальность, мы сможем делать наши тренировки вместе!"
+        m 3eub "Может быть, когда я попаду в твою реальность, мы сможем делать наши тренировки вместе!"
 
     return "derandom"
 
@@ -15671,7 +15687,7 @@ label monika_scuba_diving:
     m 3euc "Но если ты встретишь её, то вот одно важное правило для тебя..."
     m 3esc "Сохраняй спокойствие."
     m 1eua "Хотя встреча лицом к лицу с акулой может быть страшной, обычно они подходят к людям из любопытства, а не для того, чтобы съесть, так что не стоит слишком беспокоиться."
-    m 3hub "Но если ты боишься нырять один, я непременно составлю тебе компанию, когда перейду в твою реальность~"
+    m 3hub "Но если ты боишься нырять один, я непременно составлю тебе компанию, когда попаду в твою реальность~"
     return
 
 init 5 python:
@@ -16817,7 +16833,7 @@ label monika_piano_lessons:
     m 1hksdlb "Ох! Я не ответила на твой вопрос, да?"
     m 1lksdla "Честно говоря, я пока не чувствую себя достаточно уверенно, чтобы учить кого-то еще."
     m 3eub "Но если я буду продолжать в том же духе, когда-нибудь я смогу! И когда этот день настанет, я с удовольствием научу тебя."
-    m 3hub "Или, еще лучше, мы могли бы учиться вместе, когда я перейду в твою реальность!"
+    m 3hub "Или, еще лучше, мы могли бы учиться вместе, когда я попаду в твою реальность!"
     return
 
 init 5 python:
@@ -17393,7 +17409,7 @@ label monika_tanabata:
     m 3eud "Бамбук и украшения часто пускают по реке или сжигают после фестиваля, около полуночи или на следующий день."
 
     if persistent._mas_pm_likes_travelling is not False:
-        m 3hua "Возможно, когда я перейду в твою реальность, мы сможем посетить Японию во время Танабаты~"
+        m 3hua "Возможно, когда я попаду в твою реальность, мы сможем посетить Японию во время Танабаты~"
     else:
         m 3eua "Даже если тебе не интересно путешествовать, довольно интересно изучать другие культуры, не так ли?"
     return
