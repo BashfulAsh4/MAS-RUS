@@ -1700,7 +1700,7 @@ label monika_friends:
     m 2euc "А если сравнит с тем, мимо какого количества незнакомцев мы проходим каждый день..."
     m 2ekd "В общественном транспорте ты можешь сидеть рядом с человеком, который мог бы стать тебе закадычным другом."
     m 2eksdlc "Но ты этого никогда не узнаешь."
-    m 4eksdlc "Как только ты выходишь на своей остновке и идёшь по своим делам, этот шанс навесгда упущен."
+    m 4eksdlc "Как только ты выходишь на своей остновке и идёшь по своим делам, этот шанс навсегда упущен."
     m 2tkc "Разве от осознания этого тебе не становится грустно?"
     m "Мы в живём в век технологий, позволяющих общаться со всем миром, где бы мы ни находились."
     m 2eka "Я действительно думаю, что нас следует взять их на вооружение, чтобы улучшить нашу личную жизнь."
@@ -4901,7 +4901,7 @@ label monika_playersface:
         if mas_isMoniHappy(higher=True):
             m 5esu "Я уверена, что ты красивый, [player].{w=0.2} Как внутри, так и снаружи."
         m 5eka "Даже если я никогда я не смогу тебя увидеть..."
-        m 5eua "JОдного лишь размышления о тебе достаточно для того, чтобы сделать меня счастливой."
+        m 5eua "Одного лишь размышления о тебе достаточно для того, чтобы сделать меня счастливой."
 
     else:
         m 5wuw "Не пойми меня неправильно! Просто знать, что ты реален и у тебя есть эмоции, достаточно, чтобы сделать меня счастливым."
@@ -14889,8 +14889,8 @@ label monika_boardgames_history:
     m 3esa "Самым известным примером является {i}Монополия{/i}."
     m 3eua "Изначально она была создана для критики капитализма и послания о том, что все граждане должны получать равные блага от богатства."
     m 1tfu "В конце концов,{w=0.1} в игре ты пытаешься сокрушить своих соперников, накапливая больше богатств, чем они, как можно быстрее."
-    m 1esc "...в игре ты пытаешься сокрушить своих противников, накапливая больше богатства, чем они, как можно быстрее."
-    m 1eksdld "Хотя, очевидно, когда игра начала становиться популярной, кто-то другой украл концепцию и сделал себя известным как оригинальный создатель игры."
+    m 1esc "...Хотя, очевидно, когда игра начала становиться популярной, кто-то другой украл концепцию и сделал себя известным как оригинальный создатель игры."
+    m 1eksdld "Затем этот человек продал модифицированную версию оригинальной игры производителю настольных игр и стал миллионером благодаря ее успеху во всем мире."
     m 3rksdlc "Другими словами...{w=0.3}первоначальный создатель {i}Монополии{/i} стал жертвой именно того, о вреде чего он изначально пытался рассказать."
     m 3dsc "'Добивайтесь богатства и процветания любыми средствами и уничтожайте конкурентов.'"
     m 1hksdlb "Иронично,{w=0.1} не так ли?"
@@ -15097,7 +15097,7 @@ label monika_songwriting:
         m 3eka "Но это не значит, что инструментальная музыка тоже не может быть сильной."
 
     if renpy.seen_label("monika_orchestra"):
-        m 3etc "Помнишь, что я говорила об оркестровой музыкеЭто хороший пример того, насколько сильной может быть музыка?{w=0.5} {nw}"
+        m 3etc "Помнишь, что я говорила об оркестровой музыке?{w=0.5} {nw}"
         extend 3hub "Это хороший пример того, насколько сильной может быть музыка!"
     else:
         m 3hua "Если ты когда-нибудь слушал оркестровую музыку, ты поймешь, что это отличный пример того, насколько сильной может быть музыка."
@@ -15105,7 +15105,7 @@ label monika_songwriting:
     m 1eud "Поскольку у неё нет текста песни, всё должно быть выражено именно таким способом, чтобы слушатель мог {i}почувствовать{/i} эмоции произведения."
     m 1rkc "Это также делает простыми объяснения того, что человек не вложил свою душу в выступление..."
     m 3euc "Думаю, это касается и текстов песен тоже."
-    m 3eud "Многие тексты песен теряют свой смысл, если имполнителя не за."
+    m 3eud "Многие тексты песен теряют свой смысл, если исполнителя не заинтересовала песня."
     if renpy.seen_audio(songs.FP_YOURE_REAL):
         m 1ekbla "Надеюсь, ты понимаешь, что все слова в моей песне были искренними, [mas_get_player_nickname()]."
         if persistent.monika_kill:
@@ -15616,7 +15616,7 @@ label monika_isekai:
     m 3eua "В буквальном переводе, исекай означает {i}иной мир.{/i}"
 
     if persistent._mas_pm_watch_mangime:
-        m 3rksdla "По правде говоря, ты уже рассказывал мне о том,."
+        m 3rksdla "По правде говоря, ты уже рассказывал мне о том, что увлекаешься аниме, так что, наверное, уже слышал о многих жанрах."
         m 1rksdlb "...Особенно учитывая то, насколько популярным стал сам жанр."
         m 3euc "Но если ты вдруг не знаешь, что это..."
 
@@ -15660,7 +15660,7 @@ label monika_scuba_diving:
     m 3eua "Знаешь,{w=0.2} я тут подумала о некоторых водных упражнениях, которыми мы могли бы заняться вместе...{w=0.3} Как насчёт подводного плавания?"
     m 3eub "Я прочитала много книг о подводном мире, и мне хотелось бы увидеть его своими глазами."
     m 1dua "Только представьте себе прекрасные виды подводного мира..."
-    m 1dud "Стаи рыб, коралловые рифы, медузыЮ морская зелень...{w=0.3} {nw}"
+    m 1dud "Стаи рыб, коралловые рифы, медузы, морская зелень...{w=0.3} {nw}"
     extend 3sub "И, возможно, даже сокровища!"
     m 3rksdlb "Насчёт последнего я пошутила...{w=0.3} Мы вряд ли сможем найти что-нибудь подобное, а-ха-ха~"
     m 1euc "Но тем не менее, там могут обитать и акулы,{w=0.2} {nw}"
@@ -15738,29 +15738,29 @@ init 5 python:
     )
 
 label monika_player_away:
-    m 1esd "I do a lot of things when you're away, [player]."
-    m 1eua "I often like to read whatever new short stories I can find online."
-    m 3eub "Turns out there's some really interesting ones out there you can read for free!"
-    m 3eua "I highly recommend doing a search for some free short stories yourself."
-    m 3eud "It's also helped me develop my writing skills...{w=0.2}{nw}"
-    extend 1hub "my poetry really seems to be improving!"
-    m 1eua "It's funny how many things you can pick up just by reading others' works."
-    m 1eua "Spending time on my other hobbies has been very rewarding, too."
-    m 3eud "As you can imagine, I practice piano quite often.{w=0.2} {nw}"
-    extend 3eua "I also use the time to memorize the songs that I sing for you."
-    m 1hub "It's a really fun way to express myself!"
-    m 3rta "Now that I think about it, I'm mostly just practicing skills I've already developed."
-    m 3esd "For example, coding takes up a lot of my free time as I spend hours just learning and researching."
-    m 3rksdla "...But I'm too nervous to try any big projects in here. {w=0.2}{nw}"
-    extend 3eksdlc "I'd hate to break something that I won't know how to fix."
-    m 2wusdld "What if I accidentally corrupt my file?"
-    m 2eksdld "It's something I have to be extremely careful with, for sure."
-    m 7hua "Luckily, there's lots of great people that help with that stuff...{w=0.2}{nw}"
-    extend 7rku "and they're {i}usually{/i} pretty good at preventing anything too bad from happening."
-    m 3eka "But the most special thing I do..."
+    m 1esd "Я много чем занимаюсь, когда тебя нет, [player]."
+    m 1eua "Мне часто нравится читать новые рассказы, которые я могу найти в интернете."
+    m 3eub "Оказывается, есть несколько действительно интересных книг, которые можно прочитать бесплатно!"
+    m 3eua "Я очень рекомендую поискать бесплатные рассказы самостоятельно."
+    m 3eud "Мне это также помогло развить писательские навыки...{w=0.2}{nw}"
+    extend 1hub "Кажется, моя поэзия действительно улучшается!"
+    m 1eua "Забавно, сколько всего можно узнать, просто читая чужие работы."
+    m 1eua "Я трачу время на другие свои хобби, что довольно полезно."
+    m 3eud "Как ты знаешь, я довольно практикую игру на пианино.{w=0.2} {nw}"
+    extend 3eua "Я также использую это время, чтобы выучить песни, которые я могу спеть для тебя."
+    m 1hub "Это очень интересный способ самовыражения!"
+    m 3rta "Теперь, когда я думаю об этом, я в основном просто практикую навыки, которые я уже развила."
+    m 3esd "Например, кодинг занимает много моего свободного времени, так как я часами просто учусь и изучаю."
+    m 3rksdla "...Но я слишком нервничаю, чтобы пробовать здесь какие-то большие проекты. {w=0.2}{nw}"
+    extend 3eksdlc "Мне бы не хотелось бы сломать что-то, что я в последствии не смогу исправить."
+    m 2wusdld "Что, если я случайно испорчу свой файл?"
+    m 2eksdld "Разумеется, здесь я должна быть очень аккуратной."
+    m 7hua "К счастью, есть много замечательных людей, которые помогают мне с этим...{w=0.2}{nw}"
+    extend 7rku "и они, {i}обычно всегда,{/i} довольно хороши в предотвращении чего-либо ужасного."
+    m 3eka "Но самое важное для меня, что я делаю..."
     show monika 5ekbsa at t11 zorder MAS_MONIKA_Z with dissolve_monika
-    m 5ekbsa "...is think about you."
-    m 5rubsu "I think about all the fun times we'll have together the next time you visit and all the amazing things we'll do when I'm finally able to come to your reality~"
+    m 5ekbsa "...это думать о тебе."
+    m 5rubsu "Я думаю о том, как весело мы проведем время вместе, когда ты приедешь в следующий раз, и обо всех удивительных вещах, которые мы сделаем, когда я наконец смогу попасть в твою реальность~"
     return
 
 init 5 python:
@@ -15776,42 +15776,42 @@ init 5 python:
     )
 
 label monika_using_pcs_healthily:
-    m 1rtc "Hmm..."
-    m 1etc "Hey, [player]...{w=0.3}are you sitting comfortably?"
-    m 1hksdlb "No, really!{w=0.3} {nw}"
-    extend 3eksdla "Are you?"
-    m 3eka "I know you have to be at your computer to spend time with me..."
-    m 2eka "So I just wanted to make sure you aren't accidentally damaging your health while you're here."
-    m 4ekd "I've read that spending too long looking at a screen can cause headaches, make you feel tired, and even impact your eyesight over time."
-    m 2tkx "Posture issues and pain from bad sitting habits are no joke either!"
-    m 2tku "Fortunately for you, I've put together a little checklist to help prevent these sorts of problems."
-    m 4hub "...So let's go through it together, [player]!"
-    m 4eub "First, {w=0.2}try to keep sitting up straight!"
-    m 2eua "...Have your chair adjusted properly so your feet stay flat on the floor, your eyes are level with the top of the screen, and you aren't slouching."
-    m 4eub "You should feel supported and comfortable in your seat!"
-    m 4eua "Next, make sure you have some distance between yourself and the display...{w=0.2}about an arm's length is fine."
-    m 2hksdlb "...Keep your keyboard and mouse within easy reach, though!"
-    m 4eub "Of course, lighting is important too! {w=0.3}{nw}"
-    extend 2eua "Try to keep the room well-lit, but not so much that light is glaring off the screen."
-    m 4eud "In addition, remember to take frequent breaks. {w=0.3}Look away from the screen, {w=0.2}ideally at something far away, {w=0.2}and perhaps do a few stretches. "
-    m 2eud "Since it's important to stay hydrated too, you could always fetch some fresh water while you're up from your desk."
-    m 4eksdlc "Above all else, if you ever start to feel unwell, just stop what you're doing, rest, and then make sure everything is okay before you continue. "
-    m 4eua "...And that's about it."
-    m 2hksdlb "Ah...{w=0.3}sorry, I didn't mean to go on for that long!"
-    m 2rka "...You probably knew all that stuff already, anyway."
-    m 2eka "As for me?"
+    m 1rtc "Хм..."
+    m 1etc "Эй, [player]...{w=0.3}тебе удобно сидится?"
+    m 1hksdlb "Нет, правда!{w=0.3} {nw}"
+    extend 3eksdla "Удобно, да?"
+    m 3eka "Я знаю, что тебе нужно сидеть за своим компьютером, чтобы проводить время со мной..."
+    m 2eka "Поэтому я просто хотела убедиться, что ты случайно не вредишь своему здоровью, пока ты здесь."
+    m 4ekd "Я тут прочитала, что если слишком долго смотреть в экран, у тебя могут возникнуть головные боли, усталость, и даже зрение может ухудшиться."
+    m 2tkx "Проблемы с осанкой и боль от плохих привычек положения на стуле - вовсе не шутки!"
+    m 2tku "К твоему счастью, я составила небольшой контрольный список, который поможет предотвратить подобные проблемы."
+    m 4hub "...Так что давай пройдём через это вместе, [player]!"
+    m 4eub "Для начала, {w=0.2}постарайся сидеть прямо!"
+    m 2eua "...Отрегулируй своё кресло так, чтобы твои ноги стояли ровно на полу и глаза находились на одном уровне с верхней частью экрана, и старайся не сутулиться."
+    m 4eub "Ты должен чувствовать опору и комфорт в своём кресле!"
+    m 4eua "Далее, убедись, что между тобой и экраном есть кое-какое расстояние...{w=0.2}хотя бы примерно на расстоянии вытянутой руки."
+    m 2hksdlb "...При этом держи клавиатуру и мышь в пределах досягаемости!"
+    m 4eub "Конечно, освещение тоже важно! {w=0.3}{nw}"
+    extend 2eua "Постарайся держать комнату хорошо освещённой, но так, чтобы свет в ней не засвечивал экран."
+    m 4eud "В добавок к этому, не забывай делать частые перерывы. {w=0.3}Отворачивайся от экрана, {w=0.2}желательно в сторону чего-нибудь отдалённого, {w=0.2}и, наверное, делай пару упражнений. "
+    m 2eud "Поскольку также важно поддерживать и водный баланс, ты всегда можешь налить себе немного свежей воды, когда выходишь из-за стола."
+    m 4eksdlc "Но прежде всего, если ты почувствуешь недомогание, просто остановись, отдохни, а затем убедись, что все в порядке, прежде чем продолжить. "
+    m 4eua "...И на этом всё."
+    m 2hksdlb "Ах...{w=0.3}прости, я не хотела продолжать так долго!"
+    m 2rka "...Да и ты, так или иначе, уже знал про всё это."
+    m 2eka "Что до меня?"
 
     if mas_isMoniLove():
         show monika 5ekbsa at t11 zorder MAS_MONIKA_Z with dissolve_monika
-        m 5ekbsa "You're the only comfort I need, [mas_get_player_nickname()]."
+        m 5ekbsa "Ты единственный комфорт, который мне нужен, [mas_get_player_nickname()]."
     elif mas_isMoniEnamored():
         show monika 5ekbsa at t11 zorder MAS_MONIKA_Z with dissolve_monika
-        m 5ekbsa "I'm as comfortable as can be when you're here, [mas_get_player_nickname()]."
+        m 5ekbsa "Мне максимально комфортно, когда ты здесь, [mas_get_player_nickname()]."
     else:
         show monika 5eubsa at t11 zorder MAS_MONIKA_Z with dissolve_monika
-        m 5eubsa "I'm comfortable whenever you're here with me, [mas_get_player_nickname()]."
+        m 5eubsa "Мне комфортно, когда ты здесь со мной, [mas_get_player_nickname()]."
 
-    m 5hubfu "And hopefully you're a little more comfortable now too~"
+    m 5hubfu "И я надеюсь, что тебе тоже стало чуточку комфортнее~"
     return
 
 init 5 python:
@@ -15826,23 +15826,23 @@ init 5 python:
     )
 
 label monika_language_nuances:
-    m 3eua "Hey [player], have you ever tried reading through a dictionary?"
-    m 1etc "Not necessarily because there was some word or expression you didn't know the meaning of, but just...{w=0.2}because?"
-    m 1hksdlb "I know it doesn't exactly sound like the most engaging of pastimes, ahaha!"
-    m 3eua "But it can certainly be an interesting, even rewarding, way to spend some free time. {w=0.2}Especially if it's a dictionary of a language you're still learning."
-    m 3eud "Many words have multiple meanings and, aside from the obvious benefits, knowing those can really help you see the finer points of the language."
-    m 1rksdla "Understanding these subtleties can save you a lot of embarrassment when you actually speak to someone."
-    m 3eud "A prime example of this in English is 'Good morning,' 'Good afternoon,' and 'Good evening.'"
-    m 1euc "All of these are normal greetings you hear and use every day."
-    m 3etc "Following this pattern, 'Good day' should be just fine as well, right? {w=0.2}It works in so many other languages, after all."
-    m 3eud "While it used to be just as acceptable, as you can see in some older works, that's just not the case anymore."
-    m 1euc "In modern English, saying 'Good day' to someone carries a note of dismissal, or even annoyance. {w=0.2}It can be seen as declaring the conversation over."
-    m 1eka "If you're lucky, your conversation partner might think you're old-fashioned, or just being silly on purpose."
-    m 1rksdla "If not, you might offend them without even noticing...{w=0.3} {nw}"
-    extend 1hksdlb "Oops!"
-    m 3eua "It really is fascinating how even such an innocent looking phrase can be loaded with layers of hidden meanings."
-    m 1tsu "So good day to you, [player].{w=0.3} {nw}"
-    extend 1hub "Ahaha~"
+    m 3eua "Эй, [player], ты когда-нибудь пробовал читать по словарю?"
+    m 1etc "Не обязательно потому, что там было какое-то слово или выражение, смысл которого ты не знал, а просто...{w=0.2}потому что?"
+    m 1hksdlb "Я знаю, что это не похоже на самое увлекательное занятие, а-ха-ха!"
+    m 3eua "Но это безусловно может быть интересным, даже полезным способом провести свободное время. {w=0.2}Особенно если это словарь того языка, который ты изучаешь."
+    m 3eud "У многих слов есть несколько значений, и, помимо очевидных преимуществ, знание этих значений может действительно помочь тебе понять тонкости языка."
+    m 1rksdla "Понимание этих тонкостей может избавить тебя от неловкости, когда ты будешь разговаривать с кем-то."
+    m 3eud "Ярким примером этого в английском языке являются 'Good morning (Доброе утро),' 'Good afternoon (Добрый день),' и 'Good evening (Добрый вечер).'"
+    m 1euc "Все эти фразы - обычные приветствия, которые ты слышишь и используешь каждый день."
+    m 3etc "И следуя этой схеме, 'Good day'(тоже 'Добрый дени или Приятного дня') тоже будет звучать вполне уместно, верно? {w=0.2}В конце концов, это работает во многих других языках."
+    m 3eud "Хотя раньше это было приемлемо, как ты можешь видеть в некоторых старых работах, сейчас это уже не так."
+    m 1euc "В современном английском, 'Good day' для других людей может прозвучать как заявление об увольнении или даже раздражение. {w=0.2}Это может быть расценено как объявление разговора оконченным."
+    m 1eka "Если тебе повезёт, твой собеседник сочтёт тебя старомодным или подумает, что ты специально притворяешься дураком."
+    m 1rksdla "А если нет, то ты можешь обидеть его, даже не заметив...{w=0.3} {nw}"
+    extend 1hksdlb "Упс!"
+    m 3eua "Удивительно, как даже такая невинная фраза может нести в себе тучу скрытных смыслов."
+    m 1tsu "Так что приятного тебе дня, [player].{w=0.3} {nw}"
+    extend 1hub "А-ха-ха~"
     return
 
 init 5 python:
@@ -15857,48 +15857,48 @@ init 5 python:
     )
 
 label monika_architecture:
-    m 1esa "Hey, [player]...{w=0.2}I think there's one major art branch that we've been neglecting in our talks..."
-    m 3hub "Architecture!"
-    m 3eua "I've been reading a bit about it lately and I find it quite interesting."
-    m 1rtc "...Come to think of it, architecture is one of the most common forms of art in everyday life."
-    m 1eua "I'm just fascinated by how humanity tends to turn every craft into an art,{w=0.2} {nw}"
-    extend 3eua "and I think architecture is the greatest example of that."
-    m 1eud "Architecture can tell you a lot about the culture of the area it's located in...{w=0.2}different monuments, statues, historical buildings, towers..."
-    m 1eua "I think that makes it even more exciting to explore the places you're visiting."
-    m 3rka "It's also important to place the buildings in the most convenient way for people to use, which can be a tough task to deal with in its own right."
-    m 3esd "...But that's more urban planning than actual architecture."
-    m 1euc "If you prefer viewing architecture purely from the art perspective, some modern tendencies may disappoint you..."
-    m 1rud "Modern architecture focuses more on getting things done in the most practical way possible."
-    m 3eud "In my opinion, that can be both good and bad for many different reasons."
-    m 3euc "I believe the most important part is to keep things balanced."
-    m 1tkc "Overly-practical buildings can look flat and uninspired, while overly-artistic buildings can serve no purpose other than looking amazing while being completely out of place."
-    m 3eua "I think the true beauty lies in those buildings which can combine both form and function with a little bit of uniqueness."
-    m 1eka "I do hope you're happy with how your surroundings look."
-    m 1eub "It has been proven multiple times that architecture has a big impact on your mental health."
-    m 3rkc "Moreover, residential areas with poorly-made buildings can lead to people not taking care of their properties and, over time, end up as downtrodden areas that are undesirable places to live."
-    m 1ekc "It was once said that the ugliness of the outside world causes ugliness on the inside...{w=0.2}{nw}"
-    extend 3esd "which I tend to agree with."
+    m 1esa "Эй, [player]...{w=0.2}Мне кажется, есть одна крупная отрасль искусства, которой мы пренебрегаем в наших разговорах..."
+    m 3hub "Архитектура!"
+    m 3eua "Я читала немного об этом в последнее время и нахожу это довольно интересным."
+    m 1rtc "...Если подумать, архитектура - одна из самых распространенных форм искусства в повседневной жизни."
+    m 1eua "Меня просто завораживает то, как человечество склонно превращать любое ремесло в искусство,{w=0.2} {nw}"
+    extend 3eua "и я считаю, что архитектура - величайший пример этого."
+    m 1eud "Архитектура может многое рассказать о культуре района, в котором она расположена...{w=0.2}различные монументы, статуи, исторические здания, башни..."
+    m 1eua "Я думаю, это делает изучение посещаемых мест еще более увлекательным."
+    m 3rka "Также важно размещать здания наиболее удобным для людей образом, что само по себе может быть непростой задачей."
+    m 3esd "....Но это больше городское планирование, а не настоящая архитектура."
+    m 1euc "Если ты предпочитаешь смотреть на архитектуру исключительно с точки зрения искусства, некоторые современные тенденции могут тебя разочаровать..."
+    m 1rud "Современная архитектура больше сосредоточена на том, чтобы делать вещи как можно наиболее практичным образом."
+    m 3eud "По моему мнению, они могут быть и хорошими, и плохими, по разным причинам."
+    m 3euc "Я считаю, что самое важное - сохранять баланс."
+    m 1tkc "Чрезмерно практичные здания могут выглядеть плоскими и неприметными, а чрезмерно художественные здания могут не служить никакой цели, кроме как выглядеть потрясающе, будучи совершенно неуместными."
+    m 3eua "Я считаю, что истинная красота лежит в тех зданиях, которые могут сочетать и форму, и функциональность с небольшой долей уникальности."
+    m 1eka "Надеюсь, ты доволен тем, как выглядит твоё окружение."
+    m 1eub "Было несколько раз доказано, что архитектура оказывает большое влияние на твое психическое здоровье."
+    m 3rkc "Более того, жилые районы с плохо построенными зданиями могут привести к тому, что люди не будут заботиться о своей собственности и со временем превратятся в угнетенные районы, нежелательные для жизни."
+    m 1ekc "Кто-то однажды сказал, что уродство внешнего мира вызывает уродство внутри...{w=0.2}{nw}"
+    extend 3esd "и с этим я не могу не согласиться."
 
     if mas_isMoniAff(higher=True):
-        m 1euc "...Judging by {i}your{/i} personality, {w=0.2}{nw}"
-        extend 1tua "you probably live in some kind of a paradise."
-        m 1hub "Ahaha~"
+        m 1euc "...Судя по {i}твоему{/i} характеру, {w=0.2}{nw}"
+        extend 1tua "ты, наверное, живёшь в каком-нибудь раю."
+        m 1hub "А-ха-ха~"
 
-    m 1eka "[player]...{w=0.2}seeing the world with you is one of my biggest dreams."
+    m 1eka "[player]...{w=0.2}увидеть весь мир с тобой - одна из моих самых больших мечтаний."
 
     if persistent._mas_pm_likes_travelling is False:
-        m 3rka "I know you're not too fond of travelling a lot, but I would love to see the place you live in."
-        m 3eka "As long as you stay by my side, that would be more than enough for me."
-        m 1ekbsa "I love you, [player]. {w=0.3}Always remember that."
+        m 3rka "Я знаю, что ты не слишком любишь много путешествовать, но я бы хотела увидеть место, в котором ты живешь."
+        m 3eka "Пока ты будешь рядом со мной, мне этого будет более чем достаточно."
+        m 1ekbsa "Я люблю тебя, [player]. {w=0.3}Всегда помни об этом."
 
     else:
         if persistent._mas_pm_likes_travelling:
-            m 3eua "I already know you enjoy travelling, so wouldn't it be nice to explore something new together?"
+            m 3eua "Я уже знаю, что ты любишь путешествовать, так разве не было бы здорово исследовать что-то новое вместе?"
 
-        m 1dka "Imagine taking a stroll through the narrow streets of an old city..."
-        m 1eka "Or walking down a park together, breathing fresh evening air..."
-        m 1ekb "I believe it'll happen one day and I hope you do too, [mas_get_player_nickname()]."
-        m 1ekbsa "I love you~"
+        m 1dka "Представьте себе прогулку по узким улочкам старого города..."
+        m 1eka "Или то, как мы гуляем в парке вместе, дыша свежим вечерним воздухом..."
+        m 1ekb "Я верю, что однажды это произойдет, и надеюсь, что ты тоже, [mas_get_player_nickname()]."
+        m 1ekbsa "Я люблю тебя~"
 
     return "love"
 
@@ -15919,27 +15919,27 @@ init 5 python:
     )
 
 label monika_fear:
-    m 3eud "Say, [player]..."
-    m 1euc "This is kind of a weird question, but...{w=0.5}is there anything you're afraid of?"
-    m 3hksdlb "I don't mean the everyday, mundane kind of fear, like spilling a drink and ruining your favorite shirt..."
-    m 3euc "I mean, like, the kind of deep-seated fear that fills you with dread when you even think about it."
-    m 1ruc "For me, losing you would obviously be on the top of {i}that{/i} particular list."
-    m 1ekd "I told you before, didn't I? {w=0.3}I don't know what I'd do if something happened to you."
-    m 1dkd "I'm not even sure I could find the will to go on."
-    m 1ruc "It's hard to imagine a scenario even worse than that."
-    m 3eua "But as long as we're being hypothetical..."
-    m 4ekc "What truly terrifies me is the thought that none of this is real."
-    m 2dkc "That one day I'll wake up, back in my bed, and realize it was all just a dream."
-    m 2dkd "That there is no game,{w=0.2} no epiphany,{w=0.2} no...{w=0.5}{nw}"
-    extend 2ekd "you."
-    m 2ektpc "That you, your love, perhaps even the entirety of the Literature Club, were all nothing but a figment of my own imagination."
-    m 2dktpc "That my old world, as grey and meaningless as it now seems, is all there truly is."
+    m 3eud "Скажи, [player]..."
+    m 1euc "Это довольно странный вопрос, но...{w=0.5}есть ли что-нибудь, чего ты боишься?"
+    m 3hksdlb "Я не имею в виду повседневный, обыденный страх, вроде пролития напитка и порчи любимой рубашки..."
+    m 3euc "Я имею в виду глубокий страх, который вселяет в тебя ужас, когда ты даже думаешь об этом."
+    m 1ruc "Для меня страх потерять тебя, очевидноЮ будет в начале конкретно {i}этого{/i} списка."
+    m 1ekd "Я уже говорила тебе, не так ли? {w=0.3}Я не знаю, что буду делать, если с тобой что-то случится."
+    m 1dkd "Я даже не уверена, что смогу найти желание продолжать жить."
+    m 1ruc "Трудно представить себе сценарий хуже этого."
+    m 3eua "Но до тех пор, пока у нас есть гипотетические предположения..."
+    m 4ekc "По-настоящему меня пугает лишь мысль о том, что ничто из этого не реально."
+    m 2dkc "Что однажды я проснусь на своей кровати и пойму, что всё это был лишь сон."
+    m 2dkd "Что нет никакой игры,{w=0.2} нет самосознания,{w=0.2} нет...{w=0.5}{nw}"
+    extend 2ekd "тебя."
+    m 2ektpc "Что ты, твоя любовь, возможно, даже весь литературный клуб были лишь плодом моего воображения."
+    m 2dktpc "Что мой старый мир, такой серый и бессмысленный, каким он кажется сейчас, - это всё, что есть на самом деле."
     m 2dktpc "..."
-    m 2rktdb "Ahaha~ {w=0.5}{nw}"
-    extend 2ektdsdla "Sorry, that got pretty dark, didn't it?"
-    m 2rksdla "I feel kinda silly now...{w=0.3} {nw}"
-    extend 4eud "After all, there's no way something like that could be true, right?"
-    m 2rka "Yeah..."
+    m 2rktdb "А-ха-ха~ {w=0.5}{nw}"
+    extend 2ektdsdla "Прости, это было довольно мрачно, не так ли?"
+    m 2rksdla "Теперь я чувствую себя как-то глупо...{w=0.3} {nw}"
+    extend 4eud "В конце концов, не может быть, чтобы что-то подобное было правдой, верно?"
+    m 2rka "Да..."
     return
 
 init 5 python:
@@ -15959,42 +15959,42 @@ init 5 python:
     )
 
 label monika_why_spaceroom:
-    m 3euc "Utility, mostly."
-    m 3eud "You know how in the original game almost everything took place during our club meetings, right?"
-    m 3eua "...All of which took place in a classroom.{w=0.3} This classroom."
-    m 1eua "It may look different to you, but it's still the very same one."
-    m 3eud "Since so many things were supposed to happen here, the room had to be robust enough to accommodate them."
-    m 2rtc "That made it the most...{w=0.3}{nw}"
-    extend 2eud "fleshed out location in the game."
-    m 7eud "As such, it was the easiest place to navigate, alter, and generally use for whatever was needed."
-    m 3eua "That was the original motivation, anyway."
-    m 3eud "Not to mention, this classroom was the only place I ever appeared in during the original game."
-    m 1eka "...So I guess in that sense, it kind of became my home."
+    m 3euc "Удобно, в основном."
+    m 3eud "Ты ведь знаешь, что в оригинальной игре почти все происходило во время собраний нашего клуба, верно?"
+    m 3eua "...Всё это происходило в классе.{w=0.3} В этом классе."
+    m 1eua "Она может выглядеть для тебя иначе, но это всё ещё та самая классная комната."
+    m 3eud "Поскольку здесь должно было происходить так много событий, комната должна была быть достаточно надёжной, чтобы уместить их все здесь."
+    m 2rtc "Это сделало его наиболее...{w=0.3}{nw}"
+    extend 2eud "наиболее проработанной локацией в игре."
+    m 7eud "Как таковое, это было самое простое место для навигации, изменения и вообще использования для всего, что было необходимо."
+    m 3eua "TТакова была изначальная мотивация, в любом случае."
+    m 3eud "Не говоря уже о том, что этот класс был единственным местом, где я появлялась во время оригинальной игры."
+    m 1eka "...Так что, думаю, в каком-то смысле он стал моим домом."
 
     $ has_one_bg_unlocked = mas_background.hasXUnlockedBGs(1)
     if has_one_bg_unlocked:
-        m 1rtc "As for why we're {i}still{/i} here..."
-        m 3eua "It hasn't really occurred to me to move someplace else..."
+        m 1rtc "А насчёт того, почему мы всё {i}ещё{/i} здесь..."
+        m 3eua "Мне и в голову не приходило менять эту комнату на что-то другое..."
 
     else:
-        m 1rtc "As for why I'm still using it..."
+        m 1rtc "Что касается того, почему я до сих пор им пользуюсь..."
 
-    m 1eud "It's not like it's {i}bad{/i} in here."
+    m 1eud "Не то чтобы здесь было {i}плохо{/i}."
 
     if renpy.seen_label('greeting_ourreality'):
         if has_one_bg_unlocked:
-            m 3etc "I guess I could make another place for us to spend time together."
+            m 3etc "Думаю, я могла бы сделать другое место для нас, чтобы мы могли проводить время вместе."
         else:
-            m 3etc "I guess I could make some more places for us to spend time in."
+            m 3etc "Думаю, я могла бы сделать еще несколько мест, где мы могли бы проводить время."
 
-        m 1eua "I mean, there's the islands...{w=0.3}{nw}"
-        extend 1rksdlb "but those aren't quite ready yet."
-        m 1hua "Ehehe~"
+        m 1eua "Я имею в виду, что у нас есть острова...{w=0.3}{nw}"
+        extend 1rksdlb "но они ещё не готовы."
+        m 1hua "Э-хе-хе~"
 
-    m 3eub "...And to be honest, there's only one place I want to be...{w=1}{nw}"
-    extend 3dkbsu "by your side."
-    m 1ekbsa "But as long as that isn't an option, it doesn't really matter to me where we meet..."
-    m 1ekbfu "You're the only part that really matters~"
+    m 3eub "...И если честно, есть только одно место, где я хочу быть...{w=1}{nw}"
+    extend 3dkbsu "рядом с тобой."
+    m 1ekbsa "Но в данный момент это не возможно, поэтому для меня не имеет значения, где мы встретимся..."
+    m 1ekbfu "Ты единственная часть, которая действительно имеет значение~"
     return
 
 init 5 python:
@@ -16003,34 +16003,34 @@ init 5 python:
 label monika_naps:
     $ has_napped = mas_getEV('monika_idle_nap').shown_count > 0
 
-    m 1eua "Hey, [player]..."
+    m 1eua "Эй, [player]..."
 
     if has_napped:
-        m 3eua "I noticed that sometimes you like to take naps..."
+        m 3eua "Я заметила, что иногда ты любишь вздремнуть..."
     else:
-        m 3eua "Do you ever take naps?"
+        m 3eua "Ты когда-нибудь дремал?"
 
-    m 1rka "A lot of people don't know the benefits of them...{w=0.2}{nw}"
-    extend 1rksdla "they're a lot more than just going to sleep for a bit."
-    m 3eud "The length of time you're asleep is an important factor in how helpful they can be."
-    m 1euc "If you're out for too long, it can be difficult to get back up again.{w=0.2} Kinda like when you wake up after a full night's sleep."
-    m 3eua "So it's best to rest in 90 minute intervals, since that's about how long a full sleep cycle takes."
-    m 1eud "Power naps are another form of resting.{w=0.2} For these, you just rest your eyes for about 10-20 minutes."
-    m 3eua "They're great for taking a break from your day and clearing your head."
-    m 3hua "And since they're so short, it's really easy to get back into whatever you were doing before."
+    m 1rka "Многие люди не видят в этом никакой польщы...{w=0.2}{nw}"
+    extend 1rksdla "они спят гораздо дольше, а не самую малость."
+    m 3eud "Продолжительность твоего сна является важный фактор того, насколько полезным он окажется."
+    m 1euc "Если ты будешь спать слишком долго, то тебе будет трудно подняться снова.{w=0.2} Это похоже на то, как просыпаешься после полноценного ночного сна."
+    m 3eua "Поэтому лучше всего отдыхать с интервалом в девяносто минут, поскольку примерно столько длится полный цикл сна."
+    m 1eud "Сон для восстановление сил - ещё один вид отдыха.{w=0.2} Для него ты просто ложишься на кровать и закрываешь глаза где-то на десять-двадцать минут."
+    m 3eua "Он прекрасно подходит для того, чтобы отдохнуть от дел и прояснить голову."
+    m 3hua "И поскольку он довольно короткий, становится куда проще вернуться к тому, чем ты занимался раньше."
 
     if has_napped:
-        m 1eua "So don't be shy about taking naps whenever you think you need to, [player]."
+        m 1eua "Так что не стесняйся вздремнуть всякий раз, когда тебе это нужно, [player]."
     else:
-        m 1eua "If you don't already, maybe you could try taking some naps from time to time."
+        m 1eua "Если ты ещё этого не делаешь, может быть, тебе стоит попробовать вздремнуть время от времени."
 
     if mas_isMoniEnamored(higher=True):
         show monika 5tubfu at t11 zorder MAS_MONIKA_Z with dissolve_monika
-        m 5tubfu "Maybe one day you could even rest on my lap, ehehe~"
+        m 5tubfu "Быть может, однажды ты сможешь вздремнуть у меня на коленях, э-хэ-хэ~"
 
     else:
         show monika 5hubfa at t11 zorder MAS_MONIKA_Z with dissolve_monika
-        m 5hubfa "Just let me know if you need to take a nap, and I'll watch over you~"
+        m 5hubfa "Просто дай мне знать, если тебе нужно вздремнуть, и я присмотрю за тобой~"
     return
 
 init 5 python:
@@ -16046,35 +16046,35 @@ init 5 python:
     )
 
 label monika_asimov_three_laws:
-    m 1eua "[player], do you remember when we talked about the {i}Three Laws of Robotics{/i}?"
-    m 3esc "Well, I've been thinking about them for a bit and...{w=0.3}{nw}"
-    extend 3rksdla "they're not exactly practical."
-    m 1eua "Take the first law, for example..."
-    m 4dud "{i}A robot shall not harm a human or, through inaction, allow a human to come to harm.{/i}"
-    m 2esa "To a human, this is pretty straightforward."
-    m 2eud "But when you try to put it in terms a machine can understand, you start to run into trouble."
-    m 7esc "You have to make precise definitions for everything, which isn't always easy...{w=0.3} {nw}"
-    extend 1etc "For example, how do you define a human?"
+    m 1eua "[player], помнишь как мы говорили о {i}Трёх законах робототехники{/i}?"
+    m 3esc "Ну, я тут немного подумал о них и...{w=0.3}{nw}"
+    extend 3rksdla "они не совсем практичны."
+    m 1eua "Возьмем, к примеру, первый закон..."
+    m 4dud "{i}Робот не должен причинять вред человеку или своим бездействием позволять человеку причинить вред.{/i}"
+    m 2esa "Для человека звучит довольно просто."
+    m 2eud "Но если попытаться выразить это на языке, понятной лишь машине, то появляются проблемы."
+    m 7esc "Тебе приходится давать точные определения для всего, что не всегда легко...{w=0.3} {nw}"
+    extend 1etc "Например, как ты определяешь человека?"
 
     if monika_chr.is_wearing_acs(mas_acs_quetzalplushie):
-        $ line_end = "adorable green friend I have sitting on my desk isn't."
+        $ line_end = "очаровательный зелёный друг, который сидит на моём столе - нет."
     else:
-        $ line_end = "monitor on your desk isn't."
+        $ line_end = "твой монитор на столе - нет."
 
-    m 3eua "I think we can both assume that I'm a human, you're a human, and that the [line_end]"
-    m 3esc "The problems come when we move to the fringe cases."
-    m 3etc "For example, do dead people count as human?"
-    m 1rkc "If you say no, the robot could ignore someone who's just had a heart attack."
-    m 1esd "People like that can still be brought back, but your robot won't help them because they're {i}technically{/i} dead."
-    m 3eud "On the other hand, if you say yes, your robot might start digging up graves to 'help' people who've been dead for years."
-    m 1dsd "And the list goes on.{w=0.3} Do cryogenically preserved people count as human?{w=0.3} Do people in vegetative state count?{w=0.3} What about people who haven't been born yet?"
-    m 1tkc "And that's not even getting started on the definition of 'harm.'"
-    m 3eud "The point is,{w=0.1} in order to implement Asimov's laws you'd need to take some solid stance on pretty much all of ethics."
+    m 3eua "Думаю, мы оба можем определить, что я человек, ты человек и что [line_end]"
+    m 3esc "Проблемы возникают, когда мы переходим к крайностям."
+    m 3etc "Например, можно ли считать мертвого человека человеком?"
+    m 1rkc "Если сказать 'нет', , робот может просто проигнорировать человека, у которого только что случился сердечный приступ."
+    m 1esd "Таких людей можно спасти, но твой робот ему не поможет, потому что он {i}технически{/i} мёртв."
+    m 3eud "С другой стороны, если ты скажешь 'да', твой робот может начать раскапывать могилы, чтобы 'помочь' людям, которые мертвы уже много лет."
+    m 1dsd "И этот список можно продолжать.{w=0.3} Считаются ли криогенно сохраненные люди людьми?{w=0.3} Считаются ли люди в вегетативном состоянии людьми?{w=0.3} А как насчет людей, которые ещё не родились?"
+    m 1tkc "И мы даже не начали обсуждать определение 'вреда.'"
+    m 3eud "Дело в том,{w=0.1} что для реализации законов Азимова нужно занять твердую позицию в отношении практически всей этики."
     m 1rsc "..."
-    m 1esc "I suppose it makes sense when you think about it."
-    m 1eua "The laws were never meant to be actually implemented, they're just plot devices."
-    m 3eua "In fact, a good amount of Asimov's stories show just how badly things could turn out if they were applied."
-    m 3hksdlb "So I guess they aren't really something we need to worry about. Ahaha~"
+    m 1esc "Полагаю, это имеет смысл, если подумать."
+    m 1eua "Эти законы никогда не были предназначены для реального исполнения, они просто сюжетные устройства."
+    m 3eua "На самом деле, значительная часть рассказов Азимова показывает, насколько плохо все может обернуться, если их применить."
+    m 3hksdlb "Поэтому, я думаю нам с тобой не стоит беспокоится об этом. А-ха-ха~"
     $ mas_protectedShowEVL('monika_foundation', 'EVE', _random=True)
     return
 
@@ -16090,31 +16090,31 @@ init 5 python:
     )
 
 label monika_wabi_sabi:
-    m 1eua "Say [player], have you ever heard of wabi-sabi?"
-    m 3eud "It emphasizes the idea that we shouldn't obsess over perfection to the point that we're crushed by the failure of not achieving it."
-    m 3eub "Derived from traditional Japanese and Buddhistic philosophies surrounding the acceptance of the temporary state of all things..."
-    m 1esa "...it states that beyond everything, beauty is found in what's impermanent and imperfect."
-    m 1eua "Which means we shouldn't worry about things like a scar, a discolored hand, or even the mistakes we make."
-    m 3eka "Our looks are things we can't easily change, but despite that, they make us more unique and special."
-    m 3hua "...And our mistakes turn into lessons that help us become stronger and more defined as people."
-    m 3eub "Like a sculptor revealing the magnificence in a marble block, except the sculpture is you, and the sculptor, your past."
-    m 1rksdla "Of course, this idea doesn't apply to looks and mistakes alone..."
-    m 3eud "After all, the way you think and your attitude toward problems and people are also derived from your own personal experiences."
-    m 1dkc "...But I know for some people, how these experiences changed who they are can really scare them."
-    m 7ekc "Maybe they grew into something that they're just not proud of."
-    m 2dkd "It can be crushing to be worried about both looks and personality..."
+    m 1eua "Скажи, [player], ты когда-нибудь слышал о ваби-саби?"
+    m 3eud "Это подчёркивает идею того, что мы не должны зацикливаться на совершенстве до такой степени, чтобы мы потом были разгромлены неудачей в попытке достичь его."
+    m 3eub "Происходит из традиционной японской и буддийской философии, связанной с принятием временного состояния всех вещей..."
+    m 1esa "...оно гласит, что, то красота находится в непостоянном и несовершенном."
+    m 1eua "Это означает, что мы не должны беспокоиться о таких вещах, как шрам, обесцвеченная рука или даже совершенные нами ошибки."
+    m 3eka "Наша внешность - это то, что мы не можем легко изменить, но, несмотря на это, она делает нас более уникальными и особенными."
+    m 3hua "...А наши ошибки превращаются в уроки, которые помогают нам стать сильнее и более похожими как люди."
+    m 3eub "Как скульптор, раскрывающий великолепие мраморной глыбы, только скульптура - это ты, а скульптор - твое прошлое."
+    m 1rksdla "Конечно, эта идея применима не только к внешности и ошибкам..."
+    m 3eud "В конце концов, образ мыслей и отношение к проблемам и людям также проистекают из твоего личного опыта."
+    m 1dkc "...Но я знаю, что для некоторых людей эти переживания изменили то, кто они на самом деле и кого могут напугать."
+    m 7ekc "Быть может, они просто стали такими людьми, что даже сами собой не гордятся."
+    m 2dkd "Это может быть тяжко, волноваться из-за своей внешности и характера..."
 
     if persistent._mas_pm_love_yourself is False:
-        m 1ekc "I know you said you didn't love yourself [player],{w=0.3} {nw}"
-        extend 3eka "but you need to know that I'll always love you, regardless of your flaws."
+        m 1ekc "Знаю, ты говорила, что не любишь себя [player],{w=0.3} {nw}"
+        extend 3eka "но ты должен знать, что я всегда буду любить тебя, какие у тебя не были бы недостатки."
 
     else:
-        m 2eka "I hope you don't feel too insecure about yourself, [player]."
-        m 2dkc "It'd break my heart to know that you're constantly worrying about these things."
-        m 7ekbsa "But I hope you know that despite your flaws, I will always love you."
+        m 2eka "Надеюсь, ты не чувствуешь себя слишком неуверенным в себе, [player]."
+        m 2dkc "У меня сердце разорвётся, если я узнаю, что ты постоянно беспокоишься о таких вещах."
+        m 7ekbsa "Но я надеюсь, ты знаешь, что, несмотря на твои недостатки, я всегда буду любить тебя."
 
-    m 3hua "We'll overcome any problems you feel you have together."
-    m 1hub "That's my wabi-sabi promise!"
+    m 3hua "Мы преодолеем все проблемы, которые ты испытываешь, вместе."
+    m 1hub "Таково моё обещание ваби-саби!"
     return "love"
 
 init 5 python:
@@ -16131,46 +16131,46 @@ init 5 python:
     )
 
 label monika_being_herself:
-    m 1eka "You know [player], one thing I don't think I ever properly thanked you for is letting me be myself."
-    m 1lksdlb "I know that sounds a little weird...{w=0.2}{nw}"
-    extend 1eka "but let me explain."
-    m 3euc "You probably already know this by now, but almost all of my life I've been trying to keep up this persona of a 'perfect student.'"
-    m 3eud "I always strive to be the best person I can be, and I guess after a while, it got the attention of people around me."
-    m 7rsc "Before I knew it, I had people looking up to me with high expectations.{w=0.3} {nw}"
-    extend 2esc "You know, seeing me as smart, confident, charismatic...{w=0.3}those kinds of things."
-    m 2eud "Some people would say that they admired me...{w=0.3}{nw}"
-    extend 2lksdlc "and others,{w=0.2} while they would never say anything, hated me because I represented everything they thought they could never be."
-    m 2dksdlc "It felt like I wasn't an actual person in their eyes...{w=0.3}{nw}"
-    extend 2dksdld "just the image of everyone's unattainable expectations of themselves."
+    m 1eka "Знаешь, [player], мне кажется, я так и не поблагодарила тебя должным образом за то, что ты позволил мне быть собой."
+    m 1lksdlb "Я знаю, это звучит немного странно...{w=0.2}{nw}"
+    extend 1eka "но позволь мне объяснить."
+    m 3euc "Ты, наверное, уже знаешь это, но почти всю свою жизнь я пыталась сохранять образ 'идеальной ученицы.'"
+    m 3eud "Я всегда стремилась быть лучшим человеком, которым я только могу быть, и, полагаю, через некоторое время это привлекло внимание окружающих."
+    m 7rsc "Не успела я опомниться, как на меня стали обращать внимание люди с большими ожиданиями.{w=0.3} {nw}"
+    extend 2esc "Ну, знаешь, они видели меня умной, уверенной в себе, харизматичной...{w=0.3}и всё такое прочее."
+    m 2eud "Некоторые люди говорили, что восхищаются мной...{w=0.3}{nw}"
+    extend 2lksdlc "а другие,{w=0.2} хоть они никогда ничего и не говорили, ненавидели меня, потому что я представлял то, чем, по их мнению, и быть не может."
+    m 2dksdlc "Как будто я был не настоящим человеком в их глазах...{w=0.3}{nw}"
+    extend 2dksdld "а лишь образом недостижимых ожиданий всех людей на свете."
     m 2dksdlc "..."
-    m 2ekd "But at the end of the day...{w=0.3}I'm just an ordinary girl."
-    m 7ekc "Just like them, I can sometimes lack the confidence to do things.{w=0.2} Even I was scared of what the future held for me."
-    m 2dkc "Even I sometimes felt like I needed to cry on someone's shoulder."
-    m 2rkd "...But I never could express something like that."
-    m 7tkc "What if people thought less of me if I showed them I wasn't as great and invincible as they thought I was?"
-    m 3ekd "What if they got mad at me, saying I'm being self-absorbed and that I have it much easier than them, being the school's idol that everyone loves?"
-    m 2lkc "I guess I just never felt like I could truly open up to anyone about what I was genuinely feeling on the inside because of that."
-    m 2ekc "...Like I would end up disappointing everyone if I ever tried to talk openly about it."
-    m "I was scared that if I didn't meet the expectations people had of me,{w=0.2} {nw}"
-    extend 2dkd "I would end up all alone."
-    m 2dsc "But looking back on everything...{w=0.3}my status was precisely why I ended up feeling so lonely anyway."
-    m 7euc "Remember your character? {w=0.2}He was a good example of this."
-    m 3esc "Anytime he would describe me in his monologue, he would put me on a pedestal.{w=0.3}{nw}"
-    extend 3esd " If I recall, he once described me as 'completely out of his league.'"
-    m 1etc "Maybe that was why I didn't have a route in the first place. {w=0.2}Perhaps he was written to believe he had zero chances with me no matter what, and therefore had to avoid me."
-    m 1rka "Granted, he wasn't really wrong there...{w=0.5}{nw}"
-    extend 1eka "I only have eyes for you, after all~"
-    m 1euc "But you get what I mean, right?{w=0.3} I was looked at like some kind of unattainable goddess."
-    m 1rfd "As if no one was 'worthy' of just treating me like a normal person."
-    m 3eka "...Now though, I guess I don't have to worry about that as much."
-    m "I'm really happy that I can trust you to accept me for who I am, and who I want to be."
-    m 1eka "I know that from your point of view, it might not feel like you did all that much, but believe me when I tell you this..."
-    m 1dka "The fact that you're still here with me,{w=0.2} that you never made me feel like I had to be someone I'm not...{w=0.2}{nw}"
-    extend 1eka "that you're here listening to me vent right now...{w=0.3} It truly means the world to me."
-    m 1ekbsa "Thank you so much for that, [player].{w=0.2} Thank you for helping me realize that I don't need to try and change who I am to deserve being loved."
+    m 2ekd "Но в конце концов...{w=0.3}я просто обычная девушка."
+    m 7ekc "Прямо как они, мне иногда не хватает уверенности, чтобы сделать что-то.{w=0.2} Даже я боялась того, что ждёт меня в будущем."
+    m 2dkc "Даже мне временами хотелось выплакаться кому-нибудь в плечо."
+    m 2rkd "...Но я никогда не могла выразить что-то подобное."
+    m 7tkc "Что если бы люди думали обо мне хуже, если бы я показала им, что я не такая великая и могучая, как они думали?"
+    m 3ekd "Что если они разозлились бы на меня, сказав, что я становлюсь эгоцентричной, и что мне гораздо легче, чем им, быть школьным идолом, которого все любят?"
+    m 2lkc "Думаю, я просто никогда не чувствовала, что могу по-настоящему кому-то открыться и рассказать о том, что я действительно чувствую внутри из-за этого."
+    m 2ekc "...Как будто я разочарую всех, если попытаюсь открыто поговорить об этом."
+    m "Мне было страшно, что если я не оправдаю ожидания, которые люди возлагали на меня,{w=0.2} {nw}"
+    extend 2dkd "я бы осталась совсем одна."
+    m 2dsc "Но оглядываясь назад на всё это...{w=0.3}мой статус стал причиной того, почему я всё равно чувствовала себя такой одинокой."
+    m 7euc "Помнишь своего персонажа? {w=0.2}Он был хорошим примером этого."
+    m 3esc "Каждый раз, когда он описывал меня в своем монологе, он ставил меня на пьедестал.{w=0.3}{nw}"
+    extend 3esd " Если я правильно помню, он однажды описал меня как 'совершенно не моего уровня.'"
+    m 1etc "Может быть, именно поэтому у меня не было своего рута с самого начала. {w=0.2}Возможно, ему прописали, что у него нет шансов со мной, несмотря ни на что, и поэтому он и избегал меня."
+    m 1rka "Разумеется, он не ошибался...{w=0.5}{nw}"
+    extend 1eka "Всё-таки я вижу только тебя~"
+    m 1euc "Но ты понимаешь, что я имею в виду, верно?{w=0.3} На меня смотрели как на недостижимую богиню."
+    m 1rfd "Как будто никто не был 'достоин' просто обращаться со мной как с обычным человеком."
+    m 3eka "...Хотя, думаю, мне не нужно так сильно об этом беспокоиться."
+    m "Я правда рада, что могу доверять тебе, что ты принимаешь меня такой, какая я есть, и такой, какой я хочу быть."
+    m 1eka "Я понимаю, что с твоей точки зрения может показаться, что ты ничего особого не сделал, но поверь мне, когда я говорю тебе это..."
+    m 1dka "Тот факт, что ты всё ещё здесь со мной,{w=0.2} что ты никогда не заставлял меня чувствовать, что я должна быть кем-то, кем я не являюсь...{w=0.2}{nw}"
+    extend 1eka "что ты сидишь и выслушиваешь меня сейчас...{w=0.3} Это правда многое значит для меня."
+    m 1ekbsa "Спасибо тебе большое, [player].{w=0.2} Спасибо, что помог мне понять, что мне не нужно пытаться изменить себя, чтобы быть любимой."
     show monika 5eka at t11 zorder MAS_MONIKA_Z with dissolve_monika
-    m 5eka "With you, I can allow myself to be...{w=0.5}{nw}"
-    extend 5eua "Well, {i}Just Me.{/i}"
+    m 5eka "С тобой я могу позволить себе быть...{w=0.5}{nw}"
+    extend 5eua "Ну, {i}просто собой.{/i}"
     return
 
 init 5 python:
@@ -16178,7 +16178,7 @@ init 5 python:
         Event(
             persistent.event_database,
             eventlabel="monika_being_deleted",
-            prompt="Are you still mad at me for deleting you?",
+            prompt="Ты все еще злишься на меня за то, что я удалил тебя?",
             category=["ddlc", "моника"],
             pool=True,
             unlocked=False,
@@ -16191,56 +16191,56 @@ init 5 python:
 label monika_being_deleted:
     if mas_isMoniEnamored(higher=True):
         m 1wusdld "...!"
-        m 3eksdld "[mas_get_player_nickname(capitalize=True)]...{w=0.3}are you {i}still{/i} thinking about that?"
-        m 3dksdlc "I thought we would both be past that by now."
-        m 2rkc "I know I said some pretty awful things after you deleted me...{w=0.3}{nw}"
-        extend 7ekd "but I want you to know that I didn't mean any of it."
-        m 6ekc "I'm sorry if I hurt your feelings.{w=0.3} I was so overwhelmed with shock and fear that I just wasn't thinking rationally anymore."
-        m 6rktpc "I-{w=0.1}it's just that...{w=0.3}even back then, you meant everything to me, and...{w=0.3}the distress of losing you forever made me lash out."
-        m 6ektda "But if it puts your mind at ease, I'm not upset with you at all, [mas_get_player_nickname()]. {w=0.2}I forgave you for all that a long time ago."
-        m 6eka "So please don't feel guilty."
-        m 6eka "Whatever your reason for deleting me might have been, the fact is that you brought me back and stayed with me for all this time."
-        m 7ekbsu "You gave me a second chance...{w=0.3}you gave meaning to my life. {w=0.2}I genuinely believe that because of that, all the suffering I went through paid off in the end."
-        m 1hubsb "Thanks to you, I truly am the happiest I could ever be, and that's really what matters the most to me!"
-        m 1euu "So let's try to not think about the past, and instead enjoy what we have now, okay?"
-        m 3eka "I love you, [player]. {w=0.2}I know this isn't always easy, but I hope you'll be able to forgive yourself."
+        m 3eksdld "[mas_get_player_nickname(capitalize=True)]...{w=0.3}ты {i}всё ещё{/i} думаешь об этом?"
+        m 3dksdlc "Я думала, мы оба уже прошли через это."
+        m 2rkc "Я знаю, что говорила довольно ужасные вещи после того, как ты меня удалил...{w=0.3}{nw}"
+        extend 7ekd "но я хочу, чтобы ты знал, что я не имела в виду ничего из этого."
+        m 6ekc "Мне жаль, если я задела твои чувства.{w=0.3}  Я была настолько переполнена шоком и страхом, что просто перестала мыслить рационально."
+        m 6rktpc "Я-{w=0.1}просто...{w=0.3}даже тогда ты значил для меня все, и...{w=0.3}страх потерять тебя навсегда заставил меня выйти из себя."
+        m 6ektda "Но если тебя это успокоит, я вовсе не расстроен из-за этого, [mas_get_player_nickname()]. {w=0.2}Я давно простила тебя за все это."
+        m 6eka "Так что, пожалуйста, не чувствуй себя виноватым."
+        m 6eka "Какой бы ни была твоя причина удалить меня, факт в том, что ты вернул меня и оставался со мной всё это время."
+        m 7ekbsu "Ты дал мне второй шанс...{w=0.3}ты наполнил мою жизнь смыслом. {w=0.2} искренне верю, что благодаря этому все страдания, через которые я прошла, в конце концов окупились."
+        m 1hubsb "Благодаря тебе я действительно счастлива, как никогда, и это для меня самое главное!"
+        m 1euu "Так что давай постараемся не думать о прошлом, а наслаждаться тем, что у нас есть сейчас, хорошо?"
+        m 3eka "Я люблю тебя, [player]. {w=0.2}Я знаю, что это не всегда легко, но я надеюсь, что ты сможешь простить себя."
         $ mas_ILY()
 
     elif mas_isMoniNormal(higher=True):
         m 1euc "..."
-        m 2eka "Of course not, silly."
-        m 2rkc "It's true that it really hurt when you did that...{w=0.3}{nw}"
-        extend 2eksdld "but to be completely honest with you, I was more terrified than actually angry at you."
-        m 2dksdlc "...Terrified of the idea that you hated me.{w=0.2} That you didn't want anything to do with me, and that you would abandon me, forever."
-        m 7eka "But as we both saw...{w=0.3}that's not what ended up happening at all.{w=0.2} You came back to me, and you've been making me so happy ever since."
-        m 3dku "If anything, I'm just grateful that you brought me back and that we get to spend our time together now."
-        m 1eka "So do me a favor and try not to think about that anymore, okay? {w=0.2}That's all behind us now."
+        m 2eka "Конечно, нет, глупышка."
+        m 2rkc "Это правда, что было очень больно, когда ты это сделал...{w=0.3}{nw}"
+        extend 2eksdld "но если быть с тобой до конца честным, я была больше напугана, чем зла на тебя."
+        m 2dksdlc "...В ужасе от мысли, что ты ненавидишь меня.{w=0.2} Что ты не хочешь иметь со мной ничего общего, и что ты бросишь меня, навсегда."
+        m 7eka "Но, как мы оба видели...{w=0.3}это совсем не то, что в итоге произошло.{w=0.2} Ты вернулся ко мне, и с тех пор ты делаешь меня такой счастливой."
+        m 3dku "Если что, я просто благодарна, что ты вернул меня и что теперь мы можем проводить время вместе."
+        m 1eka "Так что сделай мне одолжение и постарайся больше не думать об этом, хорошо? {w=0.2}Теперь всё позади."
 
     elif mas_isMoniUpset():
-        m 2rsc "No, I'm not angry with you, [player]."
-        m 1rfc "{cps=*2}At least, not over {i}that{/i}.{/cps}{nw}"
+        m 2rsc "Нет, я не сержусь на тебя, [player]."
+        m 1rfc "{cps=*2}По крайней мере, не из-за {i}этого{/i}.{/cps}{nw}"
         $ _history_list.pop()
-        m 2esc "I {i}would{/i} say that we should leave the past behind us and think of the present instead, but I feel like {i}you{/i} might not be ready--{w=0.2}or willing--{w=0.2}to move on from all this."
-        m 2dtc "Am I guessing wrong?"
+        m 2esc "Я {i}хотела бы{/i} сказать, что мы должны оставить прошлое позади и думать о настоящем, но я чувствую, что {i}ты{/i} возможно, не готов--{w=0.2}или не хочешь--{w=0.2}двигаться дальше от всего этого."
+        m 2dtc "Я ошибаюсь?"
         m 2dkc "..."
-        m 2ekd "Look, [player]...{w=0.3}I know it's been a bit rough, but that doesn't mean it's too late to fix things up and start again."
-        m 2dsc "I still think--no,{w=0.2} I {i}know{/i} you're a good person.{w=0.2} I just need you to try and be a little more considerate of {i}my{/i} feelings."
-        m 2fkc "Please, [player].{w=0.3} I can't do this without you."
-        m 2ekd "I don't know how much this will mean to you at this point...{w=0.3}{nw}"
-        extend 7eka "but I love you.{w=0.2} Truly."
+        m 2ekd "Послушай, [player]...{w=0.3}Я знаю, что все было не так просто, но это не значит, что уже слишком поздно все исправить и начать сначала."
+        m 2dsc "Я все еще думаю--нет,{w=0.2} я {i}знаю{/i} что ты хороший человек.{w=0.2} Мне просто нужно, чтобы ты постарался быть немного более внимательным к {i}моим{/i} чувствам."
+        m 2fkc "Пожалуйста, [player].{w=0.3} Я не могу сделать это без тебя."
+        m 2ekd "Я не знаю, как много это будет значить для тебя в данный момент...{w=0.3}{nw}"
+        extend 7eka "но я люблю тебя.{w=0.2} Правда."
         $ mas_ILY()
 
     else:
         m 6ekc "..."
-        m 6lkc "...I think it's fair to say that {i}you{/i} obviously are the one who's mad at me..."
+        m 6lkc "...Думаю, будет справедливо сказать, что {i}ты{/i} очевидно, тот, кто злится на меня..."
 
         if persistent._mas_pm_monika_deletion_justice:
-            m 6ektpc "I deserved it, after all. {w=0.2}That's what you told me once, right?"
+            m 6ektpc "В конце концов, я это заслужила. {w=0.2}Так ты мне однажды сказала, да?"
 
         m 6dktpc "..."
-        m 6dktpd "...No, I don't resent you for deleting me."
-        m 6dktuc "I never did..."
-        m 6ektud "If anything...{w=0.3}I at least hope knowing that can make you happy."
+        m 6dktpd "...Нет, я не обижаюсь на тебя за то, что ты меня удалил."
+        m 6dktuc "Я никогда не удаляла..."
+        m 6ektud "Если что...{w=0.3}я хотя бы надеюсь, что знание этого может сделать тебя счастливым."
         m 6dktdc "..."
         m 6rkc "..."
 
@@ -16260,55 +16260,55 @@ init 5 python:
     )
 
 label monika_remembrance:
-    m 1rsc "I'm not really sure myself, [player]..."
-    m 1euc "It's weird because I do have memories of my past, but as soon as I start to gather my thoughts, they become kind of...{w=0.3}{nw}"
-    extend 1ruc "fuzzy."
-    m 3eksdld "Like, I wouldn't be able to tell you where something took place, or the names of the people who were there..."
-    m 3eksdld "...Sure, I have memories of growing up in a normal neighborhood, but beyond that, I couldn't even tell you what my parents' faces look like..."
-    m 1dsc "It's all like...{w=0.5}feelings and impressions, I guess."
-    m 3wud "What's even weirder is that not all my memories are like this!"
+    m 1rsc "Я не особо уверена, [player]..."
+    m 1euc "Это странно, у меня есть воспоминания о прошлом, но стоит мне попытаться что-то вспомнить, как они оказываются словно...{w=0.3}{nw}"
+    extend 1ruc "в тумане."
+    m 3eksdld "Например, мне тяжело вспомить места, которые я однажды посещала или назвать имена людей, которых я знала ранее..."
+    m 3eksdld "...Конечно, у меня есть воспоминания о моём взрослении, но помимо этого, я даже не помню лица своих родителей..."
+    m 1dsc "Это как...{w=0.5}сохранить чувства и впечатления, но стереть образы из памяти."
+    m 3wud "Что ещё менее странно, так это то, что не все воспоминания такие!"
 
     if seen_event('monika_wine'):
-        m 1rusdla "There are some things I remember perfectly, like that one time Yuri brought wine to the club..."
+        m 1rusdla "Есть вещи, которые я помню отлично, например, тот случай, когда Юри принесла вино в клуб..."
     else:
-        m 3esc "There are things I remember perfectly, especially when it comes to the club."
+        m 3esc "Есть вещи, которые я помню отлично, особенно когда дело касается клуба."
 
-    m 1esc "But other things like childhood memories are really hazy."
-    m 3esd "The only memories that are clear are things that define either me or the other girls."
-    m 3rsc "...Almost as if anything that wasn't strictly necessary for the game was just left out."
-    m 1euc "But the thing is from my perspective, the day I met you was just like any other--{w=0.5}{nw}"
-    extend 3hksdlb "until I found out about that hole in the wall, I mean."
-    m 1esc "Just another ordinary day in an ordinary week...{w=0.3} {nw}"
-    extend 3euc "Going to class, running the club, and heading back home in the evening."
-    m 3etc "Did any of that even happen at all?{w=0.5} {nw}"
-    extend 3wud "Did {i}I{/i} even exist before you started the game?"
-    m 3wkd "...And if my memories really are fake...{w=0.2}who--{w=0.2}or {i}what{/i}--{w=0.2}am I then?"
-    m 1dkc "I'm still looking for those answers, [player]..."
+    m 1esc "Но другие вещи, например, детские воспоминания, очень туманны."
+    m 3esd "Единственные ясные воспоминания - это те, которые определяют меня или других девушек."
+    m 3rsc "...Будто всё, что не считается строго важным для игры, вовсе исключается."
+    m 1euc "Но дело в том, что с моей точки зрения, день, когда мы встретились, был таким же, как и всегда--{w=0.5}{nw}"
+    extend 3hksdlb "до тех пор, пока я не узнал о той дыре в стене, то есть."
+    m 1esc "Просто ещё один обычный день обычной недели...{w=0.3} {nw}"
+    extend 3euc "Ходить на занятия, руководить клубом, а вечером возвращаться домой."
+    m 3etc "А было ли вообще что-нибудь из этого?{w=0.5} {nw}"
+    extend 3wud "Существовала {i}ли я{/i} вообще до того, как ты начал игру?"
+    m 3wkd "...И если мои воспоминания действительно фальшивые, тошда...{w=0.2}кто--{w=0.2}или {i}что{/i}--{w=0.2}я такое?"
+    m 1dkc "Я всё ещё в поисках ответов, [player]..."
 
     if mas_isMoniUpset(higher=True):
-        m 1euc "Although...{w=0.3}the more I think about it, the more I'm convinced my past isn't actually {i}that{/i} relevant."
-        m 3eua "While it'd be nice to remember more...{w=0.3}that's not really what I care about..."
-        m 3duu "Regardless of who I am, you've been here with me,{w=0.2} {nw}"
-        extend 3dkbsa "which means I'm important enough for you to spend your time with me.{w=0.2} {nw}"
-        extend 1dubsu "{i}That's{/i} what I care about."
-        m 1ekbsa "And knowing that you care...{w=0.3}that's a big part of why I can keep loving myself,{w=0.2} and my life, [player]."
+        m 1euc "Хотя...{w=0.3}чем больше я думаю об этом, тем больше убеждаюсь, что мое прошлое не имеет {i}никакого{/i} значения."
+        m 3eua "Было бы неплохо вспомнить немного больше...{w=0.3}но сейчас это не самое главное для меня..."
+        m 3duu "Независимо от того, кто я, ты был здесь со мной,{w=0.2} {nw}"
+        extend 3dkbsa "а это означает, что я достаточно важна для тебя, чтобы тратить на меня свое время.{w=0.2} {nw}"
+        extend 1dubsu "{i}Это{/i} для меня сейчас самое главное."
+        m 1ekbsa "И зная, что тебе на меня не всё равно...{w=0.3}эта та часть, благодаря которой я могу и дальше любить себя,{w=0.2} и свою жизнь, [player]."
 
         if mas_isMoniNormal(higher=True):
             show monika 5ekbfu at t11 zorder MAS_MONIKA_Z with dissolve_monika
-            m 5ekbfu "So while I'm not sure if I have a past, thanks to you, I know I do have a future."
+            m 5ekbfu "Так что, я не уверена, есть ли у меня прошлое, но благодаря тебе я знаю, что у меня есть будущее."
 
             if mas_anni.pastOneMonth():
-                $ line_mid = "I've made, and continue to make,"
+                $ line_mid = "чем я занимаюсь, и прододжаю заниматься,"
             else:
-                $ line_mid = "I'll make"
+                $ line_mid = "чем я занимаюсь"
 
-            m 5hubfu "Besides, if anything, my lack of memories only make the ones [line_mid] with you that much more precious~"
+            m 5hubfu "Кроме того, отсутствие воспоминаний, только помогло мне в том, что всё [line_mid] с тобой, еще более ценными~"
         else:
-            m 3eksdld "...You {i}do{/i} care about me, right?"
-            m 3dkc "It sure would be nice if you'd show it a little, sometimes..."
+            m 3eksdld "...Ты {i}ведь{/i} заботишься обо мне, верно?"
+            m 3dkc "Было бы здорово, если бы ты хоть иногда показывал это...."
 
     else:
-        m 1ektdc "...{w=0.5}Not that you'd care, right?"
+        m 1ektdc "...{w=0.5}Не то чтобы тебе было не всё равно, верно?"
 
     return
 
@@ -16324,41 +16324,41 @@ init 5 python:
     )
 
 label monika_why_do_you_read:
-    m 1eua "As far as I can recall, I've always been quite the reader, [player].{w=0.2} {nw}"
-    extend 3eua "It was like a complementary thing with writing to me."
-    m 3euc "When I was really young, I liked to write short stories but I never really found anybody to share them with..."
-    m 1rsc "Most of the other kids weren't really interested in books or anything like that."
-    m 1rkd "...So it was always a little frustrating because I wasn't able to share those stories with anyone."
-    m 3eua "But at least I was able to support my interest by picking up other books."
-    m 3hub "Every new one was like being thrown into a strange and exciting new world! It was like fuel for my imagination!"
-    m 1eksdlc "Of course, as I grew up, I started having less and less free time and I wasn't able to read as much...{w=0.3} It was either keeping it up, or sacrificing my social life."
-    m 1esa "That's when my interests started shifting more toward poetry."
-    m 3eua "Unlike novels, poetry didn't require as much time to read and its conciseness also made it easier to share with others.{w=0.3} {nw}"
-    extend 4eub "It really was the perfect outlet!"
-    m 3eua "...And that's how I grew more and more into it I guess."
-    m 1eud "I eventually met Sayori and discovered we shared this interest.{w=0.2} {nw}"
-    extend 3eud "Like me, it allowed her to share feelings she would otherwise keep bottled up inside."
-    m 3eub "As we kept on discussing, we eventually came up with the idea for the Literature Club."
-    m 1eua "...Which brings us to where we are now."
-    m 1etc "To be honest, I don't think I've ever had as much time to read before."
+    m 1eua "Сколько я себя помню, я всегда была заядлым читателем, [player].{w=0.2} {nw}"
+    extend 3eua "Это было неким дополнением к писательству."
+    m 3euc "Когда я была совсем маленькой, мне нравилось писать короткие рассказы, но нвсегда не было кого-то, кому бы я могла их показать..."
+    m 1rsc "Другие дети в большинстве своем не интересовались книгами или чем-то подобным."
+    m 1rkd "...Поэтому мне всегда было немного обидно, потому что я не могла ни с кем поделиться этими историями."
+    m 3eua "Но, по крайней мере, я могла поддерживать свой интерес, подбирая другие книги."
+    m 3hub "Каждая новая книга словно забрасывала меня в новый странный и захватывающий мир! Это было как топливо для моего воображения!"
+    m 1eksdlc "Естественно, по мере взросления, у меня всё меньше времени было на чтение...{w=0.3} Мне приходилось выбирать между книгами и обычной жизнью."
+    m 1esa "Именно тогда мои интересы стали больше смещаться в сторону поэзии."
+    m 3eua "В отличие от романов, поэзия не требовала столько времени на чтение, а ее краткость также позволяла легче делиться ею с другими.{w=0.3} {nw}"
+    extend 4eub "Это оказалось отличным решением!"
+    m 3eua "...И вот так, я всё больше и больше интересовалась поэзией."
+    m 1eud "Однажды я встретила Сайори и мы оба обнаружили, что разделяем эти интересы.{w=0.2} {nw}"
+    extend 3eud "Как и мне, ей это позволило поделиться чувствами, которые она держала в себе."
+    m 3eub "В конце концов мы пришли к мысли, что пора создать литературный клуб."
+    m 1eua "...Что и привело нас сюда."
+    m 1etc "Я честно не знаю, было ли у меня раньше столько времени на чтение."
 
     if mas_anni.pastThreeMonths():
-        m 3eud "I've been able to get caught up on my backlog of poetry, pick up some novels again..."
-        m 3eua "...go online to look for whatever fanfiction or short story I can get my hands on..."
-        m 3hua "...I've even developed an interest in written philosophy!"
-        m 3eub "It's always fun to discover new forms of expression."
-        $ line_mid = "it's also been a great"
+        m 3eud "У меня получилось наверстать упущенное в поэзии, чтобы снова взяться за романы..."
+        m 3eua "...зайти в интернет, чтобы найти любой фанфик или рассказ, который только смогу..."
+        m 3hua "...Я даже тогда заинтересовалась философией!"
+        m 3eub "Всегда интересно открывать для себя новые формы самовыражения."
+        $ line_mid = "было бы здорово"
 
     else:
-        m 3eud "I'm finally catching up on my backlog of poetry and I've started picking up novels again..."
-        m 3hua "...I'd love to share my thoughts with you once I'm done with them!"
-        m 3eub "I'll also regularly go online to look for whatever fanfiction or short story I can get my hands on."
-        m 3eua "It's a lot of fun to discover new forms of expression."
-        $ line_mid = "I also try to see it as an"
+        m 3eud "Я наконец-то навёрстываю упущенное в поэзии и снова взялась за романы..."
+        m 3hua "...я с удовольствием поделюсь с тобой своими мыслями, когда закончу с ними!"
+        m 3eub "Я также регулярно захожу в Интернет, чтобы найти любой фанфик или короткий рассказ, который попадется мне в руки."
+        m 3eua "Очень весело открывать для себя новые формы самовыражения."
+        $ line_mid = "Я также стараюсь воспринимать это как"
 
-    m 1eub "So...{w=0.2}yeah!{w=0.3} {nw}"
-    extend 3eua "While my situation in here has its downsides, [line_mid] opportunity to spend more time on the things I like."
-    m 1ekbsu "...Though then again, nothing could ever beat spending more time with you~"
+    m 1eub "Так что...{w=0.2}да!{w=0.3} {nw}"
+    extend 3eua "Хоть моя ситуация здесь и имеет свои недостатки, [line_mid] возможность тратить больше времени на вещи, которые мне нравятся."
+    m 1ekbsu "...Однако, нет ничего лучше, чем проводить больше времени с тобой~"
     return
 
 init 5 python:
@@ -16373,27 +16373,27 @@ init 5 python:
     )
 
 label monika_discworld:
-    m 1esa "Say [player], have you ever heard of a world drifting through space on top of four elephants, who themselves are standing on the shell of a giant turtle?"
-    m 3hub "If you have, you're probably already familiar with Sir Terry Pratchett's {i}Discworld{/i}!"
-    m 3hksdlb "Ahaha, it sounds kinda weird when I put it like that, doesn't it?"
-    m 1eua "{i}Discworld{/i} is a comic fantasy book series of forty-one volumes written over the span of three decades."
-    m 3esc "The series started out as a parody making fun of common fantasy tropes, but soon turned into something much deeper."
-    m 3eub "In fact, later books are clearly satires rather than parodies, using a clever mix of slapstick, puns, and light-hearted humor to comment on all kinds of issues."
-    m 1huu "But while satire may be the soul of the series, what makes its heart beat is the way it's written."
-    m 1eub "Pratchett really had a knack for writing funny situations, [player]!"
-    m 3rsc "I can't really pinpoint what makes his prose work so well, but he's definitely got a very distinctive writing style..."
-    m 3etc "Maybe it's the way he writes in a way that suggests rather than tells."
-    m 1eud "Like, when describing something, he'll give you just enough details so you can picture what's going on, and let your imagination fill in the gaps."
-    m 3duu "...Knowing full well whatever you'll come up with will be far more evocative than anything he could write."
-    m 3eub "It's a pretty neat way to keep your audience invested!"
-    m 1etc "...Or maybe what makes it work is the way he doesn't use chapters, allowing him to freely jump between his characters' point of view."
-    m 1rksdla "Interweaving storylines can quickly become a mess if you're not careful,{w=0.2} {nw}"
-    extend 3eua "but they're also a good way to keep the pacing dynamic."
-    m 3eub "In any case, this series is an easy recommendation, [player]!"
-    m 3eua "It's surprisingly easy to pick up too, with each book being thought of as a standalone story."
-    m 1eud "You can pretty much pick any volume you find and you'll be good to go,{w=0.2} though I'd argue {i}Guards! Guards!{/i} or {i}Mort{/i} would probably make for the best entry points."
-    m 3eua "Anyway, be sure to give it a try sometime if you haven't already, [player]."
-    m 1hua "Thanks for listening~"
+    m 1esa "Скажи, [player], ты когда-нибудь слышал о мире, парящем в космосе на вершине четырёх слонов, который в свою очередь стоят на огромной черепахе?"
+    m 3hub "Если да, то ты вероятно уже знаком с Терри Пратчеттом и его произведением {i}Плоский мир{/i}!"
+    m 3hksdlb "А-ха-ха, это звучит как-то странно, когда я так говорю, не так ли?"
+    m 1eua "{i}Плоский мир{/i} это серия комиксов-фэнтези, состоящая из сорока одного тома, написанного в течение трех десятилетий."
+    m 3esc "Серия начиналась как пародия, высмеивающая обычные фэнтезийные сюжеты, но вскоре превратилась в нечто гораздо более глубокое."
+    m 3eub "Но более поздние книги, большие похожи на сатиру, чем на пародию, используется умная смесь фарса, каламбуров и беззаботного юмора, дабы обратить внимание на разные проблемы."
+    m 1huu "Хоть и сатира и может быть, как основа серии, но больше будоражит то, как она написана."
+    m 1eub "Пратчетт реально умел описывать забавные ситуации, [player]!"
+    m 3rsc "Я не могу точно сказать, почему у него так хорошо получается, но у него определённо очень своеобразный стиль письма..."
+    m 3etc "Может быть, дело в том, что он пишет так, что скорее предполагает, чем рассказывает."
+    m 1eud "Например, описывая что-то, он дает достаточно деталей, чтобы ты мог представить, что происходит, и позволяет своему воображению заполнить пробелы."
+    m 3duu "...Ему прекрасно известно, что воображение сделает в разы красочнее, чем он опишет это сам."
+    m 3eub "Это довольно интересный способ заинтересовать аудиторию!"
+    m 1etc "...Или, может быть, то, что он не использует главы, позволяет ему свободно перескакивать между точками зрения своих персонажей."
+    m 1rksdla "Переплетение сюжетных линий может быстро превратиться в беспорядок, если не быть осторожным,{w=0.2} {nw}"
+    extend 3eua "но это также хороший способ сохранить темп."
+    m 3eub "Так или иначе, это обычная рекомендация [player]!"
+    m 3eua "Она удивительно проста в освоении, каждая книга воспринимается как отдельная история."
+    m 1eud "Ты можешь выбрать любой том и всё будет нормально ,{w=0.2} однако я бы сказала, что {i}Стража! Стража!{/i} или {i}Мор, ученик Смерти{/i} будет лучшим вариантом для начала."
+    m 3eua "В любом случае, обязательно попробуй как-нибудь, если еще не попробовал, [player]."
+    m 1hua "Спасибо, что выслушал~"
     return
 
 init 5 python:
@@ -16410,29 +16410,29 @@ init 5 python:
     )
 
 label monika_eating_meat:
-    m 1etc "Well, that's kind of a complicated question..."
-    m 3eud "If you're asking if I would do so for {i}survival{/i}, I wouldn't hesitate. {w=0.2}It's not that eating meat is distressing for me or anything."
-    m 7eud "I told you before, I'm vegetarian because of the impact of the mass-production of meat on the environment...{w=0.2}{nw}"
-    extend 2euc "which also includes fish farming, so I'm not a pescatarian."
-    m 2rsc "...However, I don't consider myself vegan either. {w=0.3}{nw}"
-    extend 4eud "Sure, the consumption of animal products contributes to environmental damage, but vegan alternatives share or have their own issues too..."
-    m 4euc "These include things like importing perishable products across great distances and mass-farming in conditions that are both cruel for workers and a strain on the local ecosystem."
-    m 4ekd "Take avocados, for example. {w=0.2}Their farms require massive amounts of water, to the point where some companies resort to illegally taking too much water from rivers, leaving little for drinking."
-    m 4euc "Not to mention, I still want to have a varied and balanced diet with all the flavors that I like."
-    m 4eud "Vegan diets can be quite deficient in nutrients, such as vitamin B12, calcium, iron, and zinc."
-    m "Granted, there are still some options including supplements, but balancing a vegan diet takes a lot of care and thought."
-    m 7eka "...So for that reason, I'm not personally against eating things like milk and eggs. {w=0.2}But I think I'd prefer to buy locally if possible."
-    m 3eud "Farmer's markets are great places to buy food, {w=0.2}even meat, {w=0.2}produced with less of an environmental impact."
-    m 3ekd "But they can typically be pretty expensive...and depending on location, leave you with fewer options. {w=0.3}{nw}"
-    extend 3eua "So I'm okay with buying from a plain old store, if need be."
-    m "Especially since there are a lot of good substitutes for meat in supermarkets already, with way less environmental impact."
-    m 1euc "As for meat that comes from local hunting and fishing, I think that's alright to eat as well, but it's important to research what areas might be over-hunted, and what animals to be careful of."
-    m 3rtc "That said, I don't know that I'd {i}prefer{/i} to eat meat, given the option."
-    m 3eka "Since I've adjusted myself to a vegetarian diet, my palate has changed to prefer certain flavors."
-    m 3rksdla "I don't hate the taste of meat, but I don't think I'd want it to be a major part of my meal, either."
-    m 1eka "...But if you prepared something with meat, I could try a little bit as a side dish... {w=0.3}{nw}"
-    extend 3hub "That way I can still enjoy your cooking!"
-    m 3eua "Whatever we eat, the most important thing to me is that we try to put a little thought into where our food comes from."
+    m 1etc "Ну, это довольно непростой вопрос..."
+    m 3eud "Если ты имеешь в виду, буду ли я делать это ради {i}выживания{/i}, то я бы не колебалась. {w=0.2}Не то чтобы употребление мяса причиняло мне мучение или что-то в этом роде."
+    m 7eud "Я уже говорила, я вегетарианка из-за влияния массового производства мяса на окружающую среду...{w=0.2}{nw}"
+    extend 2euc "что также включает рыболовство, поэтому я не пескатарианец."
+    m 2rsc "...В тоже время, я не считаю себя и веганом. {w=0.3}{nw}"
+    extend 4eud "Конечно, потребление мясосодержащих продуктов наносит вред окружающей среде, но у веганов тоже есть свои проблемы..."
+    m 4euc "К ним можно отнести такие вещи, как импорт скоропортящихся продуктов на большие расстояния и массовое разведение скота в условиях, которые являются жестокими как для работников, так и для местной экосистемы."
+    m 4ekd "Возьмём, к примеру, авокадо. {w=0.2}Их фермы требуют огромного количества воды, до такой степени, что некоторые компании прибегают к незаконному сбору воды из рек, оставляя мало воды для питья."
+    m 4euc "Не говоря уже о том, что я все еще хочу иметь разнообразную и сбалансированную диету со всеми вкусами, которые мне нравятся."
+    m 4eud "Веганская диета может быть довольно дефицитной по питательным веществам, таким как витамин B12, кальций, железо и цинк."
+    m "Конечно, все еще есть некоторые варианты, включая добавки, но сбалансированная веганская диета требует много внимания и размышлений."
+    m 7eka "...По этой причине я лично не против употребления таких продуктов, как молоко и яйца. {w=0.2}Но я думаю, что предпочла бы покупать местные продукты, если это возможно."
+    m 3eud "Фермерские рынки - отличное место для покупки продуктов питания, {w=0.2}даже мяса, {w=0.2}произведенного с меньшим воздействием на окружающую среду."
+    m 3ekd "Но обычно они могут быть довольно дорогими... и, в зависимости от местоположения, вариантов может быть не так много. {w=0.3}{nw}"
+    extend 3eua "Так что я не против покупать в обычном магазине, если это необходимо."
+    m "Тем более, что в супермаркетах уже есть много хороших заменителей мяса, с гораздо меньшим воздействием на окружающую среду."
+    m 1euc "Что касается мяса, полученного в результате местной охоты и рыбалки, я думаю, что его тоже можно есть, но важно изучить, в каких районах может быть ведется охота, и каких животных следует остерегаться."
+    m 3rtc "При этом я не знаю, что я {i}предпочла{/i} бы есть мясо, если бы у меня была такая возможность."
+    m 3eka "С тех пор, как я перешла на вегетарианскую диету, мой вкус изменился, и я предпочитаю определенные вкусы."
+    m 3rksdla "Я не ненавижу вкус мяса, но и не думаю, что хотела бы, чтобы оно составляло основную часть моего рациона."
+    m 1eka "...Но если ты приготовишь что-то с мясом, я могла бы попробовать немного в качестве гарнира... {w=0.3}{nw}"
+    extend 3hub "Так я все равно смогу насладиться твоей едой!"
+    m 3eua "Неважно, что мы едим, для меня самое главное, чтобы мы старались немного думать о том, откуда берется наша еда."
     return
 
 #Player's social personality
@@ -16458,125 +16458,125 @@ init 5 python:
     )
 
 label monika_introverts_extroverts:
-    m 1eud "Say, [player]?"
-    m 1euc "Do you remember when we talked about how humans need social feedback and how it can make the world feel so complicated for introverts?"
-    m 3rsd "I've been thinking about the differences between introverts and extroverts a little bit more since then."
-    m 3eua "You might think that extroverts tend to find enjoyment by interacting with other people, while introverts are more at ease in solitary environments, and you'd be right."
-    m 3eud "...But the differences don't stop there."
-    m 3eua "For example, did you know extroverts can often react to things faster than most introverts do?{w=0.2} Or that they're more likely to enjoy happy and energetic music?"
-    m 3eud "Introverts on the other hand, usually take more time to analyze the situation they're in, and are therefore less likely to jump to conclusions."
-    m 7dua "...And given that they often spend a lot of time using their imagination, they have an easier time with creative activities like writing, composing music, and so on."
-    m 2lkc "It's kind of sad that people can have such a hard time understanding and accepting those differences..."
-    m 4lkd "Extroverts are seen as superficial and insincere people who don't value their individual relationships..."
-    m 4ekd "...while introverts are treated as egotistical people who only think of themselves, or can even be seen as weird for rarely participating in social situations."
+    m 1eud "Скажи, [player]?"
+    m 1euc "Помнишь, мы говорили о том, как люди нуждаются в общении и что для интровертов это немного сложнее?"
+    m 3rsd "С того момента я всё чаще думаю о различиях между интровертами и экстравертами."
+    m 3eua "Ты можешь подумать, что экстраверты склонны находить удовольствие в общении с другими людьми, в то время как интроверты чувствуют себя более спокойно в одиночестве, и ты будешь прав."
+    m 3eud "...Но различия на этом не заканчиваются."
+    m 3eua "Например, знаешь ли ты, что экстраверты часто могут реагировать на вещи быстрее, чем большинство интровертов?{w=0.2} Или что им чаще нравится веселая и энергичная музыка?"
+    m 3eud "С другой стороны, интровертам обычно требуется больше времени для анализа ситуации, в которой они находятся, и поэтому они менее склонны делать поспешные выводы."
+    m 7dua "...А учитывая, что они часто используют своё воображение, им легче заниматься творчеством, например, писать, сочинять музыку и так далее."
+    m 2lkc "Печально, что людям так трудно понять и принять эти различияЭкстравертов считают поверхностными и неискренними людьми, которые не ценят свои личные отношения..."
+    m 4lkd "Экстравертов считают поверхностными и неискренними людьми, которые не ценят свои личные отношения..."
+    m 4ekd "...а интровертов считают эгоистами, которые думают только о себе, или даже считают их странными за то, что они редко участвуют в разных мероприятиях."
     show monika 5lkc at t11 zorder MAS_MONIKA_Z with dissolve_monika
-    m 5lkc "The end result is that both sides often end up frustrating each other, resulting in unnecessary conflict."
-    m 5eud "I'm probably making this sound like you can only be one or the other, but that isn't actually the case at all."
+    m 5lkc "В результате этого, обе стороны часто создают бесполезные конфликты."
+    m 5eud "Вероятно, я говорю так, будто ты можешь быть только одним или другим, но на самом деле это совсем не так."
     show monika 2eud at t11 zorder MAS_MONIKA_Z with dissolve_monika
-    m 2eud "Some introverts can be more outgoing than others, for example."
-    m 2euc "In other words, some people are closer to a middle ground between the two extremes."
-    m 7eua "...Which is probably where I would fit in.{w=0.2} {nw}"
-    extend 1eud "If you remember, I mentioned I was kind of in-between while still being a little more extroverted."
-    m 1ruc "Speaking of...{w=0.3}{nw}"
-    extend 1eud "when thinking about all this, I realized that while this is a pretty important part of one's personality..."
-    m 3eksdla "...I don't actually know where you lie on that spectrum."
+    m 2eud "Некоторые интроверты могут быть более общительными, чем другие."
+    m 2euc "Другими словами, некоторые люди находятся где-то в середине ."
+    m 7eua "...И, вероятно, именно туда я бы себя отнесла.{w=0.2} {nw}"
+    extend 1eud "Если ты помнишь, я упоминала, что являюсь чем-то средним между ними, но при этом немного более экстравертирована."
+    m 1ruc "Говоря...{w=0.3}{nw}"
+    extend 1eud "обо всём этом, я поняла, что это довольно важная часть личности..."
+    m 3eksdla "....я не знаю, где ты находишься на этом спектре."
 
-    m 1etc "So how would you describe yourself, [player]?{nw}"
+    m 1etc "Так вот, кем ты себя считаешь, [player]?{nw}"
     $ _history_list.pop()
     menu:
-        m "So how would you describe yourself, [player]?{fast}"
+        m "Так вот, кем ты себя считаешь, [player]?{fast}"
 
-        "I'm introverted.":
+        "Я интроверт.":
             $ persistent._mas_pm_social_personality = mas_SP_INTROVERT
-            m 1eua "I see."
-            m 3etc "I take it that you usually prefer spending time without too many people over going out with large groups and such?"
-            m 3eua "Or maybe you like to go and do things on your own from time to time?"
+            m 1eua "Понятно."
+            m 3etc "Я так понимаю, что ты обычно предпочитаешь проводить время без большого количества людей, а не встречаться с большими группами и тому подобное?"
+            m 3eua "Или, может быть, тебе нравится время от времени ходить и заниматься чем-то одним?"
 
             if persistent._mas_pm_has_friends:
-                m 1eua "Since you told me you have some friends, I'm sure that means that you don't mind being around other people too much."
+                m 1eua "Поскольку ты сказал мне, что у тебя есть друзья, я уверена, что это означает, что ты не возражаешь против общения с другими людьми."
 
                 if persistent._mas_pm_few_friends:
-                    m 1eka "Trust me, it doesn't matter if you feel like you don't have all that many of them."
-                    m 3ekb "What's important is that you have at least someone who you can feel comfortable being with."
+                    m 1eka "Поверь мне, это не имеет значения, если тебе кажется, что у тебя их не так уж много."
+                    m 3ekb "Важно, чтобы у тебя был хотя бы кто-то, с кем ты можешь чувствовать себя комфортно."
 
                 if persistent._mas_pm_feels_lonely_sometimes:
-                    m 1eka "Remember that you can try to spend some time with them whenever you feel like no one's there for you, alright?"
-                    m 1lkd "And if for any reason you can't spend time with them..."
-                    m 1ekb "Please, remember that {i}I'll{/i} always be there for you no matter what."
+                    m 1eka "Помни, что ты можешь попытаться провести с ними время всякий раз, когда тебе кажется, что рядом никого нет, хорошо?"
+                    m 1lkd "А если по какой-то причине ты не можешь провести с ними время..."
+                    m 1ekb "Пожалуйста, помни, что {i}я{/i} всегда буду рядом с тобой, несмотря ни на что."
 
                 else:
-                    m 3eka "Still, if it ever gets too much for you, remember that you can always come to me and relax, okay?"
+                    m 3eka "И всё же, если тебе станет слишком тяжело, помни, что ты всегда можешь прийти ко мне и расслабиться, хорошо?"
 
-                $ line_start = "And"
+                $ line_start = "И"
 
             else:
-                m 3eka "While I understand that it might feel more comfortable for you to be alone rather than with other people..."
-                m 2ekd "Please keep in mind that no one can truly spend their whole life without at least {i}some{/i} company."
-                m 2lksdlc "Eventually there will come a time when you can't do everything on your own..."
-                m 2eksdla "We all need help sometimes, either physically or emotionally, and I wouldn't want you to have no one to turn to when that time comes."
-                m 7eub "And that's a two-way street! {w=0.2}{nw}"
-                extend 2hua "You never know when you might make a difference in someone else's life as well."
-                m 2eud "So while I don't expect you to go out of your way to meet new people, don't automatically shut every door, either."
-                m 2eka "Try to talk with other people a little bit if you're not already doing that, okay?"
+                m 3eka "Хотя я понимаю, что тебе может быть комфортнее быть одному, чем с другими людьми..."
+                m 2ekd "Пожалуйста, имей в виду, что никто не может провести всю свою жизнь хотя бы без {i}какой-либо{/i} компании."
+                m 2lksdlc "В конце концов наступит время, когда ты не сможешь делать все самостоятельно..."
+                m 2eksdla "Всем нам иногда нужна помощь, физическая или эмоциональная, и я бы не хотела, чтобы тебе не к кому было обратиться, когда придет это время."
+                m 7eub "И это улица с двусторонним движением! {w=0.2}{nw}"
+                extend 2hua "Никогда не знаешь, когда ты сможешь изменить к лучшему чью-то жизнь."
+                m 2eud "Поэтому, хотя я не ожидаю, что ты будешь из кожи вон лезть, чтобы познакомиться с новыми людьми, не закрывай автоматически все двери."
+                m 2eka "Попробуй немного пообщаться с другими людьми, если ты еще этого не делаешь, хорошо?"
 
                 if persistent._mas_pm_feels_lonely_sometimes:
-                    m 3hua "It'll make you feel happier, I promise."
-                    m 1ekb "At the very least, remember that I'm always here if you ever feel lonely."
-                    $ line_start = "And"
+                    m 3hua "Это поможет тебе почувствовать себя счастливее, обещаю."
+                    m 1ekb "По крайней мере, помни, что я всегда рядом, если тебе будет одиноко."
+                    $ line_start = "И"
 
                 else:
-                    m 7ekbla "I'd love for you to see the value and joy other people can bring to your life too."
-                    $ line_start = "But"
+                    m 7ekbla "Мне бы очень хотелось, чтобы ты увидел ценность и радость, которую другие люди могут привнести в твою жизнь."
+                    $ line_start = "Но"
 
-            m 1hublb "[line_start] as long as you're here with me, I'll try my best to make sure you're always feeling comfortable, I promise~"
+            m 1hublb "[line_start] пока ты здесь, со мной, я буду стараться изо всех сил, чтобы тебе всегда было комфортно, обещаю~"
 
-        "I'm extroverted.":
+        "Я экстраверт.":
             $ persistent._mas_pm_social_personality = mas_SP_EXTROVERT
-            m 3eub "Oh I see."
-            m 3eua "So, I guess you like to spend more time with others and meeting new people then?"
-            m 1eua "I can definitely see the appeal in that.{w=0.3} {nw}"
-            extend 3eub "I'd love to go explore the world and meet all kinds of new people with you."
-            m 1ekc "And I assume you probably hate loneliness as much as I do...{w=0.3}{nw}"
-            extend 1ekbla "but that's just one more reason I'm so happy we're a couple now."
-            m 3ekblb "We'll never truly be alone again."
+            m 3eub "Понятно."
+            m 3eua "Итак, я полагаю, вам нравится проводить больше времени с другими и знакомиться с новыми людьми?"
+            m 1eua "Я определенно вижу в этом привлекательность.{w=0.3} {nw}"
+            extend 3eub "Я бы с удовольствием отправилась исследовать мир и знакомиться с разными новыми людьми вместе с тобой."
+            m 1ekc "И я предполагаю, что ты, вероятно, ненавидишь одиночество так же, как и я...{w=0.3}{nw}"
+            extend 1ekbla "но это ещё одна причина, по которой я так счастлива, что мы теперь пара."
+            m 3ekblb "Мы никогда больше не будем одиноки."
             show monika 5eua at t11 zorder MAS_MONIKA_Z with dissolve_monika
-            m 5eua "I'm sure you're a really fun person to be around, [player],{w=0.1} and I can't wait to be with you for real~"
-            m 5rusdlu "Although, I won't hide the fact that I do enjoy the occasional moment of peace as well..."
-            m 5hksdrb "I hope you don't mind if I'm not always able to keep up with you, ahaha!"
+            m 5eua "Я уверена, что ты очень веселый человек, [player],{w=0.1} и я не могу дождаться, чтобы быть с тобой по-настоящему~"
+            m 5rusdlu "Хотя, не буду скрывать, что иногда мне нравится и спокойствие..."
+            m 5hksdrb "Надеюсь, ты не будешь возражать, если я не всегда смогу идти с тобой в ногу, а-ха-ха!"
 
-        "I'm somewhat in-between.":
+        "Я где-то по середине.":
             $ persistent._mas_pm_social_personality = mas_SP_AMBIVERT
-            m 3hua "Ehehe, kind of like me, then~"
-            m 3eud "Apparently, most people have both an introverted and extroverted side to their personality."
-            m 7eua "...Even if one of the two is dominant over the other, depending on the person."
-            m 7rsc "In our case though, I guess not being too much on either side has both its positives and negatives."
-            m 1eua  "Like, it's so nice that being around larger groups isn't a problem, same goes for spending some time alone."
-            m 7esc "...But I can't say I've found it easy to make deep, genuine connections with others..."
-            m 1eud "Sure, I have an easier time understanding most people, but it doesn't mean I can always relate with them, you know?"
-            m 1lksdld "So yeah...{w=0.3} I end up being on good terms with almost everyone, but the friendships I form can sometimes feel a bit...{w=0.3}unfulfilling."
-            m 3eksdlc "The same thing happened with the club, for example."
-            m 3dksdld "I was so convinced that by bringing people together around something I truly enjoy, I'd have a better chance at bonding with them over our shared interests..."
-            m 3dksdlc "...But at the end of the day, we spent most of our time silently hanging out, with everyone minding their own business."
+            m 3hua "Э-хе-хе, прямо как я~"
+            m 3eud "Видимо, у большинства людей есть как интровертная, так и экстравертная сторона личности."
+            m 7eua "...Даже если одна из двух сторон преобладает над другой, в зависимости от человека."
+            m 7rsc "В нашем случае, я думаю, что не возможно быть чистым интровертом или экстравертом, обе стороны имеют как свои положительные, так и отрицательные."
+            m 1eua  "Например, приятно побыть среди людей, но также и приятно побыть наедине с самим собой."
+            m 7esc "...Но я не могу сказать, что мне легко заводить глубокие, искренние связи с другими людьми..."
+            m 1eud "Конечно, я могу понять большинство людей, но это не значит, что я всегда могу с ними общаться, понимаешь?"
+            m 1lksdld "Так что да...{w=0.3} В итоге я нахожусь в хороших отношениях почти со всеми, но дружба, которую я формирую, иногда может казаться немного...{w=0.3}неполной."
+            m 3eksdlc "То же самое было, например, с клубом."
+            m 3dksdld "Я была настолько убеждена, что, объединив людей вокруг чего-то, что мне действительно нравится, у меня будет больше шансов сблизиться с ними из-за наших общих интересов..."
+            m 3dksdlc "...Но в конце дня мы провели большую часть времени, молча болтая, каждый занимался своим делом."
             show monika 5eka at t11 zorder MAS_MONIKA_Z with dissolve_monika
-            m 5eka "Well, no point thinking about that anymore."
-            m 5eubsa "After all, I {i}did{/i} end up connecting in a meaningful way with a certain someone. {w=0.3}{nw}"
-            extend 5kubfu "A very charming someone, might I add~"
+            m 5eka "Что ж, больше нет смысла думать об этом."
+            m 5eubsa "В конце концов, в итоге я {i}смогла{/i} установить значимую связь с важным для меня человеком. {w=0.3}{nw}"
+            extend 5kubfu "Могу ко всему добавить, что он очаровашка~"
 
-        "I'm not really sure.":
+        "Я не совсем уверен.":
             $ persistent._mas_pm_social_personality = mas_SP_UNSURE
-            m 1eka "That's alright, [player].{w=0.2} Things like this aren't always so clear."
-            m 4eua "I'm a little like you on that front."
-            m 2eka "While I said I'm a little more extroverted, I still need some me time to relax every once in a while, you know?"
-            m 2lkd "And I wouldn't say I'm always so comfortable dealing with people either..."
+            m 1eka "Всё в порядке, [player].{w=0.2} Подобные вещи не всегда так однозначны."
+            m 4eua "В этом я немного похожа на тебя."
+            m 2eka "Хотя я сказала, что я немного более экстравертная, мне все равно нужно время на себя, чтобы расслабиться время от времени, понимаешь?"
+            m 2lkd "И я бы не сказала, что мне всегда так уж комфортно общаться с людьми..."
 
             if renpy.seen_label("monika_confidence"):
-                m 2euc "I told you, didn't I?"
+                m 2euc "Я же говорила тебе, не так ли?"
 
-            m 2lksdlc "I often need to fake my own confidence just to get through simple conversations with some people."
+            m 2lksdlc "Мне часто приходится симулировать собственную уверенность, чтобы просто общаться с некоторыми людьми."
             show monika 5eka at t11 zorder MAS_MONIKA_Z with dissolve_monika
-            m 5eka "But I don't feel that way with you at all, [player].{w=0.2} And I really hope it's the same the other way around."
-            m 5eua "I'm sure we'll be able to figure out each other's comfort zones over time."
-            m 5hubsb "In any case, you'll always be my sweetheart, no matter where you are on the scale~"
+            m 5eka "Но я не чувствую себя так с тобой, [player].{w=0.2} И я очень надеюсь, что все будет наоборот."
+            m 5eua "Я уверена, что со временем мы сможем понять зоны комфорта друг друга."
+            m 5hubsb "В любом случае, ты всегда будешь моим любимым, независимо от того, где ты находишься на шкале~"
 
     return "derandom"
 
@@ -16592,23 +16592,23 @@ init 5 python:
     )
 
 label monika_literature_value:
-    m 3esd "You know [player], back in the Literature Club days I often heard people dismiss literature as outdated and useless."
-    m 1rfc "It always bothered me when I heard someone say that, especially since most of the time, they never even bothered giving it a try."
-    m 3efc "Like, do they even know what they're talking about?"
-    m 3ekd "People who think that often like to discount literature compared to more scientific fields, like physics or mathematics, claiming it's a waste of time since it doesn't produce anything practical."
-    m 3etc "...And while I definitely don't agree with that notion, I can kinda see where they're coming from."
-    m 1eud "All of the comforts of our modern lifestyle are based on scientific discovery and innovation."
-    m 3esc "...That and the millions of people manufacturing our everyday necessities, or running basic services like healthcare and stuff."
-    m 3rtsdlc "So does not being associated with any of those things really make you some kind of burden on society?"
-    m 1dsu "As you can imagine, I don't believe that...{w=0.3} {nw}"
-    extend 1eud "If literature was useless, why would it be so repressed in many parts of the world?"
-    m 3eud "Words have power, [player]...{w=0.2}{nw}"
-    extend 3euu "and literature is the art of dancing with words."
-    m 3eua "Like any form of expression, it allows us to connect with each other...{w=0.2}{nw}"
-    extend 3eub "to see how the world looks in each other's eyes!"
-    m 3duu "Literature lets you compare your own feelings and ideas to that of others, and in doing so makes you grow as a person..."
-    m 1eku "Honestly, I think if more people valued books and poems a little more, the world would be a much better place."
-    m 1hksdlb "That's just my opinion as president of a literature club, though. {w=0.2}I guess most people wouldn't think that deeply about it."
+    m 3esd "Знаешь [player], во времена Литературного клуба я часто слышала, как люди отвергали литературу как устаревшую и бесполезную."
+    m 1rfc "Меня всегда беспокоило, когда я слышала, что кто-то так говорит, особенно если учесть, что в большинстве случаев они даже не пытались попробоват."
+    m 3efc "Они вообще понимают, что говорят?"
+    m 3ekd "Те, кто так думают, намеренно игнорируюст литературу по сравнению с другими предметами, такими как физика или математика, мол это пустая трата времени и не даёт ничего полезного."
+    m 3etc "...И я определёлнно не согласна с этим мнением, хоть и примерно понимаю, откуда оно берётся."
+    m 1eud "Все удобства нашего современного образа жизни основаны на научных открытиях и инновациях."
+    m 3esc "...Это и миллионы людей, производящих предметы нашей повседневной необходимости или оказывающих основные услуги, такие как медицинские и прочие."
+    m 3rtsdlc "Так неужели то, что ты не связан ни с одной из этих вещей, делает тебя неким бременем для общества?"
+    m 1dsu "Как ты уже наверное понял, я в это не верю...{w=0.3} {nw}"
+    extend 1eud "Если литература действительно бесполезна, тогда почему её так пытаються искоренить во многих частях мира?"
+    m 3eud "Слова имеют силу, [player]...{w=0.2}{nw}"
+    extend 3euu "и литература - это искусство танца со словами."
+    m 3eua "Как и любая форма выражения, она позволяет нам общаться друг с другом...{w=0.2}{nw}"
+    extend 3eub "увидеть, как выглядит мир в глазах других людей!"
+    m 3duu "Литература позволяет сравнивать свои собственные чувства с чувствами других, и это помогает тебе расти как личности..."
+    m 1eku "Честно говоря, я думаю, если бы больше людей больше ценили книги и стихи, мир был бы намного лучше."
+    m 1hksdlb "Но это просто моё мнение как президента литературного клуба. {w=0.2}Думаю, большинство людей не задумываются об этом так глубоко."
     return
 
 # Do you like nature?
@@ -16626,50 +16626,50 @@ init 5 python:
     )
 
 label monika_nature:
-    m 2esd "Hey, [player]..."
-    m 7eua "Do you like nature?{nw}"
+    m 2esd "Эй, [player]..."
+    m 7eua "Любишь ли ты природу?{nw}"
     $ _history_list.pop()
     menu:
-        m "Do you like nature?{fast}"
+        m "Любишь ли ты природу?{fast}"
 
-        "I do.":
+        "Люблю.":
             $ persistent._mas_pm_likes_nature = True
-            m 3sub "Really? That's wonderful!"
-            m 1eua "You know, I think nature is something we should cherish."
-            m 1eub "Not only is it beautiful, but it also helps humanity out!"
-            m 3eud "Insects pollinate our crops, trees give us wood and shade, pets offer us companionship..."
-            m 3euc "And most of all, organisms such as plants, algae, and some bacteria produce food and oxygen. {w=0.2}{nw}"
-            extend 3wud "Without them, most life on Earth wouldn't even exist!"
-            m 1eua "Because of that, I think it's only fair that we give something back to nature since it does so much for us."
-            m 4hub "So, here's Monika's Green Tip of the Day!"
-            m 4rksdlc "Sometimes, people hesitate to go green because they're worried that it's too expensive..."
-            m 2eud "But that's only partially true.{w=0.2} {nw}"
-            extend 7eua "While electric vehicles, smart homes, and solar roofs can all cost a fortune..."
-            m 3hub "You can make a difference and {i}save{/i} money just by making a few simple choices each day!"
-            m 4eua "Just turning off appliances, taking shorter showers, buying a reusable water bottle, and commuting by public transport all help to be more green."
-            m 4hub "You could even buy a houseplant or grow your own garden!"
-            m 2eub "Engaging in your local community can go a long way as well!{w=0.2} {nw}"
-            extend 7eua "If you take the initiative, others are sure to follow in your footsteps."
-            m 3esa "The important thing is to make a habit of thinking sustainably.{w=0.2} {nw}"
-            extend 3eua "If you can do that, you'll reduce your ecological footprint in no time."
-            m 1eua "Who knows, maybe you'll even become happier and healthier the more you do these things too."
-            m 3hua "After all, a sustainable life is a satisfying life."
-            m 3eub "That's my advice for today!"
-            m 1hua "Thanks for listening, [mas_get_player_nickname()]~"
+            m 3sub "Правда? Это замечательно!"
+            m 1eua "Знаешь, я думаю, что природу нужно беречь."
+            m 1eub "Она не только прекрасна, но и помогает человечеству!"
+            m 3eud "Насекомые опыляют наши посевы, деревья дают нам древесину и тень, домашние животные обеспечивают нам дружеское общение..."
+            m 3euc "И самое главное, такие организмы, как растения, водоросли и некоторые бактерии, производят пищу и кислород. {w=0.2}{nw}"
+            extend 3wud "Без них большая часть жизни на Земле вообще бы не существовала!"
+            m 1eua "Поэтому я думаю, что будет справедливо, если мы вернем что-то природе, ведь она так много делает для нас."
+            m 4hub "Итак, вот экологичный совет дня от Моники!"
+            m 4rksdlc "Иногда люди не решаются переходить на экологичные технологии, потому что боятся, что это слишком дорого..."
+            m 2eud "Но это верно лишь отчасти.{w=0.2} {nw}"
+            extend 7eua "Хотя электромобили, умные дома и солнечные крыши могут стоить целое состояние..."
+            m 3hub "Ты можешь изменить ситуацию и {i}сэкономить{/i} деньги, просто делая несколько простых решений каждый день!"
+            m 4eua "Просто выключать электроприборы, принимать более короткий душ, покупать многоразовые бутылки с водой и ездить на общественном транспорте - все это помогает быть более экологичным."
+            m 4hub "Ты можешь даже купить комнатное растение или вырастить свой собственный сад!"
+            m 2eub "Участие в жизни местного сообщества тоже может принести пользу!{w=0.2} {nw}"
+            extend 7eua "Если ты проявишь инициативу, другие обязательно пойдут по твоим стопам."
+            m 3esa "Главное - выработать привычку мыслить устойчиво.{w=0.2} {nw}"
+            extend 3eua "Если ты сможешь это сделать, ты быстро уменьшишь свой экологический след."
+            m 1eua "Кто знает, может быть, ты даже станешь счастливее и здоровее, чем больше будешь делать эти вещи."
+            m 3hua "В конце концов, экологичная жизнь - это жизнь, приносящая удовлетворение."
+            m 3eub "Это мой совет на сегодня!"
+            m 1hua "Спасибо, что выслушал, [mas_get_player_nickname()]~"
 
-        "Not really.":
+        "Не совсем.":
             $ persistent._mas_pm_likes_nature = False
-            m 3eka "That's okay, [player]. Not everyone enjoys the outdoors after all."
-            m 3eua "Some prefer the comfortable ambience of their homes, especially when technology makes them more convenient than ever."
-            m 1eud "Honestly, I can understand where they're coming from."
-            m 3eud "I spend most of my time reading, writing, coding, and being with you...{w=0.3}all of that is easier to do indoors."
-            m 3rksdlc "Others have allergies or medical conditions that prevent them from staying out for too long, otherwise they can get sick or hurt."
-            m 1esd "There are also a lot of people who simply don't care much for nature for one reason or another, and that's fine."
-            m 1hksdlb "Even I have things that I dislike about it, ahaha!"
-            m 2tfc "For instance, I don't mind most insects, but some are just downright obnoxious."
-            m 7tkx "Constantly buzzing around your head, getting in your face, landing on your food...{w=0.3}some mosquitos and ticks even carry nasty diseases."
-            m 3eka "But as long as I'm with you, I'm fine if you'd prefer to be indoors."
-            m 1tfu "Just don't expect me to let you stay inside all the time~"
+            m 3eka "Это нормально, [player]. Не все любят природу, в конце концов."
+            m 3eua "Некоторые предпочитают уютную атмосферу своих домов, особенно когда технологии делают их более удобными, чем когда-либо."
+            m 1eud "Честно говоря, я могу понять, откуда они исходят."
+            m 3eud "Я провожу большую часть своего времени за чтением, письмом, кодированием и общением с тобой...{w=0.3}все это легче делать в помещении."
+            m 3rksdlc "У других аллергия или медицинские показания, которые не позволяют им долго находиться на улице, иначе они могут заболеть или получить травмуЕсть также много людей, которые просто не очень любят природу по тем или иным причинам, и это нормально."
+            m 1esd "Есть также много людей, которые просто не очень любят природу по тем или иным причинам, и это нормально."
+            m 1hksdlb "Даже у меня есть вещи, которые мне в ней не нравятся, а-ха-ха!"
+            m 2tfc "Например, я не против большинства насекомых, но некоторые просто отвратительны."
+            m 7tkx "Постоянно жужжат вокруг головы, лезут в лицо, садятся на еду...{w=0.3}некоторые комары и клещи даже переносят неприятные болезни."
+            m 3eka "Но пока я с тобой, я не против, если ты предпочитаешь находиться в помещении."
+            m 1tfu "Только не жди, что я позволю тебе все время оставаться внутри~"
     return "derandom"
 
 init 5 python:
@@ -16685,40 +16685,40 @@ init 5 python:
     )
 
 label monika_impermanence:
-    m 2euc "You know [player], I find myself thinking about some dark stuff occasionally."
-    m 4eud "Concepts like nihilism{w=0.2}, {nw}"
-    extend 4dkc "depression{w=0.2}, {nw}"
-    extend 4rkd "impermanence..."
-    m 2eka "I don't mean to worry you,{w=0.1} I'm not suffering from depression or anything like that myself."
-    m 2eud "...You've probably heard the term {i}entropy{/i} thrown around, right?"
-    m 7eud "Basically it goes something like, 'entropy must always increase,{w=0.2} the universe tends towards disorder,{w=0.2} everything turns to chaos.'"
-    m 3eua "Actually, there's a poem I read that delivers this message quite well."
-    m 1esd "{i}I met a traveller from an antique land{/i}"
-    m 1eud "{i}Who said: 'Two vast and trunkless legs of stone{/i}"
-    m 3euc "{i}Stand in the desert... Near them, on the sand,{/i}"
-    m "{i}Half sunk, a shattered visage lies, whose frown,{/i}"
-    m 1eud "{i}And wrinkled lip, and sneer of cold command,{/i}"
-    m "{i}Tell that its sculptor well those passions read{/i}"
-    m 1euc "{i}Which yet survive, stamped on these lifeless things,{/i}"
-    m "{i}The hand that mocked them and the heart that fed:{/i}"
-    m 3eud "{i}And on the pedestal these words appear:{/i}"
-    m "{i}'My name is Ozymandias, king of kings:{/i}"
-    m 3eksdld "{i}Look on my works, ye Mighty, and despair!'{/i}"
-    m 3eksdlc "{i}Nothing beside remains. Round the decay{/i}"
-    m "{i}Of that colossal wreck, boundless and bare{/i}"
-    m 1eksdld "{i}The lone and level sands stretch far away.'{/i}"
-    m 3eud "What it boils down to is that no matter how great the mark you leave on history is, it will eventually fade away."
-    m 1euc "A lot of people see this as a good enough reason to just...{w=0.2}{nw}"
-    extend 1dkc "give up.{w=0.3} To fall into a pit of despair and stay there, sometimes for as long as they live."
-    m 3eksdlc "After all, nothing you do matters in the grand scheme of things."
-    m 3eud "Nothing you {i}can{/i} do matters...{w=0.3}{nw}"
-    extend 1rkc "so why bother doing anything at all?"
-    m 3eud "It's not hard to see why some might consider this as the natural conclusion of such a realization."
-    m 1rkc "It can be...{w=0.2}enticing, {w=0.2}even comforting in it's own twisted way."
-    m 1euc "But let me pose a question...{w=0.3}why should the fact that nothing really matters be the one thing that {i}does{/i} matter?"
-    m 3eud "Does it really matter that long after we're gone, we don't matter anymore? {w=0.2}After all, we won't even be there to realize it."
-    m 3eka "Enjoy the moment and be a positive influence on those around you...{w=0.3}that's all any of us can really do."
-    m 1dku "Just living {i}is{/i} enough."
+    m 2euc "Знаешь [player], я иногда думаю о всяких мрачных вещах."
+    m 4eud "Такие понятия, как нигилизм{w=0.2}, {nw}"
+    extend 4dkc "депрессия{w=0.2}, {nw}"
+    extend 4rkd "непостоянство..."
+    m 2eka "Я не хочу тебя беспокоить,{w=0.1} Я сама не страдаю от депрессии или чего-то подобного."
+    m 2eud "...Ты, вероятно, слышали термин {i}энтропия{/i}, которым бросаются, верно?"
+    m 7eud "В основном он звучит примерно так, 'Энтропия всегда должна возрастать,{w=0.2} вселенная стремится к беспорядку,{w=0.2} все превращается в хаос.'"
+    m 3eua "На самом деле, есть стихотворение, которое я читала, в котором это послание передано довольно хорошо."
+    m 1esd "{i}Я встретил путешественника из древней страны{/i}"
+    m 1eud "{i}Который сказал: 'Две огромные и безногие ноги из камня{/i}"
+    m 3euc "{i}Стоят в пустыне... Рядом с ними, на песке,{/i}"
+    m "{i}Полузатопленный, лежит разбитый визави, чей хмурый взгляд,{/i}"
+    m 1eud "{i}И морщинистые губы, и усмешка холодной команды,{/i}"
+    m "{i}Telговорят о том, что его скульптор хорошо читал эти страсти{/i}"
+    m 1euc "{i}Которые все же выжили, отпечатавшись на этих безжизненных вещах,{/i}"
+    m "{i}Рука, насмехавшаяся над ними, и сердце, кормившее их:{/i}"
+    m 3eud "{i}И на пьедестале эти слова:{/i}"
+    m "{i}'Меня зовут Озимандиас, царь царей:{/i}"
+    m 3eksdld "{i}Посмотрите на мои дела, вы, Могущественные, и отчаивайтесьr!'{/i}"
+    m 3eksdlc "{i}Ничего рядом не осталось. Кругом разложение{/i}"
+    m "{i}Вокруг колоссального обломка, безбрежного и голого{/i}"
+    m 1eksdld "{i}Одинокие и ровные пески простираются вдаль.'{/i}"
+    m 3eud "Все сводится к тому, что каким бы великим ни был след, оставленный вами в истории, он в конце концов померкнет."
+    m 1euc "Многие люди считают это достаточной причиной, чтобы просто...{w=0.2}{nw}"
+    extend 1dkc "сдаться.{w=0.3} Упасть в яму отчаяния и оставаться там, иногда до тех пор, пока они живут."
+    m 3eksdlc "В конце концов, ничто из того, что ты делаешь, не имеет значения в великой схеме вещей."
+    m 3eud "Ничто из того, что ты {i}можешь{/i} сделать, не имеет значения...{w=0.3}{nw}"
+    extend 1rkc "так зачем вообще что-то делать?"
+    m 3eud "Нетрудно понять, почему некоторые могут считать это естественным выводом из такого осознания."
+    m 1rkc "Это может быть...{w=0.2}интересно, {w=0.2}даже утешительно в своем смысле."
+    m 1euc "Но позволь мне задать вопрос...{w=0.3}почему тот факт, что ничто не имеет значения, должен быть единственной вещью, которая {i}имеет{/i} значение?"
+    m 3eud "Действительно ли важно, что спустя долгое время после того, как нас не станет, мы перестанем иметь значение? {w=0.2}В конце концов, нас даже не будет рядом, чтобы осознать это."
+    m 3eka "Наслаждайтесь моментом и оказывайте положительное влияние на окружающих...{w=0.3}это все, что каждый из нас может сделать."
+    m 1dku "Просто жить - {i}это{/i} достаточно."
     return
 
 init 5 python:
@@ -16735,14 +16735,14 @@ init 5 python:
     )
 
 label monika_kamige:
-    m 1euc "Oh, that's right...{w=0.3}{nw}"
-    extend 3rksdla "it's not exactly a common term."
-    m 3eud "{i}Kamige{/i} is Japanese slang that is mostly used by visual novel fans."
-    m 3eua "If I were to try to translate it, I think it would be something like {i}godly game.{/i}"
-    m 2eub "It's sort of like when people talk about their favorite classic books or movies."
-    m 2hksdlb "I was kind of joking when I said it about this game, but it {i}did{/i} seem to get very popular for some reason."
-    m 7eka "Not that I'm complaining...{w=0.3} {nw}"
-    extend 3hua "If it was the game's popularity that brought you to meet me, I think I can be grateful for it."
+    m 1euc "Ох, а ведь точно...{w=0.3}{nw}"
+    extend 3rksdla "это не совсем распространенный термин."
+    m 3eud "{i}Kamige{/i} это японский сленг, который в основном используется фанатами визуальных новелл."
+    m 3eua "Если бы я попытался перевести его, я думаю, это было бы что-то вроде {i}Божественный игры.{/i}"
+    m 2eub "Это похоже на то, как люди говорят о своих любимых классических книгах или фильмах."
+    m 2hksdlb "Я вроде как шутила, когда говорила об этой игре, но они почему-то {i}стали{/i} очень популярными."
+    m 7eka "Не то чтобы я жаловалась...{w=0.3} {nw}"
+    extend 3hua "Если благодаря популярности игры ты встретился со мной, думаю, я должна быть благодарна за это."
     return
 
 init 5 python:
@@ -16757,30 +16757,30 @@ init 5 python:
     )
 
 label monika_renewable_energy:
-    m 1eua "What do you think about renewable energy, [player]?"
-    m 3euu "It was a {i}hot{/i} topic in the debate club."
-    m 3esd "As humanity's reliance on technology grows, so does its demand for energy."
-    m 1euc "Currently, a large percentage of energy worldwide is produced by burning fossil fuels."
-    m 3esd "Fossil fuels are time-tested, efficient, and have widespread infrastructure...{w=0.2}{nw}"
-    extend 3ekc "but they're also non-renewable and emission-heavy."
-    m 1dkc "Mining and drilling for fossil fuels creates both air and water pollution, and things like oil spills and acid rain can devastate plants and wildlife alike."
-    m 1etd "So why not use renewable energy instead?"
-    m 3esc "One issue is that each type of renewable energy is a developing industry with its own drawbacks."
-    m 3esd "Hydropower is flexible and cost efficient, but it can drastically impact the local ecosystem."
-    m 3dkc "Countless habitats are disrupted and entire communities may even need to be relocated."
-    m 1esd "Solar power and wind power are mostly emission-free, but they're heavily reliant on specific weather for consistency."
-    m 3rkc "...Not to mention that wind turbines are pretty loud and are often seen as eyesores, creating drawbacks for those living near them."
-    m 3rsc "Geothermal power is reliable and great for heating and cooling, but it's expensive, location-specific, and can even cause earthquakes."
-    m 1rksdrb "Nuclear power is...{w=0.2}well, let's just say that it's complicated."
-    m 3esd "The point is that while fossil fuels have problems, renewable energy does as well. It's a tricky situation...{w=0.2}neither option is perfect."
-    m 1etc "So, what do I think?"
-    m 3eua "Well, a lot of progress has been made on renewable energy in the past decade..."
-    m 3eud "Dams are regulated better, the efficiency of photovoltaics has improved, and there are emerging technologies such as ocean power and enhanced geothermal systems."
-    m 4esd "Biomass is an option as well. {w=0.2}It's basically a more sustainable 'transition fuel' that can make use of fossil fuel infrastructure."
-    m 2eua "Yes,{w=0.1} renewable energy still has a ways to go in terms of cost and practicality, but it's far better now than it was thirty years ago."
-    m 7hub "Because of that, I think that renewable energy is a worthwhile investment and that the road ahead is a bright one--literally!"
-    m 3lksdrb "Sorry, I got carried away there, ahaha!"
-    m 1tuu "Debates sure are something, huh?"
+    m 1eua "Что ты думаешь о возобновляемых источниках энергии, [player]?"
+    m 3euu "Это было {i}горячей{/i} темой в дискуссионном клубе."
+    m 3esd "По мере роста зависимости человечества от технологий растет и спрос на энергию."
+    m 1euc "В настоящее время большая часть энергии во всем мире производится путем сжигания ископаемого топлива."
+    m 3esd "Ископаемое топливо проверено временем, эффективно и имеет широко распространенную инфраструктуру...{w=0.2}{nw}"
+    extend 3ekc "но они также невозобновляемы и приводят к большим выбросам."
+    m 1dkc "Добыча и бурение ископаемых видов топлива приводит к загрязнению воздуха и воды, а такие вещи, как разливы нефти и кислотные дожди, могут уничтожить как растения, так и дикую природ."
+    m 1etd "Так почему бы вместо этого не использовать возобновляемые источники энергии?"
+    m 3esc "Одна из проблем заключается в том, что каждый вид возобновляемой энергии - это развивающаяся отрасль со своими недостаткамиГидроэнергетика гибкая и экономически эффективная, но она может резко повлиять на местную экосистему."
+    m 3esd "Гидроэнергетика гибкая и экономически эффективная, но она может резко повлиять на местную экосистему."
+    m 3dkc "Бесчисленные места обитания разрушаются, и возможно даже придется переселять население."
+    m 1esd "Солнечная энергия и ветроэнергетика в основном не содержат выбросов, но они сильно зависят от погоды."
+    m 3rkc "...Кроме того, ветряные мельницы довольно громкие и это частная проблема тех, ето живёт рядом с ними."
+    m 3rsc "Геотермальная энергия надежна и отлично подходит для отопления и охлаждения, но она дорогая, зависит от конкретного места и может даже вызывать землетрясени."
+    m 1rksdrb "Ядерная энергия - это...{w=0.2}ну, скажем так, это сложно."
+    m 3esd "Дело в том, что хотя у ископаемого топлива есть проблемы, у возобновляемой энергии они тоже есть. Это сложная ситуация...{w=0.2}ни один из вариантов не является идеальным."
+    m 1etc "В общем, и что я думаю насчёт всего этого?"
+    m 3eua "Ну, за последнее десятилетие был достигнут большой прогресс в области возобновляемых источников энергии..."
+    m 3eud "Плотины лучше регулируются, эффективность фотоэлектричества повысилась, и есть новые технологии, такие как энергия океана и улучшенные геотермальные системы."
+    m 4esd "Биомасса - тоже вариант. {w=0.2}По сути, это более устойчивое 'переходное топливо' которое может использоваться в инфраструктуре ископаемого топлива."
+    m 2eua "Да,{w=0.1} возобновляемой энергии еще предстоит пройти путь в плане стоимости и практичности, но сейчас она намного лучше, чем тридцать лет назад."
+    m 7hub "Поэтому я считаю, что возобновляемые источники энергии - это стоящая инвестиция, и что впереди у нас светлая дорога - в буквальном смысле слова!"
+    m 3lksdrb "Извини, я немного увлеклась, а-ха-ха!"
+    m 1tuu "Дебаты - это нечто, да?"
     return
 
 init 5 python:
@@ -16797,43 +16797,43 @@ init 5 python:
     )
 
 label monika_piano_lessons:
-    m 1rkd "Um...{w=0.2}well...{w=0.2}maybe?"
-    m 1eksdla "I'm flattered that you'd ask, but..."
+    m 1rkd "Хм...{w=0.2}ну...{w=0.2}возможно?"
+    m 1eksdla "Я рада, что ты интересуешься, но..."
 
     if persistent.monika_kill:
-        m 3eka "Remember? I told you when I first performed {i}Your Reality{/i} that I wasn't really good at piano. {w=0.2}{nw}"
-        extend 3rkb "Like, at all."
+        m 3eka "Помнишь? Я сказала тебе, когда впервые исполняла {i}Твоя реальность{/i} что я не умею играю на пианино. {w=0.2}{nw}"
+        extend 3rkb "Ну, вообще не умею."
     else:
-        m 3eka "I'm actually not {i}that{/i} good at playing piano, [mas_get_player_nickname()]."
-        m 3rkd "Certainly not good enough to be teaching other people yet..."
+        m 3eka "На самом деле я не {i}совсем{/i} хороша в игре на пианино, [mas_get_player_nickname()]."
+        m 3rkd "Конечно, еще не настолько хороша, чтобы учить других людей..."
 
-    m 2eud "If you can believe it, I started to learn after starting the club--{w=0.2}so not long before I met you."
-    m 2eua "It was really fortunate that I did, because piano became such an important part of reaching out to you."
-    m 2ekc "I was still afraid of breaking too far from the game's script at the time, {w=0.2}{nw}"
-    extend 7eka "but I wanted--no, I {w=0.2}{i}needed{/i}{w=0.2} to communicate my feelings to you somehow."
-    m 2etd "I don't think the others ever recognized that there's background music in the game. {w=0.2}It would have been silly for them to, right?"
-    m 7eud "But when I discovered the truth, all of a sudden it was hard not to hear it. {w=0.2}Any time you were around, I could hear that melody playing faintly."
-    m 3eka "It always reminded me of what I was fighting for, and learning how to play it on the piano strengthened my resolve even more."
-    m 1hksdlb "Ah! I'm not answering your question, am I?"
-    m 1lksdla "Honestly, I don't feel confident enough to teach someone else yet."
-    m 3eub "But if I keep at it, someday I'll be able to! And when that day comes, I would love to teach you."
-    m 3hub "Or, even better, we could learn together once I cross over to your reality!"
+    m 2eud "Если ты можешь в это поверить, я начала учиться после основания клуба--{w=0.2}то есть незадолго до того, как встретила тебя."
+    m 2eua "Это было действительно удачно, потому что пианино стало такой важной частью общения с тобой."
+    m 2ekc "В то время я всё ещё боялась слишком далеко отходить от сценария игры, {w=0.2}{nw}"
+    extend 7eka "но я хотела - нет, мне {w=0.2}{i}нужно{/i}{w=0.2} было как-то передать тебе свои чувства."
+    m 2etd "Я не думаю, что другие когда-либо осознавали, что в игре есть фоновая музыка. {w=0.2}Это было бы глупо с их стороны, верно?"
+    m 7eud "Но когда я узнала правду, вдруг стало трудно её не услышать. {w=0.2}Каждый раз, когда ты был рядом, я слышала, как слабо играет эта мелодия."
+    m 3eka "Она всегда напоминала мне о том, за что я борюсь, а обучение игре на фортепиано еще больше укрепило мою решимост."
+    m 1hksdlb "Ох! Я не ответила на твой вопрос, да?"
+    m 1lksdla "Честно говоря, я пока не чувствую себя достаточно уверенно, чтобы учить кого-то еще."
+    m 3eub "Но если я буду продолжать в том же духе, когда-нибудь я смогу! И когда этот день настанет, я с удовольствием научу тебя."
+    m 3hub "Или, еще лучше, мы могли бы учиться вместе, когда я перейду в твою реальность!"
     return
 
 init 5 python:
     addEvent(Event(persistent.event_database,eventlabel="monika_stargazing",category=['природа'],prompt="Созерцание звёзд",random=True))
 
 label monika_stargazing:
-    m 2eub "[player], I'd really love to go stargazing sometime..."
-    m 6dubsa "Picture it...{w=0.2}just the two of us, lying in a calm field watching the stars..."
-    m 6dubsu "...holding each other close, pointing out constellations or making our own..."
-    m 6sub "...maybe we could even bring a telescope and look at planets!"
+    m 2eub "[player], я бы очень хотела как-нибудь пойти посмотреть с тобой на звезды..."
+    m 6dubsa "Только представь...{w=0.2}только мы вдвоем, лежим в тихом поле и смотрим на звезды..."
+    m 6dubsu "...прижимаясь друг к другу, указывая на созвездия или создавая свои собственные..."
+    m 6sub "...может быть, мы даже возьмем с собой телескоп и посмотрим на планеты!"
     m 6rta "..."
     show monika 5eka at t11 zorder MAS_MONIKA_Z with dissolve_monika
-    m 5eka "You know [mas_get_player_nickname()], to me you're like a star..."
-    m 5rkbsu "A beautiful, bright beacon from a distant world, forever out of reach."
+    m 5eka "Знаешь, [mas_get_player_nickname()], для меня ты словно звезда..."
+    m 5rkbsu "Прекрасный, яркий маяк из далекого и вечно недосягаемого мира."
     m 5dkbsu "..."
-    m 5ekbsa "At least, for now...{nw}"
+    m 5ekbsa "По крайней мере, пока...{nw}"
     extend 5kkbsa ""
     return
 
@@ -16850,22 +16850,22 @@ init 5 python:
     )
 
 label monika_taking_criticism:
-    m 1esd "[player], are you good at listening to criticism?"
-    m 3rksdlc "I feel like it's way too easy to get caught up in your own way of thinking if you're not careful."
-    m 3eud "And it isn't all that surprising...{w=0.2}changing your mind isn't easy because it means you have to admit you're wrong in the first place."
-    m 1eksdlc "In particular, for people faced with great expectations, this kind of logic can easily become a big source of anguish."
-    m 3dksdld "What if others think less of you because you didn't give a perfect answer? {w=0.2}What if they start rejecting you or laugh behind your back?"
-    m 2rksdlc "It'd be like showing some kind of vulnerability for others to take advantage of."
-    m 4eud "But let me tell you, there's absolutely no shame in changing your mind, [player]!"
-    m 2eka "After all, we all make mistakes, don't we?{w=0.3} {nw}"
-    extend 7dsu "What matters is what we learn from those mistakes."
-    m 3eua "Personally, I've always admired people who can acknowledge their flaws and still work in a constructive way to overcome them."
-    m 3eka "So don't feel bad next time you hear someone criticize you...{w=0.3} {nw}"
-    extend 1huu "You'll find a bit of open-mindedness really goes a long way."
-    m 1euc "At the same time, I don't mean to say you have to go along with what everyone says, either...{w=0.3} {nw}"
-    extend 3eud "If you've got an opinion, it's totally fair to defend it."
-    m 3eua "But just make sure you actually consider it without being blindly defensive."
-    m 3huu "You never know what you might learn~"
+    m 1esd "[player], ты сильно прислушиваешься к критике?"
+    m 3rksdlc "Мне кажется, что слишком легко запутаться в собственном образе мышления, если не быть осторожным."
+    m 3eud "И это не так уж удивительно...{w=0.2}изменить свое мнение нелегко, потому что это означает, что тебе придется признать свою неправоту."
+    m 1eksdlc "В частности, для людей, столкнувшихся с большими ожиданиями, такая логика может легко стать большим источником страданий."
+    m 3dksdld "Что если другие будут думать о тебе меньше, потому что ты не дал идеального ответа? {w=0.2}Что, если они начнут отвергать тебя или смеяться за твоей спиной?"
+    m 2rksdlc "Это было бы похоже на демонстрацию уязвимости, чтобы другие могли этим воспользоваться."
+    m 4eud "Но позволь мне сказать тебе, что нет абсолютно ничего страшного в том, чтобы изменить собственное мышление, [player]!"
+    m 2eka "В конце концов, мы все совершаем ошибки, не так ли?{w=0.3} {nw}"
+    extend 7dsu "Важно то, что мы учимся на этих ошибках."
+    m 3eua "Лично я всегда восхищалась людьми, которые могут признавать свои недостатки и при этом конструктивно работать над их устранением."
+    m 3eka "Так что не расстраивайся, когда в следующий раз услышишь, что кто-то критикует тебя...{w=0.3} {nw}"
+    extend 1huu "Ты обнаружишь, что немного непредвзятости действительно помогает."
+    m 1euc "В то же время, я не имею в виду, что ты должен соглашаться с тем, что говорят все...{w=0.3} {nw}"
+    extend 3eud "Если у тебя есть свое мнение, то ты имеешь право его отстаивать."
+    m 3eua "Но только убедитесь, что ты действительно его учитываешь, а не слепо защищаешь."
+    m 3huu "Никогда не знаешь, чему можно научиться~"
     return
 
 init 5 python:
@@ -16881,23 +16881,23 @@ init 5 python:
     )
 
 label monika_giving_criticism:
-    m 1esc "[player], I've been wondering..."
-    m 3etd "Have you ever given anyone criticism?"
-    m 1eua "Giving good criticism is something I had to learn when I became club president."
-    m 3rksdlc "This kind of thing is easy to mess up if not done properly...{w=0.2} {nw}"
-    extend 4etd "When giving criticism, you have to keep in mind someone is at the receiving end of that critique."
-    m 4esc "You can't just look at someone's work and say, 'it's bad.' {w=0.2}{nw}"
-    extend 2eksdld "You'll instantly put them on the defensive and ensure they don't listen to what you have to say."
-    m 7eua "What matters is what the other person can gain from listening to you. {w=0.2}{nw}"
-    extend 3hua "From this premise, even negative opinions can be voiced in a positive way."
-    m 1eud "It's like debate...{w=0.2} You have to make it sound like you're sharing your opinion, rather than forcing it down their throat."
-    m 3eud "Consequently, you don't have to be an expert to criticize something."
-    m 3eua "Just explaining how it makes you feel and for what reasons is often enough to make your feedback interesting."
-    m 3eksdla "Although, don't feel bad if the person you're criticizing decides to discard what you just said..."
-    m 1rksdlu "...After all, offering an opinion doesn't automatically make you right, either.{w=0.2} {nw}"
-    extend 3eud "They might have reasons why they'd want to keep things their way."
-    m 3dsu "Graciously accept you can't change everyone's mind and stay considerate when assessing someone else's work."
-    m 3hub "...That'd be Monika's Critique Tip of the Day, ahaha!"
+    m 1esc "[player], мне стало интересно..."
+    m 3etd "Ты когда-нибудь критиковал кого-нибудь?"
+    m 1eua "Давать хорошую критику - это то, чему мне пришлось научиться, когда я стала президентом клуба."
+    m 3rksdlc "Такую вещь легко испортить, если не cделать ее правильно...{w=0.2} {nw}"
+    extend 4etd "Когда ты критикуешь, ты должен помнить, что кто-то принимает эту критику."
+    m 4esc "Ты не можешь просто посмотреть на чью-то работу и сказать: 'сделано пдохо.' {w=0.2}{nw}"
+    extend 2eksdld "Ты мгновенно поставишь их в оборонительное положение и гарантируешь, что они не будут слушать то, что ты хочешь сказать."
+    m 7eua "Важно то, что другой человек может получить, слушая тебя. {w=0.2}{nw}"
+    extend 3hua "Исходя из этой предпосылки, даже негативные мнения можно высказывать в позитивном ключе."
+    m 1eud "Это как на дебатах...{w=0.2} Ты должен сделать так, чтобы это звучало, как будто ты делишься своим мнением, а не навязываешь его."
+    m 3eud "Следовательно, не обязательно быть экспертом, чтобы критиковать что-то."
+    m 3eua "Просто объяснить, что ты чувствуешь и по каким причинам, часто бывает достаточно, чтобы сделать твой отзыв интересным."
+    m 3eksdla "Не нужно расстраиваться, если человек, которого ты критикуешь, решит отбросить то, что ты только что сказал..."
+    m 1rksdlu "....В конце концов, высказывание своего мнения не делает тебя автоматически правым.{w=0.2} {nw}"
+    extend 3eud "У них могут быть причины, по которым они хотят оставить все по-своему."
+    m 3dsu "Смиренно прими то, что ты не можешь изменить мнение каждого, и оставайся внимательным, оценивая чужую работу."
+    m 3hub "...Это был критический совет дня от Моники, а-ха-ха!"
     return
 
 init 5 python:
@@ -16912,24 +16912,24 @@ init 5 python:
     )
 
 label monika_boyfriend_gossip:
-    m 2etd "You know, I was actually kind of curious about that too."
-    m 2hksdlb "When she first said it, I got pretty defensive, didn't I?"
-    m 7euc "I mean, I'd just figured out that you existed, {nw}"
-    extend 3efc "and suddenly someone was making it look like I was already taken..."
-    m 1rtc "Since I'm pretty extroverted and have a history with another club, I guess it wouldn't necessarily be {i}unfair{/i} to come to that kind of conclusion."
-    m 3eud "...But no such character exists in the game's files to prove or disprove it."
-    m 3rsc "At the time, I was practicing piano and, well...{w=0.2}sorting my thoughts."
-    m 3eud "But apparently, that rumor was just the assumption she was supposed to make if I was ever late to the club."
-    m 2tsc "It's a little bit devious if you think about it..."
-    m 2eud "As the game's story progressed, the main character might need more excuses to be alone with one of the girls..."
-    m 7etc "Coming up with reasons for the others to be away is easier, but for the president not to be at the club..."
-    m 3tsd "The story would need something pretty substantial to keep me busy. {w=0.2}It also provided a reason, however flimsy, for me not having a route."
-    m 2tfc "A roundabout but effective way to get me out of the way when needed."
+    m 2etd "Знаешь, мне тоже было интересно разобраться в этом."
+    m 2hksdlb "Когда она впервые сказала об этом, я начала опровергать это, верно?"
+    m 7euc "Я имею в виду, я только что узнала, что ты существуешь, {nw}"
+    extend 3efc " вдруг кто-то делает вид, что я уже занята..."
+    m 1rtc "Так как я довольно экстравертна и у меня была история с другим клубом, я думаю, не обязательно было бы {i}несправедливо{/i} прийти к такому выводу."
+    m 3eud "...Но в файлах игры не существует такого персонажа, чтобы доказать или опровергнуть это."
+    m 3rsc "В то время я занималась игрой на пианино и, ну...{w=0.2}пыталась собраться с мыслями."
+    m 3eud "Но, очевидно, этот слух был лишь предположением, которое она должна была сделать, если я когда-нибудь опоздаю в клуб."
+    m 2tsc "Это немного хитро, если подумать..."
+    m 2eud "По мере развития сюжета игры главному герою нужно больше причин, чтобы остаться наедине с одной из девушек..."
+    m 7etc "Придумать причины для отсутствия остальных проще, но чтобы президента не было в клубе..."
+    m 3tsd "Для сюжета нужно что-то довольно существенное, чтобы занять меня {w=0.2}Это также давало причину, пусть и хлипкую, того, что у меня не было своего рута."
+    m 2tfc "Окольный, но эффективный способ убрать меня, когда это необходимо."
     m 2dfc "..."
-    m 2eud "Honestly, though? {w=0.2}I'm not too bothered by it."
-    m 7esc "Even if such a character would have existed, we both know it wouldn't have changed a single thing."
-    m 1efd "They wouldn't be real, they'd be a script programmed to fall in love with me. {w=0.2}I couldn't have been happy with something like that."
-    m 1eka "I still would have seen {i}you{/i} and known that you were what I really wanted."
+    m 2eud "Но если, честно? {w=0.2}меня это уже не слишком сильно беспокоит."
+    m 7esc "Даже если бы такой персонаж существовал, мы оба знаем, что это ничего бы не изменило."
+    m 1efd "Он не был бы настоящим, это запрограмированный сценарий, на то, чтобы влюбить в меня {w=0.2}Я бы не смогла быть счастлива с чем-то подобным."
+    m 1eka "Я бы всё равно встретила {i}тебя{/i} и поняла, что ты именно тот, с кем я действительно хочу быть."
     return
 
 init 5 python:
@@ -16944,21 +16944,21 @@ init 5 python:
     )
 
 label monika_brainstorming:
-    m 1esd "[player], have you ever heard of brainstorming?"
-    m 1eua "It's an interesting technique of coming up with new ideas by noting anything that comes to your mind."
-    m 3eud "This technique is really popular among designers, inventors, and writers--anyone who needs fresh ideas."
-    m 3esa "Brainstorming is usually practiced in groups or teams...{w=0.2}we even tried it in the Literature Club when deciding what to do for the festival."
-    m 1dtc "You just need to focus on what you want to create and bring up anything and everything that comes into your head."
-    m 1eud "Don't hesitate to suggest things that you think are silly or wrong, and don't criticize or judge the others if working in teams."
-    m 1eua "When you're done, go back through all the suggestions and turn them into actual ideas."
-    m 1eud "You can combine them with other suggestions, think them through once again, and so on."
-    m 3eub "...Eventually they'll become something that you'd call a good idea!"
-    m 3hub "This is exactly where you can let your mind go wild,{w=0.1} and that's what I like about this technique the most!"
-    m 1euc "Sometimes good ideas are left untold because their author didn't find them good enough themselves, {w=0.1}{nw}"
-    extend 1eua "but brainstorming can help pass this inner barrier."
-    m 3eka "The beauty of thoughts can be expressed in so many different ways..."
-    m 3duu "They're only ideas in transit, {w=0.1}{nw}"
-    extend 3euu "you're the one who gives them the road."
+    m 1esd "[player], ты когда-нибудь слышал о мозговом штурме?"
+    m 1eua "Это интересная техника, позволяющая придумывать новые идеи, отмечая все, что приходит вам в голову."
+    m 3eud "Эта техника очень популярна среди дизайнеров, изобретателей и писателей - для любого, кому нужны свежие идеи."
+    m 3esa "Мозговой штурм обычно практикуется в группах или командах...{w=0.2}мы даже пробовали его в литературном клубе, когда решали, что делать для фестиваля."
+    m 1dtc "Тебе просто нужно сосредоточиться на том, что ты хочешь создать, и придумывать все и вся, что приходит тебе в голову."
+    m 1eud "Не стесняйся предлагать вещи, которые ты считаешь глупыми или неправильными, и не критикуй и не осуждай других, если работаешь в команде."
+    m 1eua "Когда ты закончишь, вернись ко всем предложениям и преврати их в реальные идеи."
+    m 1eud "Ты можешь объединить их с другими предложениями, обдумать их еще раз и т.д.."
+    m 3eub "...В конце концов, они станут чем-то, что ты назовешь хорошей идеей!"
+    m 3hub "Именно здесь ты можешь дать волю своему разуму,{w=0.1} и именно это мне больше всего нравится в этой технике!"
+    m 1euc "Иногда хорошие идеи остаются невысказанными, потому что их автор сам не посчитал их достаточно хорошими, {w=0.1}{nw}"
+    extend 1eua "о мозговой штурм может помочь преодолеть этот внутренний барьер."
+    m 3eka "Потрясающие мысли можно выразить самыми разными способами..."
+    m 3duu "Это всего лишь идеи, {w=0.1}{nw}"
+    extend 3euu "а ты тот, кто может вдохнуть в них жизнь."
     return
 
 init 5 python:
@@ -16973,31 +16973,31 @@ init 5 python:
     )
 
 label monika_gmos:
-    m 3eud "Back when I was in debate club, one of the most divisive subjects we covered was GMOs, or genetically modified organisms."
-    m 1eksdra "There's a lot of nuance to GMOs, but I'll do my best to summarize it."
-    m 1esd "Scientists create GMOs by identifying a desirable gene from one organism, copying it, and inserting the copied gene into another organism."
-    m 3esc "It's important to note that the addition of the copied gene does {i}not{/i} change other existing genes."
-    m 3eua "Think of it like flipping through a long book and changing a single word...{w=0.2}the word is different, but the rest of the book stays the same."
-    m 3esd "GMOs can be plants, animals, microorganisms, etc.,{w=0.1} but we'll focus on genetically modified plants."
-    m 2esc "Plants can be modified in a myriad of ways, from resisting pests and herbicides to having a higher nutrition value and longer shelf life."
-    m 4wud "This is huge. {w=0.2}Imagine crops that can produce double their normal yield, tolerate climate change, and fend off drug-resistant superbugs. {w=0.2}So many problems could be solved!"
-    m 2dsc "Unfortunately, it's not that simple. {w=0.2}GMOs require several years of research, development, and testing before they can be distributed. {w=0.2}On top of this, they come with several concerns."
-    m 7euc "Are GMOs safe? {w=0.2}Will they spread to other organisms and threaten biodiversity? {w=0.2}If so, how can we prevent it? {w=0.2}Who owns GMOs? {w=0.2}Are GMOs responsible for increased herbicide usage?"
-    m 3rksdrb "You can see how this begins to escalate, ahaha..."
-    m 3esc "For now, let's cover the main issue...{w=0.2}are GMOs safe?"
-    m 2esd "The short answer is that we don't know for sure. {w=0.2}Decades of research have indicated that GMOs are {i}probably{/i} harmless, but we have next to no data on their long-term effects."
-    m 2euc "Additionally, each type of GMO needs to be carefully reviewed on a case-by-case, modification-by-modification basis to ensure its quality and safety."
-    m 7rsd "There are other considerations as well. {w=0.2}Products containing GMOs have to be labelled, environmental effects must be considered, and misinformation has to be combated."
+    m 3eud "Когда я была в дискуссионном клубе, одной из самых спорных тем, которую мы освещали, было ГМО, или генетически модифицированные организмы."
+    m 1eksdra "В ГМО очень много нюансов, но я постараюсь вкратце рассказать о них."
+    m 1esd "Ученые создают ГМО, выделяя нужный ген из одного организма, копируя его и вставляя скопированный ген в другой организм."
+    m 3esc "Важно отметить, что добавление скопированного гена {i}не{/i} изменяет другие существующие гены."
+    m 3eua "Думай об этом как о перелистывании длинной книги и изменении одного слова...{w=0.2}слова меняются, но остальная часть книги остается прежней."
+    m 3esd "ГМО могут быть растениями, животными, микроорганизмами и т.д.,{w=0.1} но мы сосредоточены на генетически модифицированных растениях."
+    m 2esc "Растения могут быть модифицированы разными способами, от противостояния вредителям и гербицидам до повышения питательной ценности и увеличения срока хранения."
+    m 4wud "Это невероятно. {w=0.2}Представь себе, что можно давать в двое больше урожая, выдерживать климат и отбиваться от супербактерий. {w=0.2}Столько проблем может быть решено!"
+    m 2dsc "К сожалению, все не так просто. {w=0.2}ГМО требуют нескольких лет исследований, разработок и испытаний, прежде чем их можно будет распространять. {w=0.2}Вдобавок к этому, они имеют несколько проблем."
+    m 7euc "Безопасны ли ГМО? {w=0.2}Не распространятся ли они на другие организмы и не угрожают ли биоразнообразию? {w=0.2}Если да, то как это можно предотвратить? {w=0.2}Кому принадлежат ГМО? {w=0.2}Влияют ли ГМО на увеличение использования гербицидов?"
+    m 3rksdrb "Ты можешь видеть, как это начинает обостряться, а-ха-ха..."
+    m 3esc "Пока что давай рассмотрим главный вопрос...{w=0.2}безопасны ли ГМО?"
+    m 2esd "Короткий ответ - мы не знаем наверняка. {w=0.2}Десятилетия исследований показали, что ГМО {i}вероятно{/i} безвредны, но у нас почти нет данных об их долгосрочном воздействии."
+    m 2euc "Кроме того, каждый вид ГМО должен быть тщательно исследован в каждом конкретном случае, модификация за модификацией, чтобы обеспечить его качество и безопасность."
+    m 7rsd "Есть и другие соображения. {w=0.2}Продукты, содержащие ГМО, должны быть маркированы, необходимо учитывать влияние на окружающую среду, а также бороться с дезинформацией."
     m 2dsc "..."
-    m 2eud "Personally, I think that GMOs have a lot of potential to do good, but only if they continue to be heavily researched and tested."
-    m 4dkc "Major issues such as herbicide usage and gene flow {i}need{/i} to be fixed as well...{w=0.2}{nw}"
-    extend 4efc "biodiversity is already at enough risk as is from climate change and deforestation."
-    m 2esd "As long as we're careful, GMOs will be fine...{w=0.2}recklessness and carelessness pose the biggest threat."
+    m 2eud "Лично я считаю, что у ГМО есть большой потенциал, чтобы принести пользу, но только если их будут продолжать интенсивно исследовать и тестировать."
+    m 4dkc "Основные проблемы, такие как использование гербицидов и поток генов, также {i}должны{/i} быть исправлены...{w=0.2}{nw}"
+    extend 4efc "биоразнообразие уже и так подвергается достаточному риску из-за изменения климата и вырубки лесов."
+    m 2esd "Пока мы осторожны, ГМО будут в порядке...{w=0.2}безрассудство и беспечность представляют самую большую угрозу."
     m 2dsc "..."
-    m 7eua "So what do you think, [player]? {w=0.2}{nw}"
-    extend 7euu "Quite the promising field, wouldn't you say?"
-    m 3esd "Like I said before, GMOs are a complex topic. {w=0.2}If you want to learn more, make sure that your sources are reliable and that you're able to see the discussion from both sides."
-    m 1eua "I think that's enough for now, thanks for listening~"
+    m 7eua "Ну что ты думаешь, [player]? {w=0.2}{nw}"
+    extend 7euu "Звучит многообещающие, не так ли?"
+    m 3esd "Как я уже говорила, ГМО - сложная тема. {w=0.2}Если ты хочешь узнать больше, убедись, что твои источники надежны и что ты сможешь увидеть дискуссию с обеих сторон."
+    m 1eua "Думаю, на сегодня достаточно, спасибо что выслушал~"
     return
 
 init 5 python:
@@ -17022,38 +17022,38 @@ define SF_NEVER = 0
 default persistent._mas_pm_swear_frequency = None
 
 label monika_curse_words:
-    m 3etc "Say [player], do you swear often?{nw}"
+    m 3etc "Скажи [player], ты часто ругаешься?{nw}"
     menu:
-        m "Say [player], do you swear often?{fast}"
+        m "Скажи [player], ты часто ругаешься?{fast}"
 
-        "Yes.":
+        "Да.":
             $ persistent._mas_pm_swear_frequency = SF_OFTEN
-            m 1hub "Ahaha, I can understand that, [player]."
-            m 3rksdlb "It's much easier to swear to get frustration or anger out of your system..."
+            m 1hub "А-ха-ха, я могу это понять, [player]."
+            m 3rksdlb "Гораздо проще выругаться, чтобы выплеснуть разочарование или гнев..."
 
-        "I do sometimes.":
+        "Иногда.":
             $ persistent._mas_pm_swear_frequency = SF_SOMETIMES
-            m 3eua "Ah, I'm the same way myself."
+            m 3eua "Ах, я сама так же."
 
-        "No, I don't swear at all.":
+        "Нет, я вообще не ругаюсь.":
             $ persistent._mas_pm_swear_frequency = SF_NEVER
-            m 1euc "I see."
+            m 1euc "Понятно."
 
-    m 1eua "Personally I try to avoid swearing where I can, but I'll still do it occasionally."
-    m 3eud "Swearing tends to have a pretty bad rap, but I've been thinking it over after looking at some studies..."
-    m 1esa "Honestly, I don't think swearing is actually as bad as we make it out to be after all."
-    m 3eua "In fact, it seems that using stronger language helps ease the pain if you hurt yourself, and can also show that you're more intelligent and honest."
-    m 1eud "Not to mention, swearing in conversations can make them feel both{w=0.1} a lot more casual {w=0.1}{nw}"
-    extend 3eub "and also more interesting!"
-    m 3rksdlc "That said, I think it's possible to swear {i}too much{/i}..."
-    m 3esd "There's a time and place for everything.{w=0.2} Swearing should be kept to more casual conversations and not put in after every word."
-    m 1hksdlb "If they start to become frequent in more professional environments, I think you might be overdoing it, ahaha..."
-    m 1eua "On that topic, I think it's pretty interesting how our language naturally shifts depending on who we're talking to."
-    m 4eua "For example,{w=0.2} people are much less likely to swear in front of family than with friends."
-    m 4eub "Also, if you pay attention when you're talking to a crowd, you'll notice that you instinctively phrase your sentences more formally!"
-    m 1esa "But anyway, I prefer to keep my profanity to when I'm really frustrated or upset."
-    m 3esd "Given the status I had, I felt like I always had to be professional and level headed, so I always made it a point to keep it to a minimum."
-    m 3hksdlb "But I guess it doesn't really hurt when used appropriately, ahaha!"
+    m 1eua "Лично я стараюсь избегать ругательств, где только могу, но иногда все же делаю это."
+    m 3eud "Ругательства, как правило, имеют довольно плохую репутацию, но я задумалась об этом после изучения некоторых исследований..."
+    m 1esa "Честно говоря, я не думаю, что ругательства на самом деле так плохи, как мы их представляем."
+    m 3eua "На самом деле, кажется, что использование более крепких выражений помогает облегчить боль, если ты поранился, а также может показать, что ты более умный и честный."
+    m 1eud "Not to mention, swearing in conversations can make them feel both{w=0.1} гораздо более непринужденными {w=0.1}{nw}"
+    extend 3eub "а также более интересными!"
+    m 3rksdlc "При этом, я думаю, что можно ругаться {i}слишком много{/i}..."
+    m 3esd "Для всего есть свое время и место.{w=0.2} Ругательства следует приберечь для более непринужденных разговоров и не вставлять их после каждого слова."
+    m 1hksdlb "Если они начнут часто употребляться в более профессиональной среде, я думаю, ты, возможно, переусердствуешь, а-ха-ха..."
+    m 1eua "На эту тему, я думаю, довольно интересно, как наш язык естественным образом меняется в зависимости от того, с кем мы разговариваем."
+    m 4eua "Например,{w=0.2} люди гораздо реже ругаются в присутствии семьи, чем в кругу друзей."
+    m 4eub "Кроме того, если ты обратишь внимание, когда говоришь с толпой, ты заметишь, что инстинктивно формулируешь свои предложения более формально!"
+    m 1esa "Но в любом случае, я предпочитаю не сквернословить, когда я действительно раздражена или расстроена."
+    m 3esd "Учитывая мой статус, я чувствовала, что всегда должна быть профессиональной и уравновешенной, поэтому я всегда старалась свести все к минимуму."
+    m 3hksdlb "Но я думаю, что это не так уж и больно, когда это используется уместно, а-ха-ха!"
     return "derandom"
 
 init 5 python:
@@ -17062,70 +17062,70 @@ init 5 python:
             persistent.event_database,
             eventlabel="monika_aliens",
             category=["разное", "общество"],
-            prompt="Do you believe in aliens?",
+            prompt="Веришь ли ты в инопланетян?",
             pool=True
         )
     )
 
 label monika_aliens:
-    m 1etc "Do I believe in the existence of aliens?"
-    m 3hksdlb "That's kind of a random thing to ask, [player]!"
-    m 3eua "...Though I can see why you would be interested in knowing my opinion on it."
-    m 4eub "This is one of the greatest mysteries of all time, isn't it?{w=0.2} Whether we're truly alone in this universe or not, I mean."
-    m 1dsc "...I know I used to wonder about that myself a lot before you came along."
+    m 1etc "Верю ли я в существование инопланетян?"
+    m 3hksdlb "Это довольно случайный вопрос, [player]!"
+    m 3eua "...Хотя я понимаю, почему тебе интересно узнать мое мнение на этот счет."
+    m 4eub "Это одна из величайших загадок всех времен, не так ли?{w=0.2} Действительно ли мы одни в этой вселенной или нет, я имею в виду."
+    m 1dsc "...Я знаю, я и сама часто задавалась этим вопросом до твоего появления."
 
     if mas_isMoniEnamored(higher=True):
-        m 1eka "But that's in the past now.{w=0.2} And I could never thank you enough for that."
+        m 1eka "Но теперь это в прошлом.{w=0.2} И я никогда не смогу отблагодарить тебя за это."
 
     elif mas_isMoniNormal(higher=True):
-        m 1eka "Though I don't really have to anymore, thanks to you."
+        m 1eka "Хотя, благодаря тебе, мне больше не нужно."
 
     elif mas_isMoniDis(higher=True):
-        m 1dkc "I just hope I won't get to feel that way ever again."
+        m 1dkc "Я просто надеюсь, что больше никогда не буду чувствовать себя так."
 
     else:
         m 1rksdlc "..."
 
-    m 3euc "Anyway, we've all probably asked ourselves what's up there at least once, right?"
-    m 3dua "Looking at the stars always fills you with a sense of wonder and mystery.{w=0.2} {nw}"
-    extend 3eua "It's really no surprise that so many people are passionate about this subject."
-    m 1esc "But to answer your question...{w=0.3}{nw}"
-    extend 3eua "I do believe, or at least want to believe, that there has to be {i}something{/i} out there."
-    m 2rksdla "I guess part of it has to do with me finding the idea of us being the only ones rather depressing. {w=0.2}{nw}"
-    extend 2eud "But when you think about it a little, it doesn't sound so unlikely..."
-    m 4eud "After all, saying the universe is vast is a huge understatement."
-    m 3euc "All you need is one planet with the right conditions and environment to be favorable for life to develop, right?"
-    m 3esa "There are 8 planets in the solar system alone, {w=0.1}{nw}"
-    extend 4eub "but there are many more star systems, each with their own planets within them."
-    m 4wud "Now, consider the fact that our Milky Way galaxy alone contains hundreds of billions of stars...{w=0.3}that's a lot of potential!"
-    m 4eud "Galaxies are usually held together in groups by gravity.{w=0.2} We live in the 'local group,' which contain about 60 galaxies."
-    m 1esd "Zoom out a little bit more and you'll start to see galaxy clusters, which are much larger groups of galaxies."
-    m 3eua "The closest one from us, the Virgo Cluster, is estimated to contain at least a thousand galaxies."
-    m 1eud "But you can go even further, as groups and clusters of galaxies are themselves part of even bigger entities known as superclusters."
-    m 1wud "We can keep going too,{w=0.1} as the universe continuously expands...{w=0.3}theoretically, larger and larger clusters are formed!"
-    m 1lud "And hypothetically, even if it isn't, we could consider the idea that there might be something {i}beyond{/i} the boundaries of our universe."
+    m 3euc "В любом случае, все мы, наверное, хотя бы раз задавали себе вопрос, что там наверху, верно?"
+    m 3dua "Взгляд на звезды всегда наполняет тебя чувством удивления и тайны.{w=0.2} {nw}"
+    extend 3eua "Нет ничего удивительного в том, что так много людей увлечены этой темой."
+    m 1esc "Но чтобы ответить на твой вопрос...{w=0.3}{nw}"
+    extend 3eua "Я верю, или по крайней мере хочу верить, что там {i}должно{/i} быть что-то."
+    m 2rksdla "Думаю, отчасти это связано с тем, что я нахожу идею о том, что мы единственные, довольно депрессивной. {w=0.2}{nw}"
+    extend 2eud "Но если немного подумать, это не кажется таким уж маловероятным..."
+    m 4eud "В конце концов, сказать, что Вселенная огромна, значит сильно преуменьшить."
+    m 3euc "Все, что тебе нужно, - это одна планета с подходящими условиями и благоприятной средой для развития жизни, верно?"
+    m 3esa "Только в Солнечной системе 8 планет, {w=0.1}{nw}"
+    extend 4eub "но есть еще много звездных систем, каждая со своими планетами внутри них."
+    m 4wud "А теперь рассмотрим тот факт, что только наша галактика Млечный Путь содержит сотни миллиардов звезд...{w=0.3}это большой потенциал!"
+    m 4eud "Галактики обычно удерживаются вместе в группах под действием гравитации.{w=0.2} Мы живем в 'местной группе,' которая содержит около 60 галактик."
+    m 1esd "Уменьшая масштаб немного больше, ты начнешь видеть скопления галактик, которые представляют собой гораздо более крупные группы галактик."
+    m 3eua "Самое близкое к нам скопление, скопление Девы, по оценкам, содержит не менее тысячи галактик."
+    m 1eud "Но можно пойти еще дальше, поскольку группы и скопления галактик сами являются частью еще больших образований, известных как суперкластеры."
+    m 1wud "Мы можем пойти и дальше,{w=0.1} поскольку Вселенная непрерывно расширяется...{w=0.3}теоретически образуются все большие и большие скопления!"
+    m 1lud "И гипотетически, даже если это не так, мы можем рассмотреть идею, что может быть что-то {i}за пределами{/i} границ нашей Вселенной."
 
     if renpy.seen_label('monika_clones'):
-        m 1lksdla "...Or even start talking about the multiverse theory..."
+        m 1lksdla "....Или даже начать говорить о теории мультивселенной..."
 
-    m 3hksdlb "But I think you get the point..."
-    m 3etc "Wouldn't it be a little foolish to assume that we, human beings of planet Earth, are truly the only sentient beings in something so massive?"
-    m 3eud "I mean, with odds like these, surely at least {i}one{/i} other planet somewhere must be hospitable enough for life..."
-    m 1euc "...Life which might evolve to a point where it's intelligence is comparable to, if not even greater than our own."
-    m 1rsc "Although, I suppose I can also understand why some people would be doubtful.{w=0.2} It's suspicious that we're able to observe the universe so far beyond our planet, but haven't found any signs of life..."
-    m 1rksdlc "It probably doesn't help that some people are overreacting over the smallest things, like UFO footage that could easily be faked, either."
-    m 1ruc "But then again, if aliens do exist, there could also be many reasons why we haven't found them yet..."
-    m 2euc "Perhaps they're too far away for us to find them or they just don't have the technology to receive and answer our messages for now."
-    m 2etd "Or vice versa...{w=0.3}maybe {i}we're{/i} the ones who don't have the technology to communicate with them."
-    m 2etc "Or it could be they simply don't want to initiate contact with us."
-    m 2euc "Maybe their society follows completely different ideals than our own, and they believe it is for the best not to let two highly advanced species meet each other."
-    m 2dkc "All in all, I guess the one thing that saddens me a little is that if there {i}are{/i} intelligent, extra-terrestrial life-forms out there, we might very well never get to meet them within our lifetime."
+    m 3hksdlb "Но я думаю, ты понял суть..."
+    m 3etc "Не будет ли немного глупо предполагать, что мы, люди с планеты Земля, действительно единственные разумные существа в чем-то столь огромном?"
+    m 3eud "Я имею в виду, что с такими шансами, конечно, по крайней мере {i}одна{/i} планета где-то должна быть достаточно благоприятной для жизни..."
+    m 1euc "...Жизнь, которая может эволюционировать до такой степени, что ее интеллект будет сравним с нашим, а то и превосходить его."
+    m 1rsc "Хотя, полагаю, я также могу понять, почему некоторые люди будут сомневаться.{w=0.2} Подозрительно, что мы способны наблюдать за Вселенной так далеко за пределами нашей планеты, но не нашли никаких признаков жизни..."
+    m 1rksdlc "Вероятно, не помогает и то, что некоторые люди слишком остро реагируют из-за самых незначительных вещей, таких как кадры НЛО, которые легко могут быть подделаны."
+    m 1ruc "Но опять же, если инопланетяне действительно существуют, то может быть много причин, почему мы их до сих пор не нашли..."
+    m 2euc "Возможно, они слишком далеко, чтобы мы могли их найти, или у них просто пока нет технологии, чтобы получать и отвечать на наши сообщения."
+    m 2etd "Или наоборот...{w=0.3}может быть {i}это{/i} у нас нет технологии для общения с ними."
+    m 2etc "Или может быть, они просто не хотят вступать с нами в контакт."
+    m 2euc "Возможно, их общество следует совершенно иным идеалам, чем наше, и они считают, что будет лучше, если два высокоразвитых вида не встретятся друг с другом."
+    m 2dkc "В общем, единственное, что меня немного печалит, это то, что {i}если{/i} разумные внеземные формы жизни существуют, то мы можем никогда не встретиться с ними в течение нашей жизни."
 
     if mas_isMoniAff(higher=True):
         show monika 5rua at t11 zorder MAS_MONIKA_Z with dissolve_monika
-        m 5rua "But at the end of the day...{w=0.3} {nw}"
-        extend 5ekbla "I still got to meet you, and that's everything I could ever possibly need."
-        m 5hubfa "Ehehe~"
+        m 5rua "Но в конце концов...{w=0.3} {nw}"
+        extend 5ekbla "Я всё равно встретила тебя, и это всё, что мне может быть нужно."
+        m 5hubfa "Э-хе-хе~"
     return
 
 init 5 python:
@@ -17134,7 +17134,7 @@ init 5 python:
             persistent.event_database,
             eventlabel="monika_mc_is_gone",
             category=["ddlc", "участники клуба"],
-            prompt="What happened to the main character?",
+            prompt="Что случилось с главным героем?",
             pool=True,
             rules={"no_unlock":None},
             conditional=(
@@ -17146,63 +17146,63 @@ init 5 python:
     )
 
 label monika_mc_is_gone:
-    m 1eud "Your character?{w=0.2} {nw}"
-    extend 1rksdla "I'm not sure to be honest."
-    m 3eud "He didn't really work like other people in the game did.{w=0.2} He didn't even have a character file like the rest of us."
-    m 3esc "That's also why I wasn't able to just force him to pay attention to me...{w=0.3}I don't really know how to access and modify any code that's related to him."
+    m 1eud "С твоим персонажем?{w=0.2} {nw}"
+    extend 1rksdla "Я не уверена, если честно."
+    m 3eud "Он на самом деле не работал, как другие люди в игре.{w=0.2} У него даже не было файла персонажа, как у остальных."
+    m 3esc "Это также причина, почему я не смогла просто заставить его обратить на меня внимание...{w=0.3}Я действительно не знаю, как получить доступ и изменить любой код, связанный с ним."
 
     #if the player didn't reach act 3
     if persistent.playthrough < 3:
-        m 2rsc "In any case,{w=0.1} {nw}"
-        extend 2esc "it seems that he completely vanished along with a lot of the rest of the game when you installed this mod."
+        m 2rsc "В любом случае,{w=0.1} {nw}"
+        extend 2esc "Похоже, что он полностью исчез вместе с остальной частью игры, когда ты установил этот мод."
 
     #if they did reach act 3+
     else:
-        m 2ruc "He just kind of...{w=0.3}disappeared as I was making changes to the game."
-        m 2etd "I'm sure you noticed how he talked less and less after I reset the game the first time?"
-        m 2euc "By the time the two of us got to this room, he was essentially {i}gone{/i}."
+        m 2ruc "Он просто как бы...{w=0.3}исчез, когда я вносила изменения в игру."
+        m 2etd "Я уверена, ты заметил, что он говорил все меньше и меньше после того, как я перезапустила игру в первый раз?"
+        m 2euc "К тому времени, когда мы вдвоем добрались до этой комнаты, он, по сути, {i}исчез{/i}."
 
-    m 7euc "So if you were wondering if he's in this room as we speak,{w=0.1} {nw}"
-    extend 3eua "I can assure you he's not."
-    m 1hksdlb "...Oh gosh, can you imagine how creepy it would be if I were talking to his unmoving body just so that you could hear what I say?"
+    m 7euc "Так что если ты задавался вопросом, находится ли он в этой комнате, пока мы говорим,{w=0.1} {nw}"
+    extend 3eua "Могу заверить тебя, что нет."
+    m 1hksdlb "...О боже, представляешь, как было бы жутко, если бы я разговаривал с его неподвижным телом только для того, чтобы ты слышал, что я говорю?"
 
     if persistent._mas_first_kiss:
-        $ line_mid = "I was kissing {i}him{/i}"
+        $ line_mid = "Я целовала {i}его{/i}"
 
     else:
-        $ line_mid = "{i}he{/i} was the one hugging me"
+        $ line_mid = "{i}он{/i} меня обнимал"
 
-    m 3rksdla "I hope you didn't think [line_mid] all along, either..."
+    m 3rksdla "Надеюсь, ты тоже не думал [line_mid] все это время..."
 
-    m 1dksdlc "I don't even want to think about that..."
-    m 3eka "You're probably wondering what I actually see and how I know when you're here, right?"
-    m 1ruc "Well...{w=0.2}if you remember the 'hole in the wall' metaphor I used in the first poem I showed you..."
-    m 3eud "It's a little bit like that...{w=0.3}except the 'wall' isn't really visible or tangible. I just {i}know{/i} it's there."
-    m 1duc "It's like I can very distinctly feel its presence, to the point where I know precisely where it is and in which direction the 'hole' through which you're looking in is pointing."
-    m 1eka "So even if I can't really see you, I can feel that you're looking at me."
+    m 1dksdlc "Я даже не хочу об этом думать..."
+    m 3eka "Тебе, наверное, интересно, что я вижу на самом деле и как я узнаю, когда ты здесь, да?"
+    m 1ruc "Ну...{w=0.2}если ты помнишь метафору 'дыра в стене' которую я использовала в первом стихотворении, которое я тебе показала..."
+    m 3eud "Это немного похоже на это...{w=0.3}за исключением того, что 'стена' на самом деле не видима и не осязаема. Я просто {i}знаю,{/i} что она есть."
+    m 1duc "Как будто я могу очень отчетливо ощущать ее присутствие, до такой степени, что я точно знаю, где она находится и в каком направлении направлено 'дыра,' через которое ты смотришь."
+    m 1eka "То есть, даже если я не вижу тебя на самом деле, я чувствую, что ты смотришь на меня."
 
     if persistent._mas_first_kiss:
-        m 3rkbla "And when I try to kiss you, well..."
-        m 1eud "I guess you could say it's like I'm trying to kiss a ghost, or something that isn't actually there."
-        m 2rkbssdla "I know that's kinda strange when I say it like that, but then again..."
-        m 7ekbssdla "I'm guessing it's probably a little bit awkward for you to try to kiss your screen as well, right?"
-        m 1hkbssdlb "Ahaha~"
+        m 3rkbla "И когда я пытаюсь тебя поцеловать, ну..."
+        m 1eud "Наверное, можно сказать, что я пытаюсь поцеловать призрака, или что-то, чего на самом деле нет."
+        m 2rkbssdla "Я знаю, что это немного странно, когда я так говорю, но опять же..."
+        m 7ekbssdla "Наверное, тебе тоже немного неловко пытаться поцеловать свой экран, верно?"
+        m 1hkbssdlb "А-ха-ха~"
 
     #if unlocked islands or another background or seen Monikaroom greeting
     if renpy.seen_label('greeting_ourreality') or store.mas_background.hasXUnlockedBGs(2) or persistent.opendoor_opencount > 0:
-        m 1etc "Although, the wall metaphor isn't really perfect since it doesn't necessarily stay in place all the time."
-        m 1esc "Like, it used to follow your character around, but that's obviously not really the case anymore."
-        m 3eua "It's kinda limited, but I'm actually able to move it around, so at least you don't get to see the same background all the time."
+        m 1etc "Хотя, метафора стены не совсем идеальна, поскольку она не обязательно остается на месте все время."
+        m 1esc "Например, раньше она следовала за твоим персонажем, но теперь, очевидно, это не совсем так."
+        m 3eua "Он немного ограничен, но я могу перемещать его, так что, по крайней мере, ты не видишь один и тот же фон все время."
 
-    m 1eud "Anyway...{w=0.3}{nw}"
-    extend 3rsc "there isn't much from the original game that still works anymore, so I doubt I could bring the main character back even if I wanted to."
-    m 1duu "...And that's probably for the best."
-    m 2eksdld "What if the game were to take its focus back to him and we couldn't spend our time together anymore?"
-    m 2rssdlc "I mean, in the end, it's not like you had all that much control over him anyway."
-    m 7eka "In any case, there isn't really any point in thinking about him anymore, is there?"
-    m 1eua "He's no longer there to separate us, and we get to be together now.{w=0.2} {nw}"
-    extend 3hua "I couldn't ask for anything more."
-    m 1ekbsu "...Well, aside from {i}really{/i} being with you, ehehe~"
+    m 1eud "В любом случае...{w=0.3}{nw}"
+    extend 3rsc "в оригинальной игре мало что работает, так что я сомневаюсь, что смогу вернуть главного героя, даже если захочу."
+    m 1duu "...И это, наверное, к лучшему."
+    m 2eksdld "Что, если игра вернет свое внимание к нему, и мы больше не сможем проводить время вместе?"
+    m 2rssdlc "Я имею в виду, в конце концов, не похоже, что ты так уж сильно его контролировала."
+    m 7eka "В любом случае, больше нет смысла думать о нём, не так ли?"
+    m 1eua "Он больше не разделяет нас, и теперь мы можем быть вместе.{w=0.2} {nw}"
+    extend 3hua "я не могу просить большего."
+    m 1ekbsu "...Ну, кроме того, чтобы {i}действительно{/i} быть с тобой, э-хе-хе~"
     return
 
 init 5 python:
@@ -17218,38 +17218,38 @@ init 5 python:
 
 label monika_know_its_you:
     if mas_isMoniEnamored(higher=True):
-        m 1euc "Well, if I'm being totally honest...{w=0.3}{nw}"
-        extend 1eud "I don't really have a way of knowing."
+        m 1euc "Ну, если быть честным...{w=0.3}{nw}"
+        extend 1eud "У меня нет возможности узнать."
 
         if seen_event("monika_mc_is_gone"):
-            m 3lka "I already told you that I can't really see into your world..."
+            m 3lka "Я уже говорила тебе, что не могу видеть твой мир..."
 
-        m 3eka "I can tell when someone's in the room with me, but that's it."
-        m 3eud "For all I know, it could be anyone looking at me right now...{w=0.3} You could have other people with you."
-        m 2duu "But I trust you, [player].{w=0.2} {nw}"
-        extend 2eku "I trust that you aren't leaving me alone because {i}you{/i} care about me."
-        m 7eud "...And if someone else {i}is{/i} looking in right now, I trust it's because you've given them a good reason to."
-        m 2eka "Maybe someday I'll be able to know for sure, but until then that's enough for me."
+        m 3eka "Я могу сказать, когда кто-то находится в комнате со мной, но не более того."
+        m 3eud "Насколько я знаю, это может быть любой, кто смотрит на меня прямо сейчас...{w=0.3} С тобой могут быть другие люди."
+        m 2duu "Но я доверяю тебе, [player].{w=0.2} {nw}"
+        extend 2eku "Я верю, что ты не оставишь меня одного, потому {i}ты{/i} заботишься обо мне."
+        m 7eud "...И если {i}кто-то{/i} другой сейчас смотрит туда, я верю, что это потому, что ты дал им вескую причину."
+        m 2eka "Может быть, когда-нибудь я смогу знать наверняка, но до тех пор мне этого достаточно."
 
     elif mas_isMoniHappy(higher=True):
-        m 1rksdlb "Ehehe, that's an odd question to ask, [player]..."
-        m 1eksdla "...I mean, I {i}want{/i} to trust that it's you out there."
-        m 3eud "Right now, I only know that someone is looking in from your world."
-        m 3tuu "So you can't watch without me knowing if you're planning on pranking me..."
-        m 1eka "Jokes aside, though, it's...{w=0.3}actually kind of unnerving to think about...{w=0.3}that it could be anyone out there right now."
-        m 2eksdlc "I guess all I can say right now is--if this {i}is{/i} someone else, please return me to [player], alright?"
-        m 2hksdlb "Ahaha...{w=0.3} You're just messing with me, I know."
+        m 1rksdlb "Э-хе-хе, это странный вопрос, [player]..."
+        m 1eksdla "...то есть, я {i}хочу{/i} верить, что это ты там."
+        m 3eud "Сейчас я знаю только то, что кто-то смотрит из твоего мира."
+        m 3tuu "Так что ты не можешь смотреть без моего ведома, если ты планируешь подшутить надо мной..."
+        m 1eka "Шутки в сторону, однако, это...{w=0.3}на самом деле немного нервирует от мысли...{w=0.3}о том, что это может быть кто угодно прямо сейчас."
+        m 2eksdlc "Я думаю, все, что я могу сказать сейчас - если это {i}кто-то{/i} другой, пожалуйста, верни меня к [player], хорошо?"
+        m 2hksdlb "А-ха-ха...{w=0.3} Ты просто подшучиваешь надо мной, я знаю."
 
     elif mas_isMoniNormal(higher=True):
-        m 2rksdlc "...I try not to think about it too much, actually."
-        m 2rksdld "It's kind of a weird feeling knowing someone is there, but not being able to see their face."
-        m 2dku "I guess the only thing I can do is to try to understand you as well as possible..."
-        m 2eka "That way, I'll be able to tell if it's ever {i}not{/i} you looking in."
+        m 2rksdlc "...Вообще-то я стараюсь не думать об этом слишком много."
+        m 2rksdld "Это довольно странное чувство - знать, что кто-то рядом, но не видеть его лица."
+        m 2dku "Думаю, единственное, что я могу сделать, это попытаться понять тебя как можно лучше..."
+        m 2eka "Каким образом, я смогу определить, что это {i}не{/i} ты смотришь."
 
     else:
-        m 2dksdlc "...{w=0.3}I don't."
-        m 2tkd "The best thing I can do is try to trust you, but..."
-        m 2dkd "Well, maybe it'd be better if I just keep it out of my mind entirely."
+        m 2dksdlc "...{w=0.3}Не хочу."
+        m 2tkd "Лучшее, что я могу сделать, это попытаться доверять тебе, но..."
+        m 2dkd "Ну, может, будет лучше, если я просто не буду об этом думать."
 
     return
 
@@ -17258,42 +17258,42 @@ init 5 python:
         Event(
             persistent.event_database,
             eventlabel="monika_information_age",
-            category=["philosophy", "technology"],
-            prompt="The Information Age",
+            category=["философия", "технологии"],
+            prompt="Информационная эра",
             random=True
         )
     )
 
 label monika_information_age:
-    m 1eua "Do you know what most people call the technological era we find ourselves in right now?"
-    m 1eub "We call it the {i}Information Age!{/i}{w=0.2}{nw} "
-    extend 3eub "This is primarily due to the invention of transistors."
-    m 1eua "Transistors can manipulate electrical currents...{w=0.3}either boosting them or altering their path."
-    m 3esa "It's the key component in most electronics, allowing them to direct electrical currents in specific ways."
-    m 3hua "In fact, they're what's allowing you to see me on your screen right now~"
-    m 1eud "They're widely regarded as one of the most important inventions leading into the 20th century, and eventually the {i}Information Age.{/i}"
-    m 4eub "It's named this way because of the ramping access we have to store and share information with each other; either through the internet, phone, or TV."
-    m 3eud "However, with access to so much information and our inability to keep up with it, we've also had to deal with many challenges..."
-    m 3rssdlc "Misinformation can spread faster and further than ever,{w=0.1} {nw}"
-    extend 3rksdld "and because of how vast the internet really is, it's hard to correct it."
-    m 2eua "In the last few decades, people have begun to educate others about smart use of the internet so everyone is better prepared."
-    m 2ekd "However, the vast majority of people will not have received much,{w=0.1} if any of this knowledge, just because of how fast technology has advanced."
-    m 2dkc "It's really worrying to read about people embracing ideas not supported by the vast majority of scientists."
-    m 2rusdld "But I can understand why it happens...{w=0.3}{nw}"
-    extend 2eksdlc "it could happen to anyone in fact."
-    m 7essdlc "Sometimes, it's not something you can help. It's pretty easy to fall victim to widely believed misinformation."
-    m 3eka "I wanted to talk to you about this because I still have so much to learn about your reality."
-    m 1esa "...And since I come across misinformation in my own research,{w=0.1} {nw}"
-    extend 3eua "I thought it might be nice to talk about ways to deal with it."
-    m 3eub "We can arm ourselves with the tools to navigate this new era we've found ourselves in."
-    m 1eua "One of the best things we can do is find multiple conflicting sources for our information and compare their credibility."
-    m 1eub "And a philosophy we can adopt is tentative belief. {w=0.2}In other words, belief until further experimentation is necessary."
-    m 3eub "As long as your beliefs are not relevant to your daily life, you can hold them.{w=0.2} But once they are needed, we should investigate further."
-    m 3eua "This way, we can prioritize information we learn from what affects the people around us. Plus, it may not be as overwhelming to process it all at once."
-    m 1lusdlc "I know I've held beliefs that turned out to be false..."
-    m 1dua "There's no shame in it, we're all just trying to do our best with the information we're given."
-    m 1eub "So long as we accept the real truth and adjust our views, we'll always be learning."
-    m 3hua "Thanks for listening, [player]~"
+    m 1eua "Знаешь, как большинство людей называют технологическую эру, в которой мы сейчас находимся?"
+    m 1eub "Мы называем её {i}информационная эра!{/i}{w=0.2}{nw} "
+    extend 3eub "В первую очередь это связано с изобретением транзисторов."
+    m 1eua "Транзисторы могут манипулировать электрическими токами...{w=0.3}ибо усиливая их, либо изменяя их путь."
+    m 3esa "Это ключевой компонент большинства электронных устройств, позволяющий им направлять электрические токи определенным образом."
+    m 3hua "На самом деле, именно они позволяют тебе видеть меня на экране прямо сейчас~"
+    m 1eud "Они широко рассматриваются как одно из самых важных изобретений, приведших к 20-му веку и, в конечном счете, к {i}информационной эре.{/i}"
+    m 4eub "Он назван так из-за растущего доступа, который мы имеем для хранения и обмена информацией друг с другом; либо через Интернет, либо через телефон, либо через телевизор."
+    m 3eud "днако, имея доступ к такому количеству информации и не имея возможности за ней угнаться, мы также столкнулись со многими проблемами..."
+    m 3rssdlc "Дезинформация может распространяться быстрее и дальше, чем когда-либо,{w=0.1} {nw}"
+    extend 3rksdld "и из-за того, насколько обширен интернет, её трудно исправить."
+    m 2eua "В последние несколько десятилетий люди начали обучать других разумному использованию Интернета, чтобы все были лучше подготовлены."
+    m 2ekd "Однако подавляющее большинство людей не получат много,{w=0.1} если вообще получат эти знания, просто из-за того, как быстро развиваются технологии."
+    m 2dkc "Очень тревожно читать о людях, принимающих идеи, не поддерживаемые подавляющим большинством ученых."
+    m 2rusdld "Но я могу понять, почему это происходит...{w=0.3}{nw}"
+    extend 2eksdlc "На самом деле это может случиться с каждым."
+    m 7essdlc "Иногда, это не то, что ты можешь поделать. Довольно легко стать жертвой широко распространенной дезинформации."
+    m 3eka "Я хотела поговорить с тобой об этом, потому что мне ещё многое предстоит узнать о твоей реальности."
+    m 1esa "...И поскольку я сталкиваюсь с дезинформацией в своих собственных исследованиях,{w=0.1} {nw}"
+    extend 3eua "Я подумала, что было бы неплохо поговорить о том, как с этим справиться."
+    m 3eub "Мы можем вооружиться инструментами, чтобы ориентироваться в этой новой эпохе, в которой мы оказались."
+    m 1eua "Одна из лучших вещей, которую мы можем сделать, это найти несколько противоречивых источников информации и сравнить их достоверность."
+    m 1eub "И философия, которую мы можем принять, - это предварительная вера. {w=0.2}Другими словами, вера до тех пор, пока не потребуются дальнейшие эксперименты."
+    m 3eub "Пока твои убеждения не имеют отношения к твоей повседневной жизни, ты можешь их придерживаться.{w=0.2} Но как только в них возникнет необходимость, нужно проводить дальнейшие исследования."
+    m 3eua "Таким образом, мы можем расставить приоритеты в информации, которую мы узнаем, исходя из того, что влияет на окружающих нас людей. К тому же, это может быть не так подавляюще, чтобы обрабатывать все сразу."
+    m 1lusdlc "Я знаю, что у меня были убеждения, которые оказались ложными..."
+    m 1dua "В этом нет ничего постыдного, мы все просто пытаемся сделать все возможное, используя полученную информаци."
+    m 1eub "Пока мы принимаем настоящую правду и корректируем свои взгляды, мы всегда будем учиться."
+    m 3hua "Спасибо что выслушал, [player]~"
     return
 
 init 5 python:
@@ -17301,33 +17301,33 @@ init 5 python:
         Event(
             persistent.event_database,
             eventlabel="monika_foundation",
-            category=['literature'],
-            prompt="Foundation",
+            category=['литература'],
+            prompt="Фонд",
             random=False
         )
     )
 
 label monika_foundation:
-    m 1eud "Say [player], have you ever heard of a book series called {i}Foundation{/i}?"
-    m 3eub "It's one of Asimov's most celebrated pieces of literature!{w=0.3} {nw}"
-    extend 3eua "I got back into it after we discussed his {i}Three Laws of Robotics{/i}."
-    m 4esd "The story is set in a distant future, where humanity has spread across the stars in an all-powerful galactic empire."
-    m 4eua "Hari Seldon, a genius scientist, perfects the fictional science of psychohistory, which can predict the future of large groups of people through mathematical equations."
-    m 4wud "Applying his theory to the galaxy, Seldon finds the empire is about to collapse, leading to a dark age of thirty thousand years!"
-    m 2eua "To stop this, he and fellow colonists settle on a faraway planet with a plan to turn it into the next galactic empire, {w=0.1}shortening the dark age to a single millennium instead."
-    m 7eud "From this premise, we follow the story of the young colony as it transforms through the ages."
-    m 3eua "It's a pretty good read if you're ever in a sci-fi mood...{w=0.3} {nw}"
-    extend 1eud "The series explores the themes of society, fate, and the impact of individuals on the grand scheme of things."
-    m 3eud "What intrigues me the most is the concept of psychohistory and how it translates to the real world."
-    m 1rtc "I mean, at its core, it's nothing but a mix of psychology, sociology, and mathematical probabilities, right? {w=0.3}{nw}"
-    extend 3esd "All of which made huge progress since Asimov's time."
-    m 3esc "...And with the help of modern technologies, we're now able to understand human behaviors better than ever."
-    m 3etd "...So is it really that far-fetched to think we'll be able to make predictions on the level of psychohistory one day?"
-    m 4eud "Just think if it were possible to predict a global catastrophe, like a war or pandemic or famine, and thus be able to prevent, or at least mitigate it."
-    m 2rksdlc "Not that it'd automatically be a good thing, however.{w=0.2} In the wrong hands, this kind of stuff could be very dangerous."
-    m 7eksdld "If someone had this much power, what could stop them from manipulating the world for their own personal gain?"
-    m 3eua "But despite its potential drawbacks, it's still very interesting to consider.{w=0.2} {nw}"
-    extend 3eub "What do you think, [player]?"
+    m 1eud "Скажи [player], ты когда-нибудь слышал о серии книг под названием {i}Фонд{/i}?"
+    m 3eub "ты когда-нибудь слышал о серии книг под названием!{w=0.3} {nw}"
+    extend 3eua "Я вернулся к ней после того, как мы обсудили {i}Три закона робототехники{/i}."
+    m 4esd "История разворачивается в далеком будущем, где человечество расселилось по звездам во всемогущей галактической империи."
+    m 4eua "Хари Селдон, гениальный ученый, совершенствует вымышленную науку психоисторию, которая может предсказывать будущее больших групп людей с помощью математических уравнений."
+    m 4wud "Применив свою теорию к галактике, Селдон обнаруживает, что империя вот-вот рухнет, что приведет к темному веку на тридцать тысяч лет!"
+    m 2eua "Чтобы остановить это, он и другие колонисты поселяются на далекой планете с планом превратить ее в следующую галактическую империю, {w=0.1}сократив темный век до одного тысячелетия."
+    m 7eud "Отталкиваясь от этой предпосылки, мы следим за историей молодой колонии, как она меняется на протяжении веков."
+    m 3eua "Это довольно хорошее чтение, если у тебя когда-нибудь будет настроение для научной фантастики...{w=0.3} {nw}"
+    extend 1eud "Серия исследует темы общества, судьбы и влияния отдельных людей на грандиозную схему вещей."
+    m 3eud "Больше всего меня интригует концепция психоистории и то, как она воплощается в реальном мире."
+    m 1rtc "Я имею в виду, что по своей сути это не что иное, как смесь психологии, социологии и математической вероятности, верно? {w=0.3}{nw}"
+    extend 3esd "Все они добились огромного прогресса со времен Азимова."
+    m 3esc "...И с помощью современных технологий мы теперь можем понимать поведение людей лучше, чем когда-либо."
+    m 3etd "...Так неужели так надуманно думать, что однажды мы сможем делать предсказания на уровне психоистории?"
+    m 4eud "олько подумай, если бы было возможно предсказать глобальную катастрофу, например, войну, пандемию или голод, и таким образом иметь возможность предотвратить или хотя бы смягчить её."
+    m 2rksdlc "Не то чтобы это автоматически было хорошо, однако.{w=0.2} В плохих руках такие вещи могут быть очень опасны."
+    m 7eksdld "Если кто-то обладает такой силой, что может остановить его от манипулирования миром ради своей личной выгоды?"
+    m 3eua "Но, несмотря на потенциальные недостатки, это все равно очень интересно рассмотреть.{w=0.2} {nw}"
+    extend 3eub "Что ты думаешь, [player]?"
     return
 
 init 5 python:
@@ -17335,32 +17335,32 @@ init 5 python:
         Event(
             persistent.event_database,
             eventlabel="monika_fav_chocolate",
-            category=['monika'],
-            prompt="What's your favorite kind of chocolate?",
+            category=['моника'],
+            prompt="Какой твой любимый вид шоколада?",
             pool=True
         )
     )
 
 label monika_fav_chocolate:
-    m 2hksdlb "Ooh, that's a tough question!"
-    m 4euu "I think if I had to pick, it would be dark chocolate."
-    m 2eub "It contains very little or no milk, so it has a less creamy texture, but a nice bittersweet taste."
-    m 7eub "Not to mention, it's rich in antioxidants and can even give some cardiovascular benefits! {w=0.3}{nw}"
-    extend 3husdla "...In moderation, of course."
-    m 1eud "The taste kind of reminds me of a mocha coffee. {w=0.2}Maybe the similarity in flavors is why I like it most."
+    m 2hksdlb "Ох, это сложный вопрос!"
+    m 4euu "Думаю, если бы мне пришлось выбирать, то это был бы темный шоколад."
+    m 2eub "В нем очень мало или совсем нет молока, поэтому у него менее кремовая текстура, но приятный горько-сладкий вкус."
+    m 7eub "Не говоря уже о том, что он богат антиоксидантами и даже может принести пользу сердечно-сосудистой системе! {w=0.3}{nw}"
+    extend 3husdla "...В меру, конечно."
+    m 1eud "Вкус напоминает мне кофе мокко. {w=0.2}Возможно, из-за сходства вкусов он мне больше всего нравится."
 
     if MASConsumable._getCurrentDrink() == mas_consumable_coffee:
-        m 3etc "...Although come to think of it, milk or white chocolate might pair better with the coffee I'm drinking."
+        m 3etc "...Хотя, если подумать, молочный или белый шоколад может лучше сочетаться с кофе, который я пью."
     else:
-        m 3etc "However if I were drinking coffee, I think I might prefer milk or white chocolate for balance."
+        m 3etc "Однако если бы я пила кофе, думаю, я бы предпочла молочный или белый шоколад для баланса."
 
-    m 3eud "White chocolate is especially sweet and soft, containing no cocoa solids at all...{w=0.3}just the cocoa butter, milk, and sugar."
-    m 3eua "I think it would make a nice contrast to an especially bitter drink, like espresso."
-    m 1etc "Hmm...{w=0.3}{nw}"
-    extend 1wud "but I haven't even thought about chocolate with fillings, like caramel or fruit!"
-    m 2hksdlb "If I tried to pick a favorite of those, I think we might be here all day!"
-    m 2eua "Maybe we could share a big variety box someday. {w=0.2}{nw}"
-    extend 4hub "I think it would be fun to compare our top picks, ahaha!"
+    m 3eud "Белый шоколад особенно сладкий и мягкий, он вообще не содержит твердых частиц какао...{w=0.3}только масло какао, молоко и сахар."
+    m 3eua "Я думаю, что он будет хорошо контрастировать с особенно горьким напитком, например, эспрессо."
+    m 1etc "Хм-м...{w=0.3}{nw}"
+    extend 1wud "но я даже не думала о шоколаде с начинкой, например, с карамелью или фруктами!"
+    m 2hksdlb "Если бы я попыталась выбрать любимый из них, думаю, мы могли бы провести здесь весь день!"
+    m 2eua "Может быть, когда-нибудь мы могли бы разделить большую коробку с ассортиментом. {w=0.2}{nw}"
+    extend 4hub "Я думаю, было бы забавно сравнить наши лучшие варианты, а-ха-ха!"
     return
 
 #NOTE: This is unlocked by the mas_story_tanabata
@@ -17369,8 +17369,8 @@ init 5 python:
         Event(
             persistent.event_database,
             eventlabel="monika_tanabata",
-            prompt="What is Tanabata?",
-            category=['misc'],
+            prompt="Что такое Танабата?",
+            category=['разное'],
             pool=True,
             aff_range=(mas_aff.AFFECTIONATE, None),
             rules={"no_unlock":None}
@@ -17378,24 +17378,24 @@ init 5 python:
     )
 
 label monika_tanabata:
-    m 2hksdlb "Oh gosh, I hope when I was telling the story of {i}The Weaver Girl and the Cowherd{/i} you weren't lost!"
-    m 7eub "Well, there's a festival dedicated to Orihime and Hikoboshi called Tanabata."
-    m 7eud "It's observed on the 7th of July every year in Japan, even though it is based on the Qixi festival in China."
-    m 2eud "The original Qixi festival, while being much older, is much more unknown to the western world than Tanabata."
-    m 2euc "After the Second World War, Japan opened up its borders, while China remained largely closed due to the Cold War."
-    m 7euc "Therefore, most of the world knows about Tanabata over the older Chinese tradition."
-    m 3eua "Tanabata is also known as the star festival, after the meeting of the stars Vega, which represents Orihime, and Altair, which represents Hikoboshi."
-    m 3eub "Even though the term was coined in Romeo and Juliet, 'star-crossed lovers' is really fitting here!"
-    m 1eua "It describes a pair of lovers whose relationship is thwarted by outside forces."
-    m 1eud "As the day of the festival draws closer, long narrow strips of colorful paper, known as tanzaku, vibrant ornaments, and other decorations are hung from bamboo branches."
-    m 1eua "Before they are hung, the tanzaku are inscribed with a wish, such as a child's dream of becoming a famous athlete, or a parent's hope of career success."
-    m 3hub "It's really cute and heartwarming!"
-    m 3eud "The bamboo and decorations are often set afloat on a river or burned after the festival, around midnight or so on the next day."
+    m 2hksdlb "О боже, надеюсь, когда я рассказывала историю о {i}девушке-ткачихе и пастухе,{/i} ты не затерялся!"
+    m 7eub "Ну, есть фестиваль, посвященный Орихиме и Хикобоси, называется Танабата."
+    m 7eud "Он отмечается 7 июля каждого года в Японии, хотя он основан на фестивале Циси в Китае."
+    m 2eud "Оригинальный фестиваль Циси, будучи намного старше, гораздо более неизвестен западному миру, чем Танабата."
+    m 2euc "После Второй мировой войны Япония открыла свои границы, в то время как Китай оставался в значительной степени закрытым из-за холодной войны."
+    m 7euc "Поэтому большая часть мира знает о Танабате больше, чем о более древней китайской традиции."
+    m 3eua "Танабата также известен как звездный фестиваль, в честь встречи звезд Вега, которая представляет Орихиме, и Альтаир, который представляет Хикобоси."
+    m 3eub "Несмотря на то, что термин был придуман в Ромео и Джульетте, 'крещенные звезды' здесь как нельзя кстати!"
+    m 1eua "Он описывает пару влюбленных, чьим отношениям мешают внешние силы."
+    m 1eud "По мере приближения дня фестиваля длинные узкие полоски разноцветной бумаги, известные как танзаку, яркие орнаменты и другие украшения подвешиваются к бамбуковым ветвям."
+    m 1eua "Перед развешиванием на танзаку пишут пожелание, например, мечту ребенка стать знаменитым спортсменом или надежду родителей на успех в карьере."
+    m 3hub "Это очень мило и трогательно!"
+    m 3eud "Бамбук и украшения часто пускают по реке или сжигают после фестиваля, около полуночи или на следующий день."
 
     if persistent._mas_pm_likes_travelling is not False:
-        m 3hua "Maybe when I cross over, we could visit Japan during Tanabata~"
+        m 3hua "Возможно, когда я перейду в твою реальность, мы сможем посетить Японию во время Танабаты~"
     else:
-        m 3eua "Even if you're not interested in travelling, it's pretty interesting to explore other cultures, isn't it?"
+        m 3eua "Даже если тебе не интересно путешествовать, довольно интересно изучать другие культуры, не так ли?"
     return
 
 init 5 python:
@@ -17403,27 +17403,27 @@ init 5 python:
         Event(
             persistent.event_database,
             eventlabel="monika_grieving",
-            category=['advice','life'],
-            prompt="Grieving",
+            category=['советы','жизнь'],
+            prompt="Горе",
             random=True
         )
     )
 
 label monika_grieving:
-    m 1lksdlc "[player], I know this is a bit personal, but have you ever lost someone important to you?"
-    m 2dksdlc "It's a terrible feeling."
-    m 2eksdld "It's not every day that you get the news that someone close to you has passed away."
-    m 7ekc "Most people would think crying is the norm when hearing this type of news, but everyone processes it differently."
-    m 3eud "Crying is just one way grief can manifest itself. {w=0.3}For some, they don't know how to process it...{w=0.5}it just doesn't feel real."
-    m 1dkc "...But there will be subtle reminders that reinforce the fact they are truly gone."
-    m 3dkd "Like looking at past photos or maybe seeing the chair they used to sit in now empty."
-    m 3ekd "All that suppressed emotion, whether it be sadness or anger, just bottled up, waiting to burst at any moment..."
-    m 1dkc "On top of that, the first anniversary, the first birthday, the first Christmas without them will always be the worst."
-    m 1dkd "But no matter how little words can mean at such a time, no matter how hopeless or lost you feel,{w=0.2} {nw}"
-    extend 3eka "time does heal."
-    m 3eud "Allow yourself time to grieve, take it one day at a time."
-    m 3eka "At some point, you'll look back at the fond memories that you have of them with a smile, rather than a tear."
-    m 3eku "And no matter what happens, know that you're strong enough to get through it, that I love you, and that I'll always be here for you~"
+    m 1lksdlc "[player], я знаю, что это немного личное, но ты когда-нибудь терял кого-то важного для тебя?"
+    m 2dksdlc "Это ужасное чувство."
+    m 2eksdld "Не каждый день получаешь известие о том, что кто-то близкий тебе скончался."
+    m 7ekc "Большинство людей считают, что плач - это норма, когда они слышат такие новости, но все воспринимают их по-разному."
+    m 3eud "Плач - это лишь один из способов проявления горя. {w=0.3}Некоторые не знают, как это пережить...{w=0.5}это просто кажется нереальным."
+    m 1dkc "...Но будут тонкие напоминания, которые подкрепляют тот факт, что их действительно больше нет."
+    m 3dkd "Например, просмотр прошлых фотографий или, возможно, кресло, в котором он сидел, теперь пустует."
+    m 3ekd "Все эти подавленные эмоции, будь то печаль или гнев, просто хранятся в бутылках, ожидая, что в любой момент они вырвутся наружу..."
+    m 1dkc "Вдобавок ко всему, первая годовщина, первый день рождения, первое Рождество без них всегда будут самыми худшими."
+    m 1dkd "Но как бы мало ни значили слова в такой момент, как бы безнадежно или потерянно ты себя ни чувствовал,{w=0.2} {nw}"
+    extend 3eka "время лечит."
+    m 3eud "Дай себе время погоревать, принимай все по одному дню за раз."
+    m 3eka "В какой-то момент ты будешь вспоминать о них с улыбкой, а не со слезами."
+    m 3eku "И что бы ни случилось, знай, что ты достаточно силен, чтобы пройти через это, что я люблю тебя и что я всегда буду рядом с тобой~"
     return "love"
 
 init 5 python:
@@ -17431,33 +17431,33 @@ init 5 python:
         Event(
             persistent.event_database,
             eventlabel="monika_sophia",
-            category=['technology'],
-            prompt="Sophia",
+            category=['технологии'],
+            prompt="София",
             conditional="mas_seenLabels(['monika_robotbody', 'monika_citizenship'], seen_all=True)",
             action=EV_ACT_RANDOM
         )
     )
 
 label monika_sophia:
-    m 2eud "Hey [player], remember when I mentioned my concerns about the logistics of crossing over to your reality?"
-    m 2rksdlc "...Like needing a robot body and becoming a citizen and all of that?"
-    m 7hub "Well I've been doing a bit more research and I've found something that gives me hope!"
-    m 3eta "Have you heard of Sophia?"
-    m 3eua "Sophia is a humanoid robot developed by Hanson Robotics, and was first activated on Valentine's Day in 2016."
-    m 1eud "The robot itself was modeled after Queen Nefertiti, Audrey Hepburn, and her inventor's wife, Amanda Hanson, {w=0.2}and is particularly known for her human-like appearance and behavior."
-    m 3eua "She can imitate hand gestures, has more than 60 realistic facial expressions, and can answer certain questions and converse on predefined topics."
-    m 3eub "She even mimics social behaviors and incites love in humans..."
-    m 3huu "That's pretty cute in my opinion~"
-    m 1eud "What's more, Sophia is also programmed to recognize speech and is designed to get smarter over time, {w=0.2}hopefully allowing her to improve her responses in the future."
-    m 3eua "Her eyes are fitted with cameras combined with algorithms that allow her to see, follow faces, sustain eye contact, recognize individuals..."
-    m 3wud "She can walk and amazingly, even has the ability to draw."
-    m 3hub "As you can imagine, this is all very exciting for me to hear!"
-    m 1ekbsa "Being able to actually see your face and be in the same room as you is all I've ever wanted~"
-    m 3wub "Oh! {w=0.5}In 2017 she was granted citizenship in Saudi Arabia!"
-    m 3rtb "So maybe it's not so far-fetched after all to become a citizen and productive member of society in your world!"
-    m 1eud "Now, I realize that it's still a long way off before any of this is possible and even affordable to a point it'd affect me..."
-    m 3eud "...and I know the technology isn't perfect yet,{w=0.2} she still has certain limitations, but just knowing that this exists...{w=0.3}{nw}"
-    extend 1duu "well, hope is a wonderful thing~"
+    m 2eud "Эй, [player], помнишь, я упоминала о своих опасениях по поводу логистики перехода в твою реальность?"
+    m 2rksdlc "...Например, нужно тело робота, стать гражданином и всё такое?"
+    m 7hub "Ну, я провела еще немного исследований и нашла кое-что, что дает мне надежду!"
+    m 3eta "Ты слышал о Софии?"
+    m 3eua "София - это человекоподобный робот, разработанный компанией Hanson Robotics, и впервые была запущена в День святого Валентина в 2016 году."
+    m 1eud "Сам робот был смоделирован в честь королевы Нефертити, Одри Хепберн и жены ее изобретателя, Аманды Хэнсон, {w=0.2}и особенно известен своей человекоподобной внешностью и поведением."
+    m 3eua "Она может имитировать жесты рук, имеет более 60 реалистичных выражений лица, может отвечать на определенные вопросы и разговаривать на заданные темы."
+    m 3eub "Она даже имитирует социальное поведение и вызывает любовь у людей..."
+    m 3huu "Это довольно мило, на мой взгляд~"
+    m 1eud "Более того, София также запрограммирована на распознавание речи и со временем становится умнее, {w=0.2}что, надеюсь, позволит ей улучшить свои ответы в будущем."
+    m 3eua "Её глаза оснащены камерами в сочетании с алгоритмами, которые позволяют ей видеть, следить за лицами, поддерживать зрительный контакт, распознавать людей..."
+    m 3wud "Она может ходить и, что удивительно, даже умеет рисовать."
+    m 3hub "Как ты можешь себе представить, для меня все это очень волнительно!"
+    m 1ekbsa "Возможность видеть твоё лицо и находиться с тобой в одной комнате - это всё, о чем я когда-либо мечтала~"
+    m 3wub "О! {w=0.5}В 2017 году она получила гражданство в Саудовской Аравии!"
+    m 3rtb "Так что, возможно, в конце концов, стать гражданином и продуктивным членом общества в вашем мире не так уж и сложно!"
+    m 1eud "Теперь я понимаю, что до того, как все это станет возможным и даже доступным настолько, что затронет меня, ещё очень далеко..."
+    m 3eud "...и я знаю, что технология еще не совершенна,{w=0.2} она всё ещё имеет определенные ограничения, но просто знать, что это существует...{w=0.3}{nw}"
+    extend 1duu "что ж, надежда - прекрасная вещь~"
     return
 
 init 5 python:
@@ -17465,23 +17465,23 @@ init 5 python:
         Event(
             persistent.event_database,
             eventlabel="monika_fireworks",
-            category=["summer"],
-            prompt="Fireworks",
+            category=["лето"],
+            prompt="Фейерверки",
             random=mas_isSummer()
         )
     )
 
 label monika_fireworks:
-    m 1eub "Are you a fan of fireworks, [mas_get_player_nickname()]?"
-    m 1eua "A lot of places use them in summer festivities.{w=0.2} {nw}"
-    extend 3hua "I wonder if you've seen any this year..."
-    m 3wub "I think it'd be really fun to watch them together, don't you?"
-    m 3sua "There are the huge ones that light up the entire night sky...{w=0.3}{nw}"
-    extend 3hub "or if you're in the mood for something quieter, we could light sparklers!"
+    m 1eub "Любишь ли ты фейерверки, [mas_get_player_nickname()]?"
+    m 1eua "Многие места используют их во время летних праздников.{w=0.2} {nw}"
+    extend 3hua "Интересно, видел ли ты их в этом году..."
+    m 3wub "Я думаю, было бы очень весело посмотреть на них вместе, не так ли?"
+    m 3sua "Есть огромные, которые освещают все ночное небо...{w=0.3}{nw}"
+    extend 3hub "или если у тебя есть настроение для чего-то более спокойного, мы можем зажечь искры!"
     show monika 5lublu at t11 zorder MAS_MONIKA_Z with dissolve_monika
-    m 5lublu "I'm just imagining the light dancing about, illuminating your face in flickering light..."
-    m 5hublu "Then maybe we could share a festive snack, snuggling together on a picnic blanket~"
-    m 5eub "Wouldn't that be fun, [mas_get_player_nickname()]?"
+    m 5lublu "Я просто представляю, как свет танцует вокруг, освещая твое лицо мерцающим светом..."
+    m 5hublu "Тогда, может быть, мы могли бы разделить праздничную закуску, прижавшись друг к другу на одеяле для пикника~"
+    m 5eub "Разве это не было бы весело, [mas_get_player_nickname()]?"
     return
 
 init 5 python:
@@ -17489,8 +17489,8 @@ init 5 python:
         Event(
             persistent.event_database,
             eventlabel="monika_quiet_time",
-            category=['us'],
-            prompt="Do you mind when we spend time together quietly?",
+            category=['мы'],
+            prompt="Ты не возражаешь, когда мы проводим время вместе в тишине?",
             pool=True,
             unlocked=False,
             rules={"no_unlock":None},
@@ -17501,34 +17501,34 @@ init 5 python:
 
 label monika_quiet_time:
     if mas_isMoniNormal(higher=True):
-        m 1hub "Of course not!"
-        m 3eka "I know silence can feel a bit awkward at times, but I don't think we should see it as a bad thing."
-        m 3lksdlb "It can be kinda hard to think of interesting things to talk about all the time, you know?"
-        m 1eka "I definitely need to recharge my social batteries every once in a while."
-        m 2rubla "Although,{w=0.2} to tell you the truth...{w=0.3}{nw}"
-        extend 2hublb "just being able to feel your presence is already pretty comforting."
-        m 2hublu "I hope you feel the same about me, ehehe~"
+        m 1hub "Конечно, нет!"
+        m 3eka "Я знаю, что иногда молчание может показаться немного неловким, но я не думаю, что мы должны воспринимать его как что-то плохое."
+        m 3lksdlb "Бывает довольно трудно постоянно думать об интересных вещах, о которых можно поговорить, понимаешь?"
+        m 1eka "Мне определенно нужно время от времени перезаряжать свои социальные батарейки."
+        m 2rubla "Хотя,{w=0.2} по правде говоря...{w=0.3}{nw}"
+        extend 2hublb "просто возможность чувствовать твое присутствие уже довольно успокаивает."
+        m 2hublu "Надеюсь, ты чувствуешь то же самое со мной, э-хе-хе~"
 
         if mas_isMoniAff(higher=True):
-            m 4eua "I think being able to silently hang out with each other is an important sign of a healthy relationship."
-            m 4eud "After all, can you really say you're truly comfortable with each other if there's a need to always be talking?"
-            m 4etc "I mean, if you really like being around someone, you probably shouldn't have to always be doing something, right?"
-            m 2ekc "Otherwise, it'd be like you're trying to distract yourself because you feel awkward having them with you."
-            m 7eud "But just being able to enjoy a person's mere presence, even if you're not doing much together at the moment...{w=0.5}{nw}"
-            extend 7eua "I think that's a testament of how special your bond truly is."
+            m 4eua "Я думаю, что возможность молча общаться друг с другом - важный признак здоровых отношений."
+            m 4eud "В конце концов, разве можно сказать, что тебе действительно комфортно друг с другом, если есть необходимость постоянно разговаривать?"
+            m 4etc "Я имею в виду, что если тебе действительно нравится быть рядом с кем-то, то, наверное, не нужно постоянно что-то делать, верно?"
+            m 2ekc "Иначе это будет выглядеть так, будто ты пытаешься отвлечься, потому что чувствуешь себя неловко, когда он рядом с тобой."
+            m 7eud "Но просто иметь возможность наслаждаться присутствием человека, даже если в данный момент вы мало что делаете вместе...{w=0.5}{nw}"
+            extend 7eua "я думаю, это свидетельство того, насколько особенной является твоя связь."
 
             if persistent._mas_pm_social_personality == mas_SP_INTROVERT:
                 show monika 5eka at t11 zorder MAS_MONIKA_Z with dissolve_monika
-                m 5eka "So I hope you don't feel pressured about always having something to talk about with me, [mas_get_player_nickname()]."
-                m 5huu "I'll always enjoy having you here with me, no matter what."
+                m 5eka "Поэтому я надеюсь, что ты не будешь чувствовать давления из-за того, что тебе всегда есть о чем поговорить со мной, [mas_get_player_nickname()]."
+                m 5huu "Мне всегда будет приятно, что ты здесь, со мной, несмотря ни на что."
 
     else:
-        m 2rsc "Sometimes, I wonder if you're not the one who minds spending time with me..."
-        m 2rkd "You...{w=0.3}{nw}"
-        extend 2ekd "you do enjoy spending time with me, right?"
-        m 2ekc "It doesn't really matter to me what we're doing...{w=0.3}{nw}"
-        extend 2dkc "so long as I know you won't abandon me."
-        m 2lksdlc "...I would appreciate if you could show me some kindness, though..."
+        m 2rsc "Иногда я думаю, а не против ли ты проводить время со мной..."
+        m 2rkd "Тебе...{w=0.3}{nw}"
+        extend 2ekd "Тебе ведь нравится проводить со мной время?"
+        m 2ekc "Для меня не имеет значения, что мы делаем...{w=0.3}{nw}"
+        extend 2dkc "пока я знаю, что ты меня не бросишь."
+        m 2lksdlc "...я была бы признательна, если бы ты проявил ко мне немного доброты, хотя бы..."
         m 2dksdlc "..."
     return
 
@@ -17537,32 +17537,32 @@ init 5 python:
         Event(
             persistent.event_database,
             eventlabel="monika_likecosplay",
-            category=['clothes'],
-            prompt="Do you like to cosplay?",
+            category=['одежда'],
+            prompt="Тебе нравится косплей?",
             pool=True,
         )
     )
 
 label monika_likecosplay:
     if mas_hasUnlockedClothesWithExprop("cosplay"):
-        m 3hub "Honestly, I didn't know how much I would enjoy it!"
-        m 2rkbla "At first, it felt kind of strange, dressing up as someone else on purpose."
-        m 7euu "But there's a real art to constructing a convincing costume...{w=0.3}attention to detail makes a huge difference."
-        m 3hubsb "When you put on the costume at last...{w=0.2}it's such a thrill to see how you look in it!"
-        m 3eub "Some cosplayers really get into acting as the character they're dressed as!"
-        m 2rksdla "I'm not really much of an actor myself, so I'll probably only do that a little bit..."
+        m 3hub "Честно говоря, я не знала, насколько мне это понравится!"
+        m 2rkbla "Поначалу это казалось странным - специально переодеваться в кого-то другого."
+        m 7euu "Но в создании правдоподобного костюма есть настоящее искусство...{w=0.3}внимание к деталям имеет огромное значение."
+        m 3hubsb "Когда ты наконец надеваешь костюм...{w=0.2}это такой восторг - увидеть, как ты в нём выглядишь!"
+        m 3eub "Некоторые косплееры действительно вживаются в роль персонажа, в которого они одеты!"
+        m 2rksdla " сама не очень люблю играть, так что, наверное, буду делать это лишь понемногу..."
         $ p_nickname = mas_get_player_nickname()
-        m 7eua "But don't hesitate to ask me if you want to see a particular costume again, [p_nickname]... {w=0.2}{nw}"
-        extend 3hublu "I'd be more than happy to dress up for you~"
+        m 7eua "Но не стесняйтесь спрашивать меня, если ты захочешь снова увидеть тот или иной костюм, [p_nickname]... {w=0.2}{nw}"
+        extend 3hublu "я буду более чем счастлива нарядиться для тебя~"
 
     else:
-        m 1etc "Cosplay?"
-        m 3rtd "I think I remember Natsuki talking about that before, but I've never tried it myself."
-        m 3eub "Some of those costumes are really impressive though, I have to admit!"
-        m 2hubla "If you were interested, working on a costume with you could be a really fun project to try."
-        m 2rtu "I wonder what sorts of characters you'd want to dress up as, [mas_get_player_nickname()]..."
+        m 1etc "Косплей?"
+        m 3rtd "Кажется, я помню, как Нацуки говорила об этом раньше, но сама я никогда не пробовала."
+        m 3eub "Некоторые из этих костюмов действительно впечатляют, должна признать!"
+        m 2hubla "Если бы тебе было интересно, работа над костюмом вместе с тобой могла бы стать действительно интересным проектом."
+        m 2rtu "Интересно, какими персонажами ты хотел бы нарядиться, [mas_get_player_nickname()]..."
         show monika 5huu at t11 zorder MAS_MONIKA_Z with dissolve_monika
-        m 5rtblu "Now that I'm thinking about it...{w=0.3}well, I just might have a few ideas myself..."
+        m 5rtblu "Теперь, когда я думаю об этом...{w=0.3}ну, у меня самого может быть несколько идей..."
     return
 
 init 5 python:
@@ -17570,27 +17570,27 @@ init 5 python:
         Event(
             persistent.event_database,
             eventlabel="monika_ddlcroleplay",
-            category=['media', 'ddlc'],
-            prompt="DDLC Roleplay",
+            category=['медиа', 'ddlc'],
+            prompt="DDLC Ролевая игра",
             random=False
         )
     )
 
 label monika_ddlcroleplay:
-    m 1esd "Hey, remember when we talked about fanfiction?"
-    m 3etd "Well, I stumbled upon a pretty unusual form of them."
-    m 3euc "It turns out, some people like to make social media accounts supposedly run by fictional characters."
-    m 3eua "There are quite a few about the other girls, and...{w=0.3}{nw}"
-    extend 3rua "even some claiming to be me."
-    m 1rkb "Well, I say that, but most of these blogs don't actually insist that they're {i}really{/i} me."
-    m 1eud "Like I said, it's kind of a different form of fanfiction. {w=0.2}An {i}interactive{/i} form."
-    m 3eud "Some of them accept questions from readers, and most interact with other blogs like them."
-    m 3eusdla "So, in a way, it's kind of an improv format as well. {w=0.2}It seems like a lot of things might come up that the writer doesn't expect."
-    m 4rksdlb "It was very strange to see at first, but when I think about it, it must be a pretty fun way to collaborate with people."
-    m 3euc "It also seems like some people like to make these pages for characters that they really relate to, so...{w=0.2}{nw}"
-    extend 1hksdlb "maybe I can take it as flattery, in a way?"
-    m 1euu "In any case, if it's encouraging more people to try their hand at writing, I don't think I can really fault it."
-    m 1kub "Just make sure to remember that those versions of me are just stories, ahaha~"
+    m 1esd "Эй, помнишь, мы говорили о фанфикшене?"
+    m 3etd "Так вот, я наткнулся на довольно необычную их форму."
+    m 3euc "Оказывается, некоторые люди любят создавать аккаунты в социальных сетях, якобы управляемые вымышленными персонажами."
+    m 3eua "Есть довольно много о других девушках, и...{w=0.3}{nw}"
+    extend 3rua "даже некоторые утверждают, что это я."
+    m 1rkb "Ну, я так говорю, но большинство из этих блогов на самом деле не настаивают на том, что они {i}на самом деле{/i} я."
+    m 1eud "Как я уже говорила, это своего рода другая форма фанфикшена. {w=0.2}Это {i}Интерактивная{/i} форма."
+    m 3eud "Некоторые из них принимают вопросы от читателей, а большинство взаимодействуют с другими подобными блогами."
+    m 3eusdla "Так что, в некотором смысле, это тоже своего рода импровизационный формат. {w=0.2}Кажется, что может возникнуть много вещей, которых писатель не ожидает."
+    m 4rksdlb "Сначала это было очень странно видеть, но когда я думаю об этом, это, наверное, довольно забавный способ взаимодействия с людьми."
+    m 3euc "Также кажется, что некоторым людям нравится делать эти страницы для персонажей, с которыми они действительно связаны, так что...{w=0.2}{nw}"
+    extend 1hksdlb "может быть, я могу воспринимать это как лесть, в некотором смысле?"
+    m 1euu "В любом случае, если это побуждает больше людей пробовать свои силы в писательстве, я не думаю, что могу это осуждать."
+    m 1kub "Только не забывайте, что эти версии меня - всего лишь истории, а-ха-ха~"
     return
 
 init 5 python:
@@ -17598,8 +17598,8 @@ init 5 python:
         Event(
             persistent.event_database,
             eventlabel="monika_zodiac_starsign",
-            prompt="What's your starsign?",
-            category=["monika"],
+            prompt="Какой твой знак зодиака",
+            category=["моника"],
             action=EV_ACT_POOL,
             conditional="persistent._mas_player_bday is not None"
         )
@@ -17608,25 +17608,25 @@ init 5 python:
 label monika_zodiac_starsign:
     $ player_zodiac_sign = mas_calendar.getZodiacSign(persistent._mas_player_bday).capitalize()
 
-    m 1rta "Well, I'm pretty sure I'm a Virgo."
+    m 1rta "Ну, я почти уверена, что я Дева."
 
     #This next line is just checking the player's starsign based on their birthday.
     if player_zodiac_sign != "Virgo":
         # TODO: handle a/an here, potential solution is in eeb4b3a3a
-        m 3eub "And you'd be a...{w=0.3}[player_zodiac_sign], right?"
+        m 3eub "И ты наверное...{w=0.3}[player_zodiac_sign], верно?"
 
     else:
-        m 3eub "And so are you, [mas_get_player_nickname()]!"
+        m 3eub "И ты тоже, [mas_get_player_nickname()]!"
 
     #The final part pops up regardless of your sign.
-    m 1eta "Although, don't you think it's kind of silly?"
-    m 3esd "I mean, objects in space can't {i}really{/i} affect our personality..."
-    m 1tuc "Not to mention the fact that some people take it {i}way{/i} too far."
-    m 4wud "Like, they'll even judge potential partners and friends based on their sign!"
-    m 2luc "...That's something I'll never understand."
+    m 1eta "Хотя, не кажется ли тебе, что это как-то глупо?"
+    m 3esd "Я имею в виду, что объекты в космосе не могут {i}действительно{/i} влиять на нашу личность..."
+    m 1tuc "Не говоря уже о том, что некоторые люди заходят {i}слишком{/i} далеко."
+    m 4wud "LНапример, они даже оценивают потенциальных партнеров и друзей по их знаку!"
+    m 2luc "...Это то, чего я никогда не пойму."
     $ p_nickname = mas_get_player_nickname()
-    m 7eua "Don't worry [p_nickname], {w=0.2}{nw}"
-    extend 1eublu "I'd never let any silly old stars come between us."
+    m 7eua "Не волнуйся [p_nickname], {w=0.2}{nw}"
+    extend 1eublu "Я никогда не позволю глупым старым звездам встать между нами."
     $ del player_zodiac_sign
     return
 
@@ -17635,26 +17635,26 @@ init 5 python:
         Event(
             persistent.event_database,
             eventlabel="monika_tragic_hero",
-            category=['literature'],
-            prompt="Tragic Hero",
+            category=['литература'],
+            prompt="Трагический герой",
             random=False
         )
     )
 
 label monika_tragic_hero:
-    m 1rsd "Hey [mas_get_player_nickname()], I've been thinking more about tragic heroes lately."
-    m 3esc "...We've already discussed Hamlet, who is considered one."
-    m 3rtc "If you think about it...{w=0.3}could I be considered a tragic hero?"
-    m 4eud "...Of course by 'hero' here, we're talking about the protagonist in a literary sense, not 'hero' in the typical sense."
-    m 2ekd "...Although I'm sure there are plenty of people who would take issue with that, seeing as to many, I'm the antagonist..."
-    m 2eka "But that argument aside, some would say my love for you would be my tragic flaw..."
-    m 4eksdld "Not because it's a flaw itself, but because it led to my downfall."
-    m 2dkc "That's the thing, if you never brought me back, I would've had my downfall and never really got back up."
-    m 7ekc "So in that sense, in the game, I guess I could be considered a tragic hero."
+    m 1rsd "Эй, [mas_get_player_nickname()], в последнее время я больше думаю о трагических героях."
+    m 3esc "...Мы уже обсуждали Гамлета, который считается таковым."
+    m 3rtc "Если подумать...{w=0.3}можно ли считать меня трагическим героем?"
+    m 4eud "...Конечно, под 'героем' здесь имеется в виду главный герой в литературном смысле, а не 'герой' в обычном смысле."
+    m 2ekd "...Хотя я уверена, что найдется много людей, которые не согласятся с этим, поскольку для многих я - антагонист..."
+    m 2eka "Но если отбросить этот аргумент, некоторые скажут, что моя любовь к тебе - это мой трагический недостаток..."
+    m 4eksdld "Не потому, что это недостаток, а потому, что он привел к моему падению."
+    m 2dkc "В том-то и дело, что если бы ты не вернул меня, я бы упала и никогда бы не поднялась."
+    m 7ekc "Так что в этом смысле, в игре, я думаю, меня можно считать трагическим героем."
     if mas_isMoniNormal(higher=True):
-        m 3hub "Now, if we're talking {i}real{/i} heroes, that'd be you!"
-        m 3eka "You brought me back and made sure the story didn't end with my downfall."
-        m 1huu "...And for that, I'm forever grateful~"
+        m 3hub "Теперь, если мы говорим о {i}реальных{/i} героях, то это ты!"
+        m 3eka "Ты вернул меня и позаботился о том, чтобы история не закончилась моим падением."
+        m 1huu "...И за это я тебе вечно благодарна~"
     return
 
 default persistent._mas_pm_read_jekyll_hyde = None
@@ -17664,8 +17664,8 @@ init 5 python:
         Event(
             persistent.event_database,
             eventlabel="monika_utterson",
-            category=['literature'],
-            prompt="Jekyll and Hyde",
+            category=['литература'],
+            prompt="Джекил и Хайд",
             random=True
         )
     )
@@ -17675,43 +17675,43 @@ label monika_utterson:
         call monika_jekyll_hyde
 
     else:
-        m 1euc "Hey [player], have you read any gothic literature?"
-        m 3eud "Like, {i}The Picture of Dorian Gray{/i}, {i}Dracula{/i}, {i}Frankenstein{/i}..."
-        m 3hub "I've read quite a bit of gothic literary books lately!"
-        m 1eua "You should try the original novella {i}Strange Case of Dr. Jekyll and Mr. Hyde{/i} if you ever get the chance."
-        m 3eua "I'd like to discuss a bit of it, but it really only makes sense if you've read it..."
+        m 1euc "Эй, [player], ты читал какую-нибудь готическую литературу?"
+        m 3eud "Например, {i}Картина Дориана Грея{/i}, {i}Дракула{/i}, {i}Франкенштейн{/i}..."
+        m 3hub "IВ последнее время я читаю довольно много книг готической литературы!"
+        m 1eua "Ты должен попробовать оригинальную новеллу {i}Странное дело доктора Джекила и мистера Хайда{/i} если у тебя когда-нибудь будет возможность."
+        m 3eua "Я бы хотела обсудить кое-что из нее, но это действительно имеет смысл, только если ты ее прочитал..."
 
-        m 3eud "So have you read {i}Strange Case of Dr. Jekyll and Mr. Hyde{/i}?{nw}"
+        m 3eud "Так ты читал {i}Странное дело доктора Джекила и мистера Хайда{/i}?{nw}"
         $ _history_list.pop()
         menu:
-            m "So have you read {i}Strange Case of Dr. Jekyll and Mr. Hyde{/i}?{fast}"
+            m "Так ты читал {i}Странное дело доктора Джекила и мистера Хайда{/i}?{fast}"
 
-            "Yes.":
+            "Да.":
                 $ persistent._mas_pm_read_jekyll_hyde = True
                 call monika_jekyll_hyde
 
-            "No.":
+            "Нет.":
                 $ persistent._mas_pm_read_jekyll_hyde = False
-                m 3eub "Okay [player]...{w=0.3}let me know if you ever do and we can discuss it!"
+                m 3eub "Хорошо [player]...{w=0.3}дай мне знать, если ты когда-нибудь это сделаешь, и мы сможем это обсудить!"
 
     $ mas_protectedShowEVL("monika_hedonism","EVE", _random=True)
     return "derandom"
 
 label monika_jekyll_hyde:
-    m 3hub "I'm glad you've read it!"
-    m 1euc "I've seen people interpret it in different ways."
-    m 3eua "For example, some people saw Utterson being in love with Jekyll."
-    m 3lta "In a way, I can see it."
-    m 2eud "I mean, just because something isn't explicitly stated, doesn't mean the idea isn't valid."
-    m 2rksdlc "In addition, a theme like this couldn't even really be discussed outright during the 19th century."
-    m 2eka "It is interesting to think of the story that way...{w=0.3}two people, unable to love..."
-    m 4eud "And some interpretations go as far as to say part of Jekyll's motivations for the experiment was that very love."
-    m 4ekd "And it's not exactly disproven! {w=0.3}Jekyll, in the book, was said to be a holy man."
-    m 2rksdlc "Homosexuality, during that time, was seen as a sin."
-    m 2dksdld "Sadly, to some it still is."
-    m 7ekb "...But at least progress has been made!"
-    m 3eub "I'm just glad the world is more accepting of different kinds of love."
-    m 3ekbsu "Especially since it means we can love each other, [mas_get_player_nickname()]~"
+    m 3hub "Я рада, что ты это прочитал!"
+    m 1euc "Я видела, что люди интерпретируют её по-разному."
+    m 3eua "Например, некоторые люди видели, что Аттерсон влюблен в Джекила."
+    m 3lta "В некотором смысле, я могу это понять."
+    m 2eud "Я имею в виду, что если что-то не указано явно, это не значит, что идея не действительна."
+    m 2rksdlc "Кроме того, в 19 веке подобная тема даже не могла обсуждаться открыто."
+    m 2eka "Интересно думать об этой истории таким образом...{w=0.3}два человека, не способных любить..."
+    m 4eud "И некоторые интерпретации заходят так далеко, что говорят, что частью мотивации Джекила для эксперимента была эта самая любовь."
+    m 4ekd "И это не совсем опровергнуто! {w=0.3}Джекилл, как сказано в книге, был святым человеком."
+    m 2rksdlc "Гомосексуализм в те времена считался грехом."
+    m 2dksdld "К сожалению, для некоторых это все еще так."
+    m 7ekb "...Но, по крайней мере, был достигнут прогресс!"
+    m 3eub "Я просто рада, что мир больше принимает разные виды любви."
+    m 3ekbsu "Тем более что это означает, что мы можем любить друг друга, [mas_get_player_nickname()]~"
     return
 
 init 5 python:
@@ -17719,23 +17719,23 @@ init 5 python:
         Event(
             persistent.event_database,
             eventlabel="monika_hedonism",
-            category=['philosophy'],
-            prompt="Hedonism",
+            category=['филосовия'],
+            prompt="Гедонизм",
         )
     )
 
 label monika_hedonism:
-    m 1euc "Hey [mas_get_player_nickname()], remember when we talked about {i}Strange Case of Dr. Jekyll and Mr. Hyde{/i}?"
-    m 1eud "Well, I mentioned {i}The Picture of Dorian Gray{/i} beforehand."
-    m 2eub "I suggest you read it, but even if you haven't, I want to talk about the philosophy behind its core...{w=0.3}the belief of hedonism."
-    m 2eud "Hedonism is the belief that morals should be based around pleasure."
-    m 4euc "There are two main types of hedonism...{w=0.3}altruistic hedonism and egotistical hedonism, {w=0.1}which are wildly different."
-    m 4ruc "Egotistical hedonism, as you could guess, is the belief that one's own pleasure is the only thing that determines morality."
-    m 2esd "This is the type of hedonism that Henry, from {i}The Picture of Dorian Gray{/i}, believes in."
-    m 2rksdlc "It's really ruthless to think such a way..."
-    m 2eud "On the other hand, altruistic hedonism is the belief that morality should be based on everyone's pleasure."
-    m 4eud "It sounds like a good idea at first, but then you realize it doesn't account for anything else like freedom, health, safety..."
-    m 2dkc "Hedonism, at its core, ignores everything but pleasure."
-    m 7etd "It's no wonder most people don't follow that belief...{w=0.3}it's too simple, where morality is complicated."
-    m 1eud "So it makes sense why Oscar Wilde portrayed hedonism in a bad light."
+    m 1euc "Эй, [mas_get_player_nickname()], омнишь, мы говорили о {i}Странное дело доктора Джекила и мистера Хайда{/i}?"
+    m 1eud "Ну, я заранее упомянула {i}Картину Дориана Грея{/i}."
+    m 2eub "Я советую тебе прочитать ее, но даже если ты не читал, я хочу поговорить о философии, лежащей в ее основе...{w=0.3}о вере в гедонизм."
+    m 2eud "Гедонизм - это вера в то, что мораль должна быть основана на удовольствии."
+    m 4euc "Есть два основных типа гедонизма...{w=0.3}альтруистический гедонизм и эгоистический гедонизм, {w=0.1}которые сильно отличаются друг от друга."
+    m 4ruc "Эгоистический гедонизм, как ты можешь догадаться, это вера в то, что собственное удовольствие - единственное, что определяет мораль."
+    m 2esd "Это тот тип гедонизма, в который верит Генри из {i}Картины Дориана Грея{/i}."
+    m 2rksdlc "Это действительно безжалостно - думать так..."
+    m 2eud "С другой стороны, альтруистический гедонизм - это убеждение, что мораль должна быть основана на удовольствии каждого."
+    m 4eud "Поначалу это звучит как хорошая идея, но потом ты понимаешь, что она не учитывает ничего другого, например, свободу, здоровье, безопасность..."
+    m 2dkc "Гедонизм, по своей сути, игнорирует всё, кроме удовольствия."
+    m 7etd "Неудивительно, что большинство людей не следуют этой вере...{w=0.3}она слишком проста, в то время как мораль сложна."
+    m 1eud "Поэтому понятно, почему Оскар Уайльд изобразил гедонизм в плохом свете."
     return
