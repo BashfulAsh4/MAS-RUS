@@ -3389,7 +3389,7 @@ screen mas_selector_sidebar(items, mailbox, confirm, cancel, restore, remover=No
                 xalign 0.0
                 layout "nobreak"
                 first_indent (0 if not mailbox.search_text else 10)
-                # allow "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789 _"
+                # allow "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЬЫЪЭЮЯабвгдеёжзийклмнопрстуфхцчшщьыъэюя _"
                 changed store.mas_selspr.selector_search_callback
 
         if not mailbox.search_text:

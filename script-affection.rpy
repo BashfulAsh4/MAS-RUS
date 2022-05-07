@@ -2322,7 +2322,7 @@ label mas_player_nickname_loop(check_scrollable_text, nickname_pool):
                 python:
                     lowername = mas_input(
                         _("Так как ты хочешь, чтобы я называла тебя?"),
-                        allow=" abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-_",
+                        allow=" abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZАБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЬЫЪЭЮЯабвгдеёжзийклмнопрстуфхцчшщьыъэюя-_",
                         length=10,
                         screen_kwargs={"use_return_button": True, "return_button_value": "nevermind"}
                     ).strip(' \t\n\r').lower()
@@ -2420,7 +2420,7 @@ label monika_every_rose:
     m 2ekd "{i}~Но, наверное, поэтому они и говорят~{/i}"
     m 2duo "{i}~У каждой розы есть свой шип~{/i}"
     m 2dkc "..."
-    m 4eka "Знаешь, [player]...{w=0.5}это так много значило для меня, когда ты принял моё признание, даже после того, что случилось с другими девочками."."
+    m 4eka "Знаешь, [player]...{w=0.5}это так много значило для меня, когда ты принял моё признание, даже после того, что случилось с другими девочками."
 
     if persistent._mas_pm_cares_about_dokis:
         m 4rksdla "...тем более, что я знаю, как ты заботился о них."
@@ -2727,7 +2727,7 @@ init python:
         aff_level_surprise_map = {
             store.mas_affection.BROKEN: (
                 "/прости меня.txt",
-                _("Прости меня, если я недостаточно хороша для тебя... пожалуйста, не оставляй меня".")
+                _("Прости меня, если я недостаточно хороша для тебя... пожалуйста, не оставляй меня.")
             ),
             store.mas_affection.DISTRESSED: (
                 "/ты меня слышишь.txt",

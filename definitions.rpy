@@ -7998,9 +7998,9 @@ define hero = "hero"
 
 # Input characters filters
 define numbers_only = "0123456789"
-define lower_letters_only = " abcdefghijklmnopqrstuvwxyz"
-define letters_only = " abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
-define name_characters_only = " abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-_'"
+define lower_letters_only = " abcdefghijklmnopqrstuvwxyzабвгдеёжзийклмнопрстуфхцчшщьыъэюя"
+define letters_only = " abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZАБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЬЫЪЭЮЯабвгдеёжзийклмнопрстуфхцчшщьыъэюя"
+define name_characters_only = " abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZАБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЬЫЪЭЮЯабвгдеёжзийклмнопрстуфхцчшщьыъэюя-_'"
 
 #Default is NORMAL
 default persistent._mas_randchat_freq = mas_randchat.NORMAL
@@ -8169,30 +8169,30 @@ label mas_set_gender:
     python:
         pronoun_gender_map = {
             "M": {
-                "his": "his",
-                "he": "he",
-                "hes": "he's",
-                "heis": "he is",
+                "his": "его",
+                "he": "он",
+                "hes": "он",
+                "heis": "он",
                 "bf": "парнем",
-                "man": "man",
-                "boy": "boy",
-                "guy": "guy",
-                "him": "him",
-                "himself": "himself",
+                "man": "мужчина",
+                "boy": "мальчик",
+                "guy": "парень",
+                "him": "его",
+                "himself": "его",
                 "hero": "герой"
             },
             "F": {
-                "his": "her",
-                "he": "she",
-                "hes": "she's",
-                "heis": "she is",
-                "bf": "girlfriend",
-                "man": "woman",
-                "boy": "girl",
-                "guy": "girl",
-                "him": "her",
-                "himself": "herself",
-                "hero": "heroine"
+                "his": "её",
+                "he": "она",
+                "hes": "она",
+                "heis": "она",
+                "bf": "девушкой",
+                "man": "женщина",
+                "boy": "девочка",
+                "guy": "девушка",
+                "him": "её",
+                "himself": "её",
+                "hero": "героиня"
             },
             "X": {
                 "his": "their",
