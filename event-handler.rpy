@@ -2731,7 +2731,7 @@ label prompt_menu:
             talk_menu.append((_("Повторить разговор"), "repeat"))
         if _mas_getAffection() > -50:
             if mas_passedILY(pass_time=datetime.timedelta(0,10)):
-                talk_menu.append((_("Я тебя тоже люблю!"),"love_too"))
+                talk_menu.append((_("Я тоже тебя люблю!"),"love_too"))
             else:
                 talk_menu.append((_("Я люблю тебя!"), "love"))
         talk_menu.append((_("Я чувствую себя..."), "moods"))
@@ -2794,7 +2794,7 @@ label show_prompt_list(sorted_event_labels):
 
         final_items = (
             (_("Я больше не хочу видеть это меню"), "mas_hide_unseen", False, False, 20),
-            (_("Неважно"), False, False, False, 0)
+            (_("Не важно"), False, False, False, 0)
         )
 
     call screen mas_gen_scrollable_menu(prompt_menu_items, mas_ui.SCROLLABLE_MENU_LOW_AREA, mas_ui.SCROLLABLE_MENU_XALIGN, *final_items)
@@ -3001,7 +3001,7 @@ label mas_bookmarks:
 
         bk_menu_final_items = (
             (_("Я хотел бы удалить закладку"), "remove_bookmark", False, False, 20),
-            (_("Неважно"), "nevermind", False, False, 0)
+            (_("Не важно"), "nevermind", False, False, 0)
         )
 
     # FALL THROUGH
