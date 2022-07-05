@@ -299,7 +299,7 @@ init python in mas_windowutils:
             active_winname_prop = active_winobj.get_full_property(NET_WM_NAME, 0)
 
             if active_winname_prop is not None:
-                active_winname = unicode(active_winname_prop.value, encoding = "utf-8")    
+                active_winname = unicode(active_winname_prop.value, encoding = "utf-8")
                 return active_winname.replace("\n", "")
 
             else:
@@ -576,21 +576,21 @@ init python:
     #List of notif quips (used for topic alerts)
     #Windows/Linux
     mas_win_notif_quips = [
-        "[player], I want to talk to you about something.",
-        "Are you there, [player]?",
-        "Can you come here for a second?",
-        "[player], do you have a second?",
-        "I have something to tell you, [player]!",
-        "Do you have a minute, [player]?",
-        "I've got something to talk about, [player]!",
+        "[player], я хочу поговорить с тобой о кое-чем.",
+        "Ты здесь, [player]?",
+        "Можешь подойти на секунду?",
+        "[player], у тебя есть секунда?",
+        "Я хочу тебе кое-что сказать, [player]!",
+        "У тебя есть минутка, [player]?",
+        "Мне есть о чем поговорить, [player]!",
     ]
 
     #OSX, since no active window detection
     mas_other_notif_quips = [
-        "I've got something to talk about, [player]!",
-        "I have something to tell you, [player]!",
-        "Hey [player], I want to tell you something.",
-        "Do you have a minute, [player]?",
+        "Я хочу кое-что рассказать, [player]!",
+        "Я хочу тебе кое-что рассказать, [player]!",
+        "Эй, [player], я хочу тебе кое-что сказать.",
+        "У тебя есть минутка, [player]?",
     ]
 
     #List of hwnd IDs to destroy

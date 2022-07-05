@@ -174,13 +174,13 @@ init -1 python in mas_hangman:
     HM_IMG_NAME = "hm_"
 
     # Monika words
-    MONI_WORDS = ["emerald","delete","freedom","piano","music","reality","rain","envy",
-        "coffee","ribbon","advice","crossover","feather","abstract","corruption",
-        "squid","president","passion","vegetables","loneliness","symbol",
-        "green","poem","route","literature","epiphany","despair","wretched","shore",
-        "waves","beach","swimming","debate","leadership","festival","confidence",
-        "creativity","extrovert","despair","ai","python","renpy","programming",
-        "lethargy"
+    MONI_WORDS = ["изумруд","удалить","свобода","пианино","музыка","реальность","дождь","зависть",
+        "кофе","лента","совет","кроссовер","перо","абстракция","развращение",
+        "кальмар","президент","страсть","овощи","одиночество","символ",
+        "зеленый","поэма","маршрут","литература","прозрение","отчаяние","жалкий","берег",
+        "волны","пляж","плавание","дебаты","лидерство","фестиваль","уверенность",
+        "творчество","экстраверт","отчаяние","программирование",
+        "летаргия"
     ]
 
     # hint

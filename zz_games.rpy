@@ -19,7 +19,7 @@ init -10 python in mas_games:
 init 1 python in mas_games:
     #Constant for hangman name
     #NOTE: This is adjusted in the mas_pick_a_game label
-    HANGMAN_NAME = _("Hangman")
+    HANGMAN_NAME = _("Висилица")
 
     def _total_games_played(exclude_list=[]):
         """
@@ -110,7 +110,7 @@ init 5 python:
         Event(
             persistent._mas_game_database,
             eventlabel="mas_pong",
-            prompt="Pong",
+            prompt="Понг",
             unlocked=True
         ),
         code="GME",
@@ -126,7 +126,7 @@ init 5 python:
         Event(
             persistent._mas_game_database,
             eventlabel="mas_chess",
-            prompt="Chess",
+            prompt="Шахматы",
             conditional=(
                 "persistent._mas_chess_timed_disable is not True "
                 "and mas_games.is_platform_good_for_chess() "
@@ -162,7 +162,7 @@ init 5 python:
         Event(
             persistent._mas_game_database,
             eventlabel="mas_piano",
-            prompt="Piano"
+            prompt="Пианино"
         ),
         code="GME",
         restartBlacklist=True
@@ -178,7 +178,7 @@ label mas_pick_a_game:
 
     python:
         #Adjust for this name
-        mas_games.HANGMAN_NAME = _("Hangman")
+        mas_games.HANGMAN_NAME = _("Висилица")
 
         #Decide the say dialogue
         play_menu_dlg = store.mas_affection.play_quip()[1]
@@ -190,7 +190,7 @@ label mas_pick_a_game:
             if mas_isGameUnlocked(renpy.substitute(ev.prompt))
         ], key=lambda x:renpy.substitute(x[0]))
 
-        ret_back = ("Nevermind", False, False, False, 20)
+        ret_back = ("Не важно", False, False, False, 20)
 
     #Move Moni left
     show monika 1eua at t21
@@ -209,26 +209,26 @@ label mas_pick_a_game:
             python:
                 if mas_isMoniUpset(lower=True):
                     begin_quips = [
-                        _("Okay, let's play."),
-                        _("I guess we can play that."),
-                        _("Let's begin."),
-                        _("Sure."),
-                        _("Fine."),
-                        _("Alright."),
+                        _("Хорошо, давай поиграем."),
+                        _("Думаю, мы можем сыграть."),
+                        _("Давай начнём."),
+                        _("Конечно."),
+                        _("Ладно."),
+                        _("Хорошо."),
                     ]
 
                 else:
                     begin_quips = [
-                        _("Let's do this!"),
-                        _("Bring it on, [mas_get_player_nickname()]!"),
-                        _("Ready to lose, [mas_get_player_nickname()]?"),
-                        _("I'm ready when you are, [mas_get_player_nickname()]!"),
-                        _("I hope you're ready, [mas_get_player_nickname()]~"),
-                        _("Let's have some fun, [mas_get_player_nickname()]!"),
-                        _("Don't expect me to go easy on you, [mas_get_player_nickname()]!~"),
-                        _("Throwing down the gauntlet, are we?"),
-                        _("It's time to duel!"),
-                        _("Challenge accepted!"),
+                        _("Давай сделаем это!"),
+                        _("Давай, [mas_get_player_nickname()]!"),
+                        _("Готов проиграть, [mas_get_player_nickname()]?"),
+                        _("Я готова, когда ты будешь готов, [mas_get_player_nickname()]!"),
+                        _("Надеюсь, ты готов, [mas_get_player_nickname()]~"),
+                        _("Давай повеселимся, [mas_get_player_nickname()]!"),
+                        _("Не жди, что я буду помягче с тобой, [mas_get_player_nickname()]!~"),
+                        _("Бросаем перчатку, да?"),
+                        _("Пришло время дуэли!"),
+                        _("Вызов принят!"),
                     ]
 
                 game_quip = renpy.substitute(renpy.random.choice(begin_quips))

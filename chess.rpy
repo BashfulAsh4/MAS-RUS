@@ -1012,7 +1012,7 @@ label mas_chess_start_chess:
             $ line_start = "Отличная работа"
 
         else:
-            m 1eka "О, похоже, у нас патовая ситуацияНо есть и положительная сторона."
+            m 1eka "О, похоже, у нас патовая ситуация."
             $ line_start = "Но есть и положительная сторона"
 
         if not persistent._mas_ever_won["chess"]:

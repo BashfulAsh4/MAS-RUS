@@ -86,7 +86,7 @@ init -1 python:
         NOTE_COLOR = "#181818"
 
         # Font used for the note
-        NOTE_FONT = "mod_assets/font/m1_fixed.ttf"
+        NOTE_FONT = "mod_assets/font/Adventure.ttf"
 
         # Month names constant array
         MONTH_NAMES = ["Неизвестно", "Январь", "Февраль",
@@ -1126,10 +1126,10 @@ init -1 python in mas_calendar:
             string with the sign
         """
         zodiac_signs = [
-            (1, 19, "capricorn"), (2, 18, "aquarius"), (3, 20, "pisces"), (4, 19, "aries"),
-            (5, 20, "taurus"), (6 ,21, "gemini"), (7, 22, "cancer"), (8, 22, "leo"),
-            (9, 22, "virgo"), (10, 22, "libra"), (11, 22, "scorpio"), (12, 21, "sagittarius"),
-            (12, 31, "capricorn")
+            (1, 19, "овен"), (2, 18, "водолей"), (3, 20, "рыбы"), (4, 19, "овен"),
+            (5, 20, "телец"), (6 ,21, "близнецы"), (7, 22, "рак"), (8, 22, "лев"),
+            (9, 22, "дева"), (10, 22, "весы"), (11, 22, "скорпион"), (12, 21, "стрелец"),
+            (12, 31, "козерог")
         ]
         index = bisect.bisect(zodiac_signs, (date.month, date.day))
 
@@ -1879,15 +1879,15 @@ init python:
     import store.mas_calendar as calendar
     import datetime
 
-    calendar.addRepeatable("New years day",_("New Year's Day"),month=1,day=1,year_param=list())
-    calendar.addRepeatable("Valentine",_("Valentine's Day"),month=2,day=14,year_param=list())
+    calendar.addRepeatable("New years day",_("День Нового года"),month=1,day=1,year_param=list())
+    calendar.addRepeatable("Valentine",_("День святого Валентина"),month=2,day=14,year_param=list())
     #calendar.addRepeatable("White day","White Day",month=3,day=14,year_param=list())
-    calendar.addRepeatable("April Fools",_("Day I Became an AI"),month=4,day=1,year_param=[2018])
-    calendar.addRepeatable("Monika's Birthday",_("My Birthday"),month=9,day=22,year_param=range(1999,MASCalendar.MAX_VIEWABLE_YEAR))
-    calendar.addRepeatable("Halloween",_("Halloween"),month=10,day=31,year_param=list())
-    calendar.addRepeatable("Christmas eve",_("Christmas Eve"),month=12,day=24,year_param=list())
-    calendar.addRepeatable("Christmas",_("Christmas"),month=12,day=25,year_param=list())
-    calendar.addRepeatable("New year's eve",_("New Year's Eve"),month=12,day=31,year_param=list())
+    calendar.addRepeatable("April Fools",_("День, когда я стала ИИ"),month=4,day=1,year_param=[2018])
+    calendar.addRepeatable("Monika's Birthday",_("Мой день рождения"),month=9,day=22,year_param=range(1999,MASCalendar.MAX_VIEWABLE_YEAR))
+    calendar.addRepeatable("Halloween",_("Хэллоуин"),month=10,day=31,year_param=list())
+    calendar.addRepeatable("Christmas eve",_("Канун Рождества"),month=12,day=24,year_param=list())
+    calendar.addRepeatable("Christmas",_("Рождество"),month=12,day=25,year_param=list())
+    calendar.addRepeatable("New year's eve",_("Новый год"),month=12,day=31,year_param=list())
 
     # add inital session
     if (
@@ -1910,7 +1910,7 @@ init python:
         ):
         calendar.addRepeatable_d(
             "player-bday",
-            _("Your Birthday"),
+            _("Твой день рождения"),
             pbday,
             range(pbday.year,MASCalendar.MAX_VIEWABLE_YEAR)
         )
@@ -1922,7 +1922,7 @@ init python:
         ):
         calendar.addRepeatable_dt(
             "first-kiss",
-            _("Our First Kiss"),
+            _("Наш первый поцелуй"),
             persistent._mas_first_kiss,
             [persistent._mas_first_kiss.year]
         )
@@ -1939,10 +1939,10 @@ init 2 python in mas_calendar:
             changed - flag to specify that we need to change the
                 old events from the calendar
         """
-        WINTER = _("Winter")
-        SPRING = _("Spring")
-        SUMMER = _("Summer")
-        AUTUMN = _("Autumn")
+        WINTER = _("Зима")
+        SPRING = _("Весна")
+        SUMMER = _("Лето")
+        AUTUMN = _("Осень")
 
         # Season changes:
         if renpy.game.persistent._mas_pm_live_south_hemisphere:
@@ -2159,20 +2159,20 @@ screen mas_calendar_events_scrollable_list(items, display_area, scroll_align, fi
 label _first_time_calendar_use:
     $ mas_calRaiseOverlayShield()
     if persistent._mas_player_bday:
-        m 1eub "Oh, you want to take another look at that pretty calendar hanging on the wall, [player]?"
-        m 3hua "It helps me keep track of important events, like your birthday, ehehe~"
+        m 1eub "О, ты хочешь ещё раз взглянуть на этот красивый календарь, висящий на стене, [player]?"
+        m 3hua "Он помогает мне отслеживать важные события, например, твой день рождения, э-хе-хе~"
     else:
-        m 1eub "Oh, I see you noticed that pretty calendar hanging on the wall, [player]."
-        m 3hua "It helps me keep track of important events, ehehe~"
+        m 1eub "О, я вижу, ты заметил этот красивый календарь, висящий на стене, [player]."
+        m 3hua "Он помогает мне следить за важными событиями, э-хе-хе~"
 
-    m 1eua "Here, let me show you."
+    m 1eua "Вот, давай я тебе покажу."
     show monika 1eua
 
     call mas_start_calendar_read_only
 
-    m 1hua "Pretty cool, right?"
-    m 3eua "Feel free to check the calendar whenever you want."
-    m 1lksdla "Except for when I'm in the middle of talking, of course."
+    m 1hua "Довольно красиво, правда?"
+    m 3eua "Не стесняйся проверять календарь, когда захочешь."
+    m 1lksdla "Кроме тех случаев, когда я разговариваю, конечно."
 
     show monika idle with dissolve_monika
 
