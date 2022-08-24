@@ -135,10 +135,10 @@ label mas_extra_menu_firsttime:
         m 1hua "Добро пожаловать в меню Экстра, [player]!"
 
     m 1eua "Здесь я буду добавлять вещи, которые не являются играми, например, специальные действия, которые можно выполнять с помощью мыши."
-    m "ы также можешь открыть это меню, нажав клавишу 'e'."
+    m "Ты также можешь открыть это меню, нажав клавишу 'e'."
 
     if not persistent._mas_opened_extra_menu:
-        m 1hua " Жди некоторые интересные вещи в этом меню!"
+        m 1hua "Жди некоторые интересные вещи в этом меню!"
 
     $ mas_setEVLPropValues(
         "mas_extra_menu_firsttime",
@@ -358,7 +358,7 @@ screen mas_extramenu_area():
         background Solid("#0000007F")
 
         # close button
-        textbutton _("Закрыть"):
+        textbutton _("Close"):
             area (60, 596, 120, 35)
             style "hkb_button"
             action Jump("mas_extra_menu_close")
@@ -369,12 +369,12 @@ screen mas_extramenu_area():
             style "mas_extra_menu_frame"
             vbox:
                 spacing 2
-                label "Увеличить":
+                label "Zoom":
                     text_style "mas_extra_menu_label_text"
                     xalign 0.5
 
                 # resets the zoom value back to default
-                textbutton _("Сбросить"):
+                textbutton _("Reset"):
                     style "mas_adjustable_button"
                     selected False
                     xsize 72

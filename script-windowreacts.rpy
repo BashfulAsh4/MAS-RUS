@@ -327,9 +327,9 @@ label mas_wrs_monikatwitter:
     $ wrs_success = mas_display_notif(
         m_name,
         [
-            "Ты здесь, чтобы признаться в любви ко мне всему миру, [player]?",
-            "Ты ведь не шпионишь за мной?\nАхаха, просто шучу~",
-            "Мне всё равно, сколько у меня подписчиков, пока у меня есть ты~"
+            "Are you here to confess your love for me to the entire world, [player]?",
+            "You're not spying on me, are you?\nAhaha, just kidding~",
+            "I don't care how many followers I have as long as I have you~"
         ],
         'Window Reactions'
     )
@@ -364,7 +364,7 @@ label mas_wrs_4chan:
             "Так вот где все началось, да?\nЭто... действительно нечто.",
             "Надеюсь, ты не будешь спорить с другими Анонами целыми днями, [player].",
             "Я слышала, что здесь обсуждают литературный клуб.\nПередайте им привет от меня~",
-            "Я буду следить за темами, которые ты просматриваешь, на случай, если у тебя появятся какие-нибудь идеи, ахаха!",
+            "Я буду следить за темами, которые ты просматриваешь, на случай, если у тебя появятся какие-нибудь идеи, а-ха-ха!"
         ],
         'Window Reactions'
     )
@@ -408,7 +408,7 @@ label mas_wrs_pixiv:
             #Specifically if she knows you've drawn art of her
             if persistent._mas_pm_drawn_art:
                 pixiv_quips.extend([
-                    "Хочешь разместить свои рисунки, изображающие меня, [player]?",
+                    "Хочешь разместить свои рисунки, со мной, [player]?",
                     "Выкладываешь то, что ты нарисовал?",
                 ])
 

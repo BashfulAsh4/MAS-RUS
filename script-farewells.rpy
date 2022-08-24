@@ -107,6 +107,7 @@ init -1 python in mas_farewells:
             store.MASSelectiveRepeatRule.evaluate_rule(check_time, ev, defval=True)
             and store.MASNumericalRepeatRule.evaluate_rule(check_time, ev, defval=True)
             and store.MASGreetingRule.evaluate_rule(ev, defval=True)
+            and store.MASTimedeltaRepeatRule.evaluate_rule(ev)
         ):
             return False
 
@@ -1029,7 +1030,7 @@ init 5 python:
             persistent.farewell_database,
             eventlabel="bye_long_absence",
             unlocked=True,
-            prompt="Я уеду на некоторое время.",
+            prompt="Я уйду на некоторое время.",
             pool=True
         ),
         code="BYE"
@@ -1350,7 +1351,7 @@ label bye_prompt_game:
             "Да.":
                 if mas_isMoniNormal(higher=True):
                     m 3sub "Правда?"
-                        m 1hubsb "Ура!"
+                    m 1hubsb "Ура!"
                 else:
                     m 2eka "Хорошо..."
                 jump monika_idle_game.skip_intro

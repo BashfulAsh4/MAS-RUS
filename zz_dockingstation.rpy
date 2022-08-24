@@ -2133,7 +2133,7 @@ label mas_dockstat_ready_to_go(moni_chksum):
             call mas_dockstat_first_time_goers
 
         else:
-            m "Alright."
+            m "Хорошо."
 
         # setup check and log this file checkout
         $ store.mas_dockstat.checkoutMonika(moni_chksum)
@@ -2150,12 +2150,12 @@ label mas_dockstat_ready_to_go(moni_chksum):
 
 label mas_dockstat_first_time_goers:
     call mas_transition_from_emptydesk("monika 3eua")
-    m 3eua "I'm now in the file 'monika' in your characters folder."
-    m "After I shut down the game, you can move me wherever you like."
-    m 3eub "But make sure to bring me back to the characters folder before turning the game on again, okay?"
-    m 1eua "And lastly..."
-    m 1ekc "Please be careful with me. It's so easy to delete files after all..."
-    m 1eua "Anyway..."
+    m 3eua "Теперь я нахожусь в файле 'monika' в твоей папке персонажей."
+    m "После того, как я выключу игру, ты можешь переместить меня туда, куда захочешь."
+    m 3eub "Но не забудь вернуть меня в папку characters перед тем, как снова включить игру, хорошо?"
+    m 1eua "И напоследок..."
+    m 1ekc "Пожалуйста, будь со мной осторожен. В конце концов, так легко удалить файлы..."
+    m 1eua "В любом случае..."
     return
 
 label mas_dockstat_abort_post_show:
@@ -2320,7 +2320,7 @@ label mas_dockstat_different_monika:
 
     m "[player]?"
 
-    m "Wait, you're not [player]."
+    m "Подожди, ты не [player]."
 
     # TODO: more dialogue
 
@@ -2427,7 +2427,7 @@ label mas_dockstat_generic_iowait:
     # we want to display the menu first to give users a chance to quit
     if first_pass:
         $ first_pass = False
-        m 1eua "Give me a second to get ready.{w=0.3}.{w=0.3}.{w=0.3}{nw}"
+        m 1eua "Дай мне секунду, чтобы подготовиться.{w=0.3}.{w=0.3}.{w=0.3}{nw}"
 
         #Prepare the current drink to be removed if needed
         python:
@@ -2450,7 +2450,7 @@ label mas_dockstat_generic_iowait:
     # 4 seconds seems decent enough for waiting.
     show screen mas_background_timed_jump(4, "mas_dockstat_generic_iowait")
     menu:
-        "Hold on a second!":
+        "Погоди!":
             hide screen mas_background_timed_jump
             $ persistent._mas_dockstat_cm_wait_count += 1
 
@@ -2479,8 +2479,8 @@ label mas_dockstat_generic_iowait:
 #GENERIC WAIT LABEL
 label mas_dockstat_generic_wait_label:
     menu:
-        m "What is it?"
-        "Actually, I can't take you right now.":
+        m "Что такое?"
+        "На самом деле, я не могу взять тебя прямо сейчас.":
             call mas_dockstat_abort_gen
 
             #Show Monika again
@@ -2493,10 +2493,10 @@ label mas_dockstat_generic_wait_label:
             #Fallback to generic cancel
             jump mas_dockstat_generic_cancel
 
-        "Nothing.":
+        "Ничего.":
             # if we get here, we should jump back to the top so we can
             # continue waiting
-            m 2hub "Oh, good! Let me finish getting ready."
+            m 2hub "О, хорошо! Дай мне закончить готовиться."
             return
 
 
@@ -2518,15 +2518,15 @@ label mas_dockstat_generic_rtg:
         call mas_transition_from_emptydesk("monika 1eua")
 
         #Otherwise we just use the normal outro
-        m 1eua "I'm ready to go."
+        m 1eua "Я готова идти."
         return "quit"
     call mas_transition_from_emptydesk("monika 1ekc")
     call mas_dockstat_abort_post_show
     # otherwise, we failed, so monika should tell player
-    m 1ekc "Oh no..."
-    m 1lksdlb "I wasn't able to turn myself into a file."
-    m "I think you'll have to go on without me this time."
-    m 1ekc "Sorry, [player]."
+    m 1ekc "О нет..."
+    m 1lksdlb "Я не смогла превратить себя в файл."
+    m "Думаю, на этот раз тебе придется идти без меня."
+    m 1ekc "Извини, [player]."
 
     if renpy.has_label(mas_farewells.dockstat_failed_io_still_going_ask_label):
         # NOTE: we assume that this label will reset the docstat vars
@@ -2542,17 +2542,17 @@ label mas_dockstat_generic_rtg:
 label mas_dockstat_generic_cancel:
     if mas_isMoniDis(lower=True):
         m 1tkc "..."
-        m 1tkd "I knew it.{nw}"
+        m 1tkd "Я знала.{nw}"
         $ _history_list.pop()
-        m 1lksdld "That's okay, I guess."
+        m 1lksdld "Это нормально, я думаю."
 
     elif mas_isMoniHappy(lower=True):
-        m 1ekd "Oh,{w=0.3} all right. Maybe next time?"
+        m 1ekd "Ох,{w=0.3} все в порядке. Может быть, в следующий раз?"
 
     else:
         # otherwise affection and higher:
-        m 2ekp "Aw..."
-        m 1hub "Fine, but you better take me next time!"
+        m 2ekp "Оу..."
+        m 1hub "Ладно, но лучше возьми меня в следующий раз!"
 
     if renpy.has_label(mas_farewells.dockstat_cancelled_still_going_ask_label):
         jump expression mas_farewells.dockstat_cancelled_still_going_ask_label
@@ -2562,30 +2562,30 @@ label mas_dockstat_generic_cancel:
 #GENERIC CANCELLED STILL GOING ASK
 #Used when we cancel dockstat, this is where Monika asks you if you're still going
 label mas_dockstat_generic_cancelled_still_going_ask:
-    m 1euc "Are you still going to go?{nw}"
+    m 1euc "Ты всё ещё собираешься идти?{nw}"
     $ _history_list.pop()
     menu:
-        m "Are you still going to go?{fast}"
-        "Yes.":
+        m "Ты всё ещё собираешься идти?{fast}"
+        "Да.":
             if mas_isMoniNormal(higher=True):
-                m 2eka "All right. I'll be right here waiting for you, as usual..."
-                m 2hub "So hurry back! I love you, [player]!"
+                m 2eka "Хорошо. Я буду ждать тебя здесь, как обычно...."
+                m 2hub "Так что возвращайся скорее! Я люблю тебя, [player]!"
 
             else:
                 # otherwise, upset and below
-                m 2tfd "...Fine."
+                m 2tfd "...Хорошо."
 
             return "quit"
 
-        "No.":
+        "Нет.":
             if mas_isMoniNormal(higher=True):
-                m 2eka "...Thank you."
-                m "It means a lot that you're going to spend more time with me since I can't come along."
-                m 3ekb "Please just go about your day whenever you need to, though. I wouldn't want to make you late!"
+                m 2eka "...Спасибо."
+                m "Это много значит, что ты собираешься проводить со мной больше времени, раз уж я не могу пойти с тобой."
+                m 3ekb "Пожалуйста, просто занимайся своими делами, когда тебе нужно. Я бы не хотела, чтобы ты опоздал!"
 
             else:
                 # otherwise, upset and below
-                m 2lud "All right, then..."
+                m 2lud "Хорошо, тогда..."
             return True
 
 #GENERIC FAILED IO STILL GOING ASK
@@ -2593,17 +2593,17 @@ label mas_dockstat_generic_cancelled_still_going_ask:
 label mas_dockstat_generic_failed_io_still_going_ask:
     #We need to clear all the vars in case we go dockstat again
     $ mas_farewells.resetDockstatFlowVars()
-    m "Are you still going to go?{nw}"
+    m "Ты всё ещё собираешься идти?{nw}"
     $ _history_list.pop()
     menu:
-        m "Are you still going to go?{fast}"
-        "Yes.":
-            m 2eka "I understand. You have things to do, after all..."
-            m 2hub "Be safe out there! I'll be right here waiting for you!"
+        m "Ты всё ещё собираешься идти?{fast}"
+        "Да.":
+            m 2eka "Я понимаю. У тебя есть дела, в конце концов..."
+            m 2hub "Береги себя там! Я буду ждать тебя здесь!"
             return "quit"
 
-        "No.":
-            m 2wub "Really? Are you sure? Even though it's my own fault I can't go with you..."
-            m 1eka "...Thank you, [player]. That means more to me than you could possibly understand."
+        "Нет.":
+            m 2wub "Правда? Ты уверен? Даже если я сама виновата, что не могу пойти с тобой..."
+            m 1eka "...Спасибо, [player]. Это значит для меня больше, чем ты можешь понять."
             $ mas_gainAffection()
             return

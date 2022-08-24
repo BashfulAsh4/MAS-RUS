@@ -19,7 +19,7 @@ init -10 python in mas_games:
 init 1 python in mas_games:
     #Constant for hangman name
     #NOTE: This is adjusted in the mas_pick_a_game label
-    HANGMAN_NAME = _("Висилица")
+    HANGMAN_NAME = _("Hangman")
 
     def _total_games_played(exclude_list=[]):
         """
@@ -110,7 +110,7 @@ init 5 python:
         Event(
             persistent._mas_game_database,
             eventlabel="mas_pong",
-            prompt="Понг",
+            prompt="Pong",
             unlocked=True
         ),
         code="GME",
@@ -126,7 +126,7 @@ init 5 python:
         Event(
             persistent._mas_game_database,
             eventlabel="mas_chess",
-            prompt="Шахматы",
+            prompt="Chess",
             conditional=(
                 "persistent._mas_chess_timed_disable is not True "
                 "and mas_games.is_platform_good_for_chess() "
@@ -162,7 +162,7 @@ init 5 python:
         Event(
             persistent._mas_game_database,
             eventlabel="mas_piano",
-            prompt="Пианино"
+            prompt="Piano"
         ),
         code="GME",
         restartBlacklist=True
@@ -172,13 +172,29 @@ label mas_piano:
     call mas_piano_start
     return
 
+init 5 python:
+    addEvent(
+        Event(
+            persistent._mas_game_database,
+            eventlabel="mas_nou",
+            prompt="NOU",
+            aff_range=(mas_aff.NORMAL, None)
+        ),
+        code="GME",
+        restartBlacklist=True
+    )
+
+label mas_nou:
+    call mas_nou_game_start
+    return
+
 label mas_pick_a_game:
     # we can assume that getting here means we didnt cut off monika
     $ mas_RaiseShield_dlg()
 
     python:
         #Adjust for this name
-        mas_games.HANGMAN_NAME = _("Висилица")
+        mas_games.HANGMAN_NAME = _("Hangman")
 
         #Decide the say dialogue
         play_menu_dlg = store.mas_affection.play_quip()[1]
@@ -190,7 +206,7 @@ label mas_pick_a_game:
             if mas_isGameUnlocked(renpy.substitute(ev.prompt))
         ], key=lambda x:renpy.substitute(x[0]))
 
-        ret_back = ("Не важно", False, False, False, 20)
+        ret_back = ("Nevermind", False, False, False, 20)
 
     #Move Moni left
     show monika 1eua at t21

@@ -1244,8 +1244,8 @@ init 5 python:
         Event(
             persistent.event_database,
             eventlabel="mas_monika_islands",
-            category=['моника','разное'],
-            prompt="Можешь показать мне летающие острова?",
+            category=['monika','misc'],
+            prompt="Can you show me the floating islands?",
             pool=True,
             unlocked=False,
             rules={"no_unlock": None, "bookmark_rule": store.mas_bookmarks_derand.WHITELIST},
@@ -1256,11 +1256,11 @@ init 5 python:
     )
 
 label mas_monika_islands:
-    m 1eub "Конечно! Можете полюбоваться пейзажем."
+    m 1eub "Of course! You can admire the scenery for now."
 
     call mas_islands(force_exp="monika 1eua", scene_change=True)
 
-    m 1eua "Надеюсь, тебе понравится, [mas_get_player_nickname()]~"
+    m 1eua "I hope you liked it, [mas_get_player_nickname()]~"
     return
 
 default persistent._mas_pm_cares_island_progress = None
@@ -1276,45 +1276,45 @@ init 5 python:
     )
 
 label mas_monika_islands_progress:
-    m 1eub "[player], у меня для тебя интересные новости!"
-    m 3hub "Я сделала несколько новых дополнений на островах, {w=0.2}{nw}"
-    extend 1rua "и я подумала, может быть, ты захочешь взглянуть."
-    m 1hublb "В конце концов, это {i}наши{/i} острова~"
+    m 1eub "[player], I've got some exciting news for you!"
+    m 3hub "I made some new additions on the islands, {w=0.2}{nw}"
+    extend 1rua "and I thought maybe you'd like to take a look."
+    m 1hublb "They are {i}our{/i} islands after all~"
 
-    m 3eua "Что скажешь?{nw}"
+    m 3eua "What do you say?{nw}"
     $ _history_list.pop()
     menu:
-        m "Что скажешь?{fast}"
+        m "What do you say?{fast}"
 
-        "Конечно, [m_name].":
+        "Sure, [m_name].":
             $ persistent._mas_pm_cares_island_progress = True
             $ mas_gainAffection(3, bypass=True)
-            m 2hub "Ура!"
+            m 2hub "Yay!"
 
             call mas_islands(force_exp="monika 1hua")
 
-            m "Надеюсь, тебе понравится~"
-            m 1lusdlb "Я знаю, что это ещё далеко от идеала, {w=0.2}{nw}"
-            extend 1eka "но я очень хотела показать тебе свой прогресс."
-            m 2lsp "Я всё ещё учусь кодировать, и непоследовательность этого движка мне не помогает..."
-            m 7hub "Но я думаю, что на данный момент я добилась немалого прогресса!"
+            m "Hope you liked it~"
+            m 1lusdlb "I know it's far from being done, {w=0.2}{nw}"
+            extend 1eka "but I really wanted to showcase my progress to you."
+            m 2lsp "I'm still learning how to code and this engine being inconsistent doesn't help me..."
+            m 7hub "But I think I made quite a bit of progress so far!"
             $ mas_setEventPause(10)
             $ mas_moni_idle_disp.force_by_code("1hua", duration=10, skip_dissolve=True)
 
-        "Мне не интересно.":
+        "I'm not interested.":
             $ persistent._mas_pm_cares_island_progress = False
             $ mas_loseAffection(25)
-            m 2ekc "Оу..."
-            m 6rktpc "Я..."
-            m 6fktpd "Я очень много работала над этим..."
-            m 2rktdc "Ты...{w=0.5} Ты, наверное, просто занят..."
+            m 2ekc "Oh..."
+            m 6rktpc "I..."
+            m 6fktpd "I worked really hard on this..."
+            m 2rktdc "You...{w=0.5} You must just be busy..."
             $ mas_setEventPause(60*10)
             $ mas_moni_idle_disp.force_by_code("2ekc", duration=60*10, skip_dissolve=True)
 
-        "Может позже.":
-            m 2ekc "Оу...{w=0.5}{nw}"
-            extend 2eka "хорошо."
-            m 7eka "Только не застявляй меня слишком долго ждать~"
+        "Maybe later.":
+            m 2ekc "Oh...{w=0.5}{nw}"
+            extend 2eka "alright."
+            m 7eka "Just don't keep me waiting too long~"
             $ mas_setEventPause(20)
             $ mas_moni_idle_disp.force_by_code("1euc", duration=20, skip_dissolve=True)
 
@@ -1402,20 +1402,20 @@ label mas_islands(
 
 
 label mas_island_upsidedownisland:
-    m "Оу, это."
-    m "Думаю, тебе интересно, почему этот остров перевернут, верно?"
-    m "Ну... я собиралась его починить, пока не посмотрела на него еще раз внимательно."
-    m "Это выглядит нереалистично, не так ли?"
-    m "Я просто чувствую, что в этом есть что-то особенное."
-    m "Это просто... завораживает."
+    m "Oh, that."
+    m "I guess you're wondering why that island is upside down, right?"
+    m "Well...I was about to fix it until I took another good look at it."
+    m "It looks surreal, doesn't it?"
+    m "I just feel like there's something special about it."
+    m "It's just...mesmerizing."
     return
 
 label mas_island_glitchedmess:
-    m "Оу, это."
-    m "Это то, над чем я сейчас работаю."
-    m "Это всё ещё огромный беспорядок, однако. Я всё ещё пытаюсь разобраться во всем этом."
-    m "В своё время, я уверена, я стану лучше в программировании!"
-    m "Практика приводит к совершенству, в конце концов, так ведь?"
+    m "Oh, that."
+    m "It's something I'm currently working on."
+    m "It's still a huge mess, though. I'm still trying to figure it all out."
+    m "In due time, I'm sure I'll get better at coding!"
+    m "Practice makes perfect after all, right?"
     return
 
 label mas_island_cherry_blossom_tree:
@@ -1444,7 +1444,7 @@ label mas_island_cherry_blossom1:
         m "This tree may look dead right now...but when it blooms, it's gorgeous."
 
     else:
-        m "Красивое дерево, не так ли?"
+        m "It's a beautiful tree, isn't it?"
 
     m "It's called a Cherry Blossom tree; they're native to Japan."
     m "Traditionally, when the flowers are in bloom, people would go flower viewing and have a picnic underneath the trees."

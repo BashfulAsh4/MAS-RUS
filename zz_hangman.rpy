@@ -5,7 +5,7 @@
 
 # hangman stuff only
 default persistent._mas_hangman_playername = False
-define hm_ltrs_only = "абвгдеёжзийклмнопрстуфхцчшщьыъэюя?!"
+define hm_ltrs_only = "abcdefghijklmnopqrstuvwxyz?!"
 
 # IMAGES-----------
 # hangman
@@ -163,7 +163,7 @@ init -1 python in mas_hangman:
     LETTER_SPACE = 10.0
 
     # word properties
-    WORD_FONT = "mod_assets/font/Adventure.ttf"
+    WORD_FONT = "mod_assets/font/m1_fixed.ttf"
     WORD_SIZE = 36
     WORD_OUTLINE = []
     WORD_COLOR = "#202020"
@@ -174,13 +174,13 @@ init -1 python in mas_hangman:
     HM_IMG_NAME = "hm_"
 
     # Monika words
-    MONI_WORDS = ["изумруд","удалить","свобода","пианино","музыка","реальность","дождь","зависть",
-        "кофе","лента","совет","кроссовер","перо","абстракция","развращение",
-        "кальмар","президент","страсть","овощи","одиночество","символ",
-        "зеленый","поэма","маршрут","литература","прозрение","отчаяние","жалкий","берег",
-        "волны","пляж","плавание","дебаты","лидерство","фестиваль","уверенность",
-        "творчество","экстраверт","отчаяние","программирование",
-        "летаргия"
+    MONI_WORDS = ["emerald","delete","freedom","piano","music","reality","rain","envy",
+        "coffee","ribbon","advice","crossover","feather","abstract","corruption",
+        "squid","president","passion","vegetables","loneliness","symbol",
+        "green","poem","route","literature","epiphany","despair","wretched","shore",
+        "waves","beach","swimming","debate","leadership","festival","confidence",
+        "creativity","extrovert","despair","ai","python","renpy","programming",
+        "lethargy"
     ]
 
     # hint

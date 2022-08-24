@@ -1135,16 +1135,16 @@ init 5 python:
             low_cons_list = MASConsumable._getLowCons()
 
         START_TEXT = (
-            "Hi, [player],\n"
-            "Just letting you know I'm running low on a couple of things.\n"
-            "You wouldn't mind getting some more for me, would you?\n\n"
-            "Here's a list of what I'm running out of:\n"
+            "Привет, [player],\n"
+            "Просто сообщаю тебе, что у меня закончились кое-какие вещи.\n"
+            "Ты ведь не против достать для меня еще, не так ли?\n\n"
+            "Вот список того, что у меня закончилось:\n"
         )
 
         MID_TEXT = ""
 
         END_TEXT = (
-            "Thanks, [player]~"
+            "Спасибо, [player]~"
         )
 
         for cons in low_cons_list:
@@ -1383,23 +1383,23 @@ label mas_consumables_generic_get(consumable):
 
         #We need to parse the dialogue depending on the given dlg_props
         if container:
-            line_starter = renpy.substitute("I'm going to get [mas_a_an_str(container)] of [consumable.disp_name][plur].")
+            line_starter = renpy.substitute("Я собираюсь взять [mas_a_an_str(container)] [consumable.disp_name][plur].")
 
         #Otherwise we use the object reference for this
         elif obj_ref:
-            line_starter = renpy.substitute("I'm going to get [mas_a_an_str(obj_ref)] of [consumable.disp_name][plur].")
+            line_starter = renpy.substitute("Я собираюсь взять [mas_a_an_str(obj_ref)] [consumable.disp_name][plur].")
 
         #No valid dlg props
         else:
-            a_an = "some" if plur else mas_a_an(consumable.disp_name, ignore_case=True)
-            line_starter = renpy.substitute("I'm going to get [a_an] [consumable.disp_name][plur].")
+            a_an = "немного" if plur else mas_a_an(consumable.disp_name, ignore_case=True)
+            line_starter = renpy.substitute("Я собираюсь взять [a_an] [consumable.disp_name][plur].")
 
     if store.mas_globals.in_idle_mode or (mas_canCheckActiveWindow() and not mas_isFocused()):
-        m 1eua "[line_starter] I'll be right back.{w=1}{nw}"
+        m 1eua "[line_starter] Я сейчас вернусь.{w=1}{nw}"
 
     else:
         m 1eua "[line_starter]"
-        m 1eua "Hold on a moment."
+        m 1eua "Подожди минутку."
 
     #We want to take plush with
     if (
@@ -1423,10 +1423,10 @@ label mas_consumables_generic_get(consumable):
     $ consumable.acs.keep_on_desk = True
 
     if store.mas_globals.in_idle_mode or (mas_canCheckActiveWindow() and not mas_isFocused()):
-        m 1hua "Back!{w=1.5}{nw}"
+        m 1hua "Я тут!{w=1.5}{nw}"
 
     else:
-        m 1eua "Okay, what else should we do today?"
+        m 1eua "Хорошо, что ещё мы должны сделать сегодня?"
     return
 
 
@@ -1446,16 +1446,16 @@ label mas_consumables_generic_finish_having(consumable):
 
         dlg_map = {
             mas_consumables.PROP_CONTAINER: {
-                0: "I'm going to put this [container] away.",
-                1: "I'm going to get another [container]."
+                0: "Я собираюсь убрать эту [container].",
+                1: "Я собираюсь взять ещё один [container]."
             },
             mas_consumables.PROP_OBJ_REF: {
-                0: "I'm going to put this away.",
-                1: "I'm going to get another [obj_ref]."
+                0: "Я собираюсь убрать это.",
+                1: "Я собираюсь взять ещё один [obj_ref]."
             },
             "else": {
-                0: "I'm going to put this away.",
-                1: "I'm going to get another one."
+                0: "Я собираюсь убрать это.",
+                1: "Я собираюсь взять ещё один."
             }
         }
 
@@ -1472,13 +1472,13 @@ label mas_consumables_generic_finish_having(consumable):
             line_starter = renpy.substitute(dlg_map["else"][get_more])
 
     if (not mas_canCheckActiveWindow() or mas_isFocused()) and not store.mas_globals.in_idle_mode:
-        m 1eud "I finished my [consumable.disp_name][plur].{w=0.2} {nw}"
+        m 1eud "Я закончила свой [consumable.disp_name][plur].{w=0.2} {nw}"
         extend 1eua "[line_starter]"
-        m 3eua "Hold on a moment."
+        m 3eua "Подожди минутку."
 
     elif store.mas_globals.in_idle_mode or (mas_canCheckActiveWindow() and not mas_isFocused()):
-        m 1esd "Oh, I've finished my [consumable.disp_name][plur].{w=1}{nw}"
-        m 1eua "[line_starter] I'll be right back.{w=1}{nw}"
+        m 1esd "О, я закончила свой [consumable.disp_name][plur].{w=1}{nw}"
+        m 1eua "[line_starter] Я сейчас вернусь.{w=1}{nw}"
 
     #Monika is off screen
     $ consumable.acs.keep_on_desk = False
@@ -1516,7 +1516,7 @@ label mas_consumables_generic_finish_having(consumable):
             and mas_getEV("mas_consumables_generic_queued_running_out").timePassedSinceLastSeen_d(datetime.timedelta(days=7))
             and len(MASConsumable._getLowCons()) > 0
         ):
-            $ mas_display_notif(m_name, ("Hey, [player]...",), "Topic Alerts")
+            $ mas_display_notif(m_name, ("Эй, [player]...",), "Topic Alerts")
             $ queueEvent("mas_consumables_generic_queued_running_out")
 
     #Only have one left
@@ -1528,7 +1528,7 @@ label mas_consumables_generic_finish_having(consumable):
         call mas_consumables_generic_running_out(consumable=consumable)
 
     else:
-        m 1eua "Okay, what else should we do today?"
+        m 1eua "Хорошо, что ещё мы должны сделать сегодня?"
     return
 
 
@@ -1540,12 +1540,12 @@ label mas_consumables_generic_finished_prepping(consumable):
 
     if (not mas_canCheckActiveWindow() or mas_isFocused()) and not store.mas_globals.in_idle_mode:
         $ is_are = "are" if plur else "is"
-        m 1esd "Oh, my [consumable.disp_name][plur] [is_are] ready."
-        m 1eua "Hold on a moment."
+        m 1esd "О, мой [consumable.disp_name][plur] [is_are] готов."
+        m 1eua "Подожди минутку."
 
     else:
         #Idle pauses and then progresses on its own
-        m 1eua "I'm going to get my [consumable.disp_name][plur]. I'll be right back.{w=1}{nw}"
+        m 1eua "Я собираюсь взять свой [consumable.disp_name][plur]. Я сейчас вернусь.{w=1}{nw}"
 
 
     #Monika goes offscreen
@@ -1572,24 +1572,24 @@ label mas_consumables_generic_finished_prepping(consumable):
     $ consumable.acs.keep_on_desk = True
 
     if store.mas_globals.in_idle_mode or (mas_canCheckActiveWindow() and not mas_isFocused()):
-        m 1hua "Back!{w=1.5}{nw}"
+        m 1hua "Я тут!{w=1.5}{nw}"
 
     else:
-        m 1eua "Okay, what else should we do today?"
+        m 1eua "Хорошо, что ещё мы должны сделать сегодня?"
     return
 
 label mas_consumables_refill_explain:
     # provide in-universe explanation why Monika can't just dupe stuff, only shown once
-    m 3rksdla "I'd duplicate what I have now...but when I tried before, it just wasn't the same..."
-    m 1eksdla "I guess I must be missing something because I just can't seem to replicate the taste."
+    m 3rksdla "Я бы продублировала то, что у меня есть сейчас... но когда я пробовала раньше, это было совсем не то..."
+    m 1eksdla "Наверное, мне чего-то не хватает, потому что я просто не могу повторить этот вкус."
     if mas_isMoniHappy(higher=True):
-        m 1ekbsu "...Or maybe it's your everlasting love that makes it special~"
+        m 1ekbsu "...А может, это твоя вечная любовь делает его особенным~"
     return
 
 label mas_consumables_generic_running_out(consumable):
     $ amt_left = consumable.getStock()
 
-    m 1euc "By the way, [player]..."
+    m 1euc "В любом случае, [player]..."
 
     if amt_left > 0:
         python:
@@ -1617,15 +1617,15 @@ label mas_consumables_generic_running_out(consumable):
             else:
                 about = ""
 
-        m 3eud "I just wanted to let you know I only have [about][amt_left] [line_ender]"
+        m 3eud "Я просто хотел сообщить тебе, что у меня только [about][amt_left] [line_ender]"
 
         if not renpy.seen_label("mas_consumables_refill_explain"):
             call mas_consumables_refill_explain
 
     else:
-        m 3eud "I just wanted to let you know that I'm out of [consumable.disp_name][plur]."
+        m 3eud "Я просто хотел сообщить тебе, что у меня заканчивается [consumable.disp_name][plur]."
 
-    m 1eka "You wouldn't mind getting some more for me, would you?"
+    m 1eka "Ты ведь не откажешься принести мне ещё немного?"
     return
 
 label mas_consumables_generic_critical_low(consumable):
@@ -1649,14 +1649,14 @@ label mas_consumables_generic_critical_low(consumable):
         else:
             line_ender = renpy.substitute("serving of [consumable.disp_name] left.")
 
-    m 1euc "Hey, [player]..."
-    m 3eua "I only have one [line_ender]"
+    m 1euc "Эй, [player]..."
+    m 3eua "У меня есть только одна [line_ender]"
 
     if not renpy.seen_label("mas_consumables_refill_explain"):
         call mas_consumables_refill_explain
 
-    m 3eka "Would you mind getting me some more sometime?"
-    m 1hua "Thanks~"
+    m 3eka "Не могли бы ты как-нибудь принести мне ещё?"
+    m 1hua "Спасибо~"
     return
 
 init 5 python:
@@ -1691,28 +1691,28 @@ label mas_consumables_generic_queued_running_out_dlg(low_cons):
     if not low_cons:
         return
 
-    m 1esc "By the way, [player]..."
+    m 1esc "В любом случае, [player]..."
     if len(low_cons) > 2:
         $ mas_generateShoppingList(low_cons)
-        m 3rksdla "I've been running out of a few things in here..."
-        m 3eua "So I hope you don't mind, but I left you a list of things in the characters folder."
-        $ them = "them"
+        m 3rksdla "У меня тут кое-что закончилось..."
+        m 3eua "Поэтому, надеюсь, ты не возражаешь, но я оставил тебе список вещей в папке с персонажами."
+        $ them = "их"
 
     else:
         python:
             items_running_out_of = ""
             if len(low_cons) == 2:
-                items_running_out_of = "{0} and {1}".format(low_cons[0].disp_name, low_cons[1].disp_name)
+                items_running_out_of = "{0} и {1}".format(low_cons[0].disp_name, low_cons[1].disp_name)
             else:
                 items_running_out_of = low_cons[0].disp_name
 
-        m 3rksdla "I'm running out of [items_running_out_of]."
-        $ them = "some more"
+        m 3rksdla "У меня заканчивается [items_running_out_of]."
+        $ them = "ещё немного"
 
     if not renpy.seen_label("mas_consumables_refill_explain"):
         call mas_consumables_refill_explain
 
-    m 1eka "You wouldn't mind getting [them] for me, would you?"
+    m 1eka "Ты ведь не откажешься принести [them] для меня?"
 
     #Flag these as needing to be restocked
     python:
@@ -1726,10 +1726,10 @@ label mas_consumables_remove_thermos:
         return
 
     if store.mas_globals.in_idle_mode or (mas_canCheckActiveWindow() and not mas_isFocused()):
-        m 1eua "I'm going to put this thermos away. I'll be right back.{w=1}{nw}"
+        m 1eua "Я собираюсь убрать этот термос. Я сейчас вернусь.{w=1}{nw}"
 
     else:
-        m 1eua "Give me a second [player], I'm going to put this thermos away."
+        m 1eua "Дай мне секунду [player], я уберу этот термос."
 
     $ thermos = monika_chr.get_acs_of_type("thermos-mug")
     window hide
@@ -1745,10 +1745,10 @@ label mas_consumables_remove_thermos:
     window auto
 
     if store.mas_globals.in_idle_mode or (mas_canCheckActiveWindow() and not mas_isFocused()):
-        m 1hua "Back!{w=1.5}{nw}"
+        m 1hua "Я тут!{w=1.5}{nw}"
 
     else:
-        m "Okay, what else should we do today?"
+        m "Хорошо, что ещё мы должны сделать сегодня?"
     return
 
 ### Special labels for consumables
@@ -1780,12 +1780,12 @@ label mas_consumables_candycane_finish_having:
 
     else:
         if not store.mas_globals.in_idle_mode and (not mas_canCheckActiveWindow() or mas_isFocused()):
-            m 1eua "I'm going to get some more candy canes."
-            m 3eua "Hold on a moment."
+            m 1eua "Я собираюсь взять еще конфет."
+            m 3eua "Подожди минутку."
 
         elif store.mas_globals.in_idle_mode or (mas_canCheckActiveWindow() and not mas_isFocused()):
-            m 1esd "Oh, I've eaten my candy canes.{w=1}{nw}"
-            m 1eua "I'm going to get some more. I'll be right back.{w=1}{nw}"
+            m 1esd "О, я съела свои сладкие тросточки.{w=1}{nw}"
+            m 1eua "Я собираюсь взять еще. Я скоро вернусь..{w=1}{nw}"
 
         #Monika is off screen
         call mas_transition_to_emptydesk
@@ -1805,7 +1805,7 @@ label mas_consumables_candycane_finish_having:
         $ mas_consumable_candycane.acs.keep_on_desk = True
 
         if store.mas_globals.in_idle_mode or (mas_canCheckActiveWindow() and not mas_isFocused()):
-            m 1hua "Back!{w=1.5}{nw}"
+            m 1hua "Я тут!{w=1.5}{nw}"
             #Let's queue this weekly if we've got something we're low on
             if (
                 not mas_inEVL("mas_consumables_generic_queued_running_out")
@@ -1815,5 +1815,73 @@ label mas_consumables_candycane_finish_having:
                 $ queueEvent("mas_consumables_generic_queued_running_out")
 
         else:
-            m 1eua "Okay, what else should we do today?"
+            m 1eua "Хорошо, что ещё мы должны сделать сегодня?"
+    return
+
+init 5 python:
+    addEvent(
+        Event(
+            persistent.event_database,
+            eventlabel="monika_consumables_check",
+            category=['запасы'],
+            prompt="У тебя что-то закончилось?",
+            conditional="MASConsumable._getEnabledConsumables()",
+            pool=True,
+            unlocked=False,
+            action=EV_ACT_UNLOCK,
+            rules={"no_unlock": None},
+        )
+    )
+
+label monika_consumables_check:
+    #Firstly, let's get what we're low on.
+    $ low_cons = MASConsumable._getLowCons()
+
+    # Quick path if Monika needs 1 or none of consumables
+    if len(low_cons) < 2 and random.random() > 0.5:
+        if not low_cons:
+            m 3eua "Ох{w=0.1}, на данный момент у меня ничего не заканчивается, [player]...{w=0.3}{nw}"
+            extend 3hua "но я обязательно дам тебе знать, если понадобится~"
+
+        else:
+            $ items_running_out_of = low_cons[0].disp_name
+            m 3rusdlb "О{w=0.1}, рада, что ты спросил!"
+            m 1rksdla "У меня заканчивается [items_running_out_of]."
+            m 1eka "Я была бы признательна, если бы ты мог достать немного для меня~"
+
+        return
+
+    m 1rtd "Эмм...{w=0.3}{nw}"
+    extend 3eua "дай мне проверить.{w=0.2}.{w=0.2}.{w=0.2}{nw}"
+
+    #Monika goes off screen
+    call mas_transition_to_emptydesk
+
+    pause 5.0
+
+    call mas_transition_from_emptydesk("monika 1eua")
+
+    m 1hub "Я вернулась!"
+
+    if len(low_cons) > 2:
+        $ mas_generateShoppingList(low_cons)
+        m 3rksdla "На самом деле у меня не хватает нескольких вещей..."
+        m 3eua "Надеюсь, ты не против, но я оставила тебе список вещей в папке с персонажами."
+        m 1eka "Ты ведь не против достать их для меня?"
+
+    elif len(low_cons) > 0:
+        python:
+            items_running_out_of = ""
+            if len(low_cons) == 2:
+                items_running_out_of = "{0} and {1}".format(low_cons[0].disp_name, low_cons[1].disp_name)
+            else:
+                items_running_out_of = low_cons[0].disp_name
+
+        m 3rksdla "У меня заканчивается [items_running_out_of]."
+        m 1eka "Ты ведь не откажешься принести мне ещё немного?"
+
+    else:
+        m 3eua "На данный момент у меня ничего не заканчивается, [player]...{w=0.3}{nw}"
+        extend 3hua "но я обязательно дам тебе знать, если понадобится~"
+
     return

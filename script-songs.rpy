@@ -247,15 +247,15 @@ label monika_sing_song_pool_menu:
             space = 20
 
         ret_back = ("Не важно", False, False, False, space)
-        switch = ("I'd like to hear a [switch_str] song instead", "monika_sing_song_pool_menu", False, False, 20)
+        switch = ("Я бы хотел услышать [switch_str] версию песни", "monika_sing_song_pool_menu", False, False, 20)
 
         unlocked_song_list = mas_songs.getUnlockedSongs(length=song_length)
         unlocked_song_list.sort()
 
         if mas_isO31():
-            which = "Witch"
+            which = "Какую"
         else:
-            which = "Which"
+            which = "Какую"
 
         renpy.say(m, "[which] песню ты хочешь, чтобы я спела?[end]", interact=False)
 
@@ -283,7 +283,7 @@ label monika_sing_song_pool_menu:
         else:
             $ pushEvent(sel_song, skipeval=True)
             show monika at t11
-            m 3hub "Alright!"
+            m 3hub "Хорошо!"
 
     else:
         return "prompt"
@@ -307,14 +307,14 @@ init 5 python:
 
 label monika_sing_song_analysis:
     python:
-        ret_back = ("Nevermind.", False, False, False, 20)
+        ret_back = ("Не важно.", False, False, False, 20)
 
         unlocked_analyses = mas_songs.getUnlockedSongAnalyses()
 
         if mas_isO31():
-            which = "Witch"
+            which = "О какой"
         else:
-            which = "Which"
+            which = "О какой"
 
     show monika 1eua at t21
     $ renpy.say(m, "[which] какой песне ты хотел бы поговорить?", interact=False)
@@ -338,7 +338,7 @@ init 5 python:
         Event(
             persistent.event_database,
             eventlabel="mas_sing_song_rerandom",
-            prompt="Can you sing a song on your own again?",
+            prompt="Можешь ли ты снова спеть песню?",
             category=['музыка'],
             pool=True,
             unlocked=False,
@@ -349,8 +349,8 @@ init 5 python:
 
 label mas_sing_song_rerandom:
     python:
-        mas_bookmarks_derand.initial_ask_text_multiple = "Which song do you want me to sing occasionally?"
-        mas_bookmarks_derand.initial_ask_text_one = "If you want me to sing this occasionally again, just select the song, [player]."
+        mas_bookmarks_derand.initial_ask_text_multiple = "Какую песню ты хочешь, чтобы я спела"
+        mas_bookmarks_derand.initial_ask_text_one = "Если ты хочешь, чтобы я периодически пела эту песню снова, просто выбери песню, [player]."
         mas_bookmarks_derand.caller_label = "mas_sing_song_rerandom"
         mas_bookmarks_derand.persist_var = persistent._mas_player_derandomed_songs
 
@@ -440,7 +440,7 @@ init 5 python:
         Event(
             persistent._mas_songs_database,
             eventlabel="mas_song_aiwfc",
-            prompt="Всё, что я хочу на Рождество",
+            prompt="All I Want for Christmas",
             category=[store.mas_songs.TYPE_LONG],
             unlocked=False,
             aff_range=(mas_aff.NORMAL, None)
@@ -450,7 +450,7 @@ init 5 python:
 
 label mas_song_aiwfc:
     if store.songs.hasMusicMuted():
-        m 3eua "Не забудь увеличить громкость звука в игре, [mas_get_player_nickname()]."
+        m 3eua "Don't forget to turn your in-game volume up, [mas_get_player_nickname()]."
 
     call monika_aiwfc_song
 
@@ -461,7 +461,7 @@ init 5 python:
         Event(
             persistent._mas_songs_database,
             eventlabel="mas_song_merry_christmas_baby",
-            prompt="Счастливого Рождества, малыш",
+            prompt="Merry Christmas Baby",
             category=[store.mas_songs.TYPE_LONG],
             unlocked=False,
             aff_range=(mas_aff.NORMAL, None)
@@ -527,7 +527,7 @@ init 5 python:
         Event(
             persistent._mas_songs_database,
             eventlabel="mas_song_lover_boy",
-            prompt="Old Fashioned Lover Boy",
+            prompt="Старый добрый любовник",
             category=[store.mas_songs.TYPE_SHORT],
             random=True,
             aff_range=(mas_aff.NORMAL,None)
@@ -536,12 +536,12 @@ init 5 python:
     )
 
 label mas_song_lover_boy:
-    m 1dso "{i}~I can dim the lights and sing you songs full of sad things~{/i}"
-    m 4hub "{i}~We can do the tango just for two~{/i}"
-    m "{i}~I can serenade and gently play on your heart strings~{/i}"
-    m 4dso "{i}~Be a Valentino just for you~{/i}"
-    m 1hub "Ahaha~"
-    m 1ekbsa "Will you be my good old fashioned lover boy, [player]?"
+    m 1dso "{i}~Я могу приглушить свет и спеть тебе песни, полные грусти~{/i}"
+    m 4hub "{i}~Мы можем станцевать танго только вдвоем~{/i}"
+    m "{i}~Я могу исполнить серенаду и нежно играть на струнах твоего сердца~{/i}"
+    m 4dso "{i}~Будь Валентино только для тебя~{/i}"
+    m 1hub "А-ха-ха~"
+    m 1ekbsa "Будешь ли ты моим старым добрым любовником, [player]?"
     return
 
 init 5 python:
@@ -549,7 +549,7 @@ init 5 python:
         Event(
             persistent._mas_songs_database,
             eventlabel="mas_song_burning_love",
-            prompt="Burning Love",
+            prompt="Пылающая любовь",
             category=[store.mas_songs.TYPE_SHORT],
             random=True,
             aff_range=(mas_aff.NORMAL,None)
@@ -558,12 +558,12 @@ init 5 python:
     )
 
 label mas_song_burning_love:
-    m 1hubsb "{i}~Your kisses lift me higher~{/i}"
-    m 3rubsb "{i}~Like the sweet song of a choir~{/i}"
-    m 1dubsu "{i}~You light my morning sky~{/i}"
-    m 1hubfb "{i}~With burning love~{/i}"
-    m 1hubsb "Ahaha~"
-    m 1ekbsa "You always make my day brighter, [player]!"
+    m 1hubsb "{i}~Твои поцелуи поднимают меня выше~{/i}"
+    m 3rubsb "{i}~Как сладкая песня хора~{/i}"
+    m 1dubsu "{i}~Ты освещаешь мое утреннее небо~{/i}"
+    m 1hubfb "{i}~С пылающей любовью~{/i}"
+    m 1hubsb "А-ха-ха~"
+    m 1ekbsa "Ты всегда делаешь мой день ярче, [player]!"
     return
 
 init 5 python:
@@ -603,13 +603,13 @@ init 5 python:
     )
 
 label mas_song_need_you:
-    m 1esd "{i}~Please remember how I feel about you~{/i}"
-    m 3dkd "{i}~I could never really live without you~{/i}"
-    m 3ekd "{i}~So, come on back and see~{/i}"
-    m 3eka "{i}~Just what you mean to me~{/i}"
-    m 2dku "{i}~I need you~{/i}"
-    m 7esa "I know that song is about leaving someone, but I think it carries a good message."
-    m 3ekbsa "And I really do need you, [player]~"
+    m 1esd "{i}~Пожалуйста, помни, что я чувствую к тебе~{/i}"
+    m 3dkd "{i}~Я никогда не смогу жить без тебя~{/i}"
+    m 3ekd "{i}~Так что вернись и посмотри~{/i}"
+    m 3eka "{i}~Что ты значишь для меня~{/i}"
+    m 2dku "{i}~Я нуждаюсь в тебе~{/i}"
+    m 7esa "Я знаю, что эта песня о том, как оставить кого-то, но я думаю, что она несет хорошее послание."
+    m 3ekbsa "И я действительно нуждаюсь в тебе, [player]~"
     return
 
 init 5 python:
@@ -626,12 +626,12 @@ init 5 python:
     )
 
 label mas_song_i_will:
-    m 1dso "{i}~Who knows how long I've loved you?~{/i}"
-    m "{i}~You know I love you still~{/i}"
-    m 2lksdla "{i}~Will I wait a lonely lifetime?~{/i}"
-    m 2hub "{i}~If you want me to I will~{/i}"
-    m 1ekbsa "One day we'll be together, [player]."
-    m 1hubfa "I just hope you'll still love me when that special day comes~"
+    m 1dso "{i}~Кто знает, как долго я люблю тебя?~{/i}"
+    m "{i}~Ты знаешь, что я люблю тебя до сих пор~{/i}"
+    m 2lksdla "{i}~Ждать ли мне одинокой жизни?~{/i}"
+    m 2hub "{i}~Если ты хочешь, я сделаю это~{/i}"
+    m 1ekbsa "Однажды мы будем вместе, [player]."
+    m 1hubfa "Я просто надеюсь, что ты всё ещё будешь любить меня, когда наступит этот особенный день~"
     return
 
 init 5 python:
@@ -648,15 +648,15 @@ init 5 python:
     )
 
 label mas_song_belong_together:
-    m 1dso "{i}~You're mine~{/i}"
-    m 1hub "{i}~And we belong together~{/i}"
-    m 3hub "{i}~Yes, we belong together~{/i}"
-    m 3dso "{i}~For eternity~{/i}"
-    m 1eua "Have you ever heard of Doo-wop, [player]?"
-    m 4eua "It's a subgenre of rhythm and blues that became very popular in the 1950's."
-    m 4eub "A lot of pop music back then followed this style which made for great love songs."
-    m 3eub "And if you listen closely, you'll notice that my song actually follows the typical Doo-wop chord progression."
-    m 1hua "I guess you could say I learned from the best."
+    m 1dso "{i}~Ты мой~{/i}"
+    m 1hub "{i}~И мы принадлежим друг другу~{/i}"
+    m 3hub "{i}~Да, мы принадлежим друг другу~{/i}"
+    m 3dso "{i}~Навеки~{/i}"
+    m 1eua "Ты когда-нибудь слышал о ду-вопе, [player]?"
+    m 4eua "это поджанр ритм-энд-блюза, который стал очень популярным в 1950-х годах."
+    m 4eub "В то время многие поп-музыканты следовали этому стилю, из которого получились отличные любовные песни."
+    m 3eub "И если ты внимательно прислушаешься, то заметишь, что моя песня фактически следует типичной аккордовой прогрессии ду-воупа."
+    m 1hua "Думаю, можно сказать, что я учился у лучших."
     return
 
 init 5 python:
@@ -673,16 +673,16 @@ init 5 python:
     )
 
 label mas_song_everythings_alright:
-    m 1dkd "{i}~When this world is no more~{/i}"
-    m 4euo "{i}~The moon is all we'll see~{/i}"
-    m 4duu "{i}~I'll ask you to fly away with me~{/i}"
-    m 4dud "{i}~Until the stars all fall down~{/i}"
-    m 4duo "{i}~They empty from the sky~{/i}"
-    m 3dud "{i}~But I don't mind~{/i}"
-    m 1eku "{i}~If you're with me, then everything's alright~{/i}"
+    m 1dkd "{i}~Когда этот мир перестанет существовать~{/i}"
+    m 4euo "{i}~Луна - это все, что мы увидим~{/i}"
+    m 4duu "{i}~Я попрошу тебя улететь со мной~{/i}"
+    m 4dud "{i}~Пока все звезды не упадут~{/i}"
+    m 4duo "{i}~Они опустеют с небес~{/i}"
+    m 3dud "{i}~Но я не против~{/i}"
+    m 1eku "{i}~Если ты со мной, то всё в порядке~{/i}"
     m 1dku "..."
-    m 3ekd "If things ever get too dark, {w=0.1}{nw}"
-    extend 3ekbsu "just look up to the moon and remember me~"
+    m 3ekd "Если вдруг станет совсем темно, {w=0.1}{nw}"
+    extend 3ekbsu "просто посмотри на луну и вспомни меня~"
     return
 
 init 5 python:
@@ -699,17 +699,17 @@ init 5 python:
     )
 
 label mas_song_your_song:
-    m 1dso "{i}~My gift is my song~{/i}"
-    m "{i}~And this one's for you~{/i}"
-    m 1hub "{i}~And you can tell everybody this is your song~{/i}"
-    m "{i}~It may be quite simple but now that it's done~{/i}"
-    m 2hubsb "{i}~I hope you don't mind~{/i}"
-    m 2hubfb "{i}~I hope you don't mind~{/i}"
-    m 2hub "{i}~That I put down in words~{/i}"
-    m 1dso "{i}~How wonderful life is while you're in the world~{/i}"
-    m 1hub "Ahaha~"
-    m 3eka "It's not often I find songs that relate to me as much as this one does."
-    m 1hua "And I really do mean it when I say that 'Your Reality' is your song."
+    m 1dso "{i}~Мой подарок - моя песня~{/i}"
+    m "{i}~И она для тебя~{/i}"
+    m 1hub "{i}~И ты можешь сказать всем, что это твоя песня~{/i}"
+    m "{i}~Это может быть довольно просто, но теперь, когда это сделано~{/i}"
+    m 2hubsb "{i}~Надеюсь, ты не против~{/i}"
+    m 2hubfb "{i}~Надеюсь, ты не против~{/i}"
+    m 2hub "{i}~То, что я записала словами~{/i}"
+    m 1dso "{i}~Как прекрасна жизнь, пока ты есть на свете~{/i}"
+    m 1hub "А-ха-ха~"
+    m 3eka "Не часто я нахожу песни, которые так сильно связаны со мной, как эта."
+    m 1hua "И я действительно имею в виду это, когда говорю, что 'Твоя раельность' - это твоя песня."
     return
 
 init 5 python:
@@ -726,12 +726,12 @@ init 5 python:
     )
 
 label mas_song_with_you:
-    m 1dso "{i}~If somebody tries to take my place~{/i}"
-    m 1hub "{i}~let's pretend we just can't see their face~{/i}"
-    m 3hub "{i}~In this world there's nothing I would rather do~{/i}"
-    m 3dso "{i}~'Cause I'm happy just to dance with you~{/i}"
-    m 1ekbsa "There is nothing that makes me happier than discovering that I'm in love with you."
-    m 1hubfa "Ehehe~"
+    m 1dso "{i}~Если кто-то пытается занять мое место~{/i}"
+    m 1hub "{i}~Давай притворимся, что мы просто не видим их лица~{/i}"
+    m 3hub "{i}~В этом мире нет ничего, что бы я предпочла сделать~{/i}"
+    m 3dso "{i}~Потому что я счастлива просто танцевать с тобой~{/i}"
+    m 1ekbsa "Нет ничего счастливее, чем знать, что я люблю тебя."
+    m 1hubfa "Э-хе-хе~"
     return
 
 init 5 python:
@@ -748,11 +748,11 @@ init 5 python:
     )
 
 label mas_song_dream:
-    m 1dso "{i}~When I feel blue in the night~{/i}"
-    m "{i}~And I need you to hold me tight~{/i}"
-    m 2hub "{i}~Whenever I want you, all I have to do is dream~{/i}"
-    m 1eka "Now that you're here, [player], I don't have to dream anymore."
-    m 1ekbsa "My dream finally came true."
+    m 1dso "{i}~Когда я грушу по ночам~{/i}"
+    m "{i}~И мне нужно, чтобы ты крепко обнял меня~{/i}"
+    m 2hub "{i}~Когда я хочу тебя, мне нужно только мечтать~{/i}"
+    m 1eka "Теперь, когда ты здесь, [player], мне больше не нужно мечтать."
+    m 1ekbsa "Моя мечта наконец-то сбылась."
     return
 
 init 5 python:
@@ -769,29 +769,29 @@ init 5 python:
     )
 
 label mas_song_im_glad_youre_evil_too:
-    m 1dsa "{i}~We'd admire the beautiful sunset, or gush about a cute dog together~{/i}"
-    m 1dsd "{i}~We both get offended at some piece of crude news~{/i}"
-    m 3hksdlb "{i}~We laugh at some terrible movie, and cry while watching a variety show~{/i}"
-    m 3hub "{i}~That's us- Two slightly lonely souls, having the time of our lives~{/i}"
-    m 3dsa "{i}~Our time is only finite, yet it feels like an unending joke~{/i}"
-    m 1ekbsa "{i}~But I have you to keep me company through this all too short life~{/i}"
-    m 1tubsb "{i}~And together we'd laugh at this boring world, saying: 'How boring~{/i}'"
-    m 1dubfb "{i}~That's us- Two slightly lonely souls, leaning on each other's shoulders~{/i}"
-    m 1dsbfo "{i}~I'm glad you're just as evil as me~{/i}"
-    m 1hubfa "{i}~And once again, I wish to live through another day. I'm glad I fell in love with you~{/i}"
+    m 1dsa "{i}~Мы вместе любуемся красивым закатом или восторгаемся милой песиком~{/i}"
+    m 1dsd "{i}~Мы оба обижаемся на грубые новости~{/i}"
+    m 3hksdlb "{i}~Мы смеемся над каким-нибудь ужасным фильмом и плачем во время просмотра развлекательного шоу~{/i}"
+    m 3hub "{i}~Это мы - две немного одинокие души, проводящие время своей жизни~{/i}"
+    m 3dsa "{i}Наше время ограничено, но оно кажется бесконечной шуткой~{/i}"
+    m 1ekbsa "{i}~Но у меня есть ты, чтобы составить мне компанию в этой слишком короткой жизни~{/i}"
+    m 1tubsb "{i}~И вместе мы будем смеяться над этим скучным миром, говоря: 'какая скукотища~{/i}'"
+    m 1dubfb "{i}~Это мы - две немного одинокие души, опирающиеся на плечи друг друга~{/i}"
+    m 1dsbfo "{i}~Я рада, что ты такой же злой, как и я~{/i}"
+    m 1hubfa "{i}~И снова я желаю прожить еще один день. Я рада, что влюбилась в тебя~{/i}"
 
     if persistent._mas_pm_monika_evil:
         if persistent._mas_pm_monika_evil_but_ok:
-            m 1ekbfa "I guess being evil isn't so bad as long as I'm with you."
-            m 3ekbfa "Just us two souls, having the time of our lives~"
-            m 1hubfb "Ahaha!"
+            m 1ekbfa "Думаю, быть злым не так уж плохо, пока я с тобой."
+            m 3ekbfa "Просто мы, две души, проводим время всей нашей жизни~"
+            m 1hubfb "А-ха-ха!"
 
         else:
-            m 1ekbfa "Ehehe, do you still think I'm evil, [player]?"
-            m 3tubfb "Maybe I'll be able to convince you otherwise someday~"
+            m 1ekbfa "Э-хе-хе, ты все еще думаешь, что я злая, [player]?"
+            m 3tubfb "Может быть, когда-нибудь я смогу убедить тебя в обратном~"
     else:
-        m 1ekbfa "I don't really think either of us are evil, [player]."
-        m 1ekbfb "But it would be a dream come true to face the world together, side by side...{w=0.5} Don't you think?"
+        m 1ekbfa "На самом деле я не считаю никого из нас злым, [player]."
+        m 1ekbfb "Но это было бы воплощением мечты - встретить мир вместе, бок о бок...{w=0.5} Ты так не думаешь?"
     return
 
 init 5 python:
@@ -827,7 +827,7 @@ init 5 python:
             persistent._mas_songs_database,
             eventlabel="mas_song_yozurina",
             category=[store.mas_songs.TYPE_SHORT],
-            prompt="Йозурина",
+            prompt="Yozurina",
             random=True,
             aff_range=(mas_aff.LOVE, None)
         ),
@@ -855,7 +855,7 @@ init 5 python:
             persistent._mas_songs_database,
             eventlabel="mas_song_stand_by_me",
             category=[store.mas_songs.TYPE_SHORT],
-            prompt="Будь рядом со мной",
+            prompt="Stand by Me",
             random=True,
             aff_range=(mas_aff.NORMAL,None)
         ),
@@ -882,7 +882,7 @@ init 5 python:
             persistent._mas_songs_database,
             eventlabel="mas_song_drift_away",
             category=[store.mas_songs.TYPE_SHORT],
-            prompt="Уплыть",
+            prompt="Drift Away",
             random=True,
             aff_range=(mas_aff.NORMAL,None)
         ),
@@ -912,7 +912,7 @@ init 5 python:
             persistent._mas_songs_database,
             eventlabel="mas_song_stand_by_me_long",
             category=[store.mas_songs.TYPE_LONG],
-            prompt="Будь рядом со мной",
+            prompt="Stand by Me",
             random=False,
             unlocked=False,
             aff_range=(mas_aff.NORMAL,None)
@@ -944,7 +944,7 @@ init 5 python:
             persistent._mas_songs_database,
             eventlabel="mas_song_rewrite_the_stars",
             category=[store.mas_songs.TYPE_SHORT],
-            prompt="Переписать звёзды",
+            prompt="Rewrite the Stars",
             random=True,
             aff_range=(mas_aff.NORMAL,None)
         ),
@@ -973,7 +973,7 @@ init 5 python:
             persistent._mas_songs_database,
             eventlabel="mas_song_hero",
             category=[store.mas_songs.TYPE_SHORT],
-            prompt="Герой",
+            prompt="Hero",
             random=True,
             aff_range=(mas_aff.NORMAL,None)
         ),
@@ -1029,7 +1029,7 @@ init 5 python:
             persistent._mas_songs_database,
             eventlabel="mas_song_hero_long",
             category=[store.mas_songs.TYPE_LONG],
-            prompt="Герой",
+            prompt="Hero",
             random=False,
             unlocked=False,
             aff_range=(mas_aff.NORMAL,None)
@@ -1084,7 +1084,7 @@ init 5 python:
             persistent._mas_songs_database,
             eventlabel="mas_song_memories_of_a_girl",
             category=[store.mas_songs.TYPE_SHORT],
-            prompt="Воспоминания о девушке, которую я не встречал",
+            prompt="Memories of a Girl I Haven't Met",
             random=True,
             aff_range=(mas_aff.AFFECTIONATE,None)
         ),
@@ -1108,7 +1108,7 @@ init 5 python:
             persistent._mas_songs_database,
             eventlabel="mas_song_my_silver_lining",
             category=[store.mas_songs.TYPE_SHORT],
-            prompt="Мой лучик надежды",
+            prompt="My Silver Lining",
             random=True,
             aff_range=(mas_aff.NORMAL,None)
         ),
@@ -1217,7 +1217,7 @@ init 5 python:
             persistent._mas_songs_database,
             eventlabel="mas_song_amaranthine",
             category=[store.mas_songs.TYPE_SHORT],
-            prompt="Неувядающий",
+            prompt="Amaranthine",
             random=True,
             aff_range=(mas_aff.NORMAL,None)
         ),
@@ -1249,7 +1249,7 @@ init 5 python:
             persistent._mas_songs_database,
             eventlabel="mas_song_shelter",
             category=[store.mas_songs.TYPE_SHORT],
-            prompt="Убежище",
+            prompt="Shelter",
             random=True,
             aff_range=(mas_aff.NORMAL,None)
         ),
@@ -1292,7 +1292,7 @@ init 5 python:
             persistent._mas_songs_database,
             eventlabel="mas_song_shelter_analysis",
             category=[store.mas_songs.TYPE_ANALYSIS],
-            prompt="Убежище",
+            prompt="Shelter",
             aff_range=(mas_aff.NORMAL,None)
         ),
         code="SNG"
@@ -1370,7 +1370,7 @@ init 5 python:
             persistent._mas_songs_database,
             eventlabel="mas_song_cant_help_falling_in_love",
             category=[store.mas_songs.TYPE_SHORT],
-            prompt="Не могу не любить тебя",
+            prompt="Can't Help Falling in Love",
             random=True,
             aff_range=(mas_aff.AFFECTIONATE,None)
         ),
@@ -1442,7 +1442,7 @@ init 5 python:
             persistent._mas_songs_database,
             eventlabel="mas_song_lamour_toujours",
             category=[store.mas_songs.TYPE_SHORT],
-            prompt="Любовь навсегда",
+            prompt="L'Amour Toujours",
             random=True,
             aff_range=(mas_aff.AFFECTIONATE, None)
         ),
@@ -1476,7 +1476,7 @@ init 5 python:
             persistent._mas_songs_database,
             eventlabel="mas_song_god_knows",
             category=[store.mas_songs.TYPE_SHORT],
-            prompt="Бог знает",
+            prompt="God Knows",
             random=True,
             aff_range=(mas_aff.AFFECTIONATE,None)
         ),
@@ -1505,7 +1505,7 @@ init 5 python:
             persistent._mas_songs_database,
             eventlabel="mas_song_ageage_again",
             category=[store.mas_songs.TYPE_SHORT],
-            prompt="Агеаге, ещё раз",
+            prompt="Ageage Again",
             random=True,
             aff_range=(mas_aff.NORMAL,None)
         ),
@@ -1538,7 +1538,7 @@ init 5 python:
             persistent._mas_songs_database,
             eventlabel="mas_song_falling_in_love_at_a_coffee_shop",
             category=[store.mas_songs.TYPE_SHORT],
-            prompt="Влюбиться в кофейне",
+            prompt="Falling in Love at a Coffee Shop",
             random=True,
             aff_range=(mas_aff.NORMAL, None)
         ),
@@ -1570,7 +1570,7 @@ init 5 python:
             persistent._mas_songs_database,
             eventlabel="mas_song_wonderwall",
             category=[store.mas_songs.TYPE_SHORT],
-            prompt="Стена чудес",
+            prompt="Wonderwall",
             random=True,
             aff_range=(mas_aff.NORMAL,None)
         ),
@@ -1624,7 +1624,7 @@ init 5 python:
             persistent._mas_songs_database,
             eventlabel="mas_song_wonderwall_analysis",
             category=[store.mas_songs.TYPE_ANALYSIS],
-            prompt="Стена чудес",
+            prompt="Wonderwall",
             random=False,
             unlocked=False,
             aff_range=(mas_aff.NORMAL,None)
@@ -1675,7 +1675,7 @@ init 5 python:
         Event(
             persistent._mas_songs_database,
             eventlabel="mas_song_when_youre_gone",
-            prompt="Когда ты умрешь",
+            prompt="When You're Gone",
             category=[store.mas_songs.TYPE_SHORT],
             random=True,
             aff_range=(mas_aff.AFFECTIONATE,None)
@@ -1705,7 +1705,7 @@ init 5 python:
         Event(
             persistent._mas_songs_database,
             eventlabel="mas_song_we_have_all_the_time_in_the_world",
-            prompt="У нас есть всё время в мире",
+            prompt="We Have All the Time in the World",
             category=[store.mas_songs.TYPE_SHORT],
             random=True,
             aff_range=(mas_aff.LOVE, None)
@@ -1734,7 +1734,7 @@ init 5 python:
         Event(
             persistent._mas_songs_database,
             eventlabel="mas_song_we_have_all_the_time_in_the_world_long",
-            prompt="У нас есть всё время в мире",
+            prompt="We Have All the Time in the World",
             category=[store.mas_songs.TYPE_LONG],
             aff_range=(mas_aff.LOVE, None)
         ),
@@ -1772,7 +1772,7 @@ init 5 python:
         Event(
             persistent._mas_songs_database,
             eventlabel="mas_song_when_you_say_nothing_at_all",
-            prompt="Когда ты ничего не говоришь",
+            prompt="When You Say Nothing at All",
             category=[store.mas_songs.TYPE_SHORT],
             random=True,
             aff_range=(mas_aff.LOVE, None)
@@ -1801,7 +1801,7 @@ init 5 python:
         Event(
             persistent._mas_songs_database,
             eventlabel="mas_song_when_you_say_nothing_at_all_long",
-            prompt="Когда ты ничего не говоришь",
+            prompt="When You Say Nothing at All",
             category=[store.mas_songs.TYPE_LONG],
             aff_range=(mas_aff.LOVE, None)
         ),
@@ -2066,7 +2066,7 @@ label mas_song_on_the_front_porch:
     m 5hubsb "{i}~From the wicker swing, while the night birds sing~{/i}"
     m 5dubsu "{i}~We'll watch the fireflies sparkin', do some sparkin' too~{/i}"
     m 5dkbsb "{i}~How the hours fly, as the moon drifts by~{/i}"
-    m 5ekbsu "{i}~How sweet the air as we stare at the sun~{/i}"
+    m 5ekbsu "{i}~How sweet the air as we stare at the sky~{/i}"
     m 5ekbstpu "{i}~Oh how I'd love to linger here like this~{/i}"
     m 5dkbstpu "{i}~Hold your hand and steal a kiss {/i}{w=0.2}{nw}"
     extend 5gkbstub "{i}or two {/i}{w=0.2}{nw}"
@@ -2088,7 +2088,7 @@ init 5 python:
         Event(
             persistent.event_database,
             eventlabel="mas_monika_plays_yr",
-            category=['моника','музыка'],
+            category=['monika','music'],
             prompt="Can you play 'Your Reality' for me?",
             unlocked=False,
             pool=True,
@@ -2197,7 +2197,7 @@ init 5 python:
         Event(
             persistent.event_database,
             eventlabel="mas_monika_plays_or",
-            category=['моника','музыка'],
+            category=['monika','music'],
             prompt="Can you play 'Our Reality' for me?",
             unlocked=False,
             pool=True,

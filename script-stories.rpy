@@ -33,7 +33,7 @@ init -1 python in mas_stories:
     TYPE_SCARY = "scary"
 
     # pane constant
-    STORY_RETURN = "Nevermind"
+    STORY_RETURN = "Не важно"
     story_database = dict()
 
     #Time between story unlocks of the same type (in hours). Changes over sessions, but also changes after the next story unlocks
@@ -261,11 +261,11 @@ label monika_short_stories_menu:
 label mas_story_begin:
     python:
         story_begin_quips = [
-            _("Alright, let's start the story."),
-            _("Ready to hear the story?"),
-            _("Ready for story time?"),
-            _("Let's begin~"),
-            _("Are you ready?")
+            _("Хорошо, давай начнем рассказ."),
+            _("Готов слушать историю?"),
+            _("Готов к рассказу?"),
+            _("Давай начнем~"),
+            _("Ты готов?")
         ]
         story_begin_quip=renpy.random.choice(story_begin_quips)
     $ mas_gainAffection(modifier=0.2)
@@ -305,27 +305,27 @@ label mas_scary_story_setup:
 
     python:
         story_begin_quips = [
-            _("Alright let's start the story."),
-            _("Ready to hear the story?"),
-            _("Ready for story time?"),
-            _("Let's begin."),
-            _("Are you ready?")
+            _("Хорошо, давай начнем рассказ."),
+            _("Готов слушать историю?"),
+            _("Готов к рассказу?"),
+            _("Давай начнем~"),
+            _("Ты готов?")
         ]
         story_begin_quip=renpy.random.choice(story_begin_quips)
 
     m 3eua "[story_begin_quip]"
-    m 1duu "Ahem."
+    m 1duu "Кхм."
     return
 
 label mas_scary_story_cleanup:
 
     python:
         story_end_quips = [
-            _("Страшно, [player]?"),
-            _("Я тебя напугала, [player]?"),
-            _("How was it?"),
-            _("Ну?"),
-            _("So...{w=0.5}did I scare you?")
+            _("Испугался, [player]?"),
+            _("Я напугала тебя, [player]?"),
+            _("Как все прошло?"),
+            _("Ну как?"),
+            _("Ну что...{w=0.5}я напугала тебя?")
         ]
         story_end_quip=renpy.substitute(renpy.random.choice(story_end_quips))
 
@@ -343,7 +343,7 @@ label mas_scary_story_cleanup:
     call monika_zoom_transition(mas_temp_zoom_level,transition=1.0)
 
     $ play_song(None, 1.0)
-    m 1eua "I hope you liked it, [player]~"
+    m 1eua "Надеюсь, тебе понравилось, [player]~"
     $ mas_DropShield_core()
     $ HKBShowButtons()
     $ mas_scary_story_setup_done = False
@@ -354,7 +354,7 @@ init 5 python:
         Event(
             persistent._mas_story_database,
             eventlabel="mas_story_tyrant",
-            prompt="Кот и Петух",
+            prompt="Кот и петух",
             category=[mas_stories.TYPE_NORMAL],
             unlocked=True
         ),
@@ -363,13 +363,13 @@ init 5 python:
 
 label mas_story_tyrant:
     call mas_story_begin
-    m 1eua "A Cat caught a Cock and thought about reasonable excuses for eating him."
-    m "He accused him of being a nuisance by crowing at night; not letting men sleep."
-    m 3eud "The Cock defended his action by saying this was for the benefit of men, as it wakes them for labor."
-    m 1tfb "The Cat replied, 'you abound in apologies, but it's time for breakfast.'"
-    m 1hksdrb "At that he made a meal of the Cock."
-    m 3eua "The moral of this story is, tyrants need no excuse."
-    m 1hua "I hope you enjoyed this little story, [player]~"
+    m 1eua "Кот поймал Петуха и обдумывал разумные оправдания, чтобы съесть его."
+    m "Он обвинил его в том, что тот досаждает ему тем, что каркает по ночам, не давая людям спать."
+    m 3eud "Петух защищал свой поступок, говоря, что это на пользу людям, так как будит их к труду."
+    m 1tfb "Кот ответил: 'Ты изобилуешь извинениями, но пора завтракать.'"
+    m 1hksdrb "И тогда он сделал из Петуха обед."
+    m 3eua "Мораль этой истории такова: тиранам не нужны оправдания."
+    m 1hua "Надеюсь, тебе понравилась эта маленькая история, [player]~"
     return
 
 init 5 python:
@@ -377,7 +377,7 @@ init 5 python:
         Event(
             persistent._mas_story_database,
             eventlabel="mas_story_despise",
-            prompt="Лис",
+            prompt="Лиса",
             category=[mas_stories.TYPE_NORMAL],
             unlocked=False
         ),
@@ -386,9 +386,9 @@ init 5 python:
 
 label mas_story_despise:
     call mas_story_begin
-    m 1eud "One hot summer's day, a Fox was strolling through an orchard till he came to a bunch of grapes just ripening on a vine which had been trained over a lofty branch."
-    m 1tfu "'Just the thing to quench my thirst,' said the Fox."
-    m 1eua "Drawing back a few paces, he took a run and a jump, and just missed the bunch."
+    m 1eud "Однажды жарким летним днем Лиса прогуливалась по фруктовому саду, пока не наткнулась на виноградную гроздь, только что созревшую на лозе, которая была прикреплена к высокой ветке."
+    m 1tfu "'Как раз то, что нужно, чтобы утолить жажду,' - сказала лиса."
+    m 1eua "Отступив на несколько шагов, она сделала разбег и прыжок и промахнулась мимо грозди."
     m 3eub "Turning round again with a one,{w=1.0} two,{w=1.0} three,{w=1.0} he jumped up, but with no greater success."
     m 3tkc "Again and again he tried after the tempting morsel, but at last had to give it up, and walked away with his nose in the air, saying: 'I am sure they are sour.'"
     m 1hksdrb "The moral of this story is, it's easy to despise what you cannot get."
@@ -400,7 +400,7 @@ init 5 python:
         Event(
             persistent._mas_story_database,
             eventlabel="mas_story_lies",
-            prompt="Мальчик-пастух и волк",
+            prompt="The Shepherd Boy and the Wolf",
             category=[mas_stories.TYPE_NORMAL],
             unlocked=False
         ),
@@ -430,7 +430,7 @@ init 5 python:
             persistent._mas_story_database,
             eventlabel="mas_story_grasshoper",
             category=[mas_stories.TYPE_NORMAL],
-            prompt="Кузнечик",
+            prompt="The Grasshopper",
             unlocked=False
         ),
         code="STY"
@@ -455,7 +455,7 @@ init 5 python:
         Event(
             persistent._mas_story_database,
             eventlabel="mas_story_wind_sun",
-            prompt="Ветер и солнце",
+            prompt="The Wind and the Sun",
             category=[mas_stories.TYPE_NORMAL],
             unlocked=False
         ),
@@ -479,7 +479,7 @@ init 5 python:
         Event(
             persistent._mas_story_database,
             eventlabel="mas_story_seeds",
-            prompt="Семена",
+            prompt="The Seeds",
             category=[mas_stories.TYPE_NORMAL],
             unlocked=False
         ),
@@ -507,7 +507,7 @@ init 5 python:
         Event(
             persistent._mas_story_database,
             eventlabel="mas_story_gray_hair",
-            prompt="Седые волосы",
+            prompt="The Gray Hair",
             category=[mas_stories.TYPE_NORMAL],
             unlocked=False
         ),
@@ -533,7 +533,7 @@ init 5 python:
         Event(
             persistent._mas_story_database,
             eventlabel="mas_story_fisherman",
-            prompt="Рыбак",
+            prompt="The Fisherman",
             category=[mas_stories.TYPE_NORMAL],
             unlocked=False
         ),
@@ -556,7 +556,7 @@ init 5 python:
         Event(
             persistent._mas_story_database,
             eventlabel="mas_story_ravel",
-            prompt="Три желания старика",
+            prompt="Old Man's Three Wishes",
             category=[mas_stories.TYPE_NORMAL],
             unlocked=False
         ),
@@ -581,7 +581,7 @@ init 5 python:
         Event(
             persistent._mas_story_database,
             eventlabel="mas_story_genie_simple",
-            prompt="Простой джинн",
+            prompt="The Simple Genie",
             category=[mas_stories.TYPE_NORMAL],
             unlocked=False
         ),
@@ -632,7 +632,7 @@ init 5 python:
         Event(
             persistent._mas_story_database,
             eventlabel="mas_story_genie_regret",
-            prompt="Сожаление джинна",
+            prompt="The Genie's Regret",
             category=[mas_stories.TYPE_NORMAL],
             unlocked=False
         ),
@@ -683,7 +683,7 @@ init 5 python:
         Event(
             persistent._mas_story_database,
             eventlabel="mas_story_genie_end",
-            prompt="Конец джинна",
+            prompt="The Genie's End",
             category=[mas_stories.TYPE_NORMAL],
             unlocked=False
         ),
@@ -699,7 +699,7 @@ label mas_story_genie_end:
     m 1ekd "But he grew cold as years went by and he watched each one of his loved ones pass on."
     m 1rksdlc "There were still a select few people whom he held dear, despite knowing that he would have to watch them die as well."
     m 3rksdld "He never told his friends that he wasn't human, as he still wanted to be treated as one."
-    m 1euc "One day, as he was travelling with one of his friends, they came across a genie who would grant each of them one wish."
+    m 1euc "One day, as he was traveling with one of his friends, they came across a genie who would grant each of them one wish."
     m 1dsc "This made him think about everything he had been through;{w=0.5} from back to when he granted wishes to when he gave it up for a simple life."
     m 1dsd "...Everything that had led up to this moment, where he could make his own wish for the first time in a long while."
     m 1dsc "..."
@@ -727,7 +727,7 @@ init 5 python:
         Event(
             persistent._mas_story_database,
             eventlabel="mas_story_immortal_love",
-            prompt="Любовь никогда не кончается",
+            prompt="Love Never Ends",
             category=[mas_stories.TYPE_NORMAL],
             unlocked=False
         ),
@@ -762,7 +762,7 @@ init 5 python:
         Event(
             persistent._mas_story_database,
             eventlabel="mas_story_mother_and_trees",
-            prompt="Мать и её деревья",
+            prompt="A mother and her trees",
             category=[mas_stories.TYPE_NORMAL],
             unlocked=False
         ),
@@ -808,7 +808,7 @@ init 5 python:
         Event(
             persistent._mas_story_database,
             eventlabel="mas_story_self_hate",
-            prompt="Ненависть к себе",
+            prompt="Self-hate",
             category=[mas_stories.TYPE_NORMAL],
             unlocked=False
         ),
@@ -856,7 +856,7 @@ init 5 python:
         Event(
             persistent._mas_story_database,
             eventlabel="mas_story_o_tei",
-            prompt="Рассказ о О-Тей",
+            prompt="The Tale of O-Tei",
             category=[mas_stories.TYPE_NORMAL],
             unlocked=False
         ),
@@ -903,7 +903,7 @@ init 5 python:
         Event(
             persistent._mas_story_database,
             eventlabel="mas_story_crow_and_pitcher",
-            prompt="Ворон и кувшин",
+            prompt="The Crow and the Pitcher",
             category=[mas_stories.TYPE_NORMAL],
             unlocked=False
         ),
@@ -938,7 +938,7 @@ init 5 python:
         Event(
             persistent._mas_story_database,
             eventlabel="mas_story_friend",
-            prompt="Наличие лучшего друга",
+            prompt="Having A Best Friend",
             category=[mas_stories.TYPE_NORMAL],
             unlocked=False
         ),
@@ -969,7 +969,7 @@ init 5 python:
         Event(
             persistent._mas_story_database,
             eventlabel="mas_story_tanabata",
-            prompt="Девушка-ткачиха и пастух",
+            prompt="The Weaver Girl and the Cowherd",
             category=[mas_stories.TYPE_NORMAL],
             unlocked=False,
             aff_range=(mas_aff.AFFECTIONATE, None)
@@ -1041,7 +1041,7 @@ label mas_story_mindthegap:
 #START: SCARY STORIES
 init 5 python:
     addEvent(Event(persistent._mas_story_database,eventlabel="mas_scary_story_hunter",
-    category=[store.mas_stories.TYPE_SCARY], prompt="Охотник",unlocked=True),
+    category=[store.mas_stories.TYPE_SCARY], prompt="The Hunter",unlocked=True),
     code="STY")
 
 label mas_scary_story_hunter:
@@ -1089,7 +1089,7 @@ label mas_scary_story_hunter:
 
 init 5 python:
     addEvent(Event(persistent._mas_story_database,eventlabel="mas_scary_story_kuchisake_onna",
-    category=[store.mas_stories.TYPE_SCARY], prompt="Кутисаке-Онна",unlocked=False),
+    category=[store.mas_stories.TYPE_SCARY], prompt="Kuchisake-Onna",unlocked=False),
     code="STY")
 
 label mas_scary_story_kuchisake_onna:
@@ -1165,7 +1165,7 @@ label .end:
 
 init 5 python:
     addEvent(Event(persistent._mas_story_database,eventlabel="mas_scary_story_mujina",
-    category=[store.mas_stories.TYPE_SCARY], prompt="Мудзина",unlocked=False),
+    category=[store.mas_stories.TYPE_SCARY], prompt="Mujina",unlocked=False),
     code="STY")
 
 label mas_scary_story_mujina:
@@ -1186,7 +1186,7 @@ label mas_scary_story_mujina:
     m 4wuw "No eyes, mouth, or nose. Just an empty visage that stared back at him!"
     m "The merchant ran away as fast as he could, panicking from the haunting figure."
     m 1efc "He continued to run until he saw the light of a lantern and ran towards it."
-    m 3euc "The lantern belonged to a travelling salesman that was walking along."
+    m 3euc "The lantern belonged to a traveling salesman that was walking along."
     m 1esc "The old man stopped in front of him, doubled over to catch his breath."
     m 3esc "The salesman asked why the man was running."
     m 4ekd "'A m-monster! There was a girl with no face by the moat!' the merchant cried."
@@ -1213,7 +1213,7 @@ label mas_scary_story_mujina:
 
 init 5 python:
     addEvent(Event(persistent._mas_story_database,eventlabel="mas_scary_story_ubume",
-    category=[store.mas_stories.TYPE_SCARY], prompt="Убумэ",unlocked=False),
+    category=[store.mas_stories.TYPE_SCARY], prompt="The Ubume",unlocked=False),
     code="STY")
 
 label mas_scary_story_ubume:
@@ -1231,7 +1231,7 @@ label mas_scary_story_ubume:
     m 1euc "He followed the woman to the outside of a nearby temple, where she simply vanished."
     m 1esc "The confectioner was shocked by this and decided to head back home."
     m 3eud "The next day, he went to the temple and told the monk there what he saw."
-    m 1dsd "The priest told the confectioner that a young woman that was travelling through the village recently had suddenly died on the street."
+    m 1dsd "The priest told the confectioner that a young woman that was traveling through the village recently had suddenly died on the street."
     m "The monk felt compassion for the poor dead woman, as she had been in her last month of pregnancy."
     m 1esc "He had her buried in the cemetery behind the temple and gave her and her child safe passage to the afterlife."
     m 4eud "As the monk led the confectioner to the site of the grave, they both heard a baby crying from beneath the ground."
@@ -1245,7 +1245,7 @@ label mas_scary_story_ubume:
 
 init 5 python:
     addEvent(Event(persistent._mas_story_database,eventlabel="mas_scary_story_womaninblack",
-    category=[store.mas_stories.TYPE_SCARY], prompt="Женщина в чёрном",unlocked=False),
+    category=[store.mas_stories.TYPE_SCARY], prompt="The Woman in Black",unlocked=False),
     code="STY")
 
 label mas_scary_story_womaninblack:
@@ -1268,7 +1268,7 @@ label mas_scary_story_womaninblack:
     m 3eud "When he came to, the woman was gone. The colonel questioned some of the other passengers, but none of them had seen her."
     m 3ekd "To boot, once the colonel had entered the compartment it was locked, as was customary, and no one had entered or left the compartment after he had entered."
     m 1esc "When he exited the train, a railway official that overheard him talked to the colonel about the woman he was asking about."
-    m "According to the official, a woman and her husband were travelling on a train together."
+    m "According to the official, a woman and her husband were traveling on a train together."
     m 1dsd "The husband had his head too far out in one of the windows and was decapitated by a wire."
     m "His body then fell onto her lap, lifeless."
     m 3wud "When the train arrived at its stop, she was found holding the corpse and singing a lullaby to it."
@@ -1278,7 +1278,7 @@ label mas_scary_story_womaninblack:
 
 init 5 python:
     addEvent(Event(persistent._mas_story_database,eventlabel="mas_scary_story_resurrection_mary",
-    category=[store.mas_stories.TYPE_SCARY], prompt="Воскрешение Мэри",unlocked=False),
+    category=[store.mas_stories.TYPE_SCARY], prompt="Resurrection Mary",unlocked=False),
     code="STY")
 
 label mas_scary_story_resurrection_mary:
@@ -1306,7 +1306,7 @@ label mas_scary_story_resurrection_mary:
 
 init 5 python:
     addEvent(Event(persistent._mas_story_database,eventlabel="mas_scary_story_corpse",
-    category=[store.mas_stories.TYPE_SCARY], prompt="Реанимированный труп",unlocked=False),
+    category=[store.mas_stories.TYPE_SCARY], prompt="The Resuscitated Corpse",unlocked=False),
     code="STY")
 
 label mas_scary_story_corpse:
@@ -1356,7 +1356,7 @@ label mas_scary_story_corpse:
 
 init 5 python:
     addEvent(Event(persistent._mas_story_database,eventlabel="mas_scary_story_jack_o_lantern",
-    category=[store.mas_stories.TYPE_SCARY], prompt="Джек О'Лантерн",unlocked=False),
+    category=[store.mas_stories.TYPE_SCARY], prompt="Jack O' Lantern",unlocked=False),
     code="STY")
 
 label mas_scary_story_jack_o_lantern:
@@ -1391,7 +1391,7 @@ label mas_scary_story_jack_o_lantern:
 
 init 5 python:
     addEvent(Event(persistent._mas_story_database,eventlabel="mas_scary_story_baobhan_sith",
-    category=[store.mas_stories.TYPE_SCARY], prompt="Баобанские ситы",unlocked=False),
+    category=[store.mas_stories.TYPE_SCARY], prompt="Baobhan Sith",unlocked=False),
     code="STY")
 
 label mas_scary_story_baobhan_sith:
@@ -1442,7 +1442,7 @@ label mas_scary_story_baobhan_sith:
 
 init 5 python:
     addEvent(Event(persistent._mas_story_database,eventlabel="mas_scary_story_serial_killer",
-    category=[store.mas_stories.TYPE_SCARY], prompt="Серийный убийца",unlocked=False),
+    category=[store.mas_stories.TYPE_SCARY], prompt="The Serial Killer",unlocked=False),
     code="STY")
 
 label mas_scary_story_serial_killer:
@@ -1474,7 +1474,7 @@ label mas_scary_story_serial_killer:
 
 init 5 python:
     addEvent(Event(persistent._mas_story_database,eventlabel="mas_scary_story_revenant",
-    category=[store.mas_stories.TYPE_SCARY], prompt="Ревенант",unlocked=False),
+    category=[store.mas_stories.TYPE_SCARY], prompt="The Revenant",unlocked=False),
     code="STY")
 
 label mas_scary_story_revenant:
@@ -1511,7 +1511,7 @@ init 5 python:
             persistent._mas_story_database,
             eventlabel="mas_scary_story_yuki_onna",
             category=[store.mas_stories.TYPE_SCARY],
-            prompt="Юки-онна",
+            prompt="Yuki-onna",
             unlocked=False
         ),
         code="STY"
@@ -1526,7 +1526,7 @@ label mas_scary_story_yuki_onna:
     m 2wud "To his surprise, a beautiful woman was standing over his father, blowing her breath on him and instantly freezing him."
     m 4wud "As she turned to the son, she paused. The woman said to him that she would spare him of the same fate, for he was young and very handsome."
     m 4ekc "If he ever spoke a word of it to anyone, she would come back to kill him."
-    m 4esa "The following winter, the young man was on his way home from a day of cutting wood, when he came across a beautiful travelling woman."
+    m 4esa "The following winter, the young man was on his way home from a day of cutting wood, when he came across a beautiful traveling woman."
     m 2eua "It was starting to snow, and the man offered the woman shelter from the storm, and she quickly accepted."
     m 2eua "The two quickly fell in love and ended up marrying each other."
     m 2hua "They lived happily for years and had several kids as time went by."
@@ -1555,7 +1555,7 @@ init 5 python:
             persistent._mas_story_database,
             eventlabel="mas_scary_story_many_loves",
             category=[store.mas_stories.TYPE_SCARY],
-            prompt="Много возлюбленных",
+            prompt="Many Loves",
             unlocked=False
         ),
         code="STY"
@@ -1604,7 +1604,7 @@ init 5 python:
             persistent._mas_story_database,
             eventlabel="mas_scary_story_gray_lady",
             category=[store.mas_stories.TYPE_SCARY],
-            prompt="Серая леди",
+            prompt="The Gray Lady",
             unlocked=False
         ),
     code="STY"
@@ -1640,7 +1640,7 @@ init 5 python:
             persistent._mas_story_database,
             eventlabel="mas_scary_story_flowered_lantern",
             category=[store.mas_stories.TYPE_SCARY],
-            prompt="Цветочный фонарь",
+            prompt="The Flowered Lantern",
             unlocked=False
         ),
         code="STY"
@@ -1690,7 +1690,7 @@ init 5 python:
             persistent._mas_story_database,
             eventlabel="mas_scary_story_flowered_lantern_2",
             category=[store.mas_stories.TYPE_SCARY],
-            prompt="Цветочный фонарь 2",
+            prompt="The Flowered Lantern 2",
             pool=True,
             unlocked=False
         ),
@@ -1758,7 +1758,7 @@ init 5 python:
             persistent._mas_story_database,
             eventlabel="mas_scary_story_flowered_lantern_3",
             category=[store.mas_stories.TYPE_SCARY],
-            prompt="Цветочный фонарь 3",
+            prompt="The Flowered Lantern 3",
             pool=True,
             unlocked=False
         ),

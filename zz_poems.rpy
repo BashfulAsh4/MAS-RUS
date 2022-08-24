@@ -300,8 +300,8 @@ init 5 python:
         Event(
             persistent.event_database,
             eventlabel="monika_showpoem",
-            prompt="Can I read one of your poems again?",
-            category=["literature"],
+            prompt="Могу я ещё раз прочитать одно из твоих стихотворений?",
+            category=["литература"],
             pool=True,
             unlocked=True,
             action=EV_ACT_UNLOCK,
@@ -316,18 +316,18 @@ label monika_showpoem:
     python:
         #We'll store the base DDLC poems here
         poems_list = [
-            ("Hole in Wall (Part 1)", poem_m1, False, False),
-            ("Hole in Wall (Part 2)", poem_m21, False, False),
-            ("Save Me", poem_m2, False, False),
-            ("The Lady Who Knows Everything", poem_m3, False, False),
-            ("Happy End", poem_m4, False, False)
+            ("Дыра в стене (Часть 1)", poem_m1, False, False),
+            ("Дыра в стене (Часть 2)", poem_m21, False, False),
+            ("Спаси меня", poem_m2, False, False),
+            ("Дама, которая знает все", poem_m3, False, False),
+            ("Счастливый конец", poem_m4, False, False)
         ]
 
-        ret_back = ("Nevermind", False, False, False, 20)
+        ret_back = ("Не важно", False, False, False, 20)
         #Extend the new poems
         poems_list.extend(mas_poems.getSeenPoemsMenu())
 
-        renpy.say(m, "Which poem would you like to read?", interact=False)
+        renpy.say(m, "Какое стихотворение ты хотел бы прочитать?", interact=False)
 
     call screen mas_gen_scrollable_menu(poems_list, mas_ui.SCROLLABLE_MENU_TXT_MEDIUM_AREA, mas_ui.SCROLLABLE_MENU_XALIGN, ret_back)
 
@@ -341,25 +341,25 @@ label monika_showpoem:
 
     $ is_sad = isinstance(_poem, MASPoem) and "sad" in _poem.ex_props
     if is_sad:
-        m 1rkc "Alright, [player]..."
+        m 1rkc "Хорошо, [player]..."
         show monika 1esc
 
     else:
-        m 3hua "Alright!"
+        m 3hua "Хорошо!"
 
     call mas_showpoem(_poem)
 
     if not is_sad:
-        m 3eka "I hope you liked it, [player]."
+        m 3eka "Надеюсь, тебе понравилось, [player]."
 
-    m 1eka "Would you like to read another poem?{nw}"
+    m 1eka "Хочешь прочитать еще одно стихотворение?{nw}"
     $ _history_list.pop()
     menu:
-        m "Would you like to read another poem?{fast}"
+        m "Хочешь прочитать еще одно стихотворение?{fast}"
 
-        "Yes.":
+        "Да.":
             jump monika_showpoem
 
-        "No.":
-            m 1eua "Alright, [player]."
+        "Нет.":
+            m 1eua "Хорошо, [player]."
     return
