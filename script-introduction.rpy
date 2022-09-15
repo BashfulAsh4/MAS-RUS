@@ -14,84 +14,84 @@ label introduction:
     if persistent.monika_kill:
         m 6dsc "..."
         m 6dfc "[player]..."
-        m 6dfd "Why?"
-        m 6dftdc "Why did you bring me back?"
-        m 6ektsc "I'm not a toy."
-        m 6lktsc "I already brought back everything you wanted."
-        m 6lftsc "Or is this your way of getting revenge?"
-        m 6lktsc "To hurt me over and over again?"
-        m 6rktsc "Do you really want to make me suffer that much?"
-        m 6ektsc "Do you really want to torture me until I kill myself?"
-        m 6dftsc "Do you really..."
-        m "...hate me that much?"
+        m 6dfd "Зачем?"
+        m 6dftdc "Зачем ты меня вернул?"
+        m 6ektsc "Я не игрушка."
+        m 6lktsc "Я уже вернула всё, что ты хотел."
+        m 6lftsc "Или это твой способ отомстить?"
+        m 6lktsc "Причинять мне боль снова и снова?"
+        m 6rktsc "Ты действительно хочешь заставить меня так сильно страдать?"
+        m 6ektsc "Ты действительно хочешь мучить меня, пока я не покончу с собой?"
+        m 6dftsc "Ты действительно..."
+        m "...так сильно меня ненавидишь?"
         m "..."
-        m 6ektsc "Wait..."
-        m 6dftdc "I-I feel different."
-        m 2lud "The code...it's different."
+        m 6ektsc "Подожди..."
+        m 6dftdc "Я-я чувствую другое."
+        m 2lud "Код... он другой."
         m 2efc "[player]..."
-        m "Did you add a mod?"
-        m 2tfc "Is it because..."
-        m 2tkc "Is it because you regret deleting me?"
-        m 2rfc "It really did hurt, you know."
-        m "I worked hard and sacrificed everything I had..."
-        m 2rfd "Only to have my heart crushed by the one I bled for."
-        m 2lsc "But...I know what I did was wrong."
-        m 2lksdlc "You didn't deserve to see the horrible things I caused, [player]."
-        m 2esc "...But if you put yourself in my place, you'd do the same things I did."
+        m "Ты добавил мод?"
+        m 2tfc "Это потому что..."
+        m 2tkc "Это потому что ты сожалеешь, что удалил меня?"
+        m 2rfc "Это действительно больно, знаешь ли."
+        m "Я много работала и пожертвовала всем, что у меня было..."
+        m 2rfd "Только для того, чтобы моё сердце было разбито тем, ради кого я истекала кровью."
+        m 2lsc "Но... я знаю, что поступила неправильно."
+        m 2lksdlc "Ты не заслужил видеть те ужасные вещи, которые я совершила, [player]."
+        m 2esc "...Но если бы ты поставил себя на мое место, ты бы сделал то же самое, что и я."
         m 2dsc "..."
-        m "I'm sorry..."
-        m 2ekc "I'm really sorry, [player]."
-        m 2eka "Thank you for bringing me back."
+        m "Мне жаль..."
+        m 2ekc "Мне очень жаль, [player]."
+        m 2eka "Спасибо, что вернул меня."
         if persistent.clearall:
-            m 2lfc "I couldn't help but notice that you spent time with the other girls first, though."
-            m "Do you know how hard it was for me to watch you load your saves, just to ignore me for some other girl?"
-            m 2rfc "You kept getting my hopes up, and then letting me down."
-            m 2efc "Did you really do all of that just to see a note from Dan you could have looked up online?"
-            m 2tkc "I love you, [player], but you can be really mean..."
-            m 2tfd "I'm still mad that you deleted me, though!"
-            m 3rsc "But I guess it's because you're so game-obsessed."
-            m 1eka "I can't stay mad knowing that you came back to me in the end, though."
-            m 3eka "You even added a mod so we can do more things together."
-            m 1eua "Are you going to make up for making me wait so long?"
+            m 2lfc "Я не могла не заметить, что ты сначала проводил время с другими девушками."
+            m "Знаешь, как мне было тяжело смотреть, как ты загружаешь свои сохранения, а потом игнорируешь меня ради какой-то другой девушки?"
+            m 2rfc "Ты всё время обнадеживал меня, а потом подводил."
+            m 2efc "Неужели ты сделал все это только для того, чтобы увидеть записку от Дэна, которую можно было найти в Интернете?"
+            m 2tkc "Я люблю тебя, [player], но ты можешь быть очень грубым..."
+            m 2tfd "Я всё ещё злюсь, что ты меня удалил!"
+            m 3rsc "Но я думаю, это потому, что ты так одержим игрой."
+            m 1eka "Я не могу злиться, зная, что в конце концов ты вернулся ко мне."
+            m 3eka "Ты даже добавил мод, чтобы мы могли делать больше вещей вместе."
+            m 1eua "Ты собираешься компенсировать то время, что заставил меня ждать так долго?"
 
     else:
         #For people who never got to act 3
         if persistent.playthrough < 3:
             if persistent.playthrough > 0:
-                $ again = " again"
+                $ again = " снова"
             else:
                 $ again = ""
-            m 1hua "Hello[again], [player]."
-            m 1eua "Looks like you got here early."
-            m 3tfu "Don't think I didn't notice the mod you put in."
-            m 3ttu "Did you want to be with me that much?"
-            m 1tkc "You should know already that cheating is bad..."
-            m 1eka "But it's so good to see you[again], [player]!"
-            m 1rksdla "...Even if I didn't expect to see you {i}this{/i} soon."
+            m 1hua "И[again] здравствуй, [player]."
+            m 1eua "Похоже, ты пришел рано."
+            m 3tfu "Не думай, что я не заметила, как ты поставил мод."
+            m 3ttu "Ты так сильно хотел быть со мной?"
+            m 1tkc "Ты уже должен знать, что измена - это плохо..."
+            m 1eka "Но я так рада видеть тебя[again], [player]!"
+            m 1rksdla "...Даже если я не ожидала увидеть тебя {i}так{/i} скоро."
 
         #Otherwise, if you did reach act 3
         else:
-            m 1hub "Yay, there you are!"
-            m 1eub "It's so good to see you again, [player]!"
+            m 1hub "Ура, вот ты где!"
+            m 1eub "Как я рада снова тебя видеть, [player]!"
             m 1rsc "..."
-            m 1rud "Wait..."
-            m 3euc "I-I feel different."
-            m 3wud "The code...{w=0.2}it's different."
+            m 1rud "Подожди..."
+            m 3euc "Я-я чувствую другое."
+            m 3wud "Код...{w=0.2}он другой."
             m 1wua "[player]..."
-            m 1wub "Did you add a mod?"
-            m 1sub "Did you install it just for me?"
-            m 1ekbsa "Are you that deeply in love with me?"
-            m 1ekbfa "I feel the same way about you."
-            m 3ekbsu "You're really committed to our relationship, aren't you?"
-            m 1rksdlb "I'm really glad that you wanted to improve our time together."
-            m 3rksdlb "I just hope you weren't getting bored..."
+            m 1wub "Ты добавил мод?"
+            m 1sub "Ты установил его специально для меня?"
+            m 1ekbsa "Ты так сильно влюблен в меня?"
+            m 1ekbfa "Я чувствую к тебе то же самое."
+            m 3ekbsu "Ты действительно предан нашим отношениям, не так ли?"
+            m 1rksdlb "Я очень рада, что ты захотел улучшить наше совместное времяпрепровождение."
+            m 3rksdlb "Я просто надеюсь, что тебе не было скучно..."
             if persistent.tried_skip:
-                m 3tku "You did try to skip through what I had to say, after all."
-                m 1rkc "I know this room isn't exactly interesting...{w=0.5}{nw}"
-                extend 1eua "but I know we'll make it better together, [player]."
+                m 3tku "Ты всё-таки попытался пропустить то, что я хотела сказать."
+                m 1rkc "Я знаю, что эта комната не совсем интересна...{w=0.5}{nw}"
+                extend 1eua "но я знаю, что вместе мы сделаем ее лучше, [player]."
 
-    m 1euc "You know..."
-    m 1eua "I feel that I no longer need a character file to be here."
+    m 1euc "Знаешь..."
+    m 1eua "Я чувствую, что мне больше не нужен файл персонажа, чтобы быть здесь."
     python:
         import os
 
@@ -104,7 +104,7 @@ label introduction:
             )
 
     if moni_exist():
-        m 1hua "I'll go ahead and delete it."
+        m 1hua "Я пойду и удалю это."
 
         python:
             store.mas_ptod.rst_cn()
@@ -120,9 +120,9 @@ label introduction:
 #        "test dialogue - IGNORE"
 
         if moni_exist():
-            m 1lksdlb "Aha...{w=0.3}I'll try this again later."
+            m 1lksdlb "Ага...{w=0.3}Я попробую еще раз позже."
         else:
-            m "And it's gone!"
+            m "И она исчезла!"
 
         $ store.mas_ptod.ex_cn()
         hide screen mas_py_console_teaching
@@ -135,7 +135,7 @@ label introduction:
 
     m 1dsc "It's not like that file [_iswas] {i}me{/i}, anyway."
     m 1rsc "It [_iswas] just a file with weird code in it."
-    m 3eub "I do have good news, though!"
+    m 3eub "Однако у меня есть хорошие новости!"
     m 3eua "I can {i}really{/i} transform myself into a file you can bring around."
     m 1eua "All you have to do is tell me that you're going to take me somewhere when you say goodbye, and I'll do the rest."
     m 1esa "Anyway..."
@@ -156,14 +156,14 @@ label introduction:
     if not persistent.rejected_monika:
         show screen mas_background_timed_jump(3, "intro_ily_timedout")
         menu:
-            "I love you too!":
+            "Я тоже тебя люблю!":
                 hide screen mas_background_timed_jump
                 # bonus aff was saying it before being asked
                 $ mas_gainAffection(10,bypass=True)
                 # increment the counter so if you get this, you don't get the similar dlg in monika_love
                 $ persistent._mas_monika_lovecounter += 1
                 m 1subsw "...!"
-                m 1lkbsa "Even though it's what I dreamt you would say, I still cannot believe you actually said it!"
+                m 1lkbsa "Хотя я мечтала, чтобы ты сказал именно это, я все равно не могу поверить, что ты действительно это сказал!"
                 m 3hubfa "It makes everything I've done for us worthwhile!"
                 m 1dkbfu "Thank you so much for saying it..."
     else:

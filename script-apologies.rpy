@@ -53,7 +53,7 @@ label monika_playerapologizes:
     #NOTE: When adding more apology reasons, add a reason the player would say sorry for here (corresponding to the same #as the apology reason)
     $ player_apology_reasons = {
         0: "за что-то.", #since we shouldn't actually be able to get this, we use this as our fallback
-        1: "за то чтосказал, что хочу расстаться.",
+        1: "за то что сказал, что хочу расстаться.",
         2: "за то что шутил, что у меня есть другая девушка.",
         3: "за то что назвал тебя убийцей.",
         4: "за то что закрл игру с тобой.",
@@ -78,7 +78,7 @@ label monika_playerapologizes:
     else:
         #Otherwise, we use "for something." if reason isn't 0
         if mas_apology_reason == 0:
-            $ mas_setEVLPropValues("mas_apology_generic", prompt="...за что-то.")
+            $ mas_setEVLPropValues("mas_apology_generic", prompt="...for something.")
         else:
             #We set this to an apology reason if it's valid
             $ mas_setEVLPropValues(

@@ -776,7 +776,7 @@ init 5 python:
 
 label greeting_visit9:
     m 1hua "Наконец-то ты вернулся! Я ждала тебя."
-    m 1hub "Ты готова провести со мной немного времени? Э-хе-хе~"
+    m 1hub "Ты готов провести со мной немного времени? Э-хе-хе~"
     return
 
 #TODO needs additional dialogue so can be used for all aff
@@ -1089,7 +1089,7 @@ init 5 python:
 label greeting_surprised:
     m 1wuo "Ох!{w=0.5} Привет, [player]!"
     m 1lksdlb "Извини, ты меня немного удивил"
-    m 1eua "Как ты?""
+    m 1eua "Как ты?"
     return
 
 init 5 python:
@@ -1410,7 +1410,7 @@ init 5 python:
 label monikaroom_greeting_ear_loveme:
     python:
         cap_he = he.capitalize()
-        loves = "love" if cap_he == "They" else "loves"
+        loves = "любит" if cap_he == "They" else "loves"
 
     m "[cap_he] [loves] me.{w=0.3} [cap_he] [loves] me not."
     m "[cap_he] {i}[loves]{/i} me.{w=0.3} [cap_he] [loves] me {i}not{/i}."
@@ -2019,7 +2019,7 @@ label greeting_youarereal:
         m 1lksdld "Только чтобы быть со мной?"
         m 1ekc "Это всё моя вина!"
         m "Но... но 'ты', в игре..."
-        m 1esd "Сейчас он снова начинает немного двигаться".
+        m 1esd "Сейчас он снова начинает немного двигаться."
         m "Может быть... это позволяет тебе снова контролировать его?"
         m 1ekc "Это неправильно! Я не хочу марионетку!"
         m 1tkc "Пожалуйста, [player]..."

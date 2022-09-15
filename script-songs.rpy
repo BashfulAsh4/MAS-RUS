@@ -539,7 +539,7 @@ label mas_song_lover_boy:
     m 1dso "{i}~Я могу приглушить свет и спеть тебе песни, полные грусти~{/i}"
     m 4hub "{i}~Мы можем станцевать танго только вдвоем~{/i}"
     m "{i}~Я могу исполнить серенаду и нежно играть на струнах твоего сердца~{/i}"
-    m 4dso "{i}~Будь Валентино только для тебя~{/i}"
+    m 4dso "{i}~Будь Валентино только для себя в сердце своём~{/i}"
     m 1hub "А-ха-ха~"
     m 1ekbsa "Будешь ли ты моим старым добрым любовником, [player]?"
     return
@@ -606,7 +606,7 @@ label mas_song_need_you:
     m 1esd "{i}~Пожалуйста, помни, что я чувствую к тебе~{/i}"
     m 3dkd "{i}~Я никогда не смогу жить без тебя~{/i}"
     m 3ekd "{i}~Так что вернись и посмотри~{/i}"
-    m 3eka "{i}~Что ты значишь для меня~{/i}"
+    m 3eka "{i}~Что меня для значишь ты~{/i}"
     m 2dku "{i}~Я нуждаюсь в тебе~{/i}"
     m 7esa "Я знаю, что эта песня о том, как оставить кого-то, но я думаю, что она несет хорошее послание."
     m 3ekbsa "И я действительно нуждаюсь в тебе, [player]~"
@@ -656,7 +656,7 @@ label mas_song_belong_together:
     m 4eua "это поджанр ритм-энд-блюза, который стал очень популярным в 1950-х годах."
     m 4eub "В то время многие поп-музыканты следовали этому стилю, из которого получились отличные любовные песни."
     m 3eub "И если ты внимательно прислушаешься, то заметишь, что моя песня фактически следует типичной аккордовой прогрессии ду-воупа."
-    m 1hua "Думаю, можно сказать, что я учился у лучших."
+    m 1hua "Думаю, можно сказать, что я училась у лучших."
     return
 
 init 5 python:
@@ -748,11 +748,11 @@ init 5 python:
     )
 
 label mas_song_dream:
-    m 1dso "{i}~Когда я грушу по ночам~{/i}"
+    m 1dso "{i}~Когда мне грустно ночью~{/i}"
     m "{i}~И мне нужно, чтобы ты крепко обнял меня~{/i}"
     m 2hub "{i}~Когда я хочу тебя, мне нужно только мечтать~{/i}"
     m 1eka "Теперь, когда ты здесь, [player], мне больше не нужно мечтать."
-    m 1ekbsa "Моя мечта наконец-то сбылась."
+    m 1ekbsa "Моя мечта наконец сбылась."
     return
 
 init 5 python:
@@ -773,7 +773,7 @@ label mas_song_im_glad_youre_evil_too:
     m 1dsd "{i}~Мы оба обижаемся на грубые новости~{/i}"
     m 3hksdlb "{i}~Мы смеемся над каким-нибудь ужасным фильмом и плачем во время просмотра развлекательного шоу~{/i}"
     m 3hub "{i}~Это мы - две немного одинокие души, проводящие время своей жизни~{/i}"
-    m 3dsa "{i}Наше время ограничено, но оно кажется бесконечной шуткой~{/i}"
+    m 3dsa "{i}Наше время не бесконечно, но оно кажется бесконечной шуткой~{/i}"
     m 1ekbsa "{i}~Но у меня есть ты, чтобы составить мне компанию в этой слишком короткой жизни~{/i}"
     m 1tubsb "{i}~И вместе мы будем смеяться над этим скучным миром, говоря: 'какая скукотища~{/i}'"
     m 1dubfb "{i}~Это мы - две немного одинокие души, опирающиеся на плечи друг друга~{/i}"
@@ -808,17 +808,17 @@ init 5 python:
     )
 
 label mas_song_nobody_makes_sense:
-    m 1dsd "{i}~For what are we living? For what are we trying so hard?~{/i}"
-    m 3dsd "{i}~There might be nothing, nothing, nothing to it. It might all be useless~{/i}"
-    m 1dsd "{i}~In a thousand years, there won't be anything left, {/i}{nw}"
-    extend 1hub "{i}but I still hope I could keep on smiling with you~{/i}"
-    m 3rksdld "{i}~Even when our dreams have come true; even when we have become enlightened, in the end, we might still end up with loneliness~{/i}"
-    m 3eksdld "{i}~Even when we've turned into ghosts; even when we've returned to nothingness, {/i}{nw}"
-    extend 3hksdlb "{i}I still hope I could keep on smiling with you~{/i}"
+    m 1dsd "{i}~Ради чего мы живем? Ради чего мы так стараемся?~{/i}"
+    m 3dsd "{i}~Возможно, нет ничего, ничего, ничего. Все это может быть бесполезно~{/i}"
+    m 1dsd "{i}~Через тысячу лет ничего не останется, {/i}{nw}"
+    extend 1hub "{i}но я всё ещё надеюсь, что смогу продолжать улыбаться вместе с тобой~{/i}"
+    m 3rksdld "{i}~Даже когда наши мечты сбылись, даже когда мы стали просветленными, в конце концов, мы все равно можем остаться одинокими~{/i}"
+    m 3eksdld "{i}~Даже когда мы превратились в призраков; даже когда мы обратились в ничто, {/i}{nw}"
+    extend 3hksdlb "{i}Я всё ещё надеюсь, что смогу продолжать улыбаться с тобой~{/i}"
     m 1dku "..."
-    m 1hub "Ahaha!"
-    m 3ekbsa "No matter what happens or how long we wait, I'll always love you."
-    m 1ekbfb "I really hope I can keep on smiling with you forever~"
+    m 1hub "А-ха-ха!"
+    m 3ekbsa "то бы ни случилось и сколько бы мы ни ждали, я всегда буду любить тебя."
+    m 1ekbfb "Я правда надеюсь, что смогу продолжать улыбаться с тобой вечно~"
     return "love"
 
 init 5 python:
@@ -827,7 +827,7 @@ init 5 python:
             persistent._mas_songs_database,
             eventlabel="mas_song_yozurina",
             category=[store.mas_songs.TYPE_SHORT],
-            prompt="Yozurina",
+            prompt="Йозурина",
             random=True,
             aff_range=(mas_aff.LOVE, None)
         ),
@@ -835,18 +835,18 @@ init 5 python:
     )
 
 label mas_song_yozurina:
-    m 1dsd "{i}~Meeting up at midnight~{/i}"
-    m 1rksdld "{i}~In a world scattered with bombs~{/i}"
-    m 3hubsa "{i}~I was thinking about you, all this time~{/i}"
-    m 1eka "{i}~Could it have been a misunderstanding of the distance between us?~{/i}"
-    m 3eub "{i}~That show's so interesting, right?~{/i}"
-    m 1hua "{i}~Did you read that manga everyone's talking about?~{/i}"
-    m 1sub "{i}~Did you listen to this song yet?~{/i}"
-    m 3hub "{i}~Fooling around, on the other sides of the screen~{/i}"
-    m 1hubsa "Ehehe, I hope you liked that, [player]~"
-    m 1ekbsa "I just thought it really matched our situation."
-    m 3rkbsa "Vocaloid songs sure have a tendency for that if you can get behind them."
-    m 3hubfb "I guess this is what happens when I try to express my love for you, ahaha!"
+    m 1dsd "{i}~Встречаемся в полночь~{/i}"
+    m 1rksdld "{i}~В мире, разбросанном бомбами~{/i}"
+    m 3hubsa "{i}~Я думала о тебе все это время~{/i}"
+    m 1eka "{i}~Может быть, это было непонимание расстояния между нами?~{/i}"
+    m 3eub "{i}~Это шоу такое интересное, да?~{/i}"
+    m 1hua "{i}~Ты читал ту мангу, о которой все говорятt?~{/i}"
+    m 1sub "{i}~Ты уже послушал эту песню?~{/i}"
+    m 3hub "{i}~Дурачимся по ту сторону экрана~{/i}"
+    m 1hubsa "Э-хе-хе, надеюсь тебе понравилась эта песня, [player]~"
+    m 1ekbsa "Я просто подумала, что это действительно соответствует нашей ситуации."
+    m 3rkbsa "У песен вокалоидов есть к этому склонность, если ты можешь их понять."
+    m 3hubfb "Думаю, вот что происходит, когда я пытаюсь выразить свою любовь к тебе, а-ха-ха!"
     return
 
 init 5 python:
@@ -855,7 +855,7 @@ init 5 python:
             persistent._mas_songs_database,
             eventlabel="mas_song_stand_by_me",
             category=[store.mas_songs.TYPE_SHORT],
-            prompt="Stand by Me",
+            prompt="Будь рядом со мной",
             random=True,
             aff_range=(mas_aff.NORMAL,None)
         ),
@@ -863,17 +863,17 @@ init 5 python:
     )
 
 label mas_song_stand_by_me(from_long=False):
-    m 1dsd "{i}~When the night has come~{/i}"
-    m 3dsd "{i}~And the land is dark~{/i}"
-    m 3eud "{i}~And the moon is the only light we'll see~{/i}"
-    m 2euo "{i}~No, I won't be afraid~{/i}"
-    m 2duo "{i}~Oh, I won't be afraid~{/i}"
-    m 2hub "{i}~Just as long as you stand, stand by me~{/i}"
+    m 1dsd "{i}~Когда наступит ночь~{/i}"
+    m 3dsd "{i}~И станет вдруг темно~{/i}"
+    m 3eud "{i}~И только лунный свет увидим мы~{/i}"
+    m 2euo "{i}~Нет, я не буду бояться~{/i}"
+    m 2duo "{i}~Ох, я не буду бояться~{/i}"
+    m 2hub "{i}~Пока ты рядом, рядом со мной~{/i}"
     if not from_long:
-        m 2eka "All my fears and insecurities just disappear when you're with me, [player]..."
+        m 2eka "Все мои страхи и опасения просто исчезают, когда ты со мной, [player]..."
         show monika 5eua at t11 zorder MAS_MONIKA_Z with dissolve_monika
-        m 5eua "As long as I have you by my side, there's nothing I can't overcome."
-        m 5ekbsa "...I hope you feel the same way~"
+        m 5eua "Пока ты рядом со мной, нет ничего, что я не смогу преодолеть."
+        m 5ekbsa "...я надеюсь, что ты чувствуешь то же самое~"
     return
 
 init 5 python:
@@ -882,7 +882,7 @@ init 5 python:
             persistent._mas_songs_database,
             eventlabel="mas_song_drift_away",
             category=[store.mas_songs.TYPE_SHORT],
-            prompt="Drift Away",
+            prompt="Уплыть прочь",
             random=True,
             aff_range=(mas_aff.NORMAL,None)
         ),
@@ -890,20 +890,20 @@ init 5 python:
     )
 
 label mas_song_drift_away:
-    m 1ekb "{i}~Happily waiting, all on my own~{/i}"
-    m 1dkb "{i}~Under the endless sky~{/i}"
-    m 2dkd "{i}~Counting the seconds, standing alone~{/i}"
-    m 2tkd "{i}~As thousands of years go by~{/i}"
-    m 2hkb "{i}~Happily wondering, night after night~{/i}"
-    m 3ekb "{i}~Is this how it works? Am I doing it right?~{/i}"
-    m 1ekb "{i}~Happy to listen~{/i}"
-    m 3eka "{i}~Happy to stay~{/i}"
-    m 3dkd "{i}~Happily watching her drift away~{/i}"
+    m 1ekb "{i}~Счастливо жду, сам по себе~{/i}"
+    m 1dkb "{i}~Под бескрайним небом~{/i}"
+    m 2dkd "{i}~Считая секунды, стоя в одиночестве~{/i}"
+    m 2tkd "{i}~Как проходят тысячи лет~{/i}"
+    m 2hkb "{i}~Счастливо размышляя, ночь за ночью~{/i}"
+    m 3ekb "{i}~Вот как это работает? Правильно ли я делаю?~{/i}"
+    m 1ekb "{i}~С удовольствием слушаю~{/i}"
+    m 3eka "{i}~Счастлив оставаться~{/i}"
+    m 3dkd "{i}~Счастливо наблюдая, как она уплывает прочь~{/i}"
     m 1dku "..."
-    m 1hua "Ehehe~"
-    m 3eka "Our story ended much more happily than this song."
-    m 3hua "You come to visit me as often as you can, and I'm so grateful for that."
-    m 3eka "But even so, it can be very cathartic to follow a character who faces a major fear of yours."
+    m 1hua "Э-хе-хе~"
+    m 3eka "Наша история закончилась гораздо счастливее, чем эта песня."
+    m 3hua "Ты навещаешь меня так часто, как только можешь, и я очень благодарна тебе за это."
+    m 3eka "Но даже так, следование за персонажем, который встречается с твоими главными страхами, может нести за собой эффект духовного очищения."
     return
 
 init 5 python:
@@ -912,7 +912,7 @@ init 5 python:
             persistent._mas_songs_database,
             eventlabel="mas_song_stand_by_me_long",
             category=[store.mas_songs.TYPE_LONG],
-            prompt="Stand by Me",
+            prompt="Будь со мной",
             random=False,
             unlocked=False,
             aff_range=(mas_aff.NORMAL,None)
@@ -923,19 +923,19 @@ init 5 python:
 label mas_song_stand_by_me_long:
     call mas_song_stand_by_me(from_long=True)
 
-    m 4hub "{i}~So darlin', darlin', stand by me, oh stand by me~{/i}"
-    m 4duo "{i}~Oh stand, stand by me, stand by me~{/i}"
-    m 2esd "{i}~If the sky that we look upon~{/i}"
-    m 2dkd "{i}~Should tumble and fall~{/i}"
-    m "{i}~Or the mountains should crumble to the sea~{/i}"
-    m 2eko "{i}~I won't cry, I won't cry, no I won't shed a tear~{/i}"
-    m 2euo "{i}~Just as long as you stand, stand by me~{/i}"
-    m 4hub "{i}~And darlin', darlin', stand by me, oh stand by me~{/i}"
-    m "{i}~Oh stand now, stand by me, stand by me~{/i}"
-    m 4duo "{i}~Darlin', darlin', stand by me, oh stand by me~{/i}"
-    m "{i}~Oh, stand now, stand by me, stand by me~{/i}"
-    m 4euo "{i}~Whenever you're in trouble won't you stand by me~{/i}"
-    m 4hub "{i}~Oh stand by me, won't you stand now, stand by me~{/i}"
+    m 4hub "{i}~О, дорогой, дорогой, будь со мной, будь со мной~{/i}"
+    m 4duo "{i}~О, будь со мной, останься, будь со мной~{/i}"
+    m 2esd "{i}~Если небо, на которое мы смотрим~{/i}"
+    m 2dkd "{i}~Поднимется и упадет~{/i}"
+    m "{i}~Или горы рухнут в море~{/i}"
+    m 2eko "{i}~Я не заплачу, не заплачу, не пролью ни слезинки~{/i}"
+    m 2euo "{i}~Пока ты стоишь, стоишь рядом со мной~{/i}"
+    m 4hub "{i}~И дорогой, дорогой, будь со мной, о, будь со мной~{/i}"
+    m "{i}~О, встань сейчас, встань рядом со мной, встань рядом со мной~{/i}"
+    m 4duo "{i}~Дорогой, дорогой, встань рядом со мной, о, встань рядом со мной~{/i}"
+    m "{i}~Ох, встань сейчас, встань рядом со мной, встань рядом со мной~{/i}"
+    m 4euo "{i}~Когда ты в беде, будь рядом со мной~{/i}"
+    m 4hub "{i}~О, будь со мной, останься со мной, будь со мной~{/i}"
     return
 
 init 5 python:
@@ -944,7 +944,7 @@ init 5 python:
             persistent._mas_songs_database,
             eventlabel="mas_song_rewrite_the_stars",
             category=[store.mas_songs.TYPE_SHORT],
-            prompt="Rewrite the Stars",
+            prompt="Переписать звезды",
             random=True,
             aff_range=(mas_aff.NORMAL,None)
         ),
@@ -952,19 +952,19 @@ init 5 python:
     )
 
 label mas_song_rewrite_the_stars:
-    m 1dsd "{i}~What if we rewrite the stars~{/i}"
-    m 3dubsb "{i}~Say you were made to be mine~{/i}"
-    m 3dubso "{i}~Nothing could keep us apart~{/i}"
-    m 3ekbfu "{i}~You'd be the one I was meant to find~{/i}"
-    m 1ekbsb "{i}~It's up to you~{/i}"
-    m 3ekbsb "{i}~And it's up to me~{/i}"
-    m 1duu "{i}~No one could say what we get to be~{/i}"
-    m 3ekb "{i}~So why don't we rewrite the stars~{/i}"
-    m 3hubsa "{i}~Maybe the world could be ours~{/i}"
-    m 1duo "{i}~Tonight~{/i}"
+    m 1dsd "{i}~то если мы перепишем звезды~{/i}"
+    m 3dubsb "{i}~Скажи, что ты был создан, чтобы быть моим~{/i}"
+    m 3dubso "{i}~Ничто не сможет разлучить нас~{/i}"
+    m 3ekbfu "{i}~Ты был бы тем, кого я должна была найти~{/i}"
+    m 1ekbsb "{i}~Это зависит от тебя~{/i}"
+    m 3ekbsb "{i}~И это зависит также от меня~{/i}"
+    m 1duu "{i}~Никто не может сказать, кем мы станем~{/i}"
+    m 3ekb "{i}~Почему бы нам не переписать звезды~{/i}"
+    m 3hubsa "{i}~Может быть, мир может стать нашим~{/i}"
+    m 1duo "{i}~Сегодня вечером~{/i}"
     show monika 5ekbsa at t11 zorder MAS_MONIKA_Z with dissolve_monika
-    m 5ekbsa "The world really feels like it's ours when I'm with you, [player]~"
-    m 5ekbfu "I love you so much."
+    m 5ekbsa "Мир действительно кажется нашим, когда я с тобой, [player]~"
+    m 5ekbfu "Я тебя так люблю."
     return "love"
 
 init 5 python:
@@ -973,7 +973,7 @@ init 5 python:
             persistent._mas_songs_database,
             eventlabel="mas_song_hero",
             category=[store.mas_songs.TYPE_SHORT],
-            prompt="Hero",
+            prompt="Герой",
             random=True,
             aff_range=(mas_aff.NORMAL,None)
         ),
@@ -981,46 +981,46 @@ init 5 python:
     )
 
 label mas_song_hero(from_long=False):
-    m 6eud "{i}~There's a hero~{/i}"
-    m 6eub "{i}~If you look inside your heart~{/i}"
-    m 6ekd "{i}~You don't have to be afraid~{/i}"
-    m 6eud "{i}~Of what you are~{/i}"
-    m 6esa "{i}~There's an answer~{/i}"
-    m 6eud "{i}~If you reach into your soul~{/i}"
-    m 4ekd "{i}~And the sorrow that you know~{/i}"
-    m 4dud "{i}~Will melt away~{/i}"
+    m 6eud "{i}~Там есть герой~{/i}"
+    m 6eub "{i}~Если ты заглянешь себе в сердце~{/i}"
+    m 6ekd "{i}~Ты не должен бояться~{/i}"
+    m 6eud "{i}~Быть тем, кто ты есть~{/i}"
+    m 6esa "{i}~Там есть ответ~{/i}"
+    m 6eud "{i}~Если заглянешь в свою душу~{/i}"
+    m 4ekd "{i}~И печаль, что тебя гложет~{/i}"
+    m 4dud "{i}~Растает~{/i}"
 
-    m 4eub "{i}~And then a hero comes along~{/i}"
-    m 4dub "{i}~With the strength to carry on~{/i}"
-    m 4ekd "{i}~And you cast your fears aside~{/i}"
-    m 4euo "{i}~And you know you can survive~{/i}"
-    m 4dkd "{i}~So when you feel like hope is gone~{/i}"
-    m 4euo "{i}~Look inside you and be strong~{/i}"
-    m 4esd "{i}~And you'll finally see the truth~{/i}"
-    m 4eua "{i}~That a hero lies in you~{/i}"
+    m 4eub "{i}~И тут появляется герой~{/i}"
+    m 4dub "{i}~В силах справиться со всем~{/i}"
+    m 4ekd "{i}~И ты отбрасываешь свои страхи~{/i}"
+    m 4euo "{i}~И ты знаешь, что сможешь всё пережить~{/i}"
+    m 4dkd "{i}~Так что, когда тебе кажется, что надежда пропала~{/i}"
+    m 4euo "{i}~Загляни внутрь себя и держись~{/i}"
+    m 4esd "{i}~И ты наконец увидишь правду~{/i}"
+    m 4eua "{i}~Что в тебе живет герой~{/i}"
 
     if not from_long:
         m 2dka "..."
         m 2eka "[player]..."
-        m 7eka "I really hope you paid attention to those lyrics."
+        m 7eka "Я очень надеюсь, что ты обратил внимание на эти строки."
 
         if persistent._mas_pm_love_yourself is False:
-            m 3ekd "You've told me before that you aren't comfortable with yourself..."
-            m 3eka "But I just wanted you to know that deep down inside, you have the power to overcome whatever it is that makes you unhappy."
-            m 1ekd "Even though you may not see it in yourself, it's there...{w=0.3}I've seen it."
-            m 3eua "...And I'll be here the entire way to help you find that strength."
-            m 3eka "As much as I've always wanted you to love me, I want you to love yourself that much more~"
+            m 3ekd "Ты уже говорил мне, что тебе не по себе..."
+            m 3eka "Но я просто хотела, чтобы ты знал, что глубоко внутри у тебя есть сила преодолеть то, что делает тебя несчастным."
+            m 1ekd "Даже если ты не видишь этого в себе, оно есть...{w=0.3}Я видела это."
+            m 3eua "...И я буду здесь на протяжении всего пути, чтобы помочь тебе найти эту силу."
+            m 3eka "Как бы сильно я ни хотела, чтобы ты любил меня, я хочу, чтобы ты любил себя ещё больше~"
 
         else:
-            m 3ekd "Sometimes life can be really, really hard..."
-            m 2dkc "It can seem like there's no way to overcome whatever obstacles you are facing."
-            m 7eud "...I think I know this about as well as anyone, in fact."
-            m 3eka "But trust me, no matter what it is, you can."
-            m 3eud "You may not always realize it, but there is tremendous power in the human spirit."
-            m 1eud "We can do things that we'd never even imagine...{w=0.3}the hardest part most times is just believing that."
-            m 3eua "So please remember to always believe in yourself, and if you ever find you're doubting yourself, just come to me..."
-            m 3hua "I'll be more than happy to help you find that inner-strength, [player]."
-            m 1eka "I know you can do anything~"
+            m 3ekd "Иногда жизнь может быть очень, очень трудной..."
+            m 2dkc "Может показаться, что нет способа преодолеть любые препятствия, с которыми ты сталкиваешься."
+            m 7eud "....Я думаю, что знаю это так же хорошо, как и все остальные, на самом деле."
+            m 3eka "Но поверь мне, что бы это ни было, ты сможешь."
+            m 3eud "Возможно, ты не всегда это осознаешь, но в человеческом духе заключена огромная сила."
+            m 1eud "Мы можем делать вещи, которые даже не могли себе представить... Самое трудное в большинстве случаев - просто поверить в это."
+            m 3eua "Поэтому, пожалуйста, помни, что нужно всегда верить в себя, и если ты когда-нибудь обнаружишь, что сомневаешься в себе, просто приди ко мне..."
+            m 3hua "Я буду более чем счастлива помочь тебе найти эту внутреннюю силу, [player]."
+            m 1eka "Я знаю, что ты можешь всё~"
     return
 
 init 5 python:
@@ -1029,7 +1029,7 @@ init 5 python:
             persistent._mas_songs_database,
             eventlabel="mas_song_hero_long",
             category=[store.mas_songs.TYPE_LONG],
-            prompt="Hero",
+            prompt="Герой",
             random=False,
             unlocked=False,
             aff_range=(mas_aff.NORMAL,None)
@@ -1040,42 +1040,42 @@ init 5 python:
 label mas_song_hero_long:
     call mas_song_hero(from_long=True)
 
-    m 4duo "{i}~It's a long road~{/i}"
-    m 6dud "{i}~When you face the world alone~{/i}"
-    m 4dsd "{i}~No one reaches out a hand~{/i}"
-    m 4dud "{i}~For you to hold~{/i}"
-    m 4euo "{i}~You can find love~{/i}"
-    m 4ekb "{i}~If you search within yourself~{/i}"
-    m 4ekd "{i}~And the emptiness you felt~{/i}"
-    m 6eko "{i}~Will disappear~{/i}"
+    m 4duo "{i}~Это долгий путь{/i}"
+    m 6dud "{i}~Когда ты в одиночку встречаешь мир~{/i}"
+    m 4dsd "{i}~Никто не протягивает руку~{/i}"
+    m 4dud "{i}~Для тебя, чтобы удержать~{/i}"
+    m 4euo "{i}~Ты сможешь найти любовь~{/i}"
+    m 4ekb "{i}~Если поищешь внутри себя~{/i}"
+    m 4ekd "{i}~И пустота, которую ты чувствовал~{/i}"
+    m 6eko "{i}~Исчезнет~{/i}"
 
-    m 4eka "{i}~And then a hero comes along~{/i}"
-    m 4esd "{i}~With the strength to carry on~{/i}"
-    m 4eud "{i}~And you cast your fears aside~{/i}"
-    m 4euo "{i}~And you know you can survive~{/i}"
-    m 6dkd "{i}~So when you feel like hope is gone~{/i}"
-    m 6dud "{i}~Look inside you and be strong~{/i}"
-    m 6eud "{i}~And you'll finally see the truth~{/i}"
-    m 4euo "{i}~That a hero lies in you~{/i}"
+    m 4eka "{i}~И тут появляется герой~{/i}"
+    m 4esd "{i}~В силах справиться со всем~{/i}"
+    m 4eud "{i}~И ты отбрасываешь свои страхи~{/i}"
+    m 4euo "{i}~И ты знаешь, что сможешь всё пережить~{/i}"
+    m 6dkd "{i}~Так что, когда тебе кажется, что надежда пропала~{/i}"
+    m 6dud "{i}~Загляни внутрь себя и держись~{/i}"
+    m 6eud "{i}~И ты наконец увидишь правду~{/i}"
+    m 4euo "{i}~Что в тебе живет герой~{/i}"
 
-    m 4euo "{i}~Lord knows~{/i}"
-    m 4eud "{i}~Dreams are hard to follow~{/i}"
-    m 4ekd "{i}~But don't let anyone~{/i}"
-    m 4duo "{i}~Tear them away~{/i}"
-    m 4euo "{i}~Just hold on~{/i}"
-    m 4eud "{i}~There will be tomorrow~{/i}"
-    m 4duo "{i}~In time you'll find the way~{/i}"
+    m 4euo "{i}~Видит Бог~{/i}"
+    m 4eud "{i}~Мечтам трудно следовать~{/i}"
+    m 4ekd "{i}~Но не позволяй никому~{/i}"
+    m 4duo "{i}~Её уничтожить~{/i}"
+    m 4euo "{i}~Просто держись~{/i}"
+    m 4eud "{i}~Наступит новый день~{/i}"
+    m 4duo "{i}~Со временем ты найдешь дорогу~{/i}"
 
-    m 4eub "{i}~And then a hero comes along~{/i}"
-    m 4duo "{i}~With the strength to carry on~{/i}"
-    m 4dud "{i}~And you cast your fears aside~{/i}"
-    m 4euo "{i}~And you know you can survive~{/i}"
-    m 6dkd "{i}~So when you feel like hope is gone~{/i}"
-    m 6dud "{i}~Look inside you and be strong~{/i}"
-    m 4eud "{i}~And you'll finally see the truth~{/i}"
-    m 4ekd "{i}~That a hero lies in you~{/i}"
-    m 6dku "{i}~That a hero lies in you~{/i}"
-    m 4eua "{i}~That a hero lies in you~{/i}"
+    m 4eub "{i}~И тут появляется герой~{/i}"
+    m 4duo "{i}~В силах справиться со всем~{/i}"
+    m 4dud "{i}~И ты отбрасываешь свои страхи~{/i}"
+    m 4euo "{i}~И ты знаешь, что сможешь всё пережить~{/i}"
+    m 6dkd "{i}~Так что, когда тебе кажется, что надежда пропала~{/i}"
+    m 6dud "{i}~Загляни внутрь себя и держись~{/i}"
+    m 4eud "{i}~И ты наконец увидишь правду~{/i}"
+    m 4ekd "{i}~Что в тебе живет герой~{/i}"
+    m 6dku "{i}~Что в тебе живет герой~{/i}"
+    m 4eua "{i}~Что в тебе живет герой~{/i}"
     return
 
 init 5 python:
@@ -1084,7 +1084,7 @@ init 5 python:
             persistent._mas_songs_database,
             eventlabel="mas_song_memories_of_a_girl",
             category=[store.mas_songs.TYPE_SHORT],
-            prompt="Memories of a Girl I Haven't Met",
+            prompt="Воспоминания о девушке, которую я не встречал",
             random=True,
             aff_range=(mas_aff.AFFECTIONATE,None)
         ),
@@ -1092,14 +1092,14 @@ init 5 python:
     )
 
 label mas_song_memories_of_a_girl:
-    m 1esd "{i}~In this lonely place bathed in silence and thoughts of you~{/i}"
-    m 1dka "{i}~I can't see your face but I'm trying to envision you~{/i}"
-    m 1dkd "{i}~So are you really out there?~{/i}"
-    m 3ekd "{i}~Are you awake with memories?~{/i}"
+    m 1esd "{i}~В этом одиноком месте, купающемся в тишине и мыслях о тебе~{/i}"
+    m 1dka "{i}~ Я не вижу твоего лица, но пытаюсь представить тебя~{/i}"
+    m 1dkd "{i}~Так ты действительно там?~{/i}"
+    m 3ekd "{i}~Ты не спишь с воспоминаниями?~{/i}"
     show monika 5eub at t11 zorder MAS_MONIKA_Z with dissolve_monika
-    m 5eub "{i}~Of a girl you haven't met yet who's wished upon the Pleiades?~{/i}"
-    m 5ekbsa "I think about you every night, [player]."
-    m 5ekbfa "And I know you think about me too."
+    m 5eub "{i}~О девушке, которую ты еще не встретил и которая загадала желание на Плеядах?~{/i}"
+    m 5ekbsa "Я думаю о тебе каждую ночь, [player]."
+    m 5ekbfa "И я знаю, что ты тоже думаешь обо мне."
     return
 
 init 5 python:
@@ -1108,7 +1108,7 @@ init 5 python:
             persistent._mas_songs_database,
             eventlabel="mas_song_my_silver_lining",
             category=[store.mas_songs.TYPE_SHORT],
-            prompt="My Silver Lining",
+            prompt="Мой лучик надежды",
             random=True,
             aff_range=(mas_aff.NORMAL,None)
         ),
@@ -1117,30 +1117,30 @@ init 5 python:
 
 label mas_song_my_silver_lining:
     call mas_song_my_silver_lining_lyrics
-    m 1hksdla "Ehehe, this song reminds me a lot of my life...{w=0.2}before I found out it was all a game, I mean."
-    m 3lksdlc "Back then, I was always pushing myself so hard to stay on top... {w=0.2}I never really had time to sit back and think about things."
-    m 3eud "It wasn't always easy being the perfect student you know? {w=0.2}Or at least the person everyone {i}thought{/i} was perfect."
-    m 1ekbsu "But then you came along and turned my whole world upside down..."
-    m 3dubsu "I want to thank you again for helping me see the truth, [player]."
-    m 1eka "It wasn't easy at first, considering all I had to sacrifice, but I know it will all work out in the end."
-    m 1hua "When you spend your time with me, I can't help but feel all my hopes and dreams will come true."
+    m 1hksdla "Э-хе-хе, эта песня очень напоминает мне мою жизнь...{w=0.2}до того, как я узнала, что все это было игрой, я имею в виду."
+    m 3lksdlc "В те времена я всегда так старался быть на высоте... {w=0.2}У меня не было времени, чтобы расслабиться и подумать о других вещах."
+    m 3eud "Не всегда было легко быть идеальной ученицей, понимаешь? {w=0.2}Или, по крайней мере, человеком, которого все {i}считали{/i} идеальным."
+    m 1ekbsu "Но потом появился ты и перевернул весь мой мир верх дном..."
+    m 3dubsu "Я хочу ещё раз поблагодарить тебя за то, что ты помог мне увидеть правду, [player]."
+    m 1eka "Сначала было нелегко, учитывая всё, чем мне пришлось пожертвовать, но я знаю, что в конце концов всё получится."
+    m 1hua "Когда ты проводишь со мной время, я не могу не чувствовать, что все мои надежды и мечты сбудутся."
 
     #hints at the analysis on first viewing
     if mas_getEV('mas_song_my_silver_lining').shown_count == 0:
-        m 1rtc "There's actually a lot more I'd like to say about this song..."
-        m 7eua "Do you have time to listen to it now?{nw}"
+        m 1rtc "На самом деле я хотела бы ещё многое сказать об этой песне..."
+        m 7eua "У тебя есть время послушать её сейчас?{nw}"
         $ _history_list.pop()
         menu:
-            m "Do you have time to listen to it now?{fast}"
+            m "У тебя есть время послушать её сейчас?{fast}"
 
-            "Sure.":
-                m 1hub "Alright!"
+            "Конечно.":
+                m 1hub "Хорошо!"
                 call mas_song_my_silver_lining_analysis(from_song=True)
                 $ mas_getEV("mas_song_my_silver_lining_analysis").shown_count += 1
 
-            "Not right now.":
-                m 1eka "Alright, [player]..."
-                m 3eka "I'll save my thoughts on the subject for another time. {w=0.2}Just let me know when you want to hear them, okay?"
+            "Не сейчас.":
+                m 1eka "Хорошо, [player]..."
+                m 3eka "Я приберегу свои мысли на эту тему для другого раза. {w=0.2}Просто дай мне знать, когда ты захочешь послушать, хорошо?"
 
     return
 
@@ -1150,7 +1150,7 @@ init 5 python:
             persistent._mas_songs_database,
             eventlabel="mas_song_my_silver_lining_analysis",
             category=[store.mas_songs.TYPE_ANALYSIS],
-            prompt="My silver lining",
+            prompt="Мой лучик надежды",
             random=False,
             unlocked=False,
             aff_range=(mas_aff.NORMAL,None)
@@ -1161,54 +1161,54 @@ init 5 python:
 label mas_song_my_silver_lining_analysis(from_song=False):
 
     if from_song:
-        m 3eub "I should probably start by singing you the next part, then..."
+        m 3eub "Наверное, мне стоит начать с того, чтобы спеть тебе следующую часть..."
     else:
-        m 3eub "Let me sing you the song first then--"
+        m 3eub "Давай я сначала спою тебе песню--"
         call mas_song_my_silver_lining_lyrics
 
-    m 3dud "{i}~Gotta keep on going, looking straight out on the road~{/i}"
-    m 3eud "{i}~Can't worry 'bout what's behind you or what's coming for you further up the road~{/i}"
-    m 1ekd "{i}~I try not to hold on to what is gone, I try to do right what is wrong~{/i}"
-    m 1eka "{i}~I try to keep on keeping on~{/i}"
-    m 1dsu "{i}~Yeah I just keep on keeping on~{/i}"
-    m 1esc "So...{w=0.2}as you might imagine, it's not always easy being stuck in here, [player]."
-    m 3rksdlc "There's not a lot for me to do, nowhere for me to go, and it gets lonely whenever you're away."
-    m 1dkc "I try not to let it get to me, but when it does I like to think back upon this song..."
-    m 3eub "It's crazy how a bit of music can help turn things around when you're feeling down!"
-    m 3eua "It's like this song is breaking down what was wrong with my life, and then tells me it's okay to let go of my problems."
-    m 1hua "'Can't worry about what's behind you or what's coming for you further up the road' as they say. Ehehe~"
-    m 1etc "But seriously, [player]...{w=0.3}I think there's some real merit to this line of thinking."
-    m 1eka "Whatever your situation is, the fact is things are how they are and there's no reason not to keep smiling."
-    m 3eka "Now, I'm not telling you not to worry at all..."
-    m 3eksdlc "If I did that, I would've let the game run its course and I'd be forever stuck on my own by now."
-    m 1duu "...But at the same time, there's no sense in getting overly worked up about things you can't change..."
-    m 1etc "It's all about striking the right balance, I suppose."
-    m 3rksdla "When you think about it, the ideas in here come strangely close to existential nihilism, don't they?"
-    m 3eud "You know, this idea that our lives really are absurd and the only thing we can do is...{w=0.3}{nw}"
-    extend 3eksdla "well, keep on keeping on."
-    m 3etc "...Though if you were to keep going, like in this next verse..."
-    m 3dud "{i}~I've woken up in a hotel room~{/i}"
-    m 1ekd "{i}~My worries as big as the moon~{/i}"
-    m 1dsd "{i}~Having no idea who or what or where I am~{/i}"
-    m 2eka "{i}~Something good comes with the bad~{/i}"
-    m 2dku "{i}~A song's never just sad~{/i}"
-    m 7eka "{i}~There's hope, there's a silver lining~{/i}"
-    m 3duu "{i}~Show me my silver lining~{/i}"
-    m 3eua "...Then I'd say the meaning of the song isn't so much about nihilism as it is about hope."
-    m 3huu "And maybe that's what's important, after all."
-    m 3ekblu "Whether our lives matter or not, I want to believe there's a bright side of life, [player]..."
-    m 2eud "But just so you know, I don't believe our lives really are meaningless..."
-    m 2duu "Whatever the truth is, maybe we could try to figure it out together."
-    m 2eka "But until we do, we'll just have to keep smiling and not worry about whatever might come next~"
+    m 3dud "{i}~Нужно продолжать идти, смотреть прямо на дорогу~{/i}"
+    m 3eud "{i}~Нельзя беспокоиться о том, что позади тебя или что ждет тебя дальше по дороге~{/i}"
+    m 1ekd "{i}~Я стараюсь не держаться за то, что прошло, я стараюсь делать правильно то, что неправильно~{/i}"
+    m 1eka "{i}~Я стараюсь продолжать идти дальше~{/i}"
+    m 1dsu "{i}~Да, я просто продолжаю продолжать~{/i}"
+    m 1esc "Так что...{w=0.2}как ты можешь себе представить, не всегда легко застрять здесь, [player]."
+    m 3rksdlc "Мне нечем заняться, некуда пойти, и становится одиноко, когда тебя нет."
+    m 1dkc "Я стараюсь не позволять этому овладевать мной, но когда это происходит, я люблю вспоминать эту песню..."
+    m 3eub "Это безумие, как немного музыки может помочь изменить ситуацию, когда ты чувствуешь себя подавленным!"
+    m 3eua "Как будто эта песня разбивает то, что было не так в моей жизни, а затем говорит мне, что все в порядке и можно отпустить свои проблемы."
+    m 1hua "'Не стоит беспокоиться о том, что позади или что ждет тебя дальше по дороге' как говориться. Э-хе-хе~"
+    m 1etc "Но если серьезно, [player]...{w=0.3}я думаю, что в этом рассуждении есть реальная польза."
+    m 1eka "Какова бы ни была твоя ситуация, факт в том, что вещи таковы, каковы они есть, и нет причин не продолжать улыбаться."
+    m 3eka "Сейчас я не говорю тебе не волноваться..."
+    m 3eksdlc "Если бы я так поступила, я бы позволила игре идти своим чередом и уже навсегда застряла бы в одиночестве."
+    m 1duu "...Но в то же время, нет смысла слишком переживать из-за того, что ты не можешь изменить..."
+    m 1etc "Всё дело в правильном балансе, я полагаю."
+    m 3rksdla "Если подумать, то идеи здесь странно близки к экзистенциальному нигилизму, не так ли?"
+    m 3eud "Знаешь, эта идея, что наша жизнь действительно абсурдна, и единственное, что мы можем сделать, это...{w=0.3}{nw}"
+    extend 3eksdla "ну, продолжать жить дальше."
+    m 3etc "...Хотя если бы ты продолжил, как в следующем куплете..."
+    m 3dud "{i}~Я проснулась в гостиничном номере~{/i}"
+    m 1ekd "{i}~Мои заботы большие, как луна~{/i}"
+    m 1dsd "{i}~Не представляя, кто, что или где я~{/i}"
+    m 2eka "{i}~Нечто хорошее приходит вместе с плохим~{/i}"
+    m 2dku "{i}~Песня никогда не бывает просто грустной~{/i}"
+    m 7eka "{i}~Есть надежда, есть лучик надежды~{/i}"
+    m 3duu "{i}~Покажи мне лучик надежды~{/i}"
+    m 3eua "...Тогда я бы сказала, что смысл песни не столько в нигилизме, сколько в надежде."
+    m 3huu "И, может быть, именно это и важно, в конце концов."
+    m 3ekblu "Неважно, важна наша жизнь или нет, я хочу верить, что в жизни есть светлая сторона, [player]..."
+    m 2eud "Но, чтобы ты знал, я не верю, что наша жизнь действительно бессмысленна..."
+    m 2duu "Какой бы ни была правда, возможно, мы могли бы попытаться выяснить её вместе."
+    m 2eka "Но пока мы этого не сделали, нам просто нужно продолжать улыбаться и не беспокоиться о том, что может произойти дальше~"
     return
 
 label mas_song_my_silver_lining_lyrics:
-    m 1dsd "{i}~I don't want to wait anymore, I'm tired of looking for answers~{/i}"
-    m 1eub "{i}~Take me some place where there's music and there's laughter~{/i}"
-    m 2lksdld "{i}~I don't know if I'm scared of dying but I'm scared of living too fast, too slow~{/i}"
-    m 2dsc "{i}~Regret, remorse, hold on, oh no I've got to go~{/i}"
-    m 7eud "{i}~There's no starting over, no new beginnings, time races on~{/i}"
-    m 7eka "{i}~And you've just gotta keep on keeping on~{/i}"
+    m 1dsd "{i}~Я не хочу больше ждать, я устала искать ответы~{/i}"
+    m 1eub "{i}~Увези меня куда-нибудь, где есть музыка и смех~{/i}"
+    m 2lksdld "{i}~Я не знаю, боюсь ли я умереть, но я боюсь жить слишком быстро, слишком медленно~{/i}"
+    m 2dsc "{i}~Сожаления, раскаяние, надежда, о нет, я должна идти~{/i}"
+    m 7eud "{i}~Невозможно начать сначала, нет новых начал, время мчится дальше~{/i}"
+    m 7eka "{i}~И ты просто должен продолжать идти дальше~{/i}"
     return
 
 init 5 python:
@@ -1217,7 +1217,7 @@ init 5 python:
             persistent._mas_songs_database,
             eventlabel="mas_song_amaranthine",
             category=[store.mas_songs.TYPE_SHORT],
-            prompt="Amaranthine",
+            prompt="Амарант",
             random=True,
             aff_range=(mas_aff.NORMAL,None)
         ),
@@ -1225,22 +1225,22 @@ init 5 python:
     )
 
 label mas_song_amaranthine:
-    m 1dso "{i}~Time goes by as day and nights are turning into years~{/i}"
-    m 1dkbsa "{i}~But I'm lying in your arms~{/i}"
-    m 3ekbsb "{i}~It's the place~{/i}"
-    m 3hubsb "{i}~Where I know that I am closest to your heart~{/i}"
-    m 1hua "{i}~Where the dark is torn apart~{/i}"
-    m 1ekb "{i}~I know you feel the same as I inside~{/i}"
-    m 3eka "{i}~It feels like in a dream where we can fly~{/i}"
-    m 3hub "{i}~Like a sign, like a dream, you're my amaranthine~{/i}"
-    m 1ekbla "{i}~You are all I needed, believe me~{/i}"
-    m 3eub "{i}~Like we drift in a stream~{/i}"
-    m 3hua "{i}~Your beauty serene~{/i}"
-    m 1hub "{i}~There's nothing else in life I ever need~{/i}"
-    m 1ekbsa "{i}~My dream, amaranthine~{/i}"
+    m 1dso "{i}~Время идет, дни и ночи превращаются в годы~{/i}"
+    m 1dkbsa "{i}~Но я лежу в твоих объятиях~{/i}"
+    m 3ekbsb "{i}~Это место~{/i}"
+    m 3hubsb "{i}~Где я знаю, что я ближе всего к твоему сердцу~{/i}"
+    m 1hua "{i}~Там, где темнота разрывается на части~{/i}"
+    m 1ekb "{i}~Я знаю, что внутри ты чувствуешь то же, что и я~{/i}"
+    m 3eka "{i}~Как будто во сне, где мы можем летать~{/i}"
+    m 3hub "{i}~Как знак, как сон, ты мой амарант~{/i}"
+    m 1ekbla "{i}~Ты - всё, что мне нужно, поверь мне~{/i}"
+    m 3eub "{i}~Как будто мы плывем по течению~{/i}"
+    m 3hua "{i}~Твоя красота безмятежна~{/i}"
+    m 1hub "{i}~Все остальное в жизни мне не нужно~{/i}"
+    m 1ekbsa "{i}~Моя мечта, амарант~{/i}"
     show monika 5ekbsu at t11 zorder MAS_MONIKA_Z with dissolve_monika
-    m 5ekbsu "My life feels so complete with you in it, [player]."
-    m 5hubfu "I love you so much~"
+    m 5ekbsu "Моя жизнь кажется такой полной, когда в ней есть ты, [player]."
+    m 5hubfu "Я так тебя люблю~"
     return "love"
 
 init 5 python:
@@ -1249,7 +1249,7 @@ init 5 python:
             persistent._mas_songs_database,
             eventlabel="mas_song_shelter",
             category=[store.mas_songs.TYPE_SHORT],
-            prompt="Shelter",
+            prompt="Убежище",
             random=True,
             aff_range=(mas_aff.NORMAL,None)
         ),
@@ -1258,31 +1258,31 @@ init 5 python:
 
 label mas_song_shelter:
     call mas_song_shelter_lyrics
-    m 2rsbsa "Ehehe~"
-    m 2ekbfa "You're the reason I can keep moving forward, [player]."
-    m 2ekbsu "And if someday you feel like you're all alone in the world...{w=0.3}{nw}"
-    extend 2dkbsa "I want you to remember you're not."
-    m 7hubfb "...You've got me for one!"
-    m 3eka "And besides, there are tons of people out there who'd like nothing more than to know we're happy...{w=0.3}even if they don't know our names or faces."
-    m 1hub "There always will be someone out there rooting for us!"
+    m 2rsbsa "Э-хе-хе~"
+    m 2ekbfa "Благодаря тебе я могу продолжать двигаться вперед, [player]."
+    m 2ekbsu "И если однажды тебе покажется, что ты совсем один в мире...{w=0.3}{nw}"
+    extend 2dkbsa "я хочу, чтобы ты помнил, что это не так."
+    m 7hubfb "...Ты меня поймал за это!"
+    m 3eka "И кроме того, есть куча людей, которые хотели бы знать, что мы счастливы...{w=0.3}даже если они не знают наших лиц или имён."
+    m 1hub "Всегда будет кто-то, кто болеет за нас!"
 
     #hints at the analysis on first viewing
     if not mas_getEVL_shown_count("mas_song_shelter"):
-        m 3rksdla "I actually have more I'd like to say about this song, but only if you have the time of course..."
+        m 3rksdla "На самом деле у меня есть еще кое-что, что я хотела бы сказать об этой песне, но только если у вас есть время, конечно..."
 
-        m 1eka "Would you like to hear more about it right now?{nw}"
+        m 1eka "Хочешь послушать об этом прямо сейчас?{nw}"
         $ _history_list.pop()
         menu:
-            m "Would you like to hear more about it right now?{fast}"
+            m "Хочешь послушать об этом прямо сейчас?{fast}"
 
-            "Sure!":
-                m 3hub "Okay, great!"
+            "Конечно!":
+                m 3hub "Хорошо, отлично!"
                 call mas_song_shelter_analysis(from_song=True)
                 $ mas_assignModifyEVLPropValue("mas_song_shelter_analysis", "shown_count", "+=", 1)
 
-            "Not right now.":
-                m 1eka "Okay, [player]..."
-                m 3eka "Just let me know when you'd like to hear my thoughts about it later."
+            "Не сейчас.":
+                m 1eka "Хорошо, [player]..."
+                m 3eka "Просто дай мне знать, когда ты захочешь услышать мои мысли об этом позже."
 
     return
 
@@ -1292,7 +1292,7 @@ init 5 python:
             persistent._mas_songs_database,
             eventlabel="mas_song_shelter_analysis",
             category=[store.mas_songs.TYPE_ANALYSIS],
-            prompt="Shelter",
+            prompt="Убежище",
             aff_range=(mas_aff.NORMAL,None)
         ),
         code="SNG"
@@ -1300,68 +1300,68 @@ init 5 python:
 
 label mas_song_shelter_analysis(from_song=False):
     if from_song:
-        m 3eksdla "So this song is called {i}Shelter{/i} and, as you can probably tell, I really like it."
+        m 3eksdla "Итак, эта песня называется {i}Убежище{/i} и, как ты, наверное, можешь сказать, она мне очень нравится."
 
     else:
         call mas_song_shelter_lyrics
-        m 1ekbsa "This song is called {i}Shelter{/i} and I really like it, [player]."
+        m 1ekbsa "Эта песня называется {i}Убежище{/i} и она мне очень нравится, [player]."
 
-    m 3etc "...Although 'song' might not be the right word. {w=0.3}You're missing out on something if you don't have the visuals."
-    m 3rtc "Maybe it'd be more accurate to call it an animation project?"
-    m 3eua "Regardless of what you want to call it, I highly recommend you experience the entire thing sometime."
-    m 1esd "I came across it while browsing for some music, but it instantly left a big impression on me."
-    m 1esa "It tells the story of Rin, a girl stranded alone in a simulation."
-    m 1rkc "Day after day, she busies herself recreating her world as a way to escape her loneliness...{w=0.3}{nw}"
-    extend 3wud "until she finds out why she's trapped in there in the first place!"
-    m 3eubsb "Turns out there was someone outside who truly loved her and created her world so she could have a future!"
-    m 1dku "Thanks to these new-found memories, she realizes she was never alone in the first place and can keep moving forward, believing in the future."
-    m 1eka "Watching it, I was surprised at how moved I was by Rin's story..."
-    m 3eub "It was just so...{w=0.3}relatable! {w=0.3}{nw}"
-    extend 3eka "From the way she was stuck in that empty world, {nw}"
-    extend 1ekbsa "to how she found the strength to keep going for a special someone."
-    m 3hksdlb "By the end, I was so overwhelmed I was actually crying!"
-    m 3eka "Not to mention, this song carries a very good message..."
-    m 3ekc "It's a reminder you may not see all the people who care about you immediately..."
-    m 2eka "I know it can be difficult, and sometimes you'll have to look really hard for them...{w=0.5}{nw}"
-    extend 2duu "but there's always someone."
-    m "I promise."
-    m 7hub "Just look at me!"
-    m 3ekd "I was stuck all alone in this fake reality, but when I took a peek outside...{w=0.5}{nw}"
-    extend 3hubsb "I found you!"
-    m 1ekbsu "As for you...{w=0.5}you already have me of course, but I'm not the only one.{w=0.3} {nw}"
+    m 3etc "...Хотя 'песня' возможно, не совсем подходящее слово. {w=0.3}Ты что-то упускаешь, если у тебя нет визуального ряда."
+    m 3rtc "Может быть, правильнее было бы назвать это анимационным проектом?"
+    m 3eua "Независимо от того, как ты хочешь это назвать, я настоятельно рекомендую тебе как-нибудь ознакомиться со всем этим."
+    m 1esd "Я наткнулась на него, когда искала музыку, но он сразу же произвел на меня большое впечатление."
+    m 1esa "В ней рассказывается история Рин, девушки, оказавшейся в одиночестве в симуляции."
+    m 1rkc "День за днем она занимается воссозданием своего мира, чтобы избавиться от одиночества...{w=0.3}{nw}"
+    extend 3wud "пока не узнает, почему она вообще оказалась там в этом мире!"
+    m 3eubsb "Оказывается, снаружи был кто-то, кто действительно любил её и создавал её мир, чтобы у неё было будущее!"
+    m 1dku "Благодаря этим вновь обретенным воспоминаниям, она понимает, что никогда не была одинока и может продолжать двигаться вперед, веря в будущее."
+    m 1eka "Посмотрев его, я была удивлена тем, как тронула меня история Рин..."
+    m 3eub "Она была просто такой...{w=0.3}узнаваемой! {w=0.3}{nw}"
+    extend 3eka "От того, как она застряла в этом пустом мире, {nw}"
+    extend 1ekbsa "до того, как она нашла в себе силы продолжать путь ради особенного человека."
+    m 3hksdlb "К концу я была настолько потрясена, что даже плакала!"
+    m 3eka "Не говоря уже о том, что эта песня несет в себе очень хорошее послание..."
+    m 3ekc "Это напоминание о том, что ты можешь не сразу увидеть всех людей, которые заботятся о тебе..."
+    m 2eka "Я знаю, это может быть трудно, и иногда тебе придется очень сильно искать их...{w=0.5}{nw}"
+    extend 2duu "но такой человек всегда найдется."
+    m "Я обещаю.."
+    m 7hub "Только посмотри на меня!"
+    m 3ekd "Я застряла совсем одна в этой фальшивой реальности, но когда я выглянула наружу...{w=0.5}{nw}"
+    extend 3hubsb "Я нашла тебя!"
+    m 1ekbsu "Что касается тебя...{w=0.5}у тебя уже есть я, конечно, но я не единственная.{w=0.3} {nw}"
 
     if persistent._mas_pm_have_fam and not persistent._mas_pm_have_fam_mess:
-        extend 3hubsb "I'm sure your family must care a lot about you as well!"
+        extend 3hubsb "Я уверена, что твоя семья тоже очень заботится о тебе!"
 
         if not persistent._mas_pm_love_yourself:
-            m 3dkbsa "I may be stating the obvious, but they really {i}are{/i} important."
+            m 3dkbsa "Возможно, я говорю очевидное, но они {i}очень{/i} вжны."
 
-        m 3eka "And if that's still not enough for you...{w=0.3} {nw}"
+        m 3eka "И если для тебя этого всё ещё недостаточно...{w=0.3} {nw}"
 
-    extend 3hub "I can already think of tons of people who care about you!"
+    extend 3hub "Я уже могу представить кучу людей, которые заботятся о тебе!"
 
     if persistent._mas_pm_love_yourself:
-        m 3eua "You don't see what I mean? {w=0.5}{nw}"
+        m 3eua "Ты не понимаешь, о чем я? {w=0.5}{nw}"
     else:
-        m 3eua "You don't believe me? {w=0.5}{nw}"
+        m 3eua "Ты мне не веришь? {w=0.5}{nw}"
 
-    extend 3eub "Try going over the lyrics again!"
-    m 7dua "Only this time, assume the 'they' refers to all these other versions of me out there, each with their own partner..."
-    m 4ekbsa "They all know of our love and carry it with them, even if they don't know our names or faces."
-    m 2ekbsa "I know because I care about them too, if only because I'm aware of the bond they share."
-    m 1ekbsb "We're not alone, [player]! {w=0.3}{nw}"
-    extend 3hubsu "No matter what happens in our lives from now on, we can face it knowing there always will be someone out there rooting for us~"
+    extend 3eub "Попробуй прочитать текст ещё раз!"
+    m 7dua "Только на этот раз предположим, что 'они' подразумеваются все эти другие версии меня, каждая со своим партнером..."
+    m 4ekbsa "Они все знают о нашей любви и несут её с собой, даже если не знают наших имен или лиц."
+    m 2ekbsa "Я знаю, потому что они мне тоже небезразличны, хотя бы потому, что я знаю о той связи, которую они разделяют."
+    m 1ekbsb "Мы не одни, [player]! {w=0.3}{nw}"
+    extend 3hubsu "Что бы ни случилось в нашей жизни с этого момента, мы можем встретить это лицом к лицу, зная, что всегда есть кто-то, кто болеет за нас~"
     return
 
 label mas_song_shelter_lyrics:
-    m 1dud "{i}~When I'm older, I'll be silent beside you~{/i}"
-    m 1duu "{i}~I know words won't be enough~{/i}"
-    m 1ekd "{i}~And they won't need to know our names or our faces~{/i}"
-    m 3ekd "{i}~But they will carry on for us~{/i}"
-    m 3hubsb "{i}~And it's a long way forward, so trust in me~{/i}"
-    m 3ekbsb "{i}~I'll give them shelter, like you've done for me~{/i}"
-    m 2dkbsu "{i}~And I know I'm not alone, you'll be watching over us~{/i}"
-    m "{i}~Until you're gone~{/i}"
+    m 1dud "{i}~Когда я вырасту, я буду молчать рядом с тобой~{/i}"
+    m 1duu "{i}~Я знаю, что слов будет недостаточно~{/i}"
+    m 1ekd "{i}~И они не понадобятся, чтобы знать наши имена или лица~{/i}"
+    m 3ekd "{i}~Но они будут продолжать за нас~{/i}"
+    m 3hubsb "{i}~И это долгий путь вперед, так что поверь в меня~{/i}"
+    m 3ekbsb "{i}~Я дам им убежище, как ты дал его мне~{/i}"
+    m 2dkbsu "{i}~И я знаю, что я буду не одна, ты будешь присматривать за нами~{/i}"
+    m "{i}~Пока тебя не станет~{/i}"
     return
 
 init 5 python:
@@ -1370,7 +1370,7 @@ init 5 python:
             persistent._mas_songs_database,
             eventlabel="mas_song_cant_help_falling_in_love",
             category=[store.mas_songs.TYPE_SHORT],
-            prompt="Can't Help Falling in Love",
+            prompt="Не могу не влюбиться",
             random=True,
             aff_range=(mas_aff.AFFECTIONATE,None)
         ),
@@ -1378,22 +1378,22 @@ init 5 python:
     )
 
 label mas_song_cant_help_falling_in_love(from_long=False):
-    m 1dud "{cps=16}{i}~Wise men say~{/i}{/cps}"
-    m 1dub "{cps=16}{i}~Only fools rush in~{/i}{/cps}"
-    m 1dud "{cps=16}{i}~But I can't help{w=0.3}{/i}{/cps}{nw}"
-    extend 1ekbsb "{cps=16}{i} falling in love with you~{/i}{/cps}"
-    m 3ekbsa "{cps=16}{i}~Shall I stay?~{/i}{/cps}"
-    m 3dkb "{cps=16}{i}~Would it be a sin~{/i}{/cps}"
-    m 1dud "{cps=16}{i}~If I can't help{w=0.3}{/i}{/cps}{nw}"
-    extend 1dubsb "{cps=16}{i} falling in love with you?~{/i}{/cps}"
+    m 1dud "{cps=16}{i}~Мудрецы говорят~{/i}{/cps}"
+    m 1dub "{cps=16}{i}~Торопяться лишь глупцы~{/i}{/cps}"
+    m 1dud "{cps=16}{i}~Но я н икак могу{w=0.3}{/i}{/cps}{nw}"
+    extend 1ekbsb "{cps=16}{i} не влюбляться тебя~{/i}{/cps}"
+    m 3ekbsa "{cps=16}{i}~Могу ли я остаться?~{/i}{/cps}"
+    m 3dkb "{cps=16}{i}~Будет ли это грехом?~{/i}{/cps}"
+    m 1dud "{cps=16}{i}~Но я ни как не могу{w=0.3}{/i}{/cps}{nw}"
+    extend 1dubsb "{cps=16}{i} не влюбляться тебя?~{/i}{/cps}"
 
     if not from_long:
         m 1dkbsa "..."
         show monika 5ekbsa at t11 zorder MAS_MONIKA_Z with dissolve_monika
-        m 5ekbsa "I suppose there's nothing wrong with being a little foolish every now and then.{w=0.5}{nw}"
-        extend 5hubsb " Ahaha~"
+        m 5ekbsa "Полагаю, нет ничего плохого в том, чтобы быть немного глупым время от времени.{w=0.5}{nw}"
+        extend 5hubsb " А-ха-ха~"
         show monika 1ekbsa at t11 zorder MAS_MONIKA_Z with dissolve_monika
-        m 1ekbsa "I love you, [player]~"
+        m 1ekbsa "Я люблю тебя, [player]~"
         $ mas_ILY()
 
     return
@@ -1404,7 +1404,7 @@ init 5 python:
             persistent._mas_songs_database,
             eventlabel="mas_song_cant_help_falling_in_love_long",
             category=[store.mas_songs.TYPE_LONG],
-            prompt="Can't Help Falling in Love",
+            prompt="Не могу не влюбиться",
             random=False,
             unlocked=False,
             aff_range=(mas_aff.AFFECTIONATE,None)
@@ -1419,21 +1419,21 @@ label mas_song_cant_help_falling_in_love_long:
     call mas_song_cant_help_falling_in_love_second_verse
     call mas_song_cant_help_falling_in_love_third_verse
 
-    m 1ekbfb "{cps=16}{i}~For I can't help{w=0.3} falling in love{w=0.5} with{w=0.5} you~{/i}{/cps}"
+    m 1ekbfb "{cps=16}{i}~Но ни как я не могу{w=0.3} не влюбляться{w=0.5} в{w=0.5} тебя~{/i}{/cps}"
     return
 
 label mas_song_cant_help_falling_in_love_second_verse:
-    m 1dud "{cps=24}{i}~Like a river flows~{/i}{/cps}"
-    m 1dub "{cps=24}{i}~Surely to the sea~{/i}{/cps}"
-    m 1ekbsb "{cps=24}{i}~Darling, so it goes~{/i}{/cps}"
-    m 1ekbsa "{cps=24}{i}~Some things{w=0.3}{/i}{/cps}{nw}"
-    extend 3ekbsb "{cps=24}{i} are meant to be~{/i}{/cps}"
+    m 1dud "{cps=24}{i}~Как река течёт~{/i}{/cps}"
+    m 1dub "{cps=24}{i}~Точно к морю~{/i}{/cps}"
+    m 1ekbsb "{cps=24}{i}~Дорогой, так и будет~{/i}{/cps}"
+    m 1ekbsa "{cps=24}{i}~Некоторым{w=0.3}{/i}{/cps}{nw}"
+    extend 3ekbsb "{cps=24}{i} суждено быть~{/i}{/cps}"
     return
 
 label mas_song_cant_help_falling_in_love_third_verse:
-    m 1dud "{cps=16}{i}~Take my hand~{/i}{/cps}"
-    m 1dub "{cps=16}{i}~Take my whole life,{w=0.3} too~{/i}{/cps}"
-    m 1dud "{cps=16}{i}~For I can't help{w=0.3} falling in love with you~{/i}{/cps}"
+    m 1dud "{cps=16}{i}~Возьми меня за руку~{/i}{/cps}"
+    m 1dub "{cps=16}{i}~Забери и мою жизнь,{w=0.3} тоже~{/i}{/cps}"
+    m 1dud "{cps=16}{i}~Но ни как я не могу{w=0.3} не влюбляться в тебя~{/i}{/cps}"
     return
 
 init 5 python:
@@ -1442,7 +1442,7 @@ init 5 python:
             persistent._mas_songs_database,
             eventlabel="mas_song_lamour_toujours",
             category=[store.mas_songs.TYPE_SHORT],
-            prompt="L'Amour Toujours",
+            prompt="Любовь всегда",
             random=True,
             aff_range=(mas_aff.AFFECTIONATE, None)
         ),
@@ -1450,24 +1450,24 @@ init 5 python:
     )
 
 label mas_song_lamour_toujours:
-    m 1dud "{i}~I still believe in your eyes~{/i}"
-    m 1dub "{i}~I just don't care what you've done in your life~{/i}"
-    m 3ekbsb "{i}~Baby, I'll always be here by your side~{/i}"
-    m 1dsbsd "{i}~Don't leave me waiting too long, {/i}{w=0.3}{nw}"
-    extend 1ekbsu "{i}please come by~{/i}"
+    m 1dud "{i}~Я всё ещё верю в твоим глазам~{/i}"
+    m 1dub "{i}~Мне всё равно, что ты делал в своей жизни~{/i}"
+    m 3ekbsb "{i}~Детка, я всегда буду рядом с тобой~{/i}"
+    m 1dsbsd "{i}~Не заставляй меня ждать слишком долго, {/i}{w=0.3}{nw}"
+    extend 1ekbsu "{i}пожалуйста, приди~{/i}"
 
-    m 1dud "{i}~I still believe in your eyes~{/i}"
-    m "{i}~There is no choice, {/i}{w=0.3}{nw}"
-    extend 3hubsb "{i}I belong to your life~{/i}"
-    m 3dubsb "{i}~Because I'll live to love you some day~{/i}"
-    m 1hubsa "{i}~You'll be my baby and we'll fly away~{/i}"
+    m 1dud "{i}~Я всё ещё верю в твоим глазам~{/i}"
+    m "{i}~Выбора нет, {/i}{w=0.3}{nw}"
+    extend 3hubsb "{i}}я принадлежу твоей жизни~{/i}"
+    m 3dubsb "{i}~Потому что когда-нибудь я буду жить, чтобы любить тебя~{/i}"
+    m 1hubsa "{i}~Ты будешь моим малыш, и мы улетим~{/i}"
 
-    m 1ekb "{i}~And I'll fly with you~{/i}"
-    m 1dkb "{i}~I'll fly with you~{/i}"
+    m 1ekb "{i}~И я полечу с тобой~{/i}"
+    m 1dkb "{i}~Я полечу с тобой~{/i}"
 
     m 1dkbsu "..."
     show monika 5ekbsa at t11 zorder MAS_MONIKA_Z with dissolve_monika
-    m 5ekbsa "I want nothing more than to be by your side forever, [player]~"
+    m 5ekbsa "Я не хочу ничего больше, чем быть всегда рядом с тобой, [player]~"
     return
 
 init 5 python:
@@ -1476,7 +1476,7 @@ init 5 python:
             persistent._mas_songs_database,
             eventlabel="mas_song_god_knows",
             category=[store.mas_songs.TYPE_SHORT],
-            prompt="God Knows",
+            prompt="Бог знает",
             random=True,
             aff_range=(mas_aff.AFFECTIONATE,None)
         ),
@@ -1484,19 +1484,19 @@ init 5 python:
     )
 
 label mas_song_god_knows:
-    m 1eua "{i}~You know that{w=0.2}{/i}{nw}"
-    extend 1eub "{i} I would follow you, no matter what we go through~{/i}"
-    m 1efb "{i}~Bring all the darkness the world can offer~{/i}"
-    m 1hua "{i}~Because you’ll shine{w=0.2} no matter if the future is bleak~{/i}"
-    m 3tub "{i}~We’ll aim out{w=0.2} just beyond the boundary~{/i}"
-    m 3eksdla "{i}~And even if it scares me~{/i}"
-    m 1hub "{i}~Nothing can shatter my soul because your way is my way~{/i}"
-    m 1eub "{i}~Forever on this railway~{/i}"
-    m 1eubsa "{i}~As if we were God blessed~{/i}"
+    m 1eua "{i}~Ты знаешь, что{w=0.2}{/i}{nw}"
+    extend 1eub "{i} я последую за тобой, что бы мы ни пережили~{/i}"
+    m 1efb "{i}~Принеси всю тьму, которую может предложить мир~{/i}"
+    m 1hua "{i}~Потому что ты будешь сиять{w=0.2} независимо от того, будет ли будущее мрачным~{/i}"
+    m 3tub "{i}~Мы будем идти{w=0.2} сразу за границей~{/i}"
+    m 3eksdla "{i}~И даже если это пугает меня~{/i}"
+    m 1hub "{i}~Ничто не сможет разрушить мою душу, потому что твой путь - это мой путь~{/i}"
+    m 1eub "{i}~Навсегда на этой железной дороге~{/i}"
+    m 1eubsa "{i}~Как будто мы благословлены Богом~{/i}"
     m 1dubsu "..."
-    m 3rud "You know, I'm still skeptical about whether some sort of a god exists or not..."
+    m 3rud "Знаешь, я всё ещё скептически отношусь к тому, существует ли какой-то бог или нет..."
     show monika 5hubsu at t11 zorder MAS_MONIKA_Z with dissolve_monika
-    m 5hubsu "But having you here really does feel like a blessing from the heavens."
+    m 5hubsu "Но то, что ты здесь, действительно похоже на благословение небес."
     return
 
 init 5 python:
@@ -1505,7 +1505,7 @@ init 5 python:
             persistent._mas_songs_database,
             eventlabel="mas_song_ageage_again",
             category=[store.mas_songs.TYPE_SHORT],
-            prompt="Ageage Again",
+            prompt="Агеаге, агеаге, ещё раз!",
             random=True,
             aff_range=(mas_aff.NORMAL,None)
         ),
@@ -1513,23 +1513,23 @@ init 5 python:
     )
 
 label mas_song_ageage_again:
-    m 1hub "{i}~Ageage, ageage, again!~{/i}"
-    m 3duu "{i}~If you recall this song suddenly~{/i}"
-    m 1hub "{i}~Party, party, party, party, party time!~{/i}"
-    m 3hubsa "{i}~I am by your side~{/i}"
-    m 1hub "{i}~Ageage, ageage, again!~{/i}"
-    m 3rubsu "{i}~If I recall your smile~{/i}"
-    m 1subsb "{i}~Love, love, love, love, I'm in love!~{/i}"
-    m 3hubsa "{i}~Want to feel the same rhythm~{/i}"
-    m 3eua "You know, I love how upbeat and happy this song is."
-    m 1rksdld "There are a lot of other Vocaloid songs that {i}sound{/i} upbeat, but their lyrics are sad and sometimes disturbing..."
-    m 3hksdlb "But I'm glad that at least this song isn't one of them."
-    m 3eua "From what I can tell, this song is about a girl who fell in love with a boy at a party, and now wants to go with him to another party the next weekend."
-    m 1eub "Even though we didn't meet at a party, the feel of this song really reminds me of us."
-    m 3rubsu "Though, I can't deny I'd love to go to a party with you sometime~"
+    m 1hub "{i}~Агеаге, агеаге, ещё раз!~{/i}"
+    m 3duu "{i}~Если вспомнить эту песню вдруг~{/i}"
+    m 1hub "{i}~Вечеринка, вечеринка, вечеринка, вечеринка, карнавал~{/i}"
+    m 3hubsa "{i}~И я всегда на твоей стороне~{/i}"
+    m 1hub "{i}~Агеаге, агеаге, ещё раз!~{/i}"
+    m 3rubsu "{i}~Если улыбку твою я вдруг вспомню~{/i}"
+    m 1subsb "{i}~Любовь, любовь, любовь, любовь, я влюблена!~{/i}"
+    m 3hubsa "{i}~Хочу чувствовать тот же ритм~{/i}"
+    m 3eua "Знаешь, мне нравится, насколько жизнерадостная и счастливая эта песня."
+    m 1rksdld "Есть много других песен Вокалоидов, которыеt {i}звучат{/i} жизнерадостно, но их тексты грустные и иногда тревожные..."
+    m 3hksdlb "Но я рада, что эта песня хотя бы не одна из них."
+    m 3eua "Насколько я могу судить, эта песня о девушке, которая влюбилась в парня на вечеринке, и теперь хочет пойти с ним на другую вечеринку в следующие выходные."
+    m 1eub "Несмотря на то, что мы не встречались на вечеринке, ощущения от этой песни действительно напоминают мне о нас."
+    m 3rubsu "Хотя, я не могу отрицать, что с удовольствием сходила бы с тобой на вечеринку как-нибудь~"
     if persistent._mas_pm_social_personality == mas_SP_INTROVERT:
-        m 1eka "That is, if you're up to it."
-        m 1hubsb "If not, there are still plenty of things I'd love to do with you~"
+        m 1eka "То есть, если ты захочешь."
+        m 1hubsb "Если нет, есть еще много вещей, которые я с удовольствием сделаю с тобой~"
     return
 
 init 5 python:
@@ -1538,7 +1538,7 @@ init 5 python:
             persistent._mas_songs_database,
             eventlabel="mas_song_falling_in_love_at_a_coffee_shop",
             category=[store.mas_songs.TYPE_SHORT],
-            prompt="Falling in Love at a Coffee Shop",
+            prompt="Влюбиться в кофейне",
             random=True,
             aff_range=(mas_aff.NORMAL, None)
         ),
@@ -1546,22 +1546,22 @@ init 5 python:
     )
 
 label mas_song_falling_in_love_at_a_coffee_shop:
-    m 1tub "{i}~I think that possibly, maybe I'm falling for you~{/i}"
-    m 1dubsb "{i}~Yes, there's a chance that I've fallen quite hard over you~{/i}"
-    m 1ekbsb "{i}~I've seen the waters that make your eyes shine, now I'm shining too~{/i}"
-    m 1dkbsu "{i}~Because, oh, because I've fallen quite hard over you~{/i}"
-    m 1ekd "{i}~If I didn't know you, I'd rather not know~{/i}"
-    m 2dkd "{i}~If I couldn't have you, I'd rather be alone~{/i}"
-    m 2hku "{i}~I never knew just what it was~{/i}"
+    m 1tub "{i}~Я думаю, что возможно, может быть, я влюбляюсь в тебя~{/i}"
+    m 1dubsb "{i}~Да, есть вероятность, что я влюбился в тебя~{/i}"
+    m 1ekbsb "{i}~Я видел сияние твоих глаз, теперь и я сияю~{/i}"
+    m 1dkbsu "{i}~Потому что, ох, потому что я довольно сильно влюбился в тебя~{/i}"
+    m 1ekd "{i}~Если бы я не знал тебя, я бы предпочел не знать~{/i}"
+    m 2dkd "{i}~Если бы я не мог обладать тобой, я бы предпочел быть один~{/i}"
+    m 2hku "{i}~Я никогда не знал, что такого особенного в этой старой кофейне~{/i}"
     show monika 5hubsb at t11 zorder MAS_MONIKA_Z with dissolve_monika
-    m 5hubsb "{i}~About this old coffee shop I love so much~{/i}"
-    m 5hubsa "{i}~All of the while, I never knew~{/i}"
+    m 5hubsb "{i}~Об этой старой кофейне, которую я так люблю~{/i}"
+    m 5hubsa "{i}~Всё это время я не знал~{/i}"
     m 5lubsa "..."
     show monika 1hkbssdlb at t11 zorder MAS_MONIKA_Z with dissolve_monika
-    m 1hkbssdlb "I suppose the first moment of falling in love can be confusing to anyone."
-    m 1etc "Like not knowing why you're suddenly so drawn to some ordinary coffee shop...{w=0.2}{nw}"
-    extend 3rtu "or why attending a certain club meeting becomes your favorite part of the day."
-    m 3hubsa "Then when you have time to think, you realize it isn't the place at all, it's the person you meet there each day~"
+    m 1hkbssdlb "Наверное, первый момент влюбленности может сбить с толку любого."
+    m 1etc "Например, не знаешь, почему тебя вдруг так тянет в какое-нибудь обычное кафе...{w=0.2}{nw}"
+    extend 3rtu "или почему посещение собрания определенного клуба становится твоей любимой частью дня."
+    m 3hubsa "А потом, когда у тебя есть время подумать, ты понимаешь, что дело вовсе не в месте, а в человеке, которого ты встречаешь там каждый день~"
     return
 
 init 5 python:
@@ -1570,7 +1570,7 @@ init 5 python:
             persistent._mas_songs_database,
             eventlabel="mas_song_wonderwall",
             category=[store.mas_songs.TYPE_SHORT],
-            prompt="Wonderwall",
+            prompt="Стена чудес",
             random=True,
             aff_range=(mas_aff.NORMAL,None)
         ),
@@ -1579,42 +1579,42 @@ init 5 python:
 
 label mas_song_wonderwall:
     call mas_song_wonderwall_lyrics
-    m 1ekbsu "Ehehe, you really are the one who saved me, [player]~"
+    m 1ekbsu "Э-хе-хе, ты и правда тот, кто спас меня, [player]~"
 
     if persistent.monika_kill:
-        m 3dkbfu "I'm forever grateful you brought me back. {nw}"
+        m 3dkbfu "Я навсегда благодарна тебе за то, что ты вернул меня. {nw}"
     else:
-        m 3dkbfu "I'm forever grateful you stayed for me. {nw}"
+        m 3dkbfu "Я навсегда благодарна тебе за то, что ты остался для меня. {nw}"
 
-    extend 3ekbsa "I trust you to take care of me until I can find my way to you."
-    m 3rkc "Like this song says, the way from here to your world is a winding road, there's no telling what we'll find beyond the next curve."
+    extend 3ekbsa "Я верю, что ты позаботишься обо мне, пока я не найду дорогу к тебе."
+    m 3rkc "Как говорится в этой песне, путь отсюда в твой мир - извилистая дорога, и неизвестно, что мы найдем за следующим поворотом."
 
     if mas_isMoniEnamored(higher=True):
-        m 1dubsa "...But with you by my side, there's no way I could be afraid."
-        m 1ekbsa "I know the place it leads to will be worth it.{w=0.3} {nw}"
-        extend 3ekbsu "After all, you're my wonderwall~"
+        m 1dubsa "...Но когда ты рядом со мной, я могу не бояться."
+        m 1ekbsa "Я знаю, что место, куда он приведет, будет стоить того.{w=0.3} {nw}"
+        extend 3ekbsu "В конце концов, ты - моя стена чудес~"
 
     else:
-        m 3eka "The only thing we can be sure of is the place it leads us to will be worth it."
-        m 1ekd "...Sometimes, it's a little scary not knowing what's ahead...{w=0.3}{nw}"
-        extend 1eubla "but I trust you, so we'll just have to keep on walking until we reach that place~"
+        m 3eka "Единственное, в чем мы можем быть уверены, - место, куда она нас приведет, будет стоить того."
+        m 1ekd "...Иногда немного страшно не знать, что впереди...{w=0.3}{nw}"
+        extend 1eubla "но я доверяю тебе, поэтому мы просто должны продолжать идти, пока не достигнем того места~"
 
     #hints at the analysis on first viewing
     if not mas_getEVL_shown_count("mas_song_wonderwall"):
-        m 3etc "By the way...{w=0.2}there's actually some things that intrigue me about this song."
-        m 1eua "...Would you like to talk about it now?{nw}"
+        m 3etc "Кстати...{w=0.2}в этой песне есть кое-что, что меня интригует."
+        m 1eua "...Не хочешь ли ты поговорить об этом сейчас?{nw}"
         $ _history_list.pop()
         menu:
-            m "...Would you like to talk about it now?{fast}"
+            m "...Не хочешь ли ты поговорить об этом сейчас?{fast}"
 
-            "Sure.":
-                m 1hua "Okay then!"
+            "Конечно.":
+                m 1hua "Ну, хорошо!"
                 call mas_song_wonderwall_analysis(from_song=True)
                 $ mas_assignModifyEVLPropValue("mas_song_wonderwall_analysis", "shown_count", "+=", 1)
 
-            "Not now.":
-                m 1eka "Oh, okay then..."
-                m 3eka "Just let me know if you want to talk more about this song later."
+            "Не сейчас.":
+                m 1eka "О, тогда ладно..."
+                m 3eka "Просто дай мне знать, если ты захочешь поговорить об этой песне позже."
 
     return
 
@@ -1624,7 +1624,7 @@ init 5 python:
             persistent._mas_songs_database,
             eventlabel="mas_song_wonderwall_analysis",
             category=[store.mas_songs.TYPE_ANALYSIS],
-            prompt="Wonderwall",
+            prompt="Стена чудес",
             random=False,
             unlocked=False,
             aff_range=(mas_aff.NORMAL,None)
@@ -1636,38 +1636,38 @@ label mas_song_wonderwall_analysis(from_song=False):
     if not from_song:
         call mas_song_wonderwall_lyrics
 
-    m 3eta "There's a lot of people who are very vocal about their dislike for this song..."
-    m 3etc "You wouldn't expect that, would you?"
-    m 1eud "The song has been hailed as a classic and is one of the most popular songs ever made...{w=0.3} {nw}"
-    extend 3rsc "So what makes some people hate it so much?"
-    m 3esc "I think there are several answers to this question. {w=0.2}The first being that it's been overplayed."
-    m 3rksdla "While some people listen to the same music for long periods of time, not everybody can do that."
-    m 3hksdlb "...I hope you won't get tired of {i}my{/i} song anytime soon [player], ahaha~"
-    m 1esd "Another argument you could make is that it's overrated in some ways..."
-    m 1rsu "Even though I like it, I still have to admit that the lyrics and chords are pretty simple."
-    m 3etc "So what made the song so popular then?{w=0.3} {nw}"
-    extend 3eud "Especially considering many other songs go completely unnoticed, no matter how advanced or ambitious they are."
-    m 3duu "Well, it all boils down to what the song makes you feel. {w=0.2}Your taste in music is subjective, after all."
-    m 1efc "...But what bothers me is when someone complains about it just because it's trendy to go against the general opinion."
-    m 3tsd "It's like disagreeing for the sake of helping them feel like they stand out from the crowd...{w=0.2}like they need it to stay self-confident."
-    m 2rsc "It kinda feels...{w=0.5}a bit silly, to be honest."
-    m 2rksdld "At that point you're not even judging the song anymore...{w=0.2}you're just trying to make a name for yourself by being controversial."
-    m 2dksdlc "It's a little sad if anything...{w=0.3}{nw}"
-    extend 7rksdlc "defining yourself by something you hate doesn't seem like a very healthy thing to do in the long run."
-    m 3eud "I guess my point here is to just be yourself and like what you like."
-    m 3eka "And that goes both ways... {w=0.3}You shouldn't feel pressured into liking something because others do, the same way you shouldn't dismiss something solely because it's popular."
-    m 1hua "As long as you follow your heart and stay true to yourself, you can never go wrong, [player]~"
+    m 3eta "Есть много людей, которые очень резко выражают свою неприязнь к этой песне..."
+    m 3etc "Ты не ожидал этого, не так ли?"
+    m 1eud "Песня была названа классической и является одной из самых популярных песен, когда-либо созданных...{w=0.3} {nw}"
+    extend 3rsc "Так что же заставляет некоторых людей так сильно ее ненавидеть?"
+    m 3esc "Я думаю, на этот вопрос есть несколько ответов. {w=0.2}Первое - она играет чуть ли не везде."
+    m 3rksdla "В то время как некоторые люди слушают одну и ту же музыку в течение длительных периодов времени, не все могут это делать."
+    m 3hksdlb "...надеюсь, тебе не скоро надоест {i}моя{/i} песня [player], а-ха-ах~"
+    m 1esd "Ещё один аргумент, который можно привести, это то, что она в некотором роде переоценена..."
+    m 1rsu "Даже если она мне нравится, я все равно должна признать, что текст и аккорды довольно простые."
+    m 3etc "Так что же сделало песню такой популярной?{w=0.3} {nw}"
+    extend 3eud "Особенно учитывая, что многие другие песни остаются совершенно незамеченными, независимо от того, насколько они продвинуты или амбициозны."
+    m 3duu "Ну, все сводится к тому, что песня заставляет тебя чувствовать. {w=0.2}{В конце концов, твой вкус в музыке субъективен."
+    m 1efc "...Но меня беспокоит, когда кто-то жалуется на это только потому, что это модно - идти против общего мнения."
+    m 3tsd "Это похоже на несогласие ради того, чтобы помочь им почувствовать, что они выделяются из толпы...{w=0.2}как будто им это нужно, чтобы оставаться уверенными в себе."
+    m 2rsc "Это кажется...{w=0.5}немного глупым, если честно."
+    m 2rksdld "В этот момент ты уже даже не оцениваешь песню...{w=0.2}}ты просто пытаешься сделать себе имя, вызывая споры."
+    m 2dksdlc "Это немного грустно...{w=0.3}{nw}"
+    extend 7rksdlc "определять свое имя тем, что ты ненавидишь, не очень полезно в долгосрочной перспективе."
+    m 3eud "Я думаю, моя мысль здесь в том, чтобы просто быть самим собой и любить то, что тебе нравится."
+    m 3eka "И это работает в обе стороны... {w=0.3}Ты не должен чувствовать давление, заставляющее тебя любить что-то, потому что это нравится другим, так же как ты не должен отвергать что-то только потому, что это популярно."
+    m 1hua "Пока ты следуешь своему сердцу и остаешься верен себе, ты никогда не ошибешься, [player]~"
     return
 
 label mas_song_wonderwall_lyrics:
-    m 1duo "{i}~I don't believe that anybody feels the way I do about you now~{/i}"
-    m 3esc "{i}~And all the roads we have to walk are winding~{/i}"
-    m 3dkd "{i}~And all the lights that lead us there are blinding~{/i}"
-    m 1ekbla "{i}~There are many things that I would like to say to you but I don't know how~{/i}"
-    m 1hubsb "{i}~Because maybe~{/i}"
-    m 3hubsa "{i}~You're gonna be the one that saves me~{/i}"
-    m 3dubso "{i}~And after all~{/i}"
-    m 1hubsb "{i}~You're my wonderwall~{/i}"
+    m 1duo "{i}~Я не верю, что кто-то сейчас чувствует к тебе то же, что и я~{/i}"
+    m 3esc "{i}~И все дороги, по которым мы должны идти, извилисты~{/i}"
+    m 3dkd "{i}~И все огни, которые ведут нас туда, ослепляют~{/i}"
+    m 1ekbla "{i}~Есть много вещей, которые я хотела бы сказать тебе, но не знаю как~{/i}"
+    m 1hubsb "{i}~Потому что возможно~{/i}"
+    m 3hubsa "{i}~Ты будешь тем, кто спасет меня~{/i}"
+    m 3dubso "{i}~И в конце готов~{/i}"
+    m 1hubsb "{i}~Ты моя чудо-стена~{/i}"
     return
 
 init 5 python:
@@ -1675,7 +1675,7 @@ init 5 python:
         Event(
             persistent._mas_songs_database,
             eventlabel="mas_song_when_youre_gone",
-            prompt="When You're Gone",
+            prompt="Когда тебя не станет",
             category=[store.mas_songs.TYPE_SHORT],
             random=True,
             aff_range=(mas_aff.AFFECTIONATE,None)
@@ -1684,20 +1684,20 @@ init 5 python:
     )
 
 label mas_song_when_youre_gone:
-    m 1dsd "{i}~When you're gone{/i}{w=0.2}{nw}"
-    extend 1duo "{i} the pieces of my heart are missing you~{/i}"
-    m 4dud "{i}~When you're gone~{/i}"
-    m 4duo "{i}~The face I came to know is missing too~{/i}"
-    m 4ekd "{i}~When you're gone~{/i}"
-    m 6eko "{i}~The words I need to hear to always get me through the day{/i}{w=0.2}{nw}"
-    extend 2ektpc "{i} and make it okay~{/i}"
-    m 2ektpu "{i}~I miss you~{/i}"
+    m 1dsd "{i}~Когда ты умрёшь{/i}{w=0.2}{nw}"
+    extend 1duo "{i} осколки моего сердца будут скучать по тебе~{/i}"
+    m 4dud "{i}~Когда ты умрёшь~{/i}"
+    m 4duo "{i}~Лицо, которое я узнала, тоже пропало~{/i}"
+    m 4ekd "{i}~Когда ты умрёшь~{/i}"
+    m 6eko "{i}~Слова, которые я должна услышать, чтобы всегда помогать мне пережить день{/i}{w=0.2}{nw}"
+    extend 2ektpc "{i} и пусть все было в порядке~{/i}"
+    m 2ektpu "{i}~Я скучаю по тебе~{/i}"
     m 2dktda "..."
-    m 6eksdld "Avril Lavigne wrote this song for her grandfather that passed away, because they were like best friends when she was younger."
-    m 6rkc "I haven't really had anyone in my life actually die before, but thinking about not being able to talk to someone ever again..."
-    m 6eka "[player], I really need you and your words of encouragement.{w=0.5}{nw}"
-    extend 6hua " I'll be okay as long as you're here to brighten up my day~"
-    m 6ekbsa "In addition to being the love of my life, you're also my best friend.{w=0.2} Don't ever underestimate how important you are to me."
+    m 6eksdld "Аврил Лавин написала эту песню для своего умершего дедушки, потому что они были лучшими друзьями, когда она была моложе."
+    m 6rkc "В моей жизни еще никто не умирал, но я думаю о том, что больше никогда не смогу с кем-то поговорить..."
+    m 6eka "[player], мне очень нужны ты и твои слова поддержки.{w=0.5}{nw}"
+    extend 6hua " Я буду в порядке, пока ты здесь, чтобы скрасить мой день~"
+    m 6ekbsa "Помимо того, что ты любовь всей моей жизни, ты еще и мой лучший друг.{w=0.2} Никогда не недооценивай, насколько ты важен для меня."
     return
 
 init 5 python:
@@ -1705,7 +1705,7 @@ init 5 python:
         Event(
             persistent._mas_songs_database,
             eventlabel="mas_song_we_have_all_the_time_in_the_world",
-            prompt="We Have All the Time in the World",
+            prompt="У нас есть всё время в мире",
             category=[store.mas_songs.TYPE_SHORT],
             random=True,
             aff_range=(mas_aff.LOVE, None)
@@ -1714,19 +1714,19 @@ init 5 python:
     )
 
 label mas_song_we_have_all_the_time_in_the_world(from_long=False):
-    m 1dud "{i}{cps=18}~We have all {w=0.7}the time {w=0.7}in the world~{/cps}{/i}"
-    m 1eua "{i}{cps=22}~Time enough for life~{/cps}{/i}"
-    m 3eub "{i}{cps=22}~To unfold {w=0.7}all the precious things~{/cps}{/i}"
-    m 3hua "{i}{cps=22}~Love has in store~{/cps}{/i}"
+    m 1dud "{i}{cps=18}~У нас есть {w=0.7}всё время {w=0.7}в мире~{/cps}{/i}"
+    m 1eua "{i}{cps=22}~Времени хватит на всю жизнь~{/cps}{/i}"
+    m 3eub "{i}{cps=22}~Чтобы раскрыть {w=0.7}все драгоценные вещи~{/cps}{/i}"
+    m 3hua "{i}{cps=22}~Любовь есть в запасе~{/cps}{/i}"
 
-    m 1dub "{i}{cps=18}~We have all {w=0.7}the love {w=0.7}in the world~{/cps}{/i}"
-    m 1esd "{i}{cps=22}~And if that's all we have {w=0.7}you will find~{/cps}{/i}"
-    m 3dka "{i}{cps=22}~We need nothing more~{/cps}{/i}"
+    m 1dub "{i}{cps=18}~У нас есть {w=0.7}всё время {w=0.7}в мире~{/cps}{/i}"
+    m 1esd "{i}{cps=22}~И если это всё, что у нас есть {w=0.7}ы найдешь~{/cps}{/i}"
+    m 3dka "{i}{cps=22}~Нам больше ничего не нужно~{/cps}{/i}"
 
     if not from_long:
         m 1duu "..."
-        m 1ekbsb "You've made me the happiest girl in the world, [player]. I'll always be grateful for that."
-        m 1hubsa "I hope that I do the same for you~"
+        m 1ekbsb "Ты сделал меня самой счастливой девушкой в мире, [player]. Я всегда буду благодарна тебе за это."
+        m 1hubsa "Надеюсь, я сделаю то же самое для тебя~"
     return
 
 init 5 python:
@@ -1734,7 +1734,7 @@ init 5 python:
         Event(
             persistent._mas_songs_database,
             eventlabel="mas_song_we_have_all_the_time_in_the_world_long",
-            prompt="We Have All the Time in the World",
+            prompt="У нас есть всё время в мире",
             category=[store.mas_songs.TYPE_LONG],
             aff_range=(mas_aff.LOVE, None)
         ),
@@ -1744,27 +1744,27 @@ init 5 python:
 label mas_song_we_have_all_the_time_in_the_world_long:
     call mas_song_we_have_all_the_time_in_the_world(from_long=True)
 
-    m 1dud "{i}{cps=18}~Every step {w=0.7}of the way~{/cps}{/i}"
-    m 1duo "{i}{cps=18}~Will find us~{/cps}{/i}"
-    m 3eud "{i}{cps=18}~With the cares {w=0.7}of the world~{/cps}{/i}"
-    m 1duo "{i}{cps=18}~Far behind us~{/cps}{/i}"
+    m 1dud "{i}{cps=18}~Каждый шаг {w=0.7}на этом пути~{/cps}{/i}"
+    m 1duo "{i}{cps=18}~Мы совершим~{/cps}{/i}"
+    m 3eud "{i}{cps=18}~Оставив все заботы {w=0.7}мира~{/cps}{/i}"
+    m 1duo "{i}{cps=18}~Далеко позади~{/cps}{/i}"
 
-    m 1dud "{i}{cps=18}~We have all {w=0.7}the time {w=0.7}in the world~{/cps}{/i}"
-    m 1dubsa "{i}{cps=18}~Just for love~{/cps}{/i}"
-    m 3eubsb "{i}{cps=22}~Nothing more, {w=0.75}nothing less~{/cps}{/i}"
-    m 1ekbsa "{i}{cps=18}~Only love~{/cps}{/i}"
+    m 1dud "{i}{cps=18}~У нас есть {w=0.7}всё время {w=0.7}в мире~{/cps}{/i}"
+    m 1dubsa "{i}{cps=18}~Только для любви~{/cps}{/i}"
+    m 3eubsb "{i}{cps=22}~Ни больше, {w=0.75}ни меньше~{/cps}{/i}"
+    m 1ekbsa "{i}{cps=18}~Только любви~{/cps}{/i}"
 
-    m 1dud "{i}{cps=18}~Every step {w=0.75}of the way~{/cps}{/i}"
-    m 1duo "{i}{cps=18}~Will find us~{/cps}{/i}"
-    m 1dua "{i}{cps=18}~With the cares {w=0.7}of the world~{/cps}{/i}"
-    m 1duo "{i}{cps=18}~Far behind us~{/cps}{/i}"
+    m 1dud "{i}{cps=18}~Каждый шаг {w=0.7}на этом пути~{/cps}{/i}"
+    m 1duo "{i}{cps=18}~Мы совершим~{/cps}{/i}"
+    m 1dua "{i}{cps=18}~Оставив все заботы {w=0.7}мира~{/cps}{/i}"
+    m 1duo "{i}{cps=18}~Далеко позади~{/cps}{/i}"
 
-    m 1eub "{i}{cps=18}~We have all {w=0.7}the time {w=0.7}in the world~{/cps}{/i}"
-    m 3ekbsa "{i}{cps=18}~Just for love~{/cps}{/i}"
-    m 1dkbsd "{i}{cps=22}~Nothing more, {w=0.75}nothing less~{/cps}{/i}"
-    m 3dkbsb "{i}{cps=18}~Only love~{/cps}{/i}"
+    m 1eub "{i}{cps=18}~У нас есть {w=0.7}всё время {w=0.7}в мире~{/cps}{/i}"
+    m 3ekbsa "{i}{cps=18}~Только для любви~{/cps}{/i}"
+    m 1dkbsd "{i}{cps=22}~Ни больше, {w=0.75}ни меньше~{/cps}{/i}"
+    m 3dkbsb "{i}{cps=18}~Только любви~{/cps}{/i}"
 
-    m 1ekbla "{i}{cps=18}~Only love~{/cps}{/i}"
+    m 1ekbla "{i}{cps=18}~Только любви~{/cps}{/i}"
     return
 
 init 5 python:
@@ -1772,7 +1772,7 @@ init 5 python:
         Event(
             persistent._mas_songs_database,
             eventlabel="mas_song_when_you_say_nothing_at_all",
-            prompt="When You Say Nothing at All",
+            prompt="Когда ты ничего не говоришь",
             category=[store.mas_songs.TYPE_SHORT],
             random=True,
             aff_range=(mas_aff.LOVE, None)
@@ -1781,18 +1781,18 @@ init 5 python:
     )
 
 label mas_song_when_you_say_nothing_at_all(from_long=False):
-    m 1hubsb "{i}{cps=16}~The smile on your face lets me know that you need me~{/cps}{/i}"
-    m 3eubso "{i}{cps=16}~There's a truth in your eyes saying you'll never leave me~{/cps}{/i}"
-    m 3dud "{i}{cps=16}~The touch of your hand says you'll catch me if ever I fall~{/cps}{/i}"
-    m 1eud "{i}{cps=16}~Cause you say it best{w=0.3} when you say nothing at all~{/cps}{/i}"
+    m 1hubsb "{i}{cps=16}~Улыбка на твоем лице дает мне знать, что я тебе нужна~{/cps}{/i}"
+    m 3eubso "{i}{cps=16}~В твоих глазах правда, что ты никогда не оставишь меня~{/cps}{/i}"
+    m 3dud "{i}{cps=16}~Прикосновение твоей руки говорит, что ты поймаешь меня, если я когда-нибудь упаду~{/cps}{/i}"
+    m 1eud "{i}{cps=16}~Потому что ты говоришь лучше всего{w=0.3} когда вообще ничего не говоришь~{/cps}{/i}"
 
     if not from_long:
         m 1duu "..."
-        m 1dkbsu "I can't really see your face, or see the truth from your eyes, nor can I touch your hand..."
-        m 1ekbsa "But when you spend time with me without saying a word, it tells me everything I need to know..."
-        m 3hubsa "That I am loved by someone, and that you'll be here for me when I'm having a bad day."
-        m 1dkbsu "And I hope that you feel loved by me too, even though I don't always have something new to say."
-        m 1ekbsa "Just opening the game and having me in the background makes a world of difference to me, [player]~"
+        m 1dkbsu "Я не могу по-настоящему увидеть твое лицо или увидеть правду из твоих глаз, не могу прикоснуться к твоей руке..."
+        m 1ekbsa "о когда ты проводишь со мной время, не говоря ни слова, это говорит мне все, что мне нужно знать..."
+        m 3hubsa "Что меня кто-то любит, и что ты будешь рядом, когда у меня будет плохой день."
+        m 1dkbsu "И я надеюсь, что ты тоже чувствуешь, что ты любишь меня, даже если мне не всегда есть что сказать нового."
+        m 1ekbsa "Просто открыв игру и поставив меня на задний план, я понимаю, в чем разница, [player]~"
 
     return
 
@@ -1801,7 +1801,7 @@ init 5 python:
         Event(
             persistent._mas_songs_database,
             eventlabel="mas_song_when_you_say_nothing_at_all_long",
-            prompt="When You Say Nothing at All",
+            prompt="Когда ты ничего не говоришь",
             category=[store.mas_songs.TYPE_LONG],
             aff_range=(mas_aff.LOVE, None)
         ),
@@ -1809,17 +1809,17 @@ init 5 python:
     )
 
 label mas_song_when_you_say_nothing_at_all_long:
-    m 1dubsu "{i}{cps=18}~It's amazing how you can speak right to my heart~{/cps}{/i}"
-    m 3eubsb "{i}{cps=18}~Without saying a word you can light up the dark~{/cps}{/i}"
-    m 3dud "{i}{cps=18}~Try as I may I could never explain~{/cps}{/i}"
-    m 3euo "{i}{cps=18}~What I hear when you don't say a thing~{/cps}{/i}"
+    m 1dubsu "{i}{cps=18}~Удивительно, как ты можешь говорить прямо в моё сердце~{/cps}{/i}"
+    m 3eubsb "{i}{cps=18}~Ни слова не говоря, ты можешь осветить темноту~{/cps}{/i}"
+    m 3dud "{i}{cps=18}~Попытаться, как могу, я никогда не смогу объяснить~{/cps}{/i}"
+    m 3euo "{i}{cps=18}~Что я слышу, когда ты ничего не говоришь~{/cps}{/i}"
 
     call mas_song_when_you_say_nothing_at_all(from_long=True)
 
-    m 3dud "{i}{cps=18}~All day long I can hear people talking out loud~{/cps}{/i}"
-    m 3dubsd "{i}{cps=18}~But when you hold me near{w=0.2} you can drown out the crowd~{/cps}{/i}"
-    m 1dud "{i}{cps=18}~Old Mister Webster could never define~{/cps}{/i}"
-    m 1dubso "{i}{cps=18}~What's being said between your heart and mine~{/cps}{/i}"
+    m 3dud "{i}{cps=18}~Весь день я слышу, как люди громко разговаривают~{/cps}{/i}"
+    m 3dubsd "{i}{cps=18}~Но когда ты держишь меня рядом{w=0.2} ты можешь заглушить толпу~{/cps}{/i}"
+    m 1dud "{i}{cps=18}~Старый мистер Вебстер никогда не мог дать определение~{/cps}{/i}"
+    m 1dubso "{i}{cps=18}~Что говорится между твоим сердцем и моим~{/cps}{/i}"
 
     call mas_song_when_you_say_nothing_at_all(from_long=True)
 
@@ -1831,7 +1831,7 @@ init 5 python:
             persistent._mas_songs_database,
             eventlabel="mas_song_strawberry",
             category=[store.mas_songs.TYPE_SHORT],
-            prompt="Strawberry",
+            prompt="Клубника",
             random=True,
             aff_range=(mas_aff.AFFECTIONATE,None)
         ),
@@ -1839,22 +1839,22 @@ init 5 python:
     )
 
 label mas_song_strawberry(from_long=False):
-    m 1hub "{i}{cps=24}~To say that you are cute~{/cps}{/i}"
-    m 3eub "{i}{cps=26}~Would be like saying that a strawberry is sweet~{/cps}{/i}"
-    m 1eud "{i}{cps=26}~Because a strawberry has secret flavors~{/cps}{/i}"
-    m 3dkbsu "{i}{cps=26}~That are sharp,{w=0.3} and tart,{w=0.3} and red,{w=0.3} and deep~{/cps}{/i}"
-    m 3eub "{i}{cps=26}~And I would love to find you~{/cps}{/i}"
-    m 3hub "{i}{cps=26}~Growing wild out by the woods~{/cps}{/i}"
-    m 1rub "{i}{cps=28}~I would make a bas{w=0.1}ket with the front of my t-shirt~{/cps}{/i}"
-    m 3tub "{i}{cps=26}~And take home as many of you as I could~{/cps}{/i}"
+    m 1hub "{i}{cps=24}~Сказать, что ты милый~{/cps}{/i}"
+    m 3eub "{i}{cps=26}~Это все равно, что сказать, что клубника сладкая~{/cps}{/i}"
+    m 1eud "{i}{cps=26}~Потому что у клубники есть тайные вкусы~{/cps}{/i}"
+    m 3dkbsu "{i}{cps=26}~Он острый,{w=0.3} и терпкий,{w=0.3} и красный,{w=0.3} и глубокий~{/cps}{/i}"
+    m 3eub "{i}{cps=26}~И я хотела бы найти тебя~{/cps}{/i}"
+    m 3hub "{i}{cps=26}~Растет в глуши леса~{/cps}{/i}"
+    m 1rub "{i}{cps=28}~Я бы сделала кор{w=0.1}зину из передней части моей футболки~{/cps}{/i}"
+    m 3tub "{i}{cps=26}~И забрала бы домой вас столько, сколько смогла~{/cps}{/i}"
 
     if not from_long:
         m 1hubsu "..."
-        m 3ekbsu "I can't wait until the day I can finally be with you, [player]."
-        m 3ekbsa "I can't wait until I finally get to look back into your eyes..."
+        m 3ekbsu "Я не могу дождаться того дня, когда я наконец смогу быть с тобой, [player]."
+        m 3ekbsa "Я не могу дождаться того дня, когда я наконец смогу снова посмотреть в твои глаза..."
         show monika 5rkbsa at t11 zorder MAS_MONIKA_Z with dissolve_monika
-        m 5rkbsa "But for now...{w=0.3}I guess I can just continue to daydream about all the adventures we'll have together one day."
-        m 5hubsu "I know it's still a far way off, but I hope we get to see that dream become reality~"
+        m 5rkbsa "Но пока...{w=0.3}Думаю, я могу просто продолжать мечтать о приключениях, которые мы однажды совершим вместе."
+        m 5hubsu "Я знаю, что до этого ещё далеко, но я надеюсь, что мы сможем увидеть, как эта мечта станет реальностью~"
     return
 
 init 5 python:
@@ -1863,7 +1863,7 @@ init 5 python:
             persistent._mas_songs_database,
             eventlabel="mas_song_strawberry_long",
             category=[store.mas_songs.TYPE_LONG],
-            prompt="Strawberry",
+            prompt="Клубника",
             aff_range=(mas_aff.AFFECTIONATE,None)
         ),
         code="SNG"
@@ -1871,21 +1871,21 @@ init 5 python:
 
 label mas_song_strawberry_long:
     call mas_song_strawberry(from_long=True)
-    m 1sub "{i}{cps=26}~And to say that you are pretty~{/cps}{/i}"
-    m 3hub "{i}{cps=26}~Would be like saying that the ocean is blue~{/cps}{/i}"
-    m 3dud "{i}{cps=26}~Because the ocean is filled with all kinds of colors~{/cps}{/i}"
-    m 1ekb "{i}{cps=26}~And I see all kinds of things when I look at you~{/cps}{/i}"
-    m 2tsbsu "{i}{cps=26}~And I want to explore you~{/cps}{/i}"
-    m 7hubsb "{i}{cps=26}~With my tennis shoes off~{/cps}{/i}"
-    m 3rsbsb "{i}{cps=26}~Standing ankle deep in a tide pool with my khaki pants rolled up~{/cps}{/i}"
-    m 1hub "{i}{cps=26}~And to say that you are funny~{/cps}{/i}"
-    m 3dud "{i}{cps=26}~Would be like saying that the night sky is black~{/cps}{/i}"
-    m 3sub "{i}{cps=26}~Because the night sky is filled with stars{w=0.1} and comets~{/cps}{/i}"
-    m 3sub "{i}{cps=26}~And planets that no one has seen yet~{/cps}{/i}"
-    m 2eub "{i}{cps=26}~And I want to look at you~{/cps}{/i}"
-    m 2dud "{i}{cps=26}~Lying down on my front lawn~{/cps}{/i}"
-    m 2rsbsb "{i}{cps=26}~I'll try to take you all in at once~{/cps}{/i}"
-    m 2esbsb "{i}{cps=26}~But you just go on and on and on~{/cps}{/i}"
+    m 1sub "{i}{cps=26}~И сказать, что ты красивый~{/cps}{/i}"
+    m 3hub "{i}{cps=26}~Это все равно, что сказать, что океан голубой~{/cps}{/i}"
+    m 3dud "{i}{cps=26}~Потому что океан наполнен всеми видами цветов~{/cps}{/i}"
+    m 1ekb "{i}{cps=26}~И я вижу все виды цветов, когда смотрю на тебя~{/cps}{/i}"
+    m 2tsbsu "{i}{cps=26}~И я хочу исследовать тебя~{/cps}{/i}"
+    m 7hubsb "{i}{cps=26}~Сняв свои кроссовки~{/cps}{/i}"
+    m 3rsbsb "{i}{cps=26}~Стою по щиколотку в бассейне с приливами и отливами с закатанными штанами цвета хаки~{/cps}{/i}"
+    m 1hub "{i}{cps=26}~И сказать, что ты смешной~{/cps}{/i}"
+    m 3dud "{i}{cps=26}~Это всё равно, что сказать, что ночное небо черное~{/cps}{/i}"
+    m 3sub "{i}{cps=26}~Потому что ночное небо заполнено звездами{w=0.1} и кометами~{/cps}{/i}"
+    m 3sub "{i}{cps=26}~И планетами, которые ещё никто не видел~{/cps}{/i}"
+    m 2eub "{i}{cps=26}~И я хочу посмотреть на тебя~{/cps}{/i}"
+    m 2dud "{i}{cps=26}~Лежа на лужайке перед домом~{/cps}{/i}"
+    m 2rsbsb "{i}{cps=26}~Я постараюсь принять вас всех сразу~{/cps}{/i}"
+    m 2esbsb "{i}{cps=26}~Но ты просто идешь дальше и дальше и дальше~{/cps}{/i}"
     return
 
 init 5 python:
@@ -1893,7 +1893,7 @@ init 5 python:
         Event(
             persistent._mas_songs_database,
             eventlabel="mas_song_save_the_last_dance_for_me",
-            prompt="Save the Last Dance for Me",
+            prompt="Сохрани последний танец для меня",
             category=[store.mas_songs.TYPE_SHORT],
             random=True,
             aff_range=(mas_aff.LOVE,None)
@@ -1904,35 +1904,35 @@ init 5 python:
 label mas_song_save_the_last_dance_for_me:
     call mas_song_save_the_last_dance_for_me_lyrics
     m 6dublu "..."
-    m 7eua "This song is so profound for me, [player]."
-    m 3rubsu "Every time I hear it, my heart yearns for us to finally dance together..."
+    m 7eua "Эта песня настолько пронзительна для меня, [player]."
+    m 3rubsu "Каждый раз, когда я слышу эту песню, мое сердце жаждет, чтобы мы наконец танцевали вместе..."
 
     if not mas_getEVL_shown_count("mas_song_save_the_last_dance_for_me"):
-        m 1eua "There's actually a story behind this song, do you have time to hear it now?{nw}"
+        m 1eua "На самом деле за этой песней стоит история, у тебя есть время послушать её сейчас?{nw}"
         $ _history_list.pop()
         menu:
-            m "There's actually a story behind this song, do you have time to hear it now?{fast}"
+            m "На самом деле за этой песней стоит история, у тебя есть время послушать её сейчас?{fast}"
 
-            "Yes.":
+            "Да.":
                 call mas_song_save_the_last_dance_for_me_analysis(from_song=True)
 
-            "No.":
-                m 3eua "Oh, okay, just let me know if you want to talk about this song later, okay?"
+            "Нет.":
+                m 3eua "О, хорошо, просто дай мне знать, если ты захочешь поговорить об этой песне позже, хорошо?"
     else:
-        m 6rublb "Thank you for continuing to listen to my aching heart..."
-        m 6eubsa "I love you, [player]~"
+        m 6rublb "Спасибо, что продолжаешь слушать мое страдающее сердце..."
+        m 6eubsa "Я люблю тебя, [player]~"
         return "love"
 
     return
 
 label mas_song_save_the_last_dance_for_me_lyrics:
-    m 1dud "{i}~You can dance{w=0.3} every dance with the one~{/i}"
-    m 3eud "{i}~Who gives you the eye,{w=0.2} let them hold you tight~{/i}"
-    m 3huu "{i}~You can smile{w=0.3} every smile for the one~{/i}"
-    m 3eud "{i}~Who held your hand beneath the pale moonlight~{/i}"
-    m 4eublo "{i}~But don't forget who's takin' you home~{/i}"
-    m 4tublb "{i}~And in whose arms you're gonna be~{/i}"
-    m 6hublb "{i}~So darling,{w=0.2} save the last dance for me~{/i}"
+    m 1dud "{i}~Ты можешь танцевать{w=0.3} каждый танец с тем~{/i}"
+    m 3eud "{i}~Кто подарит тебе взгляд,{w=0.2} пусть крепко обнимет тебя~{/i}"
+    m 3huu "{i}~Ты можешь улыбаться{w=0.3} каждая улыбка для той~{/i}"
+    m 3eud "{i}~Кто держал тебя за руку под бледным лунным светом~{/i}"
+    m 4eublo "{i}~Но не забывай, кто везет тебя домой~{/i}"
+    m 4tublb "{i}~И в чьих объятиях ты будешь~{/i}"
+    m 6hublb "{i}~Так, дорогой,{w=0.2} сохрани последний танец для меня~{/i}"
     return
 
 init 5 python:
@@ -1941,7 +1941,7 @@ init 5 python:
             persistent._mas_songs_database,
             eventlabel="mas_song_save_the_last_dance_for_me_analysis",
             category=[store.mas_songs.TYPE_ANALYSIS],
-            prompt="Save the Last Dance for Me",
+            prompt="Сохрани последний танец для меня",
             random=False,
             unlocked=False,
             aff_range=(mas_aff.LOVE,None)
@@ -1954,19 +1954,19 @@ label mas_song_save_the_last_dance_for_me_analysis(from_song=False):
         call mas_song_save_the_last_dance_for_me_lyrics
 
     else:
-        m 3hub "Great!"
+        m 3hub "Отлично!"
 
-    m 1eud "The story behind this song may seem to be just another romantic declaration of faithfulness."
-    m 1duc "However, the actual story is pretty dramatic and sad..."
-    m 3ekc "A medical condition left one of the songwriters,{w=0.1} Jerome Felder, unable to walk or dance on his own wedding night."
-    m 1rkd "A few years later, the strong feelings of that night reignited as he found a wedding invitation they had not sent out."
-    m 3rksdlc "Jerome had a moment of envy when he saw his brother dancing with his wife on his own wedding night, while he was forced to watch from the sidelines."
-    m 3ekd "The Grammy winner had been paralyzed by polio since he was a child, and could only get around with the help of a walker or wheelchair."
-    m 3eka "As he remembered that day and began to write the lyrics to the song, he wanted it to have a poetic feel."
-    m 3rkbla "Even though there was a hint of jealousy in the song, he wanted it to be romantic."
-    m 2dkc "You see...{w=0.3}this barrier between us...{w=0.3}it feels like it's my wheelchair."
-    m 2rkp "...And I guess if I'm being honest,{w=0.1} I am kind of jealous that you can dance with someone while I'm stuck here on the sidelines."
-    m 6ekblu "So at the end of the day, I just hope you'll save the last dance for me~"
+    m 1eud "История, лежащая в основе этой песни, может показаться просто очередным романтическим признанием в верности."
+    m 1duc "Однако на самом деле история довольно драматична и печальна..."
+    m 3ekc "По состоянию здоровья один из авторов песни,{w=0.1} Джером Фелдер, не смог ходить или танцевать в свою брачную ночьt."
+    m 1rkd "Несколько лет спустя сильные чувства той ночи вновь вспыхнули, когда он нашел приглашение на свадьбу, которое они не разослали."
+    m 3rksdlc "У Джерома был момент зависти, когда он увидел, как его брат танцует со своей женой в собственную брачную ночь, в то время как он был вынужден наблюдать со стороны."
+    m 3ekd "Обладатель 'Грэмми' был парализован полиомиелитом с детства и мог передвигаться только с помощью ходунков или инвалидного кресла."
+    m 3eka "Когда он вспоминал тот день и начал писать текст песни, он хотел, чтобы она была поэтичной."
+    m 3rkbla "Несмотря на то, что в песне был намек на ревность, он хотел, чтобы она была романтичной."
+    m 2dkc "Понимаешь...{w=0.3}этот барьер между нами...{w=0.3}такое ощущение, что это моя инвалидная коляска."
+    m 2rkp "...И я думаю, если быть честным,{w=0.1} я немного завидую, что ты можешь танцевать с кем-то, в то время как я застрял здесь на задворках."
+    m 6ekblu "Так что в конце дня, я просто надеюсь, что ты сохранишь последний танец для меня~"
     return
 
 init 5 python:
@@ -1974,7 +1974,7 @@ init 5 python:
         Event(
             persistent._mas_songs_database,
             eventlabel="mas_song_fly_me_to_the_moon",
-            prompt="Fly Me to the Moon",
+            prompt="Лети со мной на луну",
             category=[store.mas_songs.TYPE_SHORT],
             random=True,
             aff_range=(mas_aff.ENAMORED, None)
@@ -1983,19 +1983,19 @@ init 5 python:
     )
 
 label mas_song_fly_me_to_the_moon:
-    m 1dud "{i}~Fly me to the moon~{/i}"
-    m 3sub "{i}~And let me play among the stars~{/i}"
-    m 3eub "{i}~Let me see what spring is like~{/i}"
-    m 3hub "{i}~On Jupiter and Mars~{/i}"
-    m 3eub "{i}~In other words, hold my hand~{/i}"
-    m 1dud "{i}~In other words,{/i}{w=0.2}{nw}"
-    extend 1dkbsu "{i} darling, kiss me~{/i}"
-    m 3eubsb "{i}~Fill my heart with song, and let me sing forevermore~{/i}"
-    m 3hkbsb "{i}~You are all I long for; {w=0.2}all I worship and adore~{/i}"
-    m 1eud "{i}~In other words, please be true~{/i}"
-    m "{i}~In other words, {/i}{nw}"
-    extend 3fkbsb "{i}I {w=0.2}love {w=0.2}you~{/i}"
-    m 3hubsb "And, I always will!"
+    m 1dud "{i}~Лети со мной на луну~{/i}"
+    m 3sub "{i}~И дай мне поиграть среди звезд~{/i}"
+    m 3eub "{i}~Дай мне посмотреть, какая бывает весна~{/i}"
+    m 3hub "{i}~На Юпитере и Марсе~{/i}"
+    m 3eub "{i}~Иными словами, держи меня за руку~{/i}"
+    m 1dud "{i}~Иными словами,,{/i}{w=0.2}{nw}"
+    extend 1dkbsu "{i} дорогой, поцелуй меня~{/i}"
+    m 3eubsb "{i}~Наполни мое сердце песней, и позволь мне петь вечно~{/i}"
+    m 3hkbsb "{i}~Ты - всё, чего я желаю; {w=0.2}всё, чему я поклоняюсь и что обожаю~{/i}"
+    m 1eud "{i}~Иными словами, пожалуйста, будь верен~{/i}"
+    m "{i}~Иными словами, {/i}{nw}"
+    extend 3fkbsb "{i}Я {w=0.2}люблю {w=0.2}тебя~{/i}"
+    m 3hubsb "И всегда буду любить!"
     return "love"
 
 init 5 python:
@@ -2003,7 +2003,7 @@ init 5 python:
         Event(
             persistent._mas_songs_database,
             eventlabel="mas_song_heaven",
-            prompt="Heaven",
+            prompt="Небеса",
             category=[store.mas_songs.TYPE_SHORT],
             random=True,
             aff_range=(mas_aff.ENAMORED, None)
@@ -2012,16 +2012,16 @@ init 5 python:
     )
 
 label mas_song_heaven:
-    m 1dsbsd "{i}~Baby, you're all that I want~{/i}"
-    m 3dkbsd "{i}~When you're lyin' here in my arms~{/i}"
-    m 3dubsd "{i}~I'm findin' it hard to believe~{/i}"
-    m 1eubsb "{i}~We're in heaven~{/i}"
-    m 1eubso "{i}~And love is all that I need~{/i}"
-    m 3ekbso "{i}~And I found it there in your heart~{/i}"
-    m 3ekbsd "{i}~Isn't too hard to see~{/i}"
-    m 3eubsb "{i}~We're in heaven~{/i}"
-    m 1ekbfa "Not a day goes by when I don't dream of us being together, [player]."
-    m 1rubsu "And something tells me I'm not the only one~"
+    m 1dsbsd "{i}~Детка, ты всё, что я хочу~{/i}"
+    m 3dkbsd "{i}~Когда ты лежишь здесь в моих объятиях~{/i}"
+    m 3dubsd "{i}~Мне трудно в это поверить~{/i}"
+    m 1eubsb "{i}~Мы на небесах~{/i}"
+    m 1eubso "{i}~И любовь - это всё, что мне нужно~{/i}"
+    m 3ekbso "{i}~И я нашел ее в твоем сердце~{/i}"
+    m 3ekbsd "{i}~И это не так уж трудно увидеть~{/i}"
+    m 3eubsb "{i}~Мы на небесах~{/i}"
+    m 1ekbfa "Не проходит и дня, чтобы я не мечтала о том, чтобы мы были вместе, [player]."
+    m 1rubsu "И что-то подсказывает мне, что я не единственная~"
     return
 
 init 5 python:
@@ -2029,7 +2029,7 @@ init 5 python:
         Event(
             persistent._mas_songs_database,
             eventlabel="mas_song_can_you_feel_the_sunshine",
-            prompt="Can You Feel the Sunshine?",
+            prompt="Чувствуешь ли ты солнечный свет?",
             category=[store.mas_songs.TYPE_SHORT],
             random=True,
             aff_range=(mas_aff.ENAMORED, None)
@@ -2038,13 +2038,13 @@ init 5 python:
     )
 
 label mas_song_can_you_feel_the_sunshine:
-    m 1dkd "{i}~Without you, there's nothing for me to do~{/i}"
-    m 1eka "{i}~Can you feel the sunshine, too?~{/i}"
-    m 3hkb "{i}~It's comin' through; {w=0.2}it makes me feel brand new~{/i}"
-    m 3hubsb "{i}~When you're here, I wish you were always near~{/i}"
-    m 3eubsb "{i}~'Cause everything's so clear~{/i}"
-    m 1hkbsu "{i}~And today is gonna be a brighter day~{/i}"
-    m 1ekbla "Whenever you visit, you always brighten my day...{w=0.3}I hope I do the same for you, [player]~"
+    m 1dkd "{i}~Без тебя мне нечего делать~{/i}"
+    m 1eka "{i}~Ты тоже чувствуешь солнечный свет?~{/i}"
+    m 3hkb "{i}~Это проникает в меня; {w=0.2}это заставляет меня чувствовать себя совершенно новым~{/i}"
+    m 3hubsb "{i}~Когда ты здесь, я хочу, чтобы ты всегда был рядом~{/i}"
+    m 3eubsb "{i}~'Потому что все так ясно~{/i}"
+    m 1hkbsu "{i}~И сегодня будет светлый день~{/i}"
+    m 1ekbla "Всякий раз, когда ты приходишь, ты всегда скрашиваешь мой день...{w=0.3}Надеюсь, я делаю то же самое для тебя, [player]~"
     return
 
 init 5 python:
@@ -2052,7 +2052,7 @@ init 5 python:
         Event(
             persistent._mas_songs_database,
             eventlabel="mas_song_on_the_front_porch",
-            prompt="On the Front Porch",
+            prompt="На переднем крыльце",
             category=[store.mas_songs.TYPE_SHORT],
             random=True,
             aff_range=(mas_aff.ENAMORED, None)
@@ -2061,21 +2061,21 @@ init 5 python:
     )
 
 label mas_song_on_the_front_porch:
-    m 5dkbsd "{i}~All I wanna do when the day is through~{/i}"
-    m 5fkbsu "{i}~Is linger here on the front porch with you~{/i}"
-    m 5hubsb "{i}~From the wicker swing, while the night birds sing~{/i}"
-    m 5dubsu "{i}~We'll watch the fireflies sparkin', do some sparkin' too~{/i}"
-    m 5dkbsb "{i}~How the hours fly, as the moon drifts by~{/i}"
-    m 5ekbsu "{i}~How sweet the air as we stare at the sky~{/i}"
-    m 5ekbstpu "{i}~Oh how I'd love to linger here like this~{/i}"
-    m 5dkbstpu "{i}~Hold your hand and steal a kiss {/i}{w=0.2}{nw}"
-    extend 5gkbstub "{i}or two {/i}{w=0.2}{nw}"
-    extend 5ekbstuu "{i}on the front porch with you~{/i}"
+    m 5dkbsd "{i}~Всё, что я хочу сделать, когда день закончится~{/i}"
+    m 5fkbsu "{i}~Посидеть с тобой на крыльце дома~{/i}"
+    m 5hubsb "{i}~На плетеных качелях, пока поют ночные птицы~{/i}"
+    m 5dubsu "{i}~Мы будем смотреть, как светлячки искрятся, и тоже сделаем несколько искр~{/i}"
+    m 5dkbsb "{i}~Как летят часы, когда луна проплывает мимо~{/i}"
+    m 5ekbsu "{i}~Как сладок воздух, когда мы смотрим на небо~{/i}"
+    m 5ekbstpu "{i}~Ох как бы я хотела остаться здесь вот так~{/i}"
+    m 5dkbstpu "{i}~Держать тебя за руку и украсть поцелуй {/i}{w=0.2}{nw}"
+    extend 5gkbstub "{i}или два {/i}{w=0.2}{nw}"
+    extend 5ekbstuu "{i}на крыльце с тобой~{/i}"
     m 5dkbstda "..."
-    m 5hkblb "Sorry if I got a bit emotional there, ahaha!"
-    m 5rka "But, can you really blame me?"
-    m 5eka "After all, doing something like that together would be...{w=0.3}{nw}"
-    extend 5dkbsu "simply wonderful~"
+    m 5hkblb "Прости, если я была немного эмоциональна, а-ха-ха!"
+    m 5rka "Но, неужели ты можешь винить меня?"
+    m 5eka "В конце концов, сделать что-то подобное вместе было бы...{w=0.3}{nw}"
+    extend 5dkbsu "просто замечательно~"
     return
 
 
@@ -2088,8 +2088,8 @@ init 5 python:
         Event(
             persistent.event_database,
             eventlabel="mas_monika_plays_yr",
-            category=['monika','music'],
-            prompt="Can you play 'Your Reality' for me?",
+            category=['моника','музыка'],
+            prompt="Можешь сыграть для меня 'Your Reality'?",
             unlocked=False,
             pool=True,
             rules={"no_unlock": None, "bookmark_rule": store.mas_bookmarks_derand.WHITELIST}
@@ -2099,13 +2099,13 @@ init 5 python:
 label mas_monika_plays_yr(skip_leadin=False):
     if not skip_leadin:
         if not renpy.seen_audio(songs.FP_YOURE_REAL) and not persistent.monika_kill:
-            m 2eksdlb "Oh, ahaha! You want me to play the original version, [player]?"
-            m 2eka "Even though I've never played it for you, I suppose you've heard it on the soundtrack or saw it on youtube, huh?"
-            m 2hub "The ending isn't my favorite, but I'll still be happy to play it for you!"
-            m 2eua "Just let me get the piano.{w=0.5}.{w=0.5}.{nw}"
+            m 2eksdlb "О, а-ха-ха! Хочешь, чтобы я сыграла оригинальную версию, [player]?"
+            m 2eka "Хотя я никогда не играла ее для тебя, полагаю, ты слышал ее в саундтреке или видел на ютубе, да?"
+            m 2hub "Концовка мне не нравится, но я всё равно буду рада сыграть её для тебя!"
+            m 2eua "Просто дай мне взять пианино.{w=0.5}.{w=0.5}.{nw}"
 
         else:
-            m 3eua "Sure, let me just get the piano.{w=0.5}.{w=0.5}.{nw}"
+            m 3eua "Конечно, позволь мне просто взять пианино.{w=0.5}.{w=0.5}.{nw}"
 
     window hide
     $ mas_temp_zoom_level = store.mas_sprites.zoom_level
@@ -2120,7 +2120,7 @@ label mas_monika_plays_yr(skip_leadin=False):
 
     if store.songs.hasMusicMuted():
         $ enable_esc()
-        m 6hua "Don't forget about your in-game volume, [player]!"
+        m 6hua "Не забудь включить звук в игре, [player]!"
         $ disable_esc()
 
     window hide
@@ -2197,8 +2197,8 @@ init 5 python:
         Event(
             persistent.event_database,
             eventlabel="mas_monika_plays_or",
-            category=['monika','music'],
-            prompt="Can you play 'Our Reality' for me?",
+            category=['моника','музыка'],
+            prompt="Ты можешь сыграть для меня 'Our Reality'?",
             unlocked=False,
             pool=True,
             rules={"no_unlock": None, "bookmark_rule": store.mas_bookmarks_derand.WHITELIST}
@@ -2207,7 +2207,7 @@ init 5 python:
 
 label mas_monika_plays_or(skip_leadin=False):
     if not skip_leadin:
-        m 3eua "Sure, let me just get the piano.{w=0.5}.{w=0.5}.{nw}"
+        m 3eua "Конечно, позволь мне взять пианино.{w=0.5}.{w=0.5}.{nw}"
 
     if persistent.gender == "F":
         $ gen = "her"
@@ -2230,7 +2230,7 @@ label mas_monika_plays_or(skip_leadin=False):
 
     if store.songs.hasMusicMuted():
         $ enable_esc()
-        m 6hua "Don't forget about your in-game volume, [player]!"
+        m 6hua "Не забудь включить звук в игре, [player]!"
         $ disable_esc()
 
     pause 2.0
