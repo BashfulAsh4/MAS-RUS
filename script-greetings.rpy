@@ -1410,7 +1410,7 @@ init 5 python:
 label monikaroom_greeting_ear_loveme:
     python:
         cap_he = he.capitalize()
-        loves = "любит" if cap_he == "They" else "loves"
+        loves = "love" if cap_he == "They" else "loves"
 
     m "[cap_he] [loves] me.{w=0.3} [cap_he] [loves] me not."
     m "[cap_he] {i}[loves]{/i} me.{w=0.3} [cap_he] [loves] me {i}not{/i}."

@@ -1055,7 +1055,7 @@ label mas_compliment_missed:
                     call monika_holdme_end
 
                     m 6dkbsa "М-м-м... это было очень мило, [player]."
-                    m 7ekbsb "ы действительно знаешь, как заставить меня чувствовать себя особенной~"
+                    m 7ekbsb "Ты действительно знаешь, как заставить меня чувствовать себя особенной~"
                     $ mas_moni_idle_disp.force_by_code("1eubsa", duration=10, skip_dissolve=True)
 
                 "Не сейчас.":

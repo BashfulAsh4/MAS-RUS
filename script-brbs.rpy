@@ -161,7 +161,7 @@ init 10 python in mas_brbs:
         _("Итак, что ещё ты хотел сделать сегодня?"),
         _("Что ещё ты хотел сделать сегодня?"),
         _("Есть ли что-то ещё, что ты хотел сделать сегодня?"),
-        _("Что ещё мы должны сделать сегодня??")
+        _("Что ещё мы должны сделать сегодня?")
     ]
 
     def get_wb_quip():
@@ -244,7 +244,7 @@ init 5 python:
 
 label monika_idle_brb:
     if mas_isMoniAff(higher=True):
-        m 1eua "Alright, [player]."
+        m 1eua "Хорошо, [player]."
 
         show monika 1eta at t21
         python:

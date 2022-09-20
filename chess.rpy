@@ -942,7 +942,7 @@ label mas_chess_remenu:
     if _return == -1:
         show monika at t11
         m 1ekc "...Хорошо, [player].{w=0.3} Я очень хотела сыграть с тобой."
-        m 1eka "Но мы же сыграем в другой раз, верно?"
+        m 1eka "Но мы же сыграем в другой раз, верно?Э"
         return
 
     #We're changing the main group of settings we wish to change

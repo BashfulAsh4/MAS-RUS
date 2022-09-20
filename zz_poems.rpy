@@ -300,7 +300,7 @@ init 5 python:
         Event(
             persistent.event_database,
             eventlabel="monika_showpoem",
-            prompt="Могу я ещё раз прочитать одно из твоих стихотворений?",
+            prompt="Могу я еще раз прочитать одно из твоих стихотворений?",
             category=["литература"],
             pool=True,
             unlocked=True,
