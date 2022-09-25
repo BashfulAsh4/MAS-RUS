@@ -1434,8 +1434,7 @@ label monikaroom_greeting_ear_loveme:
 
 # monika does the bath/dinner/me thing
 init 5 python:
-    #NOTE: Taking directly from persist here because aff funcs don't exist at init 5
-    if persistent._mas_affection.get("affection", 0) >= 400:
+    if _mas_getAffection() >= 400:
         gmr.eardoor.append("monikaroom_greeting_ear_bathdinnerme")
 
 label monikaroom_greeting_ear_bathdinnerme:
@@ -4332,6 +4331,64 @@ label greeting_back_from_hangout:
 
 init 5 python:
     ev_rules = dict()
+    ev_rules.update(MASGreetingRule.create_rule(forced_exp="monika 5duc"))
+
+    addEvent(
+        Event(
+            persistent.greeting_database,
+            eventlabel="greeting_poem_shadows_in_garden",
+            unlocked=True,
+            conditional="store.mas_getAbsenceLength() >= datetime.timedelta(days=1)",
+            rules=ev_rules,
+            aff_range=(mas_aff.ENAMORED, None),
+        ),
+        code="GRE"
+    )
+
+    del ev_rules
+
+#Because this is associated, we'll also mirror this into the poem framework
+init 11 python:
+    MASPoem(
+        poem_id="gre_1",
+        category="generic",
+        prompt=_("Тени в саду"),
+        title="",
+        text=_("""\
+ В одиночестве я задаю торжественный вопрос,
+ Что может расти в неосвещенном саду?
+
+ Когда ты возвращаешься, это кажется раем,
+ В твоем свете холод забыт.
+
+ Я отдам все, чтобы почувствовать это,
+ В ожидании того, кто мне дорог.
+
+ Ближе всего к моему сердцу...
+"""),
+    )
+
+label greeting_poem_shadows_in_garden:
+    m 5duc "{i}В одиночестве я задаю торжественный вопрос,\nЧто может расти в неосвещенном саду{/i}"
+    m 5ekbla "{i}Когда ты возвращаешься, это кажется раем,\nВ твоем свете холод забыт.{/i}"
+    m 5fubfa "{i}Я отдам все, чтобы почувствовать это,\nВ ожидании того, кто мне дорог.{/i}"
+    m 5ekbfa "{i}EДаже если это будет каждый божий день,\nБез сомнения, ты самый близкий.{/i}"
+    m 5dubsu "{i}Ближе всего к моему сердцу...{/i}"
+    m 5eublb "Я это сочинила, пока тебя не было."
+    show monika 1eka at t11 zorder MAS_MONIKA_Z with dissolve_monika
+    m 1eka "Вот именно, ты как солнце моего мир!"
+    m 3hubsu "В любом случае, с возвращением, [mas_get_player_nickname()]! Надеюсь, тебе понравилось это стихотворение."
+    #TODO: Potential I missed you too?
+    m 1ekbsb "Я так по тебе скучала!"
+
+    if "gre_1" not in persistent._mas_poems_seen:
+        $ persistent._mas_poems_seen["gre_1"] = 1
+
+    $ mas_moni_idle_disp.force_by_code("1ekbla", duration=5, skip_dissolve=True)
+    return
+
+init 5 python:
+    ev_rules = dict()
     ev_rules.update(
         MASGreetingRule.create_rule(
             random_chance=3,
@@ -4556,48 +4613,5 @@ label mas_after_bath_cleanup:
     return
 
 label mas_after_bath_cleanup_change_outfit:
-    # TODO: Rng outfit selection wen
-    python hide:
-        force_hair_change = False# If we changed the outfit, we always change hair
-
-        if monika_chr.is_wearing_clothes_with_exprop(mas_sprites.EXP_C_WET):
-            force_hair_change = True
-
-            # Let's restore the previous outfit and acs
-            monika_chr.load_state(persistent._mas_previous_moni_state, as_prims=True)
-
-            # Fallback just in case
-            if monika_chr.is_wearing_clothes_with_exprop(mas_sprites.EXP_C_WET):
-                if mas_isMoniHappy(higher=True):
-                    new_clothes = mas_clothes_blazerless
-
-                else:
-                    new_clothes = mas_clothes_def
-
-                monika_chr.change_clothes(
-                    new_clothes,
-                    by_user=False,
-                    outfit_mode=True
-                )
-
-        if (
-            force_hair_change
-            or monika_chr.is_wearing_hair_with_exprop(mas_sprites.EXP_H_WET)
-        ):
-            available_hair = mas_sprites.get_installed_hair(
-                predicate=lambda hair_obj: (
-                    not hair_obj.hasprop(mas_sprites.EXP_H_WET)
-                    and mas_sprites.is_clotheshair_compatible(monika_chr.clothes, hair_obj)
-                    and mas_selspr.get_sel_hair(hair_obj) is not None
-                    and mas_selspr.get_sel_hair(hair_obj).unlocked
-                )
-            )
-            # We should always have *something*, but just to make this extra foolproof
-            if available_hair:
-                new_hair = random.choice(available_hair)
-                monika_chr.change_hair(
-                    new_hair,
-                    by_user=False
-                )
-
+    $ mas_after_bath_cleanup_change_outfit()
     return

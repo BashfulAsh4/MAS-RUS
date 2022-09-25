@@ -777,7 +777,7 @@ label game_chess:
                 if quicksaved_file is None:
                     python:
                         persistent._mas_chess_timed_disable = datetime.datetime.now()
-                        mas_loseAffection(modifier=0.5)
+                        mas_loseAffection()
 
                     m 2wfw "[player]!"
                     m 2wfx "Ты снова удалил сохранение."
@@ -873,7 +873,9 @@ label mas_chess_remenu:
                 "options": [
                     ("Обычные шахматы", mas_chess.MODE_NORMAL, False, (chessmode == mas_chess.MODE_NORMAL)),
                     ("Случайные шахматы", mas_chess.MODE_BAD_CHESS, False, (chessmode == mas_chess.MODE_BAD_CHESS)),
-                    ("Шахматы 960", mas_chess.MODE_960, False, (chessmode == mas_chess.MODE_960))
+                    ("Шахматы 960", mas_chess.MODE_960, False, (chessmode == mas_chess.MODE_960)),
+                    # Keep this last
+                    ("Можешь ли ты объяснить эти игровые режимы?", "explain_modes", False, False)
                 ],
                 "final_items": [
                     ("Правила", "ruleset_select", False, False, 20),
@@ -887,6 +889,7 @@ label mas_chess_remenu:
                 "options": [
                     ("Обычные правила", True, False, casual_rules),
                     ("Традиционные правила", False, False, not casual_rules),
+                    # Keep this last
                     ("В чём разница?", 0, False, False)
                 ],
                 "final_items": [
@@ -942,7 +945,7 @@ label mas_chess_remenu:
     if _return == -1:
         show monika at t11
         m 1ekc "...Хорошо, [player].{w=0.3} Я очень хотела сыграть с тобой."
-        m 1eka "Но мы же сыграем в другой раз, верно?Э"
+        m 1eka "Но мы же сыграем в другой раз, верно?"
         return
 
     #We're changing the main group of settings we wish to change
@@ -958,7 +961,25 @@ label mas_chess_remenu:
 
         #Normal/Really Bad Chess/Chess 960 selection
         if menu_category == "gamemode_select":
-            $ chessmode = _return
+            if _return == "explain_modes":
+                # Take Monika back, so we won't face an empty right-side screen.
+                show monika at t11
+
+                m 1eub "Конечно! {w=0.2}{nw}"
+                extend 1eua "Разумеется, {i}Обычные шахматы{/i} означает стандартные шахматы."
+                m 3eua "Затем есть {i}Случайные шахматы{/i}, режим, основанный на {i}Очень плохие шахматы{/i}."
+                m 3eub "Мы получаем полностью случайные фигуры, что добавляет фактор удачи и делает игру увлекательной для игроков любого уровня мастерства."
+                m 1eua "В качестве альтернативы есть более справедливый режим случайных шахмат под названием {i}Шахматы 960/i}, также известный как {i}Случайные шахматы Фишера{/i}."
+                m 3eud "В этом режиме фигуры в заднем ряду случайным образом перетасовываются, при этом слоны располагаются на клетках противоположных цветов, а король - между двумя ладьями."
+                m 4hua "Существует 960 возможных стартовых позиций, поэтому игра была названа {i}Шахматы 960{/i}."
+                m 1eua "{i}Шахматы 960{/i} позволяет игрокам избежать сложной теории дебютов и при этом проверить свое понимание шахмат."
+                m 1etu "Так какой режим ты предпочитаешь? {w=0.3}{nw}"
+                extend 1hub "А-ха-ха~"
+
+                # There goes our Monika again.
+                show monika at t21
+            else:
+                $ chessmode = _return
 
         #Practice/Play mode
         elif menu_category == "ruleset_select":

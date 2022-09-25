@@ -193,9 +193,9 @@ label monika_short_stories_menu:
         # build switch button
         #TODO: Build a generalized switch for more than just two items
         if story_type == mas_stories.TYPE_SCARY:
-            switch_str = "short"
+            switch_str = "короткую"
         else:
-            switch_str = "scary"
+            switch_str = "страшную"
 
         switch_item = ("I'd like to hear a " + switch_str + " story", "monika_short_stories_menu", False, False, 20)
 
@@ -248,7 +248,7 @@ label monika_short_stories_menu:
                         story_to_push = mas_stories.get_and_unlock_random_story(story_type)
 
             #Then push
-            $ pushEvent(story_to_push, skipeval=True)
+            $ MASEventList.push(story_to_push, skipeval=True)
 
             show monika at t11
 
@@ -261,16 +261,16 @@ label monika_short_stories_menu:
 label mas_story_begin:
     python:
         story_begin_quips = [
-            _("Хорошо, давай начнем рассказ."),
-            _("Готов слушать историю?"),
-            _("Готов к рассказу?"),
-            _("Давай начнем~"),
-            _("Ты готов?")
+            _("Alright, let's start the story."),
+            _("Ready to hear the story?"),
+            _("Ready for story time?"),
+            _("Let's begin~"),
+            _("Are you ready?")
         ]
         story_begin_quip=renpy.random.choice(story_begin_quips)
     $ mas_gainAffection(modifier=0.2)
     m 3eua "[story_begin_quip]"
-    m 1duu "Кхм."
+    m 1duu "Ahem."
     return
 
 
@@ -305,27 +305,27 @@ label mas_scary_story_setup:
 
     python:
         story_begin_quips = [
-            _("Хорошо, давай начнем рассказ."),
-            _("Готов слушать историю?"),
-            _("Готов к рассказу?"),
-            _("Давай начнем~"),
-            _("Ты готов?")
+            _("Alright let's start the story."),
+            _("Ready to hear the story?"),
+            _("Ready for story time?"),
+            _("Let's begin."),
+            _("Are you ready?")
         ]
         story_begin_quip=renpy.random.choice(story_begin_quips)
 
     m 3eua "[story_begin_quip]"
-    m 1duu "Кхм."
+    m 1duu "Ahem."
     return
 
 label mas_scary_story_cleanup:
 
     python:
         story_end_quips = [
-            _("Испугался, [player]?"),
-            _("Я напугала тебя, [player]?"),
-            _("Как все прошло?"),
-            _("Ну как?"),
-            _("Ну что...{w=0.5}я напугала тебя?")
+            _("Scared, [player]?"),
+            _("Did I scare you, [player]?"),
+            _("How was it?"),
+            _("Well?"),
+            _("So...{w=0.5}did I scare you?")
         ]
         story_end_quip=renpy.substitute(renpy.random.choice(story_end_quips))
 
@@ -343,7 +343,7 @@ label mas_scary_story_cleanup:
     call monika_zoom_transition(mas_temp_zoom_level,transition=1.0)
 
     $ play_song(None, 1.0)
-    m 1eua "Надеюсь, тебе понравилось, [player]~"
+    m 1eua "I hope you liked it, [player]~"
     $ mas_DropShield_core()
     $ HKBShowButtons()
     $ mas_scary_story_setup_done = False
@@ -354,7 +354,7 @@ init 5 python:
         Event(
             persistent._mas_story_database,
             eventlabel="mas_story_tyrant",
-            prompt="Кот и петух",
+            prompt="The Cat and the Cock",
             category=[mas_stories.TYPE_NORMAL],
             unlocked=True
         ),
@@ -363,13 +363,13 @@ init 5 python:
 
 label mas_story_tyrant:
     call mas_story_begin
-    m 1eua "Кот поймал Петуха и обдумывал разумные оправдания, чтобы съесть его."
-    m "Он обвинил его в том, что тот досаждает ему тем, что каркает по ночам, не давая людям спать."
-    m 3eud "Петух защищал свой поступок, говоря, что это на пользу людям, так как будит их к труду."
-    m 1tfb "Кот ответил: 'Ты изобилуешь извинениями, но пора завтракать.'"
-    m 1hksdrb "И тогда он сделал из Петуха обед."
-    m 3eua "Мораль этой истории такова: тиранам не нужны оправдания."
-    m 1hua "Надеюсь, тебе понравилась эта маленькая история, [player]~"
+    m 1eua "A Cat caught a Cock and thought about reasonable excuses for eating him."
+    m "He accused him of being a nuisance by crowing at night; not letting men sleep."
+    m 3eud "The Cock defended his action by saying this was for the benefit of men, as it wakes them for labor."
+    m 1tfb "The Cat replied, 'you abound in apologies, but it's time for breakfast.'"
+    m 1hksdrb "At that he made a meal of the Cock."
+    m 3eua "The moral of this story is, tyrants need no excuse."
+    m 1hua "I hope you enjoyed this little story, [player]~"
     return
 
 init 5 python:
@@ -377,7 +377,7 @@ init 5 python:
         Event(
             persistent._mas_story_database,
             eventlabel="mas_story_despise",
-            prompt="Лиса",
+            prompt="The Fox",
             category=[mas_stories.TYPE_NORMAL],
             unlocked=False
         ),
@@ -386,9 +386,9 @@ init 5 python:
 
 label mas_story_despise:
     call mas_story_begin
-    m 1eud "Однажды жарким летним днем Лиса прогуливалась по фруктовому саду, пока не наткнулась на виноградную гроздь, только что созревшую на лозе, которая была прикреплена к высокой ветке."
-    m 1tfu "'Как раз то, что нужно, чтобы утолить жажду,' - сказала лиса."
-    m 1eua "Отступив на несколько шагов, она сделала разбег и прыжок и промахнулась мимо грозди."
+    m 1eud "One hot summer's day, a Fox was strolling through an orchard till he came to a bunch of grapes just ripening on a vine which had been trained over a lofty branch."
+    m 1tfu "'Just the thing to quench my thirst,' said the Fox."
+    m 1eua "Drawing back a few paces, he took a run and a jump, and just missed the bunch."
     m 3eub "Turning round again with a one,{w=1.0} two,{w=1.0} three,{w=1.0} he jumped up, but with no greater success."
     m 3tkc "Again and again he tried after the tempting morsel, but at last had to give it up, and walked away with his nose in the air, saying: 'I am sure they are sour.'"
     m 1hksdrb "The moral of this story is, it's easy to despise what you cannot get."
@@ -465,11 +465,11 @@ init 5 python:
 label mas_story_wind_sun:
     call mas_story_begin
     m 1dsc "The Wind and the Sun were disputing which was the strongest."
-    m 1euc "Suddenly they saw a traveller coming down the road, and the Sun said: 'I see a way to decide our dispute.'"
-    m 3efd "'Whichever of us can cause that traveller to take off his cloak shall be regarded as the strongest. You begin.'"
-    m 3euc "So the Sun retired behind a cloud, and the Wind began to blow as hard as it could upon the traveller."
-    m 1ekc "But the harder he blew the more closely did the traveller wrap his cloak around him, till at last the Wind had to give up in despair."
-    m 1euc "Then the Sun came out and shone in all his glory upon the traveller, who soon found it too hot to walk with his cloak on."
+    m 1euc "Suddenly they saw a traveler coming down the road, and the Sun said: 'I see a way to decide our dispute.'"
+    m 3efd "'Whichever of us can cause that traveler to take off his cloak shall be regarded as the strongest. You begin.'"
+    m 3euc "So the Sun retired behind a cloud, and the Wind began to blow as hard as it could upon the traveler."
+    m 1ekc "But the harder he blew the more closely did the traveler wrap his cloak around him, till at last the Wind had to give up in despair."
+    m 1euc "Then the Sun came out and shone in all his glory upon the traveler, who soon found it too hot to walk with his cloak on."
     m 3hua "The moral of this story is, gentleness and kind persuasion win where force and bluster fail."
     m 1hub "Hope you had fun, [player]."
     return
@@ -590,7 +590,7 @@ init 5 python:
 
 label mas_story_genie_simple:
     call mas_story_begin
-    m 1eua "There was once a genie who travelled across different worlds to escape the chaos of his own."
+    m 1eua "There was once a genie who traveled across different worlds to escape the chaos of his own."
     m 3euc "During his journeys, he met a woman that challenged the way he saw the world."
     m 3eua "She was smart and talented, but held back by the hardships she faced and how little she had."
     m 3eub "The genie saw this and felt generous, offering tools to speed up her work and make her life easier."
@@ -879,7 +879,7 @@ label mas_story_o_tei:
     m "He soon married another girl, but his heart stayed somewhere else."
     m 2esd "And as everything does in life, his family too had been taken by time and he was left all alone again."
     m 4eud "It was then that he decided to abandon his home and take a long journey to forget his troubles."
-    m 1esc "He travelled all around the country, searching for a cure to his malaise."
+    m 1esc "He traveled all around the country, searching for a cure to his malaise."
     m 1euc "And then on one evening, he came across an inn and stopped there to rest."
     m "As he settled down in his room, a nakai opened the door to greet him."
     m 3euc "His heart leapt..."
@@ -1005,7 +1005,7 @@ init 5 python:
             eventlabel="mas_story_mindthegap",
             prompt="Mind the Gap",
             category=[mas_stories.TYPE_NORMAL],
-            unlocked=True
+            unlocked=False
         ),
         code="STY"
     )
@@ -1036,6 +1036,66 @@ label mas_story_mindthegap:
     m 1dku "It goes to show that people can do incredible things simply out of compassion and love."
     m 1ekbla "This story reminds me to treasure every moment, and not to take any piece of our time together for granted."
     m 1dkblu "I'll always treasure you, [player]."
+    return
+
+init 5 python:
+    addEvent(
+        Event(
+            persistent._mas_story_database,
+            eventlabel="mas_story_knock",
+            prompt="Knock",
+            category=[mas_stories.TYPE_NORMAL],
+            unlocked=False
+        ),
+        code="STY"
+    )
+
+label mas_story_knock:
+    call mas_story_begin
+    m 1euc "The last man on Earth sat alone in a room."
+    m 3rud "...There was a knock on the door."
+    m 3duc "Some may say this is where the story ends.{w=0.2} {nw}"
+    extend 1dud "But that's not actually true."
+    m 3etc "Who knocked at the door?{w=0.2} {nw}"
+    extend 3esa "The answer wasn't that horrible, really."
+    m 3eua "The last man on Earth was Walter Phelan. {w=0.2}His only company was a species called the Zan."
+    m 3eud "The human race had been destroyed by them, except for him, and, somewhere...{w=0.3}{nw}"
+    extend 3wud "a woman--{w=0.1}one woman."
+    m 3euc "Both Walter and this woman were picked as specimens for the zoo organized by the Zan."
+    m 2esc "There were two of every species, much like in the tale of Noah's Ark."
+    m 2euc "Anyway, when he opened the door, Walter wasn't surprised to see one of the Zan."
+    m 2etd "The odd little alien, after greeting the human in the best way an alien could do, asked for Walter's help."
+    m 2euc "'Something we do not understand happened,' he said,{w=0.1} {nw}"
+    extend 2ekd "'two of the other animals sleep and do not wake. They are cold.'"
+    m 7euc "It was obvious to Walter that the two animals--a snake and a duck--had died."
+    m 3esc "However, the Zan didn't know that."
+    m 1dsc "The human quickly set a strategy in his mind.{w=0.2} He told the Zan the animals would never wake again.{w=0.2} That the Old Grim Reaper was on the loose, killing everyone on sight."
+    m 1euc "...But he could help. {w=0.2}On one condition: {w=0.2}The last woman on Earth had to help too."
+    m 1eua "The Zan allowed him to go see the animals, and a meeting was arranged."
+    m 1dsc "Walter thought he would never see the last woman on Earth...{w=0.3}{nw}"
+    extend 1wub "but meeting with her was an amazing turn of events!"
+    m 1esa "Grace Evans, the last woman on Earth, was surprised to know what Walter had found out: {w=0.2}that the Zan couldn't die of natural causes."
+    m 3ttu "...But perhaps they could be killed."
+    m 1eud "The man had all of the pieces to test that theory, and after saying his goodbyes to Grace, he put his plan into action."
+    m 3esc "He asked the Zan to see the last duck--since the other one had died--and told the alien what he should do."
+    m 4eud "'Give it affection by petting it, or else, it too will die...{w=0.2}of loneliness.'"
+    m 3rsc "Now, the aliens had no knowledge of how affection worked, so they just watched while Walter petted the duck lovingly."
+    m 1esc "'You must do the same with the remaining snake,' he said."
+    m 1euc "...And so the Zan did."
+    m 3wud "But bear in mind, [player], it was no ordinary snake...{w=0.3}{nw}"
+    extend 3tfu "but a venomous one."
+    m 1euc "So, the Zan assigned to pet the remaining snake was inflicted by its deadly venom."
+    m 1wud "Another Zan entered Walter's room in despair the next day. {w=0.2}{nw}"
+    extend 4wko "'One of us died!' he cried."
+    m 2dud "'Well, there's nothing to do then.{w=0.2} {nw}"
+    extend 2esc "The curse has spread, and you must flee,' the man stated."
+    m 7euc "The Zan had a council meeting, and let the two humans know that they were indeed leaving."
+    m 1ekd "The risk was too high, they couldn't lose more of their own race."
+    m 3eud "They left all the 'cursed' animals, including Walter and Grace, and blasted off on their ship."
+    m 1dua "The last man and woman on Earth were together at last.{w=0.2}{nw}"
+    extend 1rkbla " Now what would they do with their eternity alone?"
+    m 3gsbsu "That's left for us to imagine..."
+    m 1hubsa "I hope you liked this story, [player]."
     return
 
 #START: SCARY STORIES
@@ -1171,7 +1231,7 @@ init 5 python:
 label mas_scary_story_mujina:
     call mas_scary_story_setup
     m 1esc "One night at a late hour, an old merchant was walking down a road heading home after a long day of selling his wares."
-    m 3esc "The road he travelled on led to a large hill that was very dark and secluded at night so many travelers tended to avoid the area."
+    m 3esc "The road he traveled on led to a large hill that was very dark and secluded at night so many travelers tended to avoid the area."
     m "The man was tired, however, and decided to take the road anyway since it would get him home quicker."
     m "On the one side of the hill was an old moat that was quite deep."
     m 3eud "As he went along, he noticed a woman crouching by the moat, all alone and weeping bitterly."

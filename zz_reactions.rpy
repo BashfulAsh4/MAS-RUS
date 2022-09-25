@@ -95,7 +95,10 @@ init -11 python in mas_filereacts:
     th_foundreact_map = dict()
 
     # good gifts list
-    good_gifts = list()
+    good_gifts = [
+        # Custom sprite jsons should be considered good
+        "mas_reaction_gift_generic_sprite_json"
+    ]
 
     # bad gifts list
     bad_gifts = list()
@@ -745,7 +748,7 @@ init python:
 
         if len(reacts) > 0:
             for _react in reacts:
-                queueEvent(_react)
+                MASEventList.queue(_react)
             persistent._mas_filereacts_just_reacted = True
 
 
@@ -905,7 +908,7 @@ init python:
         if amount is None:
             amount = store._mas_getGoodExp()
 
-        mas_capGainAff(amount * modifier, "_mas_filereacts_gift_aff_gained", 15 if mas_isSpecialDay() else 3)
+        mas_capGainAff(amount * modifier, "_mas_filereacts_gift_aff_gained", 9 if mas_isSpecialDay() else 3)
 
     def mas_getGiftedDates(giftlabel):
         """
@@ -1129,7 +1132,7 @@ label mas_reaction_gift_generic_sprite_json:
 
                 # we have a complete description, so use it here
                 if spr_obj.dlg_plur:
-                    sprite_str = "these " + renpy.substitute(spr_obj.dlg_desc)
+                    sprite_str = "эти " + renpy.substitute(spr_obj.dlg_desc)
                     item_ref = "их"
                     its = "они"
 
@@ -1141,7 +1144,7 @@ label mas_reaction_gift_generic_sprite_json:
                 acs_quip = renpy.substitute(renpy.random.choice(acs_quips))
 
             m 1hua "Спасибо за [sprite_str], [acs_quip]"
-            m 3hub "I can't wait to try on [item_ref]!"
+            m 3hub "Мне не терпится примерить [item_ref]!"
 
     $ mas_finishSpriteObjInfo(sprite_data)
     if giftname is not None:
@@ -1424,7 +1427,7 @@ init 5 python:
     addReaction("mas_reaction_gift_thermos_mug", "justmonikathermos", is_good=True)
 
 label mas_reaction_gift_thermos_mug:
-    call mas_thermos_mug_handler(mas_acs_thermos_mug, "Только Моника", "justmonikathermos")
+    call mas_thermos_mug_handler(mas_acs_thermos_mug, "Just Monika", "justmonikathermos")
     return
 
 #Whether or not we've given Monika a thermos before
@@ -1665,7 +1668,7 @@ label mas_reaction_candy:
         m 2lksdlb "Если я съем еще, то заболею, а-ха-ха!"
         m 1eka "А ты бы этого не хотел, верно?"
     elif times_candy_given == 4:
-        $ mas_loseAffection(5)
+        $ mas_loseAffection(modifier=1.5)
         m 2wfd "[player]!"
         m 2tfd "Ты меня не слушаешь?"
         m 2tfc "Я же сказала, что не хочу больше конфет сегодня!"
@@ -1673,7 +1676,7 @@ label mas_reaction_candy:
         m 2rkc "Было очень мило с твоей стороны подарить мне все эти конфеты на Хэллоуин, но хватит..."
         m 2ekc "Я не могу всё это съесть."
     else:
-        $ mas_loseAffection(10)
+        $ mas_loseAffection(modifier=2.0)
         m 2tfc "..."
         python:
             store.mas_ptod.rst_cn()
@@ -1719,23 +1722,22 @@ label mas_reaction_candycorn:
         m 4eka "Хотя я ценю, что ты пытаешься дать мне конфеты на Хэллоуин."
         m 1hua "И если бы ты нашёл способ достать для меня другие конфеты, я была бы очень рада, [player]!"
     elif times_candy_given == 1:
-        $ mas_loseAffection(5)
+        $ mas_loseAffection()
         m 2esc "Ох."
         m 2esc "Ещё кукурузные конфеты, [player]?"
         m 4esc "Я уже говорила тебе, что не очень люблю кукурузные конфеты."
         m 4ekc "Так не мог бы ты попробовать найти что-нибудь другое?"
         m 1eka "Я теперь не так часто получаю сладости..."
         m 1ekbfa "Ну...{w=1}помимо тебя, [player]..."
-        m 1hubfa "Э-хе-хеe~"
+        m 1hubfa "Э-хе-хе~"
     elif times_candy_given == 2:
-        $ mas_loseAffection(10)
-        m 2wfw "[player]!"
+        $ mas_loseAffection(modifier=1.5)
         m 2tfc "Я действительно старалась не быть грубой, но..."
         m 2tfc "Я постоянно говорю тебе, что не люблю кукурузные конфеты, а ты все равно продолжаешь их мне давать."
         m 2rfc "Сейчас мне начинает казаться, что ты просто пытаешься надо мной подшутить."
         m 2tkc "Так что, пожалуйста, либо найди мне какую-нибудь другую конфету, либо просто прекрати."
     else:
-        $ mas_loseAffection(15) # should have seen it coming
+        $ mas_loseAffection(modifier=2) # should have seen it coming
         m 2tfc "..."
         python:
             store.mas_ptod.rst_cn()
@@ -2465,7 +2467,7 @@ label mas_reaction_gift_chocolates:
 
             $ mas_giftCapGainAff(3 if mas_isSpecialDay() else 1)
 
-            m 1wuo "О!"
+            m 1wuo "Oh!"
 
             if mas_isF14():
                 #Extra little bump if on f14

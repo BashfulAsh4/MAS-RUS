@@ -24,6 +24,8 @@ init 3 python in mas_compliments:
 
 init 22 python in mas_compliments:
     import store
+    import random
+    import datetime
 
     thanking_quips = [
         _("Ты такой милый, [player]."),
@@ -35,16 +37,37 @@ init 22 python in mas_compliments:
         _("Ты всегда мне льстишь, [player].")
     ]
 
+    __last_called_callback = None
+    __wait_time = 55.0
     # set this here in case of a crash mid-compliment
     thanks_quip = renpy.substitute(renpy.random.choice(thanking_quips))
+
+    def __set_wait_time():
+        """
+        Sets new wait time
+        """
+        global __wait_time
+        __wait_time = random.uniform(40.0, 70.0)
 
     def compliment_delegate_callback():
         """
         A callback for the compliments delegate label
         """
-        global thanks_quip
+        global thanks_quip, __last_called_callback
 
         thanks_quip = renpy.substitute(renpy.random.choice(thanking_quips))
+
+        _now = datetime.datetime.now()
+        if __last_called_callback is not None:
+            diff = (_now - __last_called_callback).total_seconds()
+            if diff <= __wait_time:
+                __last_called_callback = _now
+                __set_wait_time()
+                return
+
+        __last_called_callback = _now
+        __set_wait_time()
+
         store.mas_gainAffection()
 
 # entry point for compliments flow
@@ -90,7 +113,7 @@ label monika_compliments:
     # return value? then push
     if _return:
         $ mas_compliments.compliment_delegate_callback()
-        $ pushEvent(_return)
+        $ MASEventList.push(_return)
         # move her back to center
         show monika at t11
 

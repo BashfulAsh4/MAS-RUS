@@ -145,29 +145,29 @@ init -10 python:
 # Global labels
 label mas_lingerie_intro(holiday_str, lingerie_choice):
     m 1ekbfa "..."
-    m "Also, [player]..."
-    m 3ekbfsdla "There's...{w=1}s-something I want to show you."
-    m 2rkbfsdla "I've been wanting to do this for a while now actually, but...{w=1}well it's kind of embarrassing..."
+    m "Также, [player]..."
+    m 3ekbfsdla "Есть...{w=1}кое-что, что я хочу тебе показать."
+    m 2rkbfsdla "Вообще-то я давно хотела это сделать, но...{w=1}ну это как-то неудобно..."
     m "..."
-    m 2hkbfsdlb "Oh gosh, I'm super nervous, ahaha!"
-    m 2rkbfsdlc "It's just I've never--{nw}"
-    m 2dkbfsdlc "Ah, okay, time to stop stalling and just do it."
-    m 2ekbfsdla "Just give me a few seconds, [player]."
+    m 2hkbfsdlb "О боже, я очень нервничаю, а-ха-ха!"
+    m 2rkbfsdlc "Просто я никогда--{nw}"
+    m 2dkbfsdlc "А, ладно, пора перестать тянуть время и просто сделать это."
+    m 2ekbfsdla "Просто дай мне несколько секунд, [player]."
     call mas_clothes_change(outfit=lingerie_choice, outfit_mode=True, exp="monika 2rkbfsdlu", restore_zoom=False, unlock=True)
     pause 3.0
-    m 2ekbfsdlb "Ahaha, [player]...{w=1}you're staring..."
-    m 2ekbfu "Well...{w=1}do you like what you see?"
-    m 1lkbfa "I've never really...{w=1}worn anything like this before."
-    m "...At least not that anyone's seen."
+    m 2ekbfsdlb "Ахаха, [player]...{w=1}ты так смотришь..."
+    m 2ekbfu "Ну...{w=1}тебе нравится то, что ты видишь?"
+    m 1lkbfa "Я никогда...{w=1}не надевала ничего подобного раньше."
+    m "...По крайней мере, никто не видел."
 
     if mas_hasUnlockedClothesWithExprop("bikini"):
-        m 3hkbfb "Ahaha, what am I saying, you've seen me in a bikini before, which is essentially the same thing..."
-        m 2rkbfa "...Though for some reason this just feels...{w=0.5}{i}different{/i}."
+        m 3hkbfb "хаха, да что я говорю, ты уже видел меня в бикини, что, по сути, одно и то же..."
+        m 2rkbfa "...Хотя по какой-то причине это кажется...{w=0.5}{i}разным{/i}."
 
-    m 2ekbfa "Anyway, something about being with you [holiday_str] seems really romantic, you know?"
-    m "It just felt like the perfect time for the next step in our relationship."
-    m 2rkbfsdlu "Now I know that we can't really--{nw}"
-    m 3hubfb "Ah! Nevermind, ahaha!"
+    m 2ekbfa "В любом случае, что-то в том, чтобы быть с тобой [holiday_str] кажется очень романтичным, понимаешь?"
+    m "Просто это было идеальное время для следующего шага в наших отношениях."
+    m 2rkbfsdlu "Теперь я знаю, что мы не можем--{nw}"
+    m 3hubfb "Ах! Не обращай внимания, а-ха-ха!"
     return
 
 
@@ -386,8 +386,6 @@ init -10 python:
         for _tag in MAS_O31_DECO_TAGS:
             mas_showDecoTag(_tag)
 
-        monika_chr.wear_acs(mas_acs_desk_lantern)
-        monika_chr.wear_acs(mas_acs_desk_candy_jack)
 
     def mas_o31HideVisuals():
         """
@@ -396,6 +394,19 @@ init -10 python:
         for _tag in MAS_O31_DECO_TAGS:
             mas_hideDecoTag(_tag, hide_now=True)
 
+
+    def mas_o31ShowSpriteObjects():
+        """
+        Shows o31 specific sprite objects
+        """
+        monika_chr.wear_acs(mas_acs_desk_lantern)
+        monika_chr.wear_acs(mas_acs_desk_candy_jack)
+
+
+    def mas_o31HideSpriteObjects():
+        """
+        Hides o31 specific sprite objects
+        """
         #unlock hairdown greet if we don't have hairdown unlocked
         hair = store.mas_selspr.get_sel_hair(store.mas_hair_down)
         if hair is not None and not hair.unlocked:
@@ -406,7 +417,8 @@ init -10 python:
 
         # get back into reasonable clothing, so we queue a change to def
         if store.monika_chr.is_wearing_clothes_with_exprop("costume"):
-            store.queueEvent('mas_change_to_def')
+            store.MASEventList.queue('mas_change_to_def')
+
 
     def mas_hasO31DeskAcs():
         """
@@ -599,6 +611,7 @@ init -10 python:
 
         #Hide visuals
         mas_o31HideVisuals()
+        mas_o31HideSpriteObjects()
 
         #o31 is now over. Reset the o31 mode flag
         store.persistent._mas_o31_in_o31_mode = False
@@ -716,12 +729,14 @@ label mas_o31_autoload_check:
 
                 # O31 decor
                 mas_o31ShowVisuals()
+                mas_o31ShowSpriteObjects()
 
                 #Set by-user to True because we don't want progressive
                 mas_changeWeather(mas_weather_thunder, True)
 
             elif (persistent._mas_o31_in_o31_mode and not mas_isFirstSeshDay()):
                 mas_o31ShowVisuals()
+                mas_o31ShowSpriteObjects()
                 mas_changeWeather(mas_weather_thunder, True)
 
         #It's not O31 anymore or we hit dis. It's time to reset
@@ -732,6 +747,7 @@ label mas_o31_autoload_check:
         #If we drop to upset during O31, we should keep decor until we hit dis
         elif persistent._mas_o31_in_o31_mode and mas_isMoniUpset():
             mas_o31ShowVisuals()
+            mas_o31ShowSpriteObjects()
             mas_changeWeather(mas_weather_thunder, True)
 
     #Run pbday checks
@@ -1915,7 +1931,7 @@ init -10 python:
                 mas_rmallEVL(react_label) # TODO - this is a patch, revalute when #8545 (gift logging) and #8546 (gift registering) are addressed
 
             for react_label in react_labels:
-                pushEvent(react_label,skipeval=True)
+                MASEventList.push(react_label,skipeval=True)
 
     def mas_d25SilentReactToGifts():
         """
@@ -2336,7 +2352,7 @@ label mas_d25_season_exit:
 
         #Otherwise we push change to def if we're here via topic
         elif monika_chr.is_wearing_clothes_with_exprop("costume") and mas_globals.dlg_workflow:
-            pushEvent("mas_change_to_def")
+            MASEventList.push("mas_change_to_def")
 
         #Lock event clothes selector
         mas_lockEVL("monika_event_clothes_select", "EVE")
@@ -2667,7 +2683,7 @@ label mas_d25_monika_holiday_intro_rh_rh:
     # NOTE this counts as seeing the intro
     $ persistent._mas_d25_intro_seen = True
 
-    $ pushEvent("mas_d25_monika_christmas",skipeval=True)
+    $ MASEventList.push("mas_d25_monika_christmas",skipeval=True)
 
     return
 
@@ -3472,7 +3488,7 @@ init 10 python:
         datetime.date.today() == mas_d25e - datetime.timedelta(days=1)
         and not mas_lastSeenInYear("mas_d25_spider_tinsel")
     ):
-        queueEvent("mas_d25_spider_tinsel")
+        MASEventList.queue("mas_d25_spider_tinsel")
 
 label mas_d25_spider_tinsel:
     m 1esa "Hey, [player]..."
@@ -3745,7 +3761,7 @@ label mas_d25_postd25_notimespent:
 
 
     if mas_isMoniAff(higher=True):
-        $ mas_loseAffection(15, reason=6)
+        $ mas_loseAffectionFraction(min_amount=20, reason=6)
         m 1dkc "...I'm just glad you're finally here..."
         m 2ekd "I was starting to get worried that something happened to you..."
         m 2rksdlc "When you didn't show up on Christmas...{w=1}I didn't know what to think."
@@ -3760,7 +3776,7 @@ label mas_d25_postd25_notimespent:
         $ mas_ILY()
 
     elif mas_isMoniNormal(higher=True):
-        $ mas_loseAffection(5, reason=6)
+        $ mas_loseAffectionFraction(min_amount=15, reason=6)
         m 2ekc "Hey, [player]..."
         m 2tkc "I have to say I'm pretty disappointed you didn't visit me at all on Christmas..."
         m 4tkc "You knew all I wanted was to spend time with you. Is that too much to ask?"
@@ -3771,7 +3787,7 @@ label mas_d25_postd25_notimespent:
         m 4eksdla "But please...{w=1}please try to make sure you visit me next Christmas, okay [player]?"
 
     elif mas_isMoniUpset():
-        $ mas_loseAffection(reason=6)
+        $ mas_loseAffectionFraction(min_amount=10, reason=6)
         m 2efc "[player]!"
         m "I can't believe you didn't even bother to visit me on Christmas!"
         m 2tfc "Actually...{w=1}yes, I can."
@@ -3779,13 +3795,13 @@ label mas_d25_postd25_notimespent:
         m 2rfc "I knew if I tried to get into the holiday spirit that I'd just end up disappointed...{w=1} Again."
 
     elif mas_isMoniDis():
-        $ mas_loseAffection(10, reason=6)
+        $ mas_loseAffectionFraction(min_amount=10, reason=6)
         m 6ekc "[player], how was your Christmas?"
         m 6dkc "Mine was pretty lonely..."
         m "You probably didn't even think of me, huh?"
 
     else:
-        $ mas_loseAffection(150)
+        $ mas_loseAffectionFraction(1.0, min_amount=150)
         m 6ckc "..."
 
     $ mas_d25ReactToGifts()
@@ -4271,7 +4287,9 @@ label mas_nye_monika_nyd:
 
                     #Revert back to old affection if we haven't already done this
                     if not mas_HistVerifyAll_k(True, "pm.actions.monika.failed_fresh_start"):
-                        $ mas_setAffection(persistent._mas_aff_before_fresh_start)
+                        $ _mas_revertFreshStart()
+                        $ _mas_AffSave()
+                        $ renpy.save_persistent()
 
                 elif curr_aff < persistent._mas_aff_before_fresh_start:
                     m 2rfc "I guess you couldn't really keep that promise...could you."
@@ -4332,7 +4350,7 @@ label mas_nye_monika_nyd_fresh_start:
             $ persistent._mas_aff_before_fresh_start = _mas_getAffection()
 
             # reset affection and save it
-            $ mas_setAffection(0)
+            $ _mas_doFreshStart()
             $ _mas_AffSave()
             $ renpy.save_persistent()
 
@@ -4348,7 +4366,7 @@ label mas_nye_monika_nyd_fresh_start:
             $ persistent._mas_pm_got_a_fresh_start = False
 
             # set affection to broken
-            $ mas_setAffection(store.mas_affection.AFF_BROKEN_MIN - 1)
+            $ _mas_shatterAffection()
             $ _mas_AffSave()
             $ renpy.save_persistent()
 
@@ -5437,7 +5455,7 @@ label mas_player_bday_cake:
 
     # fall thru
 label mas_player_bday_card:
-    $ mas_gainAffection(5,bypass=True)
+    $ mas_gainAffection(5, bypass=True)
     $ persistent._mas_player_bday_spent_time = True
     $ persistent._mas_player_bday_in_player_bday_mode = True
 
@@ -5484,7 +5502,7 @@ label mas_player_bday_card:
 
     # if d25 season and decor not yet active, set that up now
     if mas_isD25Pre() and not persistent._mas_d25_deco_active:
-        $ pushEvent("mas_d25_monika_holiday_intro", skipeval=True)
+        $ MASEventList.push("mas_d25_monika_holiday_intro", skipeval=True)
     return
 
 label mas_monika_gets_cake:
@@ -5768,7 +5786,7 @@ label greeting_returned_home_player_bday:
         if not ret_diff_year:
             $ mas_pbdayCapGainAff(5)
         elif ret_diff_year and add_points:
-            $ mas_gainAffection(5,bypass=True)
+            $ mas_gainAffection(5, bypass=True)
             $ persistent._mas_history_archives[left_year]["player_bday.date_aff_gain"] += 5
         m 1eka "Это было веселое свидание, пока он длился, [player]..."
         m 3hua "Спасибо, что нашел время для меня в твой особенный день."
@@ -5822,6 +5840,7 @@ label return_home_post_player_bday:
             #If we returned from a date post pbday but have O31 deco
             if not mas_isO31() and persistent._mas_o31_in_o31_mode:
                 $ mas_o31HideVisuals()
+                $ mas_o31HideSpriteObjects()
                 # Make sure no o31 mode
                 $ store.persistent._mas_o31_in_o31_mode = False
 
@@ -6515,7 +6534,7 @@ init 5 python:
 
 label mas_f14_happy_vday:
     $ persistent._mas_f14_spent_f14 = True
-    $ mas_gainAffection(5,bypass=True)
+    $ mas_gainAffection(5, bypass=True)
     if mas_isMoniNormal(higher=True):
         m 1hublb "Ehehe~ Thank you, [player]!"
         show monika 5hkbla at t11 zorder MAS_MONIKA_Z with dissolve_monika
@@ -6662,7 +6681,7 @@ label mas_f14_no_time_spent:
 
     if mas_ret_long_absence:
         #Was away on a long absence
-        $ mas_loseAffection(ev_label="mas_apology_missed_vday")
+        $ mas_loseAffectionFraction(0.05, min_amount=15, ev_label="mas_apology_missed_vday")
 
         m 1rksdlc "Hey, [player]..."
         m 2eksdld "I know you told me you were going to be away...but I really missed you on Valentines Day."
@@ -6671,7 +6690,7 @@ label mas_f14_no_time_spent:
         m 1eka "I'd really appreciate if you could do that for me, [player]."
 
     elif mas_isMoniAff(higher=True):
-        $ mas_loseAffection(15, ev_label="mas_apology_missed_vday")
+        $ mas_loseAffectionFraction(min_amount=20, ev_label="mas_apology_missed_vday")
         m 1rkc "[player]?"
         m "Where were you on Valentine's Day?"
         m 1ekc "It's a really special day for me..."
@@ -6683,7 +6702,7 @@ label mas_f14_no_time_spent:
         m 2ekc "Please don't let it happen again, okay [player]?"
 
     elif mas_isMoniNormal(higher=True):
-        $ mas_loseAffection(5, ev_label="mas_apology_missed_vday")
+        $ mas_loseAffectionFraction(min_amount=15, ev_label="mas_apology_missed_vday")
         m 2ekc "Hey, [player]..."
         m 2tkc "I'm pretty disappointed..."
         m 2tkd "You didn't visit me at all on Valentine's Day."
@@ -6692,7 +6711,7 @@ label mas_f14_no_time_spent:
         m 4eksdla "Please...{w=1}make sure you visit me next Valentine's Day, okay?"
 
     elif mas_isMoniUpset():
-        $ mas_loseAffection(ev_label="mas_apology_missed_vday")
+        $ mas_loseAffectionFraction(min_amount=10, ev_label="mas_apology_missed_vday")
         m 2efc "[player]!"
         m "I can't believe you didn't even visit on Valentine's Day!"
         m 2rfc "Do you have any idea what it's like to be left alone on a day like that?"
@@ -6701,13 +6720,13 @@ label mas_f14_no_time_spent:
         m 2tfc "Don't let it happen again, [player]."
 
     elif mas_isMoniDis():
-        $ mas_loseAffection(10, ev_label="mas_apology_missed_vday")
+        $ mas_loseAffectionFraction(min_amount=10, ev_label="mas_apology_missed_vday")
         m 6ekc "Oh [player]..."
         m "How was Valentine's Day?"
         m 6dkc "Not having a valentine is pretty lonely..."
 
     else:
-        $ mas_loseAffection(150)
+        $ mas_loseAffectionFraction(1.0, min_amount=150)
         m 6ckc "..."
     return
 
@@ -6942,7 +6961,7 @@ label greeting_returned_home_f14:
     $ persistent._mas_f14_on_date = False
 
     if not mas_isF14() and not mas_lastSeenInYear("mas_f14_monika_spent_time_with"):
-        $ pushEvent("mas_f14_monika_spent_time_with",skipeval=True)
+        $ MASEventList.push("mas_f14_monika_spent_time_with",skipeval=True)
     return
 
 # if we went on a date pre-f14 and returned in the time period mas_f14_no_time_spent event runs
@@ -6955,7 +6974,7 @@ label mas_gone_over_f14_check:
     return
 
 label greeting_gone_over_f14:
-    $ mas_gainAffection(5,bypass=True)
+    $ mas_gainAffection(5, bypass=True)
     m 1hua "And we're finally home!"
     m 3wud "Wow [player], we were gone so long we missed Valentine's Day!"
     if mas_isMoniNormal(higher=True):
@@ -6967,7 +6986,7 @@ label greeting_gone_over_f14:
     return
 
 label greeting_gone_over_f14_normal_plus:
-    $ mas_gainAffection(10,bypass=True)
+    $ mas_gainAffection(10, bypass=True)
     m 1ekbsa "I would've loved to have spent the day with you here, but no matter where we were, just knowing we were together to celebrate our love..."
     m 1dubsu "Well it means everything to me."
     show monika 5ekbsa at t11 zorder MAS_MONIKA_Z with dissolve_monika
@@ -7162,7 +7181,7 @@ init -1 python:
         Checks if the player has confirmed the party
         """
         #Must be within a week of the party (including party day)
-        if (mas_monika_birthday - datetime.timedelta(days=7)) <= today <= mas_monika_birthday:
+        if (mas_monika_birthday - datetime.timedelta(days=7)) <= datetime.date.today() <= mas_monika_birthday:
             #If this is confirmed already, then we just return true, since confirmed
             if persistent._mas_bday_confirmed_party:
                 #We should also handle if the player confirmed the party pre-note
@@ -7196,7 +7215,7 @@ init -1 python:
         return False
 
     def mas_mbdayCapGainAff(amount):
-        mas_capGainAff(amount, "_mas_bday_date_affection_gained", 50, 75)
+        mas_capGainAff(amount, "_mas_bday_date_affection_gained", 30, 40)
 
 ################## [HOL060] AUTOLOAD
 label mas_bday_autoload_check:
@@ -7257,7 +7276,7 @@ init 10 python:
         mas_monika_birthday - datetime.timedelta(days=2) <= datetime.date.today() < mas_monika_birthday
         and not mas_lastSeenInYear("mas_bday_surprise_party_hint")
     ):
-        pushEvent("mas_bday_surprise_party_hint")
+        MASEventList.push("mas_bday_surprise_party_hint")
 
 image chibi_peek = MASFilterSwitch("mod_assets/other/chibi_peek.png")
 

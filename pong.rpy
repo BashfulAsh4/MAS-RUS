@@ -73,7 +73,7 @@ init:
                 self.paddle = Image("mod_assets/games/pong/pong.png")
                 self.ball = Image("mod_assets/games/pong/pong_ball.png")
                 self.player = Text(_("[player]"), size=36)
-                self.monika = Text(_("Monika"), size=36)
+                self.monika = Text(_("Моника"), size=36)
                 self.ctb = Text(_("Нажми, чтобы начать!"), size=36)
 
                 # Sounds used.
@@ -835,7 +835,7 @@ label mas_pong_dlg_winner:
         elif pong_difficulty_before <= 20:
             if pong_monika_last_response_id == PONG_MONIKA_RESPONSE_WIN_EXPERT_GAME:
                 m 2tub "Приятно побеждать!"
-                m 2hub "Не волнуйся, я уверен, что скоро ты снова победишь~"
+                m 2hub "Не волнуйся, я уверена, что скоро ты снова победишь~"
             else:
                 if loss_streak_counter > 1:
                     m 2eub "Я выиграла еще один раунд!"
