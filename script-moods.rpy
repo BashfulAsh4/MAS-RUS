@@ -605,7 +605,7 @@ init 5 python:
     addEvent(
         Event(
             persistent._mas_mood_database,eventlabel="mas_mood_bored",
-            prompt="...скучающим.",
+            prompt="...bored.",
             category=[store.mas_moods.TYPE_NEUTRAL],
             unlocked=True
         ),
@@ -629,17 +629,17 @@ label mas_mood_bored:
                 m 1eka "Но, если тебе скучно, тогда мы должны найти себе занятие..."
 
             "Ну...":
-                $ mas_loseAffection()
+                $ mas_loseAffectionFraction(min_amount=15)
                 m 2ekc "Ох..{w=1} Понятно."
                 m 2dkc "Я и не думала, что наскучила тебе..."
                 m 2eka "Уверена, мы найдем, чем заняться..."
 
     elif mas_isMoniDis(higher=True):
-        $ mas_loseAffection()
+        $ mas_loseAffectionFraction(min_amount=15)
         m 2lksdlc "Мне жаль, что я надоела тебе, [player]."
 
     else:
-        $ mas_loseAffection()
+        $ mas_loseAffectionFraction(min_amount=15)
         m 6ckc "Знаешь [player], если я все время делаю тебя таким несчастным..."
         m "Может, тебе стоит найти себе другое занятие."
         return "quit"
@@ -659,7 +659,7 @@ label mas_mood_bored:
 
     if picked_game_label == "mas_piano":
         if mas_isMoniAff(higher=True):
-             3eub "Ты мог бы сыграть для меня что-нибудь на пианино!"
+            m 3eub "Ты мог бы сыграть для меня что-нибудь на пианино!"
 
         elif mas_isMoniNormal(higher=True):
             m 4eka "Может быть, ты мог бы сыграть для меня что-нибудь на пианино?"

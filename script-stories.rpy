@@ -197,7 +197,7 @@ label monika_short_stories_menu:
         else:
             switch_str = "страшную"
 
-        switch_item = ("I'd like to hear a " + switch_str + " story", "monika_short_stories_menu", False, False, 20)
+        switch_item = ("Я бы хотел услышать " + switch_str + " историю", "monika_short_stories_menu", False, False, 20)
 
         final_item = (mas_stories.STORY_RETURN, False, False, False, 0)
 
@@ -205,11 +205,11 @@ label monika_short_stories_menu:
     show monika 1eua at t21
 
     if story_type == mas_stories.TYPE_SCARY:
-        $ which = "Witch"
+        $ which = "Какую"
     else:
-        $ which = "Which"
+        $ which = "Какую"
 
-    $ renpy.say(m, which + " story would you like to hear?" + end, interact=False)
+    $ renpy.say(m, which + " историю ты хотел бы услышать?" + end, interact=False)
 
     # call scrollable pane
     call screen mas_gen_scrollable_menu(stories_menu_items, mas_ui.SCROLLABLE_MENU_TXT_LOW_AREA, mas_ui.SCROLLABLE_MENU_XALIGN, switch_item, final_item)

@@ -570,7 +570,7 @@ image input_caret:
         linear 0.35 alpha 1
         repeat
 
-screen input(prompt, use_return_button=False, return_button_prompt="Nevermind", return_button_value="cancel_input"):
+screen input(prompt, use_return_button=False, return_button_prompt="Не важно", return_button_value="cancel_input"):
     style_prefix "input"
 
     window:
@@ -1592,7 +1592,7 @@ screen preferences():
                 vbox:
 
                     hbox:
-                        label _("Sunrise  ")
+                        label _("Восход  ")
 
                         # display time
                         label _("[[ " + sr_display + " ]")
@@ -1601,7 +1601,7 @@ screen preferences():
 
 
                     hbox:
-                        label _("Sunset  ")
+                        label _("Закат  ")
 
                         # display time
                         label _("[[ " + ss_display + " ]")
@@ -1612,7 +1612,7 @@ screen preferences():
                 vbox:
 
                     hbox:
-                        label _("Random Chatter  ")
+                        label _("Случайные разговоры  ")
 
                         # display str
                         label _("[[ " + rc_display + " ]")
@@ -1625,7 +1625,7 @@ screen preferences():
                     )
 
                     hbox:
-                        label _("Ambient Volume")
+                        label _("Громкость окружения")
 
                     bar value Preference("mixer amb volume")
 
@@ -1662,11 +1662,11 @@ screen preferences():
                 #We disable updating on the main menu because it causes graphical issues
                 #due to the spaceroom not being loaded in
                 if not main_menu:
-                    textbutton _("Update Version"):
+                    textbutton _("Обновление версии"):
                         action Function(renpy.call_in_new_context, 'forced_update_now')
                         style "navigation_button"
 
-                textbutton _("Import DDLC Save Data"):
+                textbutton _("Импортировать данные сохранения DDLC"):
                     action Function(renpy.call_in_new_context, 'import_ddlc_persistent_in_settings')
                     style "navigation_button"
 
@@ -1888,8 +1888,8 @@ screen hot_keys():
                     text _("Музыка")
                     text _("Игры")
                     text _("Поговорить")
-                    text _("Bookmark")
-                    text _("Derandom")
+                    text _("Закладки")
+                    text _("Дерандом")
                     text _("Полный экран")
                     text _("Скриншоты")
                     text _("Настройки")
@@ -1969,7 +1969,7 @@ screen history():
                 text h.what.replace("[","[[")  # ]" fix syntax highlight issue
 
         if not _history_list:
-            label _("The dialogue history is empty.")
+            label _("История диалогов пуста.")
 
 
 style history_window is empty:
