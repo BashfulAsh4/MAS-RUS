@@ -1959,7 +1959,7 @@ init 15 python in mas_affection:
         quip = _dict_quip(play_menu_quips)
         if len(quip) > 0:
             return quip
-        return _("Во что бы ты хотел поиграть?
+        return _("Во что бы ты хотел поиграть?")
 
 
 default persistent._mas_long_absence = False
