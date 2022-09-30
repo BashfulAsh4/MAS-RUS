@@ -1,0 +1,18 @@
+Non-steam версия
+
+Скачать оригинальный ддлк снова: https://teamsalvato.itch.io/ddlc (на случай если что-то не работает в новой версии)
+Скачать последнюю версию Mas: https://www.monikaafterstory.com/releases.html
+Разархировать мод в ддлк по пути: DDLC/game
+Скачать перевод: https://github.com/BashfulAsh4/MAS-RUS
+Скачать шрифты: https://drive.google.com/file/d/1_3WVCgzxjfs-Q1fxpVk99Qmv5rpqdCp9/view?usp=sharing (Инструкция по установке шрифтов находится в внутри)
+Установить перевод в папку "game" с заменой
+
+Версия steam
+Скачать последнюю версию Mas: https://www.monikaafterstory.com/releases.html
+Скачать перевод: https://github.com/BashfulAsh4/MAS-RUS
+Скачать шрифты: https://drive.google.com/file/d/1_3WVCgzxjfs-Q1fxpVk99Qmv5rpqdCp9/view?usp=sharing (Инструкция по установке шрифтов находится в внутри)
+Удалить оригинальный DDLC перед этим сохранив папку "mod_assets" и "Submods" (если есть сабмоды)
+Что не было удалено стимом удалить в ручную(если такое случится)
+Скачать занаво оригинальный DDLC
+Разархировать мод в ддлк по пути: DDLC/game
+Установить перевод в папку "game" с заменой
