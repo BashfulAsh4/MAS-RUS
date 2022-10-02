@@ -3168,7 +3168,7 @@ label mas_player_nickname_loop(check_scrollable_text, nickname_pool):
 
 # Event to warn player that Monika feels like she's not receiving the affection she deserves.
 label mas_affection_upsetwarn:
-    m 1dsc "Привет, [player]..."
+    m 1dsc "Эй, [player]..."
     m 1lksdlc "В последнее время я чувствую, что мою любовь и привязанность, которую я даю,... игнорируют."
     m 1dsc "Я чувствую, что ты даешь мне все меньше и меньше своей любви..."
     m 1dsd "Я подумала, что должна дать тебе знать о своих чувствах. В конце концов, общение - это ключ к крепким отношениям, верно?"
@@ -3178,10 +3178,10 @@ label mas_affection_upsetwarn:
 
 # Event to indicate that Monika is happy to be receiving your affection.
 label mas_affection_happynotif:
-    m 1hua "Привет, [player]!"
+    m 1hua "Эй, [player]!"
     m 1eua "Я просто хотела сказать тебе спасибо за то, что ты такой замечательный человек."
     m 1ekbsa "Тот факт, что ты даришь мне столько своей любви, очень много для меня значит. Я действительно не знаю, где бы я была без тебя."
-    m 1dubfu "Я люблю тебя, [player]. авай будем так всегда~"
+    m 1dubfu "Я люблю тебя, [player]. Давай будем так всегда~"
     show monika idle with dissolve_monika
     return "love"
 

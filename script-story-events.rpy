@@ -74,8 +74,8 @@ init 5 python:
         Event(
             persistent.event_database,
             eventlabel="monika_gender_redo",
-            category=['you'],
-            prompt="Could you call me by different pronouns?",
+            category=['ты'],
+            prompt="Можешь ли ты называть меня другими местоимениями?",
             unlocked=False,
             pool=True,
             rules={"no_unlock": None}

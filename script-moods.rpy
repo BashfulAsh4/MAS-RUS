@@ -605,7 +605,7 @@ init 5 python:
     addEvent(
         Event(
             persistent._mas_mood_database,eventlabel="mas_mood_bored",
-            prompt="...bored.",
+            prompt="...скучающим.",
             category=[store.mas_moods.TYPE_NEUTRAL],
             unlocked=True
         ),
