@@ -1334,7 +1334,7 @@ label mas_song_shelter_analysis(from_song=False):
         extend 3hubsb "Я уверена, что твоя семья тоже очень заботится о тебе!"
 
         if not persistent._mas_pm_love_yourself:
-            m 3dkbsa "Возможно, я говорю очевидное, но они {i}очень{/i} вжны."
+            m 3dkbsa "Возможно, я говорю очевидное, но они {i}очень{/i} важны."
 
         m 3eka "И если для тебя этого всё ещё недостаточно...{w=0.3} {nw}"
 
@@ -1720,7 +1720,7 @@ label mas_song_we_have_all_the_time_in_the_world(from_long=False):
     m 3hua "{i}{cps=22}~Любовь есть в запасе~{/cps}{/i}"
 
     m 1dub "{i}{cps=18}~У нас есть {w=0.7}всё время {w=0.7}в мире~{/cps}{/i}"
-    m 1esd "{i}{cps=22}~И если это всё, что у нас есть {w=0.7}ы найдешь~{/cps}{/i}"
+    m 1esd "{i}{cps=22}~И если это всё, что у нас есть {w=0.7}ты найдешь~{/cps}{/i}"
     m 3dka "{i}{cps=22}~Нам больше ничего не нужно~{/cps}{/i}"
 
     if not from_long:

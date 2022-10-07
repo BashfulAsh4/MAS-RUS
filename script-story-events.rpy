@@ -640,8 +640,8 @@ init 5 python:
         Event(
             persistent.event_database,
             eventlabel="monika_changename",
-            category=['you'],
-            prompt="I changed my name",
+            category=['ты'],
+            prompt="Я изменил своё имя",
             unlocked=False,
             pool=True,
             rules={"no_unlock": None}

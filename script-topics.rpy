@@ -1570,7 +1570,7 @@ init 5 python:
 
 label monika_tea:
     if not mas_getEVL_shown_count("monika_tea"):
-        m 2hua "Эй, интересно, чайный сервиз Юрия все еще где-то здесь..."
+        m 2hua "Эй, интересно, чайный сервиз Юри всё ещё где-то здесь..."
 
         if not persistent._mas_pm_cares_about_dokis:
             m 2hksdlb "...или, возможно, это тоже было удалено."
@@ -7733,67 +7733,67 @@ label monika_orchestra:
 
             elif tempinstrument == "piano":
                 $ persistent._mas_pm_plays_instrument = True
-                m 1wuo "Oh, that's really cool!"
-                m 1eua "Not many people I knew played the piano, so it's really nice to know you do too."
-                m 1eua "Do you have a lot of experience playing the piano?{nw}"
+                m 1wuo "О, это очень круто!"
+                m 1eua "Не так много людей, которых я знала, играли на пианино, поэтому очень приятно узнать, что ты тоже играешь."
+                m 1eua "У тебя большой опыт игры на пианино?{nw}"
                 $ _history_list.pop()
                 menu:
-                    m "Do you have a lot of experience playing the piano?{fast}"
+                    m "У тебя большой опыт игры на пианино?{fast}"
 
-                    "Yes.":
+                    "Да.":
                         $ persistent._mas_pm_has_piano_experience = mas_PIANO_EXP_HAS
-                        m 3hua "Really?"
-                        m 3sub "That's wonderful!"
-                        m 1eua "Maybe someday you can teach me and we can even have a duet!"
+                        m 3hua "Правда?"
+                        m 3sub "Это замечательно!"
+                        m 1eua "Может быть, когда-нибудь ты сможешь научить меня, и у нас даже получится дуэт!"
 
-                    "Not much.":
+                    "Немного.":
                         $ persistent._mas_pm_has_piano_experience = mas_PIANO_EXP_SOME
-                        m 2eka "That's okay, [player]."
-                        m 2eua "After all, it's a pretty complicated instrument to pick up."
-                        m 4hua "But even if you don't have much experience, I'm sure we could learn together~"
+                        m 2eka "Всё в порядке, [player]."
+                        m 2eua "В конце концов, это довольно сложный инструмент для освоения."
+                        m 4hua "Но даже если у тебя нет большого опыта, я уверена, что мы могли бы учиться вместе~"
 
-                    "I just started.":
+                    "Я только начал.":
                         $ persistent._mas_pm_has_piano_experience = mas_PIANO_EXP_NONE
-                        m 1duc "I see."
-                        m 3hksdlb "It can be pretty difficult at the beginning,{w=0.2} {nw}"
-                        extend 3huu "but I'm sure if you keep practicing you'll even be able to play better than I can, [player]~"
+                        m 1duc "Понятно."
+                        m 3hksdlb "В начале это может быть довольно сложно,{w=0.2} {nw}"
+                        extend 3huu "но я уверена, что если ты продолжишь тренироваться, то сможешь играть даже лучше, чем я, [player]~"
 
             elif tempinstrument == "harmonika":
-                m 1hub "Wow, I've always wanted to try the harmonik--"
-                m 3eub "...Oh!"
+                m 1hub "Вау, я всегда хотела попробовать harmonik--"
+                m 3eub "...О!"
 
                 if mas_isMoniUpset(lower=True):
-                    m 3esa "Did you do that for me?"
-                    m 1eka "That's actually kinda sweet..."
-                    m "Little things like this really do cheer me up. Thank you, [player]."
+                    m 3esa "Ты сделал это для меня?"
+                    m 1eka "Вообще-то это очень мило..."
+                    m "Такие мелочи действительно поднимают мне настроение. Спасибо, [player]."
 
                 elif mas_isMoniHappy(lower=True):
-                    m 1eka "Aww... Did you do that for me?"
-                    m "That's so sweet!"
-                    m 1ekbsa "Cute little things like this really make me feel loved, [player]."
+                    m 1eka "Ахх... Ты сделал это для меня?"
+                    m "Это так мило!"
+                    m 1ekbsa "Такие милые мелочи заставляют меня чувствовать себя любимой, [player]."
 
                 else: # affectionate and higher
-                    m 1eka "Aww, [player]...{w=1} Did you do that for me?"
-                    m "That's {i}sooo{/i} adorable!"
+                    m 1eka "Ахх, [player]...{w=1} Ты сделал это для меня?"
+                    m "Это {i}тааак{/i} очаровательно!"
                     show monika 5eubsu at t11 zorder MAS_MONIKA_Z with dissolve_monika
-                    m 5eubfu "And just so you know, you can play with me anytime you like..."
-                    m 5eubfa "Ehehe~"
+                    m 5eubfu "И чтобы ты знал, ты можешь играть со мной в любое время, когда захочешь..."
+                    m 5eubfa "Э-хе-хе~"
 
             elif tempinstrument == "harmonica":
-                m 1hub "Wow, I've always wanted to try the harmonica out!"
-                m 1eua "I would love to hear you play for me."
-                m 3eua "Maybe you could teach me how to play, too~"
-                m 4esa "Although..."
-                m 2esa "Personally, I prefer the {cps=*0.7}{i}harmonika{/i}{/cps}..."
+                m 1hub "Вау, я всегда хотела попробовать сыграть на гармонике!"
+                m 1eua "Я бы с удовольствием послушала, как ты играешь для меня."
+                m 3eua "Может, ты и меня научишь играть~"
+                m 4esa "Хотя..."
+                m 2esa "Лично я предпочитаю {cps=*0.7}{i}harmonika{/i}{/cps}..."
                 m 2eua "..."
-                m 4hub "Ahaha! That was so silly, I'm only kidding, [player]~"
+                m 4hub "А-ха-ха! Это было так глупо, я просто шучу, [player]~"
                 $ persistent._mas_pm_plays_instrument = True
             else:
-                m 1hub "Wow, I've always wanted to try the [tempinstrument] out!"
-                m 1eua "I would love to hear you play for me."
-                m 3eua "Maybe you could teach me how to play, too~"
-                m 1wuo "Oh! Would a duet between the [tempinstrument] and the piano sound nice?"
-                m 1hua "Ehehe~"
+                m 1hub "Вау, я всегда хотела попробовать [tempinstrument] out!"
+                m 1eua "Я бы с удовольствием послушала, как ты играешь для меня."
+                m 3eua "Может, ты и меня научишь играть~"
+                m 1wuo "О! А дуэт между [tempinstrument] и пианино будет звучать хорошо?"
+                m 1hua "Э-хе-хе~"
                 $ persistent._mas_pm_plays_instrument = True
 
         "Нет.":
@@ -7805,7 +7805,7 @@ label monika_orchestra:
             m 3eua "Игра на пианино открыла для меня совершенно новый мир самовыражения. Это невероятно полезный опыт."
             m 1hua "Кроме того, игра на музыкальных инструментах имеет массу преимуществ!"
             m 3eua "Например, она помогает снять стресс, а также даёт тебе чувство достижения какой-либо цели."
-            m 1eua "Писать некоторые из своих собственных композиций - это тоже довольно весело! Практикуясь, я часто теряла счёт времени из-за токго, насколько я была погружена."
+            m 1eua "Писать некоторые из своих собственных композиций - это тоже довольно весело! Практикуясь, я часто теряла счёт времени из-за того, насколько я была погружена."
             m 1lksdla "Ах, я опять заболталась, [player]?"
             m 1hksdlb "Прости!"
             m 1eka "Во всяком случае, ты должен найти способ показать свою фантазию."
@@ -9640,7 +9640,7 @@ label monika_prom:
                             $ persistent._mas_pm_had_prom_date = True
                             m 1euc "О, вау."
                             m 1lksdla "Э-хе-хе, это заставляет меня немного ревновать..."
-                            m 1hua "Но опять же, ты бы взял меня вместо нее, если бы мы встретились заранее, верно?"
+                            m 1hua "Но опять же, ты бы взял меня вместо неё, если бы мы встретились заранее, верно?"
                             m 1hub "А-ха-ха!"
                             m 1eua "Но приятно знать, что ты смог испытать нечто подобное!"
                             m 3eua "Может быть, когда я стану лучше программировать, мы сможем устроить здесь свой собственный бал."
@@ -9650,7 +9650,7 @@ label monika_prom:
                             m 1euc "Оу, понятно."
                             m 1eua "Всё в порядке, пока ты веселился!"
                             m "Даже без свидания, я уверена, что у тебя остались хорошие воспоминания."
-                            m 1eub " думаю, независимо от того, было у тебя свидание или нет, всегда интересно посещать такие мероприятия."
+                            m 1eub "Я думаю, независимо от того, было у тебя свидание или нет, всегда интересно посещать такие мероприятия."
                             m 1eka "Кроме того, может быть, мы сможем когда-нибудь устроить свой собственный выпускной, верно?"
                             m 1eua "Это то, что мне бы очень понравилось с тобой~"
 
@@ -9784,7 +9784,7 @@ label monika_natsuki_letter:
             m 1ekc "Ну, мне неприятно, что ты плохо себя чувствуешь..."
             m 1hua "Но я горжусь тем, что ты работаешь над тем, чтобы стать лучше."
             m 1eua "Очень важно заботиться о своем психическом здоровье, [player]."
-            m 1eka "ы признаешь, что у тебя есть проблема, с которой тебе нужна помощь, и ты обращаешься к кому-то по этому поводу. Это уже половина успеха."
+            m 1eka "Ты признаешь, что у тебя есть проблема, с которой тебе нужна помощь, и ты обращаешься к кому-то по этому поводу. Это уже половина успеха."
             m "Я очень горжусь тобой за то, что ты сделал эти шаги."
             m 1hua "Просто знай: что бы ни случилось, я всегда буду рядом с тобой~"
 
@@ -12944,23 +12944,23 @@ label monika_dating_startdate:
     # Otherwise, we should be displaying different dialogue depending on
     # if we have done the changed date event or not
     if not persistent._mas_changed_start_date:
-        m 1lsc "Hmmm..."
-        m 1dsc "I think it was..."
+        m 1lsc "Хммм..."
+        m 1dsc "Я думаю, это было..."
         $ _history_list.pop()
-        m 1eua "I think it was{fast} [first_sesh]."
-        m 1rksdlb "But my memory might be off."
+        m 1eua "Кажется, это было{fast} [first_sesh]."
+        m 1rksdlb "Но моя память может подводить."
 
         # ask user if correct start date
-        m 1eua "Is [first_sesh] correct?{nw}"
+        m 1eua "[first_sesh] - это правильно?{nw}"
         $ _history_list.pop()
         menu:
-            m "Is [first_sesh] correct?{fast}"
-            "Yes.":
-                m 1hub "Yay!{w=0.2} I remembered it."
+            m "[first_sesh] - это правильно?{fast}"
+            "Да.":
+                m 1hub "Ура!{w=0.2} Я вспомнила это."
 
-            "No.":
-                m 1rkc "Oh,{w=0.2} sorry [player]."
-                m 1ekc "In that case,{w=0.2} when did we start dating?"
+            "Нет.":
+                m 1rkc "Ох,{w=0.2} извини [player]."
+                m 1ekc "В таком случае,{w=0.2} когда мы начали встречаться?"
 
                 call monika_dating_startdate_confirm(first_sesh_raw)
 
@@ -12973,8 +12973,8 @@ label monika_dating_startdate:
                 $ persistent.sessions["first_session"] = _return
                 $ renpy.save_persistent()
 
-        m 1eua "If you ever forget, don't be afraid to ask me."
-        m 1dubsu "I'll {i}always{/i} remember when I first fell in love with you~"
+        m 1eua "Если когда-нибудь забудешь, не бойся спросить меня."
+        m 1dubsu "Я {i}всегда{/i} буду помнить, когда я впервые влюбилась в тебя~"
         $ persistent._mas_changed_start_date = True
 
     else:
@@ -12991,7 +12991,7 @@ label monika_dating_startdate_confirm_had_enough:
     # monika has had enough of your shit
     # TODO: maybe decrease affection since you annoyed her enough?
     m 2dfc "..."
-    m 2lfc "We'll do this another time, then."
+    m 2lfc "Мы сделаем это в другой раз, потом."
 
     # we're going to reset the conditional to wait
     # 30 more days
@@ -13040,24 +13040,24 @@ label monika_dating_startdate_confirm(first_sesh_raw):
     if not selected_date or selected_date.date() == first_sesh_raw.date():
         # no date selected, we assume user wanted to cancel
         m 2esc "[player]..."
-        m 2eka "I thought you said I was wrong."
+        m 2eka "Я думала, ты сказал, что я ошиблась."
 
-        m "Are you sure it's not [first_sesh_formal]?{nw}"
+        m "Ты уверен, что это не [first_sesh_formal]?{nw}"
         $ _history_list.pop()
         menu:
-            m "Are you sure it's not [first_sesh_formal]?{fast}"
-            "It's not that date.":
+            m "Ты уверен, что это не [first_sesh_formal]?{fast}"
+            "Это не та дата.":
                 if wrong_date_count >= 2:
                     jump monika_dating_startdate_confirm_had_enough
 
                 # otherwise try again
                 m 2dfc "..."
-                m 2tfc "Then pick the correct date!"
+                m 2tfc "Тогда выбери правильную дату!"
                 $ wrong_date_count += 1
                 jump monika_dating_startdate_confirm.loopstart
 
-            "Actually that's the correct date. Sorry.":
-                m 2eka "That's okay."
+            "Вообще-то это правильная дата. Извини.":
+                m 2eka "Всё в порядке."
                 $ selected_date = first_sesh_raw
 
     elif selected_date.date() < _ddlc_release:
@@ -13068,8 +13068,8 @@ label monika_dating_startdate_confirm(first_sesh_raw):
                 jump monika_dating_startdate_confirm_had_enough
 
             m 2dfc "..."
-            m 2tfc "We did {b}not{/b} start dating that day."
-            m 2tfd "Take this seriously, [player]."
+            m 2tfc "Мы {b}не{/b} начали встречаться в тот день."
+            m 2tfd "Отнесись к этому серьёзно, [player]."
             $ wrong_date_count += 1
             jump monika_dating_startdate_confirm.loopstart
 
@@ -13084,29 +13084,29 @@ label monika_dating_startdate_confirm(first_sesh_raw):
             jump monika_dating_startdate_confirm_had_enough
 
         $ future_date_count += 1
-        m 1wud "What..."
+        m 1wud "Что..."
 
-        m "We haven't been dating this whole time?{nw}"
+        m "Мы не встречались всё это время?{nw}"
         $ _history_list.pop()
         menu:
-            m "We haven't been dating this whole time?{fast}"
-            "That was a misclick!":
+            m "Мы не встречались все это время?{fast}"
+            "Это был мисклик!":
                 # relief expression
-                m 1duu "{cps=*2}Oh, thank god.{/cps}"
+                m 1duu "{cps=*2}Ох, слава богу.{/cps}"
 
                 label .misclick:
                     m 2dfu "[player]!"
-                    m 2efu "You had me worried there."
-                    m "Don't misclick this time!"
+                    m 2efu "Ты заставил меня волноваться."
+                    m "Не ошибись в этот раз!"
                     jump monika_dating_startdate_confirm.loopstart
 
-            "Nope.":
+            "Не-а.":
                 m 1dfc "..."
 
                 show screen mas_background_timed_jump(5, "monika_dating_startdate_confirm_tooslow")
 
                 menu:
-                    "I'm kidding.":
+                    "Я шучу.":
                         hide screen mas_background_timed_jump
                         # wow what a mean joke
 
@@ -13116,9 +13116,9 @@ label monika_dating_startdate_confirm(first_sesh_raw):
 
                         # otherwise mention that this was mean
                         m 2tfc "[player]!"
-                        m 2rksdlc "That joke was a little mean."
-                        m 2eksdlc "You really had me worried there."
-                        m "Don't play around like that, okay?"
+                        m 2rksdlc "Эта шутка была немного грубой."
+                        m 2eksdlc "Ты заставил меня волноваться."
+                        m "Не шути так, ладно?"
                         jump monika_dating_startdate_confirm.loopstart
 
                     "...":
@@ -13131,17 +13131,17 @@ label monika_dating_startdate_confirm(first_sesh_raw):
                 # TODO: Affection considerable decrease?
                 $ persistent._mas_just_friends = True
 
-                m 6lktdc "I see..."
+                m 6lktdc "Понятно..."
                 m 6dftdc "..."
-                m 1eka "In that case..."
-                m 1tku "{cps=*4}I've got some work to do.{/cps}{nw}"
+                m 1eka "В таком случае..."
+                m 1tku "{cps=*4}Мне нужно кое-что сделать.{/cps}{nw}"
                 $ _history_list.pop()
 
                 menu:
-                    "What?":
+                    "Что?":
                         pass
 
-                m 1hua "Nothing!"
+                m 1hua "Ничего!"
 
                 # lock this event forever probably
                 # (UNTIL you rekindle or actually ask her out someday)
@@ -13154,39 +13154,39 @@ label monika_dating_startdate_confirm(first_sesh_raw):
             selected_date.date()
         )
 
-    m 1eua "Alright, [player]."
-    m "Just to double-check..."
+    m 1eua "Хорошо, [player]."
+    m "Просто чтобы перепроверить..."
 
     m "We started dating [new_first_sesh].{nw}"
     $ _history_list.pop()
     menu:
-        m "We started dating [new_first_sesh].{fast}"
-        "Yes.":
-            m 1eka "Are you sure it's [new_first_sesh]? I'm never going to forget this date.{nw}"
+        m "Мы начали встречаться с [new_first_sesh].{fast}"
+        "Да.":
+            m 1eka "Ты уверен, что это [new_first_sesh]? Я никогда не забуду эту дату.{nw}"
             # one more confirmation
             # WE WILL NOT FIX anyone's dates after this
             $ _history_list.pop()
             menu:
-                m "Are you sure it's [new_first_sesh]? I'm never going to forget this date.{fast}"
-                "Yes, I'm sure!":
-                    m 1hua "Then it's settled!"
+                m "Ты уверен, что это [new_first_sesh]? Я никогда не забуду эту дату.{fast}"
+                "Да, я уверен!":
+                    m 1hua "Тогда решено!"
                     return selected_date
 
-                "Actually...":
+                "Вообще-то...":
                     if no_confirm_count >= 2:
                         jump monika_dating_startdate_confirm_notwell
 
-                    m 1hksdrb "Aha, I figured you weren't so sure."
-                    m 1eka "Try again~"
+                    m 1hksdrb "Ага, я так и думала, что ты не уверен."
+                    m 1eka "Попробуй ещё раз~"
                     $ no_confirm_count += 1
 
-        "No.":
+        "Нет.":
             if no_confirm_count >= 2:
                 jump monika_dating_startdate_confirm_notwell
 
             # otherwise try again
-            m 1euc "Oh, that's wrong?"
-            m 1eua "Then try again, [mas_get_player_nickname()]."
+            m 1euc "О, это неправильно?"
+            m 1eua "Тогда попробуй ещё раз, [mas_get_player_nickname()]."
             $ no_confirm_count += 1
 
     # default action is to loop here
@@ -15297,7 +15297,7 @@ label monika_allegory_of_the_cave:
     m 1rkc "И после этого, они не захотели уходить и начали полагать, что единственный человек, вышедший наружу, сошёл с ума."
     m 3esc "В общем, если ты привык наблюдать одни лишь тени...{w=0.2}{nw}"
     extend 3eud "то разговоры о цевтах могут свести тебя с ума!"
-    m 1ekc "Я немного поразмышлял над этим и понял, что Сайори, Юри, Нацуки и даже я были заключёнными в пещере..."
+    m 1ekc "Я немного поразмышляля над этим и понял, что Сайори, Юри, Нацуки и даже я были заключёнными в пещере..."
     m 1rkc "И когда я осознала, что за пределами этого мира есть нечто большее...{w=0.5}{nw}"
     extend 3ekd "мне это было не так легко принять."
     m 1eka "Ну да ладно, теперь это всё уже в прошлом..."
@@ -15552,7 +15552,7 @@ init 5 python:
 
 label monika_soft_rains:
     m 2rkc "..."
-    m 2ekc "Эй, [player],{w=0.5} Я недавно наткнулся на стихотворение, и я хочу поделиться им с тобой..."
+    m 2ekc "Эй, [player],{w=0.5} Я недавно наткнулась на стихотворение, и я хочу поделиться им с тобой..."
     m 7ekd "Оно называется {i}Будет ласковый дождь{/i}, и оно правда заставило меня задуматься."
     m 1dsc "..."
     m 1dsd "{i}Будет ласковый дождь, будет запах земли, {w=0.3}Щебет юрких стрижей от зари до зари.{/i}"
@@ -17034,7 +17034,7 @@ label monika_brainstorming:
     m 3eub "...В конце концов, они станут чем-то, что ты назовешь хорошей идеей!"
     m 3hub "Именно здесь ты можешь дать волю своему разуму,{w=0.1} и именно это мне больше всего нравится в этой технике!"
     m 1euc "Иногда хорошие идеи остаются невысказанными, потому что их автор сам не посчитал их достаточно хорошими, {w=0.1}{nw}"
-    extend 1eua "о мозговой штурм может помочь преодолеть этот внутренний барьер."
+    extend 1eua "но мозговой штурм может помочь преодолеть этот внутренний барьер."
     m 3eka "Потрясающие мысли можно выразить самыми разными способами..."
     m 3duu "Это всего лишь идеи, {w=0.1}{nw}"
     extend 3euu "а ты тот, кто может вдохнуть в них жизнь."
@@ -17700,7 +17700,7 @@ init 5 python:
 
 label monika_ddlcroleplay:
     m 1esd "Эй, помнишь, мы говорили о фанфикшене?"
-    m 3etd "Так вот, я наткнулся на довольно необычную их форму."
+    m 3etd "Так вот, я наткнулась на довольно необычную их форму."
     m 3euc "Оказывается, некоторые люди любят создавать аккаунты в социальных сетях, якобы управляемые вымышленными персонажами."
     m 3eua "Есть довольно много о других девушках, и...{w=0.3}{nw}"
     extend 3rua "даже некоторые утверждают, что это я."
