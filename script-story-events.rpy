@@ -19,32 +19,32 @@ init 5 python:
     #NOTE: This unlocks the monika_gender_redo event
 
 label mas_gender:
-    m 2eud "...[player]? So I've been thinking a bit."
-    m 2euc "I've mentioned before that the 'you' in the game might not reflect the real you."
-    m 7rksdla "But I guess I just assumed that you were probably a guy."
-    m 3eksdla "...The main character was, after all."
-    m 3eua "But if I'm going to be your girlfriend, I should probably know at least this much about the real you."
+    m 2eud "...[player]? Я немного подумала."
+    m 2euc "Я уже говорила, что 'ты' в игре может не отражать реального тебя."
+    m 7rksdla "Но я думаю, точнее предполагаю, что ты, наверное, парень."
+    m 3eksdla "...В конце концов, главный герой был им."
+    m 3eua "Но если я собираюсь стать твоей девушкой, я должна знать хотя бы столько о настоящем тебе."
 
-    m 1eua "So, what's your gender?{nw}"
+    m 1eua "Итак, какого ты пола?{nw}"
     $ _history_list.pop()
     menu:
-        m "So, what's your gender?{fast}"
+        m "Итак, какого ты пола?{fast}"
 
-        "Male.":
+        "Парень.":
             $ persistent._mas_pm_is_trans = False
             $ persistent.gender = "M"
-            m 3eua "Okay [player], thanks for confirming that for me."
-            m 1hksdlb "Not that I would have been bothered if you answered differently, mind you!"
+            m 3eua "Хорошо [player], спасибо, что подтвердил это для меня."
+            m 1hksdlb "Не то чтобы я беспокоилась, если бы ты ответил по-другому, заметь!"
 
-        "Female.":
+        "Девушка.":
             $ persistent._mas_pm_is_trans = False
             $ persistent.gender = "F"
-            m 2eud "Oh? So you're a girl?"
-            m 2hksdlb "I hope I didn't say anything to offend you before!"
-            m 7rksdlb "...I guess that's why they say you shouldn't make assumptions, ahaha!"
-            m 3eka "But honestly, it doesn't matter to me at all..."
+            m 2eud "О? Так ты девушка?"
+            m 2hksdlb "Надеюсь, я не говорила ничего такого, что могло бы тебя обидеть!"
+            m 7rksdlb "...Наверное, поэтому и говорят, что не стоит делать предположений, а-ха-ха!"
+            m 3eka "Но, честно говоря, для меня это не имеет никакого значения..."
 
-        "Neither.":
+        "Ни тот, ни другой.":
             $ persistent._mas_pm_is_trans = False
             $ persistent.gender = "X"
             call mas_gender_neither
@@ -84,15 +84,15 @@ init 5 python:
     )
 
 label monika_gender_redo:
-    m 1eka "Of course, [player]!"
+    m 1eka "Конечно, [player]!"
 
     if not mas_getEVL_shown_count("monika_gender_redo"):
-        m 3eka "Have you made some personal discoveries since the last time we talked about this?{nw}"
+        m 3eka "Ты открыл для себя что-то новое с тех пор, как мы говорили об этом в последний раз?{nw}"
         $ _history_list.pop()
         menu:
-            m "Have you made some personal discoveries since the last time we talked about this?{fast}"
+            m "Ты открыл для себя что-то новое с тех пор, как мы говорили об этом в последний раз?{fast}"
 
-            "Yes.":
+            "Да.":
                 m 1eka "I see. I know I've been there."
                 m 3hua "I'm so proud of you for going on that journey of self-discovery."
                 m 1eub "...And even prouder of you for being courageous enough to tell me!"
@@ -379,7 +379,133 @@ init 3 python:
         "wicked",
         "witch",
         "worthless",
-        "wrong"
+        "wrong",
+        "сперма",
+        "сумашедшая",
+        "мошенница",
+        "анал",
+        "жопа",
+        "безумная",
+        "эгоистка",
+        "мазохистка",
+        "чокнутая",
+        "соси",
+        "конча",
+        "тварь",
+        "жестокая",
+        "ужасная",
+        "сука",
+        "кровь",
+        "бычая",
+        "хулиганка",
+        "извращенка",
+        "грешная",
+        "жуткая",
+        "пизда",
+        "чёрт",
+        "черт",
+        "хуй",
+        "хер",
+        "немая",
+        "злая",
+        "грязная",
+        "ебать",
+        "трахать",
+        "ужасная",
+        "ненавидеть",
+        "ненавижу",
+        "противная",
+        "ужасная",
+        "страшная",
+        "жуткая",
+        "аморальная",
+        "убийство",
+        "убивать",
+        "тупая",
+        "неприятная",
+        "гнусная",
+        "яд",
+        "ядовитая",
+        "накипь",
+        "дерьмо",
+        "убогая",
+        "вонючая",
+        "глупая",
+        "тупая",
+        "тролль",
+        "уродливая",
+        "мерзкая",
+        "отходы",
+        "плохая",
+        "ведьма",
+        "сволочь",
+        "иди на фиг",
+        "иди нафиг",
+        "идинафиг",
+        "пошланафиг",
+        "иди нахуй",
+        "иди на хуй",
+        "иди нах",
+        "идинахуй",
+        "идинах",
+        "пошла нахуй",
+        "пошланахуй",
+        "пошла нах",
+        "пошланах",
+        "мымра",
+        "стерва",
+        "бля",
+        "блядь",
+        "блять",
+        "больная",
+        "уродина",
+        "шлюха",
+        "пиздаболка",
+        "трап",
+        "игрушка",
+        "сиськи",
+        "сиська",
+        "титьки",
+        "титька",
+        "^сиськ$",
+        "^титьк$",
+        "тампон",
+        "неряха",
+        "потаскуха",
+        "грязнуля",
+        "бикса",
+        "лахудра",
+        "насильница",
+        "киска",
+        "порно",
+        "педо",
+        "трусы",
+        "трусики",
+        "панцу",
+        "подушка",
+        "подкладка",
+        "негр",
+        "негротянка",
+        "нига",
+        "нигер",
+        "лесбиянка",
+        "лесбуха",
+        "лезбо",
+        "гейша",
+        "гомосексуальная",
+        "фетиш",
+        "плод",
+        "пробка",
+        "анус",
+        "приклад",
+        "пума",
+        "мамаша",
+        "зад",
+        "задница",
+        "фейк",
+        "ненастоящая",
+        "лузер",
+        "неудачница"
     ]
 
     #Base list for good nicknames. Apply modifiers for specifying the use
@@ -404,18 +530,52 @@ init 3 python:
         "queen",
         "senpai",
         "sunshine",
-        "sweet"
+        "sweet",
+        "ангел",
+        "красивая",
+        "лучшая",
+        "прелестная",
+        "милашка",
+        "дорогая",
+        "классная",
+        "сердце",
+        "солнышко",
+        "милочка",
+        "зайка",
+        "любовь",
+        "мони",
+        "моня",
+        "моничка",
+        "монечка",
+        "монька",
+        "принцесса",
+        "сладкая",
+        "красавица",
+        "любимая",
+        "прекрасная",
+        "кошечка",
+        "кисочка",
+        "кисонька",
+        "милая",
+        "киса",
+        "лапочка",
+        "ласковая",
+        "солнышко"
     ]
 
     #Modifier for the player's name choice
     mas_good_nickname_list_player_modifiers = [
         "king",
-        "prince"
+        "prince",
+        "король",
+        "принц"
     ]
 
     #Modifier for Monika's nickname choice
     mas_good_nickname_list_monika_modifiers = [
         "moni",
+        "мони",
+        "моня"
     ]
 
     mas_good_player_nickname_list = mas_good_nickname_list_base + mas_good_nickname_list_player_modifiers
@@ -472,7 +632,71 @@ init 3 python:
         "thicc",
         "thighs",
         "uncle",
-        "virgin"
+        "virgin",
+        "брат",
+        "сестра",
+        "бро",
+        "сис",
+        "братан",
+        "сеструха",
+        "братец",
+        "сестричка",
+        "папа",
+        "папочка",
+        "батя",
+        "мама",
+        "мамка",
+        "мамочка",
+        "лоля",
+        "мокрый",
+        "мокрая",
+        "возбуждать",
+        "тётя",
+        "бэтмен",
+        "производитель",
+        "заводчик",
+        "селекционер",
+        "бобба",
+        "босс",
+        "хозяин",
+        "женщина-кошка",
+        "кошкодевочка",
+        "кузен",
+        "кузина",
+        "дефлоратор",
+        "эрекция",
+        "палец",
+        "перст",
+        "возбуждённая",
+        "лизать",
+        "облизывание",
+        "облизывать",
+        "вылизывать",
+        "мастер",
+        "господин",
+        "мастурбация",
+        "госпожа",
+        "моани",
+        "момика",
+        "пошлая",
+        "пошлый",
+        "оргазм",
+        "повелитель",
+        "владыка",
+        "владелец",
+        "проникновение",
+        "секс",
+        "шлепок",
+        "супермен",
+        "супервумен",
+        "ляжки",
+        "бёдра",
+        "бедро",
+        "дядя",
+        "дядька",
+        "дядюшка",
+        "девственница",
+        "целка"
     ]
 
     mas_awkward_quips = [

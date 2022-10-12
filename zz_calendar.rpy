@@ -86,7 +86,7 @@ init -1 python:
         NOTE_COLOR = "#181818"
 
         # Font used for the note
-        NOTE_FONT = "mod_assets/font/Adventure.ttf"
+        NOTE_FONT = "mod_assets/font/comic.ttf"
 
         # Month names constant array
         MONTH_NAMES = ["Неизвестно", "Январь", "Февраль",
@@ -300,7 +300,7 @@ M̼̤̱͇̤ ͈̰̬͈̭ͅw̩̜͇͈ͅa̲̩̭̩ͅs̙ ̣͔͓͚̰h̠̯̫̼͉e̗̗̮r�
             # Change title depending on flag
             if select_date:
                 self.text_title = Text(
-                    "Select a Date",
+                    "Выбрать дату",
                     font=gui.default_font,
                     size=33,
                     color=("#ffffff" if self.day_mode else "#000000"),
@@ -308,7 +308,7 @@ M̼̤̱͇̤ ͈̰̬͈̭ͅw̩̜͇͈ͅa̲̩̭̩ͅs̙ ̣͔͓͚̰h̠̯̫̼͉e̗̗̮r�
                 )
             else:
                 self.text_title = Text(
-                    "Calendar",
+                    "Календарь",
                     font=gui.default_font,
                     size=33,
                     color=("#ffffff" if self.day_mode else "#000000"),

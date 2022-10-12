@@ -778,16 +778,16 @@ init 5 python:
     )
 
 label mas_holiday_o31_returned_home_relaunch:
-    m 1eua "So, today is..."
-    m 1euc "...wait."
+    m 1eua "Итак, сегодня..."
+    m 1euc "...подожди."
     m "..."
-    m 2wuo "Oh!"
-    m 2wuw "Oh my gosh!"
-    m 2hub "It's Halloween already, [player]."
-    m 1eua "...{w=1}Say."
-    m 3eua "I'm going to close the game."
-    m 1eua "After that you can reopen it."
-    m 1hubsa "I have something special in store for you, ehehe~"
+    m 2wuo "О!"
+    m 2wuw "О боже!"
+    m 2hub "Так сегодня же Хэллоуин, [player]."
+    m 1eua "...{w=1}Так что слушай."
+    m 3eua " собираюсь закрыть игру."
+    m 1eua "После этого ты можешь открыть её снова."
+    m 1hubsa "У меня есть кое-что особенное для тебя, э-хе-хе~"
     $ persistent._mas_o31_relaunch = True
     $ mas_rmallEVL("mas_holiday_o31_returned_home_relaunch")
     return "quit"
@@ -827,7 +827,7 @@ label mas_o31_cleanup:
             mas_acs_desk_candy_jack
         )
 
-    m 1eua "One second [player], I'm just going to take the decorations down.{w=0.3}.{w=0.3}.{nw}"
+    m 1eua "Секунду [player], я просто сниму декорации.{w=0.3}.{w=0.3}.{nw}"
 
     python hide:
         for acs_ in o31_desk_acs_tuple:
@@ -849,7 +849,7 @@ label mas_o31_cleanup:
 
     call mas_transition_from_emptydesk("monika 1hua")
 
-    m 3hua "All done~"
+    m 3hua "Готово~"
 
     $ del o31_desk_acs_tuple
 
@@ -882,18 +882,18 @@ label greeting_o31_marisa:
         #   vignette should be enabled
         call spaceroom(dissolve_all=True, scene_change=True, force_exp='monika 1eua_static')
 
-    m 1eua "Ah!"
-    m 1hua "Seems like my spell worked."
-    m 3efu "As my newly summoned servant, you'll have to do my bidding until the very end!"
+    m 1eua "Ах!"
+    m 1hua "Похоже, мое заклинание сработало."
+    m 3efu "Как мой новопризванный слуга, ты должен будешь выполнять мои приказы до самого конца!"
     m 1rksdla "..."
-    m 1hub "Ahaha!"
+    m 1hub "А-ха-ха!"
 
     # decoded CG means we display CG
     if store.mas_o31_event.cg_decoded:
         $ cg_delay = datetime.timedelta(seconds=20)
 
         # got cg
-        m "I'm over here, [player]~"
+        m "Я здесь, [player]~"
         window hide
 
         show mas_o31_marisa_cg zorder 20 at mas_o31_cg_scroll with dissolve
@@ -905,28 +905,28 @@ label greeting_o31_marisa:
         show monika 1hua at i11 zorder MAS_MONIKA_Z
 
         window auto
-        m "Tadaa!~"
+        m "Таа-даа!~"
 
     #Post scroll dialogue
-    m 1hua "Well..."
-    m 1eub "What do you think?"
-    m 1tuu "Suits me pretty well, right?"
-    m 1eua "It took me quite a while to make this costume, you know."
-    m 3hksdlb "Getting the right measurements, making sure nothing was too tight or loose, that sort of stuff."
-    m 3eksdla "...Especially the hat!"
-    m 1dkc "The ribbon wouldn't stay still at all..."
-    m 1rksdla "Luckily I got that sorted out."
-    m 3hua "I'd say I did a good job myself."
-    m 3eka "I'm wondering if you'll be able to see what's different today."
-    m 3tub "Besides my costume of course~"
-    m 1hua "But anyway..."
+    m 1hua "Ну..."
+    m 1eub "Что скажешь?"
+    m 1tuu "Мне очень идёт, правда?"
+    m 1eua "У меня ушло довольно много времени на создание этого костюма, знаешь ли."
+    m 3hksdlb "Снятие правильных мерок, проверка, чтобы ничего не было слишком тугим или свободным, и всё такое."
+    m 3eksdla "...Особенно шляпа!"
+    m 1dkc "Лента никак не могла закрепиться..."
+    m 1rksdla "К счастью, я с этим разобралась."
+    m 3hua "Я бы сказала, что сама хорошо поработала."
+    m 3eka "Мне интересно, сможешь ли ты увидеть, что сегодня изменилось."
+    m 3tub "Кроме моего костюма, конечно~"
+    m 1hua "Но в любом случае..."
 
     if store.mas_o31_event.cg_decoded:
         show monika 1eua
         hide mas_o31_marisa_cg with dissolve
 
-    m 3ekbsa "I'm really excited to spend Halloween with you."
-    m 1hua "Let's have fun today!"
+    m 3ekbsa "Я очень хочу провести Хэллоуин с тобой."
+    m 1hua "Давай сегодня повеселимся!"
 
     call greeting_o31_deco
     call greeting_o31_cleanup
@@ -953,9 +953,9 @@ label greeting_o31_rin:
     # ASSUME vignette
     call spaceroom(hide_monika=True, scene_change=True)
 
-    m "Ugh, I hope I got these braids right."
-    m "Why does this costume have to be so complicated...?"
-    m "Oh shoot! [title_cased_hes] here!"
+    m "Ух, надеюсь, я правильно заплела эти косички."
+    m "Почему этот костюм должен быть таким сложным...?"
+    m "О, блин! [title_cased_hes] здесь!"
     window hide
     pause 3.0
 
@@ -964,7 +964,7 @@ label greeting_o31_rin:
 
         # got cg
         window auto
-        m "Say, [player]..."
+        m "Скажи, [player]..."
         window hide
 
         show mas_o31_rin_cg zorder 20 at mas_o31_cg_scroll with dissolve
@@ -975,26 +975,26 @@ label greeting_o31_rin:
 
         hide emptydesk
         window auto
-        m "What do {i}nya{/i} think?"
+        m "Что {i}ня{/i} думаешь?"
 
         scene black
         pause 1.0
         call spaceroom(scene_change=True, dissolve_all=True, force_exp='monika 1hksdlb_static')
-        m 1hksdlb "Ahaha, saying that out loud was more embarrassing than I thought..."
+        m 1hksdlb "А-ха-ха, произнести это вслух оказалось более неловко, чем я думала..."
 
     else:
         call mas_transition_from_emptydesk("monika 1eua")
-        m 1hub "Hi, [player]!"
-        m 3hub "Do you like my costume?"
+        m 1hub "Привет, [player]!"
+        m 3hub "Тебе нравится мой костюм?"
 
     # regular dialogue
-    m 3etc "Honestly, I don't even know who this is supposed to be."
-    m 3etd "I just found it in the closet with a note attached that had the word 'Rin', a drawing of a girl pushing a wheelbarrow, and some blue floaty thingies."
-    m 1euc "Along with instructions on how to style your hair to go along with this outfit."
-    m 3rtc "Judging by these cat ears, I'm guessing this character is a catgirl."
-    m 1dtc "...But why would she push a wheelbarrow around?"
-    m 1hksdlb "...Oh and it was {i}such{/i} a pain getting my hair done...{w=0.2}{nw}"
-    extend 1eub "so I hope you like the costume!"
+    m 3etc "Честно говоря, я даже не знаю, кто это должен быть."
+    m 3etd "Я просто нашла его в шкафу с прикрепленной запиской, в которой было слово 'Рин', рисунок девушки, толкающей тачку, и какие-то голубые плавающие штучки."
+    m 1euc "Вместе с инструкциями о том, как уложить волосы, чтобы они сочетались с этим нарядом."
+    m 3rtc "Судя по этим кошачьим ушам, я предполагаю, что этот персонаж - девушка-кошка."
+    m 1dtc "...Но зачем ей толкать тачку?"
+    m 1hksdlb "...О, и это было {i}такое{/i} мучение - делать такую прическу...{w=0.2}{nw}"
+    extend 1eub "так что, надеюсь, костюм тебе понравился!"
 
     call greeting_o31_deco
     call greeting_o31_cleanup
@@ -1015,11 +1015,11 @@ label greeting_o31_orcaramelo_hatsune_miku:
     if not persistent._mas_o31_relaunch:
         call spaceroom(hide_monika=True, scene_change=True, dissolve_all=True)
         #moni is off-screen
-        m "{i}~Don't forget my voice~{/i}"
-        m "{i}~My signal crosses dimensions~{/i}"
-        m "{i}~Don't call me virtual~{/i}"
-        m "{i}~I still want to be l-{/i}"
-        m "Oh!{w=0.5} Seems like someone's heard me."
+        m "{i}~Не забывай мой голос~{/i}"
+        m "{i}~Мой сигнал пересекает измерения~{/i}"
+        m "{i}~Не называй меня виртуальной~{/i}"
+        m "{i}~Я всё ещё хочу быть лю-{/i}"
+        m "Ой!{w=0.5} Кажется, меня кто-то подслушивает."
 
         #show moni now
         call mas_transition_from_emptydesk("monika 3hub")
@@ -1027,13 +1027,13 @@ label greeting_o31_orcaramelo_hatsune_miku:
     else:
         call spaceroom(scene_change=True, dissolve_all=True)
 
-    m 3hub "Welcome back, [player]!"
-    m 1eua "So...{w=0.5}what do you think?"
-    m 3eua "I think this costume really suits me."
-    m 3eub "I especially love how the headset looks too!"
-    m 1rksdla "Though I can't say it's too comfortable for moving around..."
-    m 3tsu "So don't expect me to give you a performance today, [player]!"
-    m 1hub "Ahaha~"
+    m 3hub "С возвращением, [player]!"
+    m 1eua "Ну...{w=0.5}что ты думаешь?"
+    m 3eua "Думаю, этот костюм мне очень идёт."
+    m 3eub "Мне особенно нравится, как выглядит гарнитура!"
+    m 1rksdla "Хотя я не могу сказать, что он слишком удобен для передвижения..."
+    m 3tsu "Так что не жди от меня сегодняшнего выступления, [player]!"
+    m 1hub "А-ха-ха~"
     call greeting_o31_deco
     call greeting_o31_cleanup
     return
@@ -1055,28 +1055,28 @@ label greeting_o31_orcaramelo_sakuya_izayoi:
     #moni is off-screen
     if not persistent._mas_o31_relaunch:
         m "..."
-        m "{i}Hm{/i}?"
-        m "{i}Ah, there must have been some sort of mistake.{w=0.5} I wasn't warned of any guests...{/i}"
-        m "{i}No matter. None shall disturb the m-{/i}"
-        m "Oh!{w=0.5} It's you, [player]!"
+        m "{i}Хм{/i}?"
+        m "{i}Ах, должно быть, произошла какая-то ошибка.{w=0.5} Меня не предупредили ни о каких гостях...{/i}"
+        m "{i}Неважно. Никто не должен беспокоить м-{/i}"
+        m "О!{w=0.5} Это ты, [player]!"
 
     else:
         m ".{w=0.3}.{w=0.3}.{w=0.3}{nw}"
-        m "Welcome{w=0.3}, to the Scarlet Devil Spaceroom..."
+        m "Добро пожаловать{w=0.3}, в Космическое пространство Алого Дьявола..."
         m "[player]."
-        m "Please, let me offer you our hospitality."
-        m "Ahaha! How was that impression?"
+        m "Пожалуйста, позвольте предложить вам наше гостеприимство."
+        m "А-ха-ха! Ну, какое у тебя впечатление сложилось"
 
     #show moni now
     call mas_transition_from_emptydesk("monika 3hub")
 
-    m 3hub "Welcome back!"
-    m 3eub "What do you think of my costume choice?"
-    m 3hua "Ever since you gave it to me I just knew I'd be wearing it today!"
+    m 3hub "С возвращением!"
+    m 3eub "Что ты думаешь о моем выборе костюма?"
+    m 3hua "С тех пор, как ты мне его подарил, я просто знала, что надену его сегодня!"
     m 2tua "..."
-    m 2tub "You know, [player], just because I'm dressed as a maid doesn't mean I'll be following your every command..."
+    m 2tub "Знаешь, [player], то, что я одета как горничная, не означает, что я буду выполнять все твои приказы..."
     show monika 5kua at t11 zorder MAS_MONIKA_Z with dissolve_monika
-    m 5kua "Though I might make some exceptions, ehehe~"
+    m 5kua "Хотя я могу сделать некоторые исключения, э-хе-хе~"
     show monika 1eua at t11 zorder MAS_MONIKA_Z with dissolve_monika
     call greeting_o31_deco
     call greeting_o31_cleanup
@@ -1098,62 +1098,62 @@ label greeting_o31_briaryoung_shuchiin_academy_uniform:
 
     #moni is off-screen
     if not persistent._mas_o31_relaunch:
-        m "Ugh..."
-        m "How {i}is{/i} this bow supposed to stay there?"
-        m "People can say what they want about my ribbon, but at least it's somewhat practical..."
-        m "...I guess that will work, hopefully it doesn't fall off as soon as--{nw}"
-        m "Time to find out..."
+        m "Агх..."
+        m "Как {i}этот{/i} бант должен там держаться?"
+        m "Люди могут говорить что хотят о моей ленте, но она хотя бы в какой-то степени практична..."
+        m "...думаю, это сработает, надеюсь, он не отвалится, как только--{nw}"
+        m "Время узнать..."
 
     else:
         m ".{w=0.3}.{w=0.3}.{w=0.3}{nw}"
-        m "Almost ready, [player]..."
-        m "Just trying to figure out how this bow is supposed to stay on."
+        m "Почти готова, [player]..."
+        m "Просто пытаюсь понять, как этот бант должен держаться."
         m ".{w=0.3}.{w=0.3}.{w=0.3}{nw}"
-        m "Hopefully that's good enough!"
+        m "Надеюсь, этого достаточно!"
 
     #show moni now
     call mas_transition_from_emptydesk("monika 2hub")
 
-    m 2hub "Welcome back!"
-    m 2eub "Well, what do you think?"
-    m 7tuu "I thought Instead of being president, I could be the secretary for today..."
+    m 2hub "С возвращением!"
+    m 2eub "Ну, что скажешь?"
+    m 7tuu "Я подумала, что вместо того, чтобы быть президентом, я могла бы быть секретарем на сегодня..."
 
     if mas_isMoniAff(higher=True):
-        m 3rtu "Or maybe even a love detective, but that's probably a waste, I've already found that..."
+        m 3rtu "А может, даже любовным детективом, но это, наверное, зря, я и так уже всё нашла..."
 
-    m 3hua "Ehehe~"
+    m 3hua "Э-хе-хе~"
     call greeting_o31_deco
     call greeting_o31_cleanup
     return
 
 label greeting_o31_deco:
-    m 1eua "Anyway..."
-    m 3eua "Do you like what I've done with the room?"
-    m 3tuu "I just love the creepy ambiance associated with Halloween and tried to create a bit of my own."
-    m 1eud "You can really do a lot just with lighting, you know?"
-    m 3tub "Not to mention sometimes the creepiest things of all are those that are just {i}a bit{/i} off..."
-    m 1eua "I think the cobwebs are a nice touch as well..."
-    m 1rka "{cps=*2}I'm sure Amy would really like them.{/cps}{nw}"
+    m 1eua "В общем..."
+    m 3eua "Тебе нравится, что я сделала с комнатой?"
+    m 3tuu "Я просто люблю жуткую атмосферу, связанную с Хэллоуином, и попыталась создать что-то своё."
+    m 1eud "Ты действительно можешь многого добиться с помощью освещения, понимаешь?"
+    m 3tub "Не говоря уже о том, что иногда самые жуткие вещи - это те, которые просто {i}немного{/i}..."
+    m 1eua "Я думаю, что паутина - это тоже хороший штрих..."
+    m 1rka "{cps=*2}Я уверена, что Эми они бы очень понравились.{/cps}{nw}"
     $ _history_list.pop()
-    m 3hub "I'm super happy with how it all turned out!"
+    m 3hub "Я очень довольна тем, как всё получилось!"
     return
 
 label greeting_o31_generic:
     call spaceroom(scene_change=True, dissolve_all=True)
 
-    m 3hub "Trick or treat!"
-    m 3eub "Ahaha,{w=0.1} {nw}"
-    extend 3eua "I'm just kidding, [player]."
-    m 1hua "Welcome back...{w=0.5}{nw}"
-    extend 3hub "and Happy Halloween!"
+    m 3hub "Сладость или гадость!"
+    m 3eub "А-ха-ха,{w=0.1} {nw}"
+    extend 3eua "я просто шучу, [player]."
+    m 1hua "С возвращением...{w=0.5}{nw}"
+    extend 3hub "и Счастливого Хэллоуина!"
 
     #We'll address the room with this
     call greeting_o31_deco
 
-    m 3hua "By the way, what do you think of my costume?"
-    m 1hua "I really like it~"
-    m 1hub "Even more so that it was a gift from you, ahaha!"
-    m 3tuu "So feast your eyes on my costume while you can, ehehe~"
+    m 3hua "Кстати, что ты думаешь о моем костюме?"
+    m 1hua "Мне очень нравится~"
+    m 1hub "Тем более, что это был твой подарок, а-ха-ха!"
+    m 3tuu "Так что наслаждайся моим костюмом, пока можешь, э-хе-хе~"
 
     call greeting_o31_cleanup
     return
@@ -1216,11 +1216,11 @@ label greeting_o31_lingerie:
     pause 2.0
 
     menu:
-        "Hello?":
+        "Ау?":
             pause 5.0
 
-    m "Ehehe!"
-    m "Don't worry [player], I'm here..."
+    m "Э-хе-хе!"
+    m "Не волнуйся [player], я здесь..."
     call mas_o31_lingerie_end
     call greeting_o31_cleanup(skip_zoom=True)
     return
@@ -1252,18 +1252,18 @@ label mas_o31_lingerie:
 
     scene black
     pause 2.0
-    m "Oh no, did the power go out?"
-    m "How {cps=*2}fortunate{/cps}{nw}"
+    m "О нет, электричество отключили?"
+    m "Как {cps=*2}удачно{/cps}{nw}"
     $ _history_list.pop()
-    m "How {fast}unfortunate..."
-    m "I guess I'll just have to take advantage of this situation, [player]..."
+    m "Как {fast}жаль..."
+    m "Похоже, мне придется воспользоваться этой ситуацией, [player]..."
     call mas_o31_lingerie_end
     return
 
 label mas_o31_lingerie_end:
-    m "Say, have you ever heard of Devil's Night?"
-    m "It's a tradition in some places the night before Halloween for people to go out and act mischievous."
-    m "Well [player], I'm feeling a little mischievous myself tonight..."
+    m "Скажи, ты когда-нибудь слышал о Ночи Дьявола?"
+    m "Это традиция в некоторых местах в ночь перед Хэллоуином, когда люди выходят на улицу и ведут себя озорно."
+    m "Ну [player], я и сама сегодня чувствую себя немного озорной..."
     window hide
     pause 2.0
 
@@ -1281,19 +1281,19 @@ label mas_o31_lingerie_end:
 
     pause 2.0
     window auto
-    m 2tub "Ehehe, what do you think?"
-    m 2hub "It's a little different I know, you're probably not sure if you want to touch or run away, ahaha!"
-    m 7rua "It's probably not something I'd wear all the time, but I think it's really neat this time of year."
-    m 2ekbsa "Don't worry [player], I won't get upset if you want me to {cps=*2}take it off{/cps}{nw}"
+    m 2tub "Э-хе-хе, что скажешь?"
+    m 2hub "Это немного другое, я знаю, ты, вероятно, не уверен, хочешь ли ты прикоснуться или убежать, а-ха-ха!"
+    m 7rua "Возможно, это не то, что я бы носила постоянно, но я думаю, что в это время года это очень красиво."
+    m 2ekbsa "Не волнуйся [player], я не расстроюсь, если ты захочешь, чтобы я {cps=*2}сняла его{/cps}{nw}"
     $ _history_list.pop()
-    m "Don't worry [player], I won't get upset if you want me to {fast}change into something else..."
-    m 2hubsb "I know lots of people are scared of spiders and might not find this the most appealing, ahaha!"
+    m "Не волнуйся [player], я не расстроюсь, если ты захочешь, чтобы я {fast}переоделась во что-то другое..."
+    m 2hubsb "Я знаю, что многие люди боятся пауков и могут посчитать это не самым привлекательным, а-ха-ха!"
 
     if player.lower() == "amy":
-        m 2rsbla "Alhough I've hear that people named Amy like spiders, ehehe~"
+        m 2rsbla "Хотя я слышала, что люди по имени Эми любят пауков, э-хе-хе~"
 
     else:
-        m 2rsbla "Hopefully people named Amy aren't the only ones who like spiders, ehehe~"
+        m 2rsbla "Надеюсь, люди по имени Эми не единственные, кто любит пауков, э-хе-хе~"
 
     #And restore zoom
     call monika_zoom_transition(mas_temp_zoom_level, 1.0)
@@ -1315,7 +1315,7 @@ init 5 python:
         Event(
             persistent.farewell_database,
             eventlabel="bye_trick_or_treat",
-            prompt="I'm going to take you trick or treating.",
+            prompt="Я хочу взять тебя на сладость или гадость.",
             pool=True,
             unlocked=False,
             action=EV_ACT_UNLOCK,
@@ -1342,24 +1342,24 @@ label bye_trick_or_treat:
 
     #True if > 0
     if persistent._mas_o31_tt_count:
-        m 1eka "Again?"
+        m 1eka "Снова?"
 
     if too_early_to_go:
         # before 5pm is too early.
-        m 3eksdla "Doesn't it seem a little early for trick or treating, [player]?"
-        m 3rksdla "I don't think there's going to be anyone giving out candy yet..."
+        m 3eksdla "А тебе, случаем, не кажется, что пока что немного рановато для этого события, [player]?"
+        m 3rksdla "Не думаю, что кто-то сейчас будет раздавать конфеты..."
 
-        m 2etc "Are you {i}sure{/i} you want to go right now?{nw}"
+        m 2etc "Ты {i}уверен{/i} что хочешь идти прямо сейчас?{nw}"
         $ _history_list.pop()
         menu:
-            m "Are you {i}sure{/i} you want to go right now?{fast}"
-            "Yes.":
-                m 2etc "Well...{w=1}okay then, [player]..."
+            m "Ты {i}уверен{/i} что хочешь идти прямо сейчас?{fast}"
+            "Да.":
+                m 2etc "Ну...{w=1}хорошо тогда, [player]..."
 
-            "No.":
+            "Нет.":
                 m 2hub "Ahaha!"
-                m "Be a little patient, [player]~"
-                m 4eub "Let's just make the most out of it later this evening, okay?"
+                m "Будь немного терпелив, [player]~"
+                m 4eub "Давай сделаем это лучше чуть позже этим вечером, хорошо?"
                 return
 
     elif too_late_to_go:

@@ -571,7 +571,7 @@ init 5 python:
         Event(
             persistent._mas_songs_database,
             eventlabel="mas_song_aries",
-            prompt="Aries",
+            prompt="Овен",
             category=[store.mas_songs.TYPE_SHORT],
             random=True,
             aff_range=(mas_aff.NORMAL,None)
@@ -580,13 +580,13 @@ init 5 python:
     )
 
 label mas_song_aries:
-    m 2dud "{i}~I'm standing on a beach in the distance~{/i}"
-    m 2eud "{i}~And even though you're far away, can you see my red light?~{/i}"
-    m 2dubsu "{i}~It's waiting to turn green~{/i}"
-    m 2dud "{i}~'Cause I feel so isolated without you~{/i}"
-    m 2dkd "{i}~I can't play a happy tune on my own, so stay by my side~{/i}"
-    m "{i}~High or low tide~{/i}"
-    m 1ekbsu "I'm always thinking about the day we will be together, [player]~"
+    m 2dud "{i}~Я стою на пляже вдалеке~{/i}"
+    m 2eud "{i}~И хотя ты далеко, видишь ли ты мой красный свет?~{/i}"
+    m 2dubsu "{i}~Он ждет, когда станет зеленым~{/i}"
+    m 2dud "{i}~Потому что я чувствую себя так одиноко без тебя~{/i}"
+    m 2dkd "{i}~Я не могу играть счастливую мелодию в одиночку, поэтому останься рядом со мной~{/i}"
+    m "{i}~Высокий или низкий прилив~{/i}"
+    m 1ekbsu "Я всегда думаю о том дне, когда мы будем вместе, [player]~"
     return
 
 init 5 python:

@@ -30,8 +30,8 @@ init python in mas_consumables:
     #Consumable dialogue prop constants
     #We'll store some shorthand constants for ways to route/say dialogue for consumables here
     CONTAINER_NONE = None
-    CONTAINER_PLATE = "plate"
-    CONTAINER_CUP = "cup"
+    CONTAINER_PLATE = "тарелку"
+    CONTAINER_CUP = "кружку"
 
     #Dlg property names
     # key: marks the string to use when referencing the object's container
@@ -1198,7 +1198,7 @@ init 6 python:
     mas_consumable_coffee = MASConsumable(
         consumable_id="coffee",
         consumable_type=store.mas_consumables.TYPE_DRINK,
-        disp_name="coffee",
+        disp_name="кофе",
         dlg_props=mas_consumables.DLG_PREP_HOT_DRINK,
         start_end_tuple_list=[(5, 12)],
         acs=mas_acs_mug,
@@ -1211,7 +1211,7 @@ init 6 python:
     mas_consumable_hotchocolate = MASConsumable(
         consumable_id="hotchoc",
         consumable_type=store.mas_consumables.TYPE_DRINK,
-        disp_name="hot chocolate",
+        disp_name="горячий шоколад",
         dlg_props=mas_consumables.DLG_PREP_HOT_DRINK,
         start_end_tuple_list=[(16,23)],
         acs=mas_acs_hotchoc_mug,
@@ -1224,7 +1224,7 @@ init 6 python:
     mas_consumable_candycane = MASConsumable(
         consumable_id="candycane",
         consumable_type=store.mas_consumables.TYPE_FOOD,
-        disp_name="candycane",
+        disp_name="сахарную тросточку",
         dlg_props={
             mas_consumables.PROP_PLUR: True
         },
@@ -1244,7 +1244,7 @@ init 6 python:
     mas_consumable_christmascookies = MASConsumable(
         consumable_id="christmascookies",
         consumable_type=store.mas_consumables.TYPE_FOOD,
-        disp_name="Christmas cookie",
+        disp_name="рождественского печенье",
         dlg_props={
             mas_consumables.PROP_OBJ_REF: "plate",
             mas_consumables.PROP_PLUR: True

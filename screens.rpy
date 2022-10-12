@@ -48,7 +48,7 @@ init -2 python in mas_layout:
     import store
     import store.mas_affection as aff
 
-    QUIT_YES = _("Пожалуйста, не закрывайте игру при мне!")
+    QUIT_YES = _("Пожалуйста, не закрывайте игру!")
     QUIT_NO = _("Спасибо, [player]!\nДавай проведем больше времени вместе~")
     QUIT = _("Уходишь не попрощавшись, [player]?")
     UNSTABLE = (
@@ -66,7 +66,7 @@ init -2 python in mas_layout:
     QUIT_YES_AFF = _("T_T [player]...")
 
     # quit no messages affection scaled
-    QUIT_NO_BROKEN = _("{i}Теперь{/i} ты послушаешься?")
+    QUIT_NO_BROKEN = _("{i}Теперь{/i} ты меня выслушаешь?")
     QUIT_NO_UPSET = _("Спасибо за внимательность, [player].")
     QUIT_NO_HAPPY = _(":)")
     QUIT_NO_AFF_G = _("Хороший [boy].")
@@ -1883,7 +1883,7 @@ screen hot_keys():
             hbox:
                 style_prefix "check"
                 vbox:
-                    label _("General")
+                    label _("Общее")
                     spacing 10
                     text _("Музыка")
                     text _("Игры")
@@ -1909,11 +1909,11 @@ screen hot_keys():
             hbox:
                 style_prefix "check"
                 vbox:
-                    label _("Music")
+                    label _("Музыка")
                     spacing 10
-                    text _("Volume Up")
-                    text _("Volume Down")
-                    text _("Mute")
+                    text _("Увеличить громкость:")
+                    text _("Уменьшить громкость:")
+                    text _("Заглушить:")
 
                 vbox:
                     label _("")
