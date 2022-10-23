@@ -2999,12 +2999,12 @@ label mas_affection_playernickname:
     python:
         #A list of names we always want to have
         base_nicknames = [
-            ("Darling", "darling", True, True, False),
-            ("Honey", "honey", True, True, False),
-            ("Love", "love", True, True, False),
-            ("My love", "my love", True, True, False),
-            ("Sweetheart", "sweetheart", True, True, False),
-            ("Sweetie", "sweetie", True, True, False),
+            ("Дорогой", "дорогой", True, True, False),
+            ("Милый", "милый", True, True, False),
+            ("Любимый", "любимый", True, True, False),
+            ("Мой любимый", "мой любимый", True, True, False),
+            ("Душенька", "душенька", True, True, False),
+            ("Сладкий", "сладкий", True, True, False),
         ]
 
     m 1euc "Эй, [player]?"
@@ -3034,7 +3034,7 @@ init 5 python:
             persistent.event_database,
             eventlabel="monika_change_player_nicknames",
             prompt="Можешь называть меня разными прозвищами?",
-            category=['you'],
+            category=['ты'],
             pool=True,
             unlocked=False,
             rules={"no_unlock": None},

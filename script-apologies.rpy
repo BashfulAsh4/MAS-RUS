@@ -78,7 +78,7 @@ label monika_playerapologizes:
     else:
         #Otherwise, we use "for something." if reason isn't 0
         if mas_apology_reason == 0:
-            $ mas_setEVLPropValues("mas_apology_generic", prompt="...за что-то.")
+            $ mas_setEVLPropValues("mas_apology_generic", prompt="...for something.")
         else:
             #We set this to an apology reason if it's valid
             $ mas_setEVLPropValues(
@@ -101,7 +101,7 @@ label monika_playerapologizes:
         #Now we add the generic if there's no prompt attached
         generic_ev = mas_getEV('mas_apology_generic')
 
-        if generic_ev.prompt == "...за что-то." or generic_ev.prompt == "...for something else.":
+        if generic_ev.prompt == "...for something." or generic_ev.prompt == "...for something else.":
             apologylist.append((generic_ev.prompt, generic_ev.eventlabel, False, False))
 
         #The back button

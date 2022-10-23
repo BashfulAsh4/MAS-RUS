@@ -3948,7 +3948,7 @@ label mas_selector_generic_sidebar_select_acs(acs_type, use_acs=None, set_compat
         if sel_group is None:
             sel_group = acs_type
         if idle_dlg is None:
-            idle_dlg = "Какой {0} ты бы хотел, чтобы я надела?".format(acs_type)
+            idle_dlg = "Какой {0} ты бы хотел, чтобы я надела".format(acs_type)
 
         # filter for acs
         if use_acs is None:
@@ -4008,7 +4008,7 @@ label monika_clothes_select:
     #Setup
     python:
         mailbox = store.mas_selspr.MASSelectableSpriteMailbox(
-            "Какую одежду ты хочешь, чтобы я надела?"
+            "Какую одежду ты бы хотел, чтобы я одела?"
         )
         mailbox.send_outfit_checkbox_visible(True)
         mailbox.send_outfit_checkbox_checked(persistent._mas_setting_ocb)
@@ -4088,7 +4088,7 @@ label monika_event_clothes_select:
     # setup
     python:
         mailbox = store.mas_selspr.MASSelectableSpriteMailbox(
-            "Что ты хочешь изменить?"
+            "Что ты хочешь изменить"
         )
         # only def and the outfit in question will be available here, so outfit mode only
         mailbox.send_outfit_checkbox_visible(False)

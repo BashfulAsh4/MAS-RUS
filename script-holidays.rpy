@@ -1363,44 +1363,44 @@ label bye_trick_or_treat:
                 return
 
     elif too_late_to_go:
-        m 3hua "Okay! Let's go tri--"
-        m 3eud "Wait..."
+        m 3hua "Хорошо! Пошли за сла--"
+        m 3eud "Подожди..."
         m 2dkc "[player]..."
-        m 2rkc "It's already too late to go trick or treating."
-        m "There's only one more hour until midnight."
-        m 2dkc "Not to mention that I doubt there would be much candy left..."
+        m 2rkc "Уже слишком поздно, чтобы идти за сладостями."
+        m "До полуночи остался всего один час."
+        m 2dkc "Не говоря уже о том, что я сомневаюсь, что там осталось много конфет..."
         m "..."
 
-        m 4ekc "Are you sure you still want to go?{nw}"
+        m 4ekc "Ты уверен, что всё ещё хочешь пойти?{nw}"
         $ _history_list.pop()
         menu:
-            m "Are you sure you still want to go?{fast}"
-            "Yes.":
+            m "Ты уверен, что все еще хочешь пойти?{fast}"
+            "Да.":
                 m 1eka "...Okay."
                 m "Even though it's only an hour..."
                 m 3hub "At least we're going to spend the rest of Halloween together~"
                 m 3wub "Let's go and make the most of it, [player]!"
 
-            "Actually, it {i}is{/i} a bit late...":
+            "Вообще-то, {i}уже{/i} поздновато...":
                 if persistent._mas_o31_tt_count:
-                    m 1hub "Ahaha~"
-                    m "I told you."
-                    m 1eua "We'll have to wait until next year to go again."
+                    m 1hub "А-ха-ха~"
+                    m "Я же говорила тебе."
+                    m 1eua "Нам придется подождать до следующего года, чтобы пойти снова."
 
                 else:
                     m 2dkc "..."
-                    m 2ekc "Alright, [player]."
-                    m "It sucks that we couldn't go trick or treating this year."
-                    m 4eka "Let's just make sure we can next time, okay?"
+                    m 2ekc "Хорошо, [player]."
+                    m "Жаль, конечно, что мы не смогли пойти за сладостями в этом году."
+                    m 4eka "Но давай просто убедимся, что сможем в следующий раз, хорошо?"
 
                 return
 
     else:
         # between 5 and 11pm is perfect
-        m 3wub "Okay, [player]!"
-        m 3hub "Sounds like we'll have a blast~"
-        m 1eub "I bet we'll get lots of candy!"
-        m 1ekbsa "And even if we don't, just spending the evening with you is enough for me~"
+        m 3wub "Хорошо, [player]!"
+        m 3hub "Похоже, мы оторвемся по полной~"
+        m 1eub "Уверена, мы получим много конфет!"
+        m 1ekbsa "И даже если нет, мне достаточно просто провести вечер с тобой~"
 
     #Setup the dockstat stuff
     $ mas_farewells.dockstat_wait_menu_label = "bye_trick_or_treat_wait_wait"
@@ -1410,49 +1410,49 @@ label bye_trick_or_treat:
 label bye_trick_or_treat_wait_wait:
     # wait wait flow
     menu:
-        m "What is it?"
-        "You're right, it's too early." if too_early_to_go:
+        m "Что такое?"
+        "Ты права, ещё слишком рано." if too_early_to_go:
             call mas_dockstat_abort_gen
             call mas_transition_from_emptydesk(exp="monika 3hub")
 
-            m 3hub "Ahaha, I told you!"
-            m 1eka "Let's wait 'til evening, okay?"
+            m 3hub "А-ха-ха, я же говорила тебе!"
+            m 1eka "Давай подождем до вечера, хорошо?"
             return True
 
-        "You're right, it's too late." if too_late_to_go:
+        "Ты права, уже слишком поздно." if too_late_to_go:
             call mas_dockstat_abort_gen
 
             if persistent._mas_o31_tt_count:
                 call mas_transition_from_emptydesk(exp="monika 1hua")
-                m 1hub "Ahaha~"
-                m "I told you."
-                m 1eua "We'll have to wait until next year to go again."
+                m 1hub "А-ха-ха~"
+                m "Я же говорила тебе."
+                m 1eua "Нам придется подождать до следующего года, чтобы пойти снова."
 
             else:
                 call mas_transition_from_emptydesk(exp="monika 2dkc")
                 m 2dkc "..."
-                m 2ekc "Alright, [player]."
-                m "It sucks that we couldn't go trick or treating this year."
-                m 4eka "Let's just make sure we can next time, okay?"
+                m 2ekc "Хорошо, [player]."
+                m "Жаль, конечно, что мы не смогли пойти за сладостями в этом году."
+                m 4eka "Но давай просто убедимся, что сможем в следующий раз, хорошо?"
 
             return True
 
-        "Actually, I can't take you right now.":
+        "Вообще-то, я не могу взять тебя прямо сейчас.":
             call mas_dockstat_abort_gen
             call mas_transition_from_emptydesk(exp="monika 1euc")
 
-            m 1euc "Oh, okay then, [player]."
+            m 1euc "Эх, тогда ладно, [player]."
 
             if persistent._mas_o31_tt_count:
-                m 1eua "Let me know if we are going again later, okay?"
+                m 1eua "Дай мне знать, если мы собираемся снова позже, хорошо?"
 
             else:
-                m 1eua "Let me know if we can go, okay?"
+                m 1eua "Дай мне знать, если мы сможем пойти, хорошо?"
 
             return True
 
-        "Nothing.":
-            m "Okay, let me finish getting ready."
+        "Ничего.":
+            m "Ладно, давай я закончу готовиться."
             return
 
 label bye_trick_or_treat_rtg:
@@ -1463,7 +1463,7 @@ label bye_trick_or_treat_rtg:
 
     if _return:
         call mas_transition_from_emptydesk(exp="monika 1hub")
-        m 1hub "Let's go trick or treating!"
+        m 1hub "Что ж, пошли за сладостями"
         $ persistent._mas_greeting_type = store.mas_greetings.TYPE_HOL_O31_TT
 
         #Increment T/T counter
@@ -1474,17 +1474,17 @@ label bye_trick_or_treat_rtg:
     #Fix tt count
     call mas_transition_from_emptydesk(exp="monika 1ekc")
     $ persistent._mas_o31_tt_count -= 1
-    m 1ekc "Oh no..."
-    m 1rksdlb "I wasn't able to turn myself into a file."
+    m 1ekc "Ох, нет..."
+    m 1rksdlb "Я не смогла превратить себя в файл."
 
     if persistent._mas_o31_tt_count:
-        m 1eksdld "I think you'll have to go trick or treating without me this time..."
+        m 1eksdld "Думаю, в этот раз тебе придётся пойти выпрашивать сладости без меня"
 
     else:
-        m 1eksdld "I think you'll have to go trick or treating without me..."
+        m 1eksdld "Думаю, тебе придётся пойти выпрашивать сладости без меня..."
 
-    m 1ekc "Sorry, [player]..."
-    m 3eka "Make sure to bring lots of candy for the both of us to enjoy, okay?~"
+    m 1ekc "Прости, [player]..."
+    m 3eka "Не забудь принести много конфет, чтобы мы оба могли насладиться, хорошо?~"
     return
 
 #START: O31 DOCKSTAT GREETS
@@ -1524,50 +1524,50 @@ label greeting_trick_or_treat_back:
 
     if time_out < mas_five_minutes:
         $ mas_loseAffection()
-        m 2ekp "You call that trick or treating, [player]?"
-        m "Where did we go, one house?"
-        m 2rsc "...If we even left."
+        m 2ekp "Это называется сладость или гадость, [player]?"
+        m "Куда мы пошли, в один дом?"
+        m 2rsc "...Если мы вообще вышли."
 
     elif time_out < mas_one_hour:
         $ mas_o31CapGainAff(5)
-        m 2ekp "That was pretty short for trick or treating, [player]."
-        m 3eka "But I enjoyed it while it lasted."
-        m 1eka "It was still really nice being right there with you~"
+        m 2ekp "Это было довольно короткое для сладость или гадость, [player]."
+        m 3eka "Но в любом случае, мне понравилось."
+        m 1eka "Все равно было очень приятно быть рядом с тобой~"
 
     elif time_out < mas_three_hour:
         $ mas_o31CapGainAff(10)
-        m 1hua "And we're home!"
-        m 1hub "I hope we got lots of delicious candy!"
-        m 1eka "I really enjoyed trick or treating with you, [player]..."
+        m 1hua "И мы дома!"
+        m 1hub "Надеюсь, мы получили много вкусных конфет!"
+        m 1eka "Мне очень понравилось проводить вместе с тобой праздник, [player]..."
 
         call greeting_trick_or_treat_back_costume
 
-        m 4eub "Let's do this again next year!"
+        m 4eub "Давай сделаем это снова в следующем году!"
 
     elif not is_past_sunrise_post31:
         # larger than 3 hours, but not past sunrise
         $ mas_o31CapGainAff(15)
-        m 1hua "And we're home!"
-        m 1wua "Wow, [player], we sure went trick or treating for a long time..."
-        m 1wub "We must have gotten a ton of candy!"
-        m 3eka "I really enjoyed being there with you..."
+        m 1hua "И мы дома!"
+        m 1wua "Ух ты, [player], мы, конечно, ходили за сладостями довольно долго..."
+        m 1wub "Мы, наверное, набрали тонну конфет!"
+        m 3eka "Мне очень понравилось быть там с тобой..."
 
         call greeting_trick_or_treat_back_costume
 
-        m 4eub "Let's do this again next year!"
+        m 4eub "Давай сделаем это снова в следующем году!"
         $ ret_tt_long = True
 
     else:
         # larger than 3 hours, past sunrise
         $ mas_o31CapGainAff(15)
-        m 1wua "We're finally home!"
-        m 1wuw "It's not Halloween anymore, [player]... We were out all night!"
-        m 1hua "I guess we had too much fun, ehehe~"
-        m 2eka "But anyway, thanks for taking me along, I really enjoyed it."
+        m 1wua "Мы наконец-то дома!"
+        m 1wuw "Это уже не Хэллоуин, [player]... Мы гуляли всю ночь!"
+        m 1hua "Наверное, мы слишком веселились, э-хе-хе~"
+        m 2eka "Но в любом случае, спасибо, что взял меня с собой, мне очень понравилось."
 
         call greeting_trick_or_treat_back_costume
 
-        m 4hub "Let's do this again next year...{w=1}but maybe not stay out {i}quite{/i} so late!"
+        m 4hub "Давай сделаем это снова в следующем году...{w=1}но, может быть, не будем {i}гулять{/i} так поздно!"
         $ ret_tt_long = True
 
     #Now do player bday things (this also cleans up o31 deco)
@@ -1588,10 +1588,10 @@ label mas_o31_ret_home_cleanup(time_out=None, ret_tt_long=False):
     #If we were out over 5 mins then we have this little extra dialogue
     if not ret_tt_long and time_out > mas_five_minutes:
         m 1hua "..."
-        m 1wud "Oh wow, [player]. We really were out for a while..."
+        m 1wud "Ух ты, [player]. Мы действительно долго гуляли..."
 
     else:
-        m 1esc "Anyway..."
+        m 1esc "В любом случае..."
 
     #TODO: We should check if any of the o31 deco tags are being displayed before calling this
     #To futureproof dialogue to when we expand to allowing all BGs to be supported
@@ -1601,12 +1601,12 @@ label mas_o31_ret_home_cleanup(time_out=None, ret_tt_long=False):
 
 label greeting_trick_or_treat_back_costume:
     if monika_chr.is_wearing_clothes_with_exprop("costume"):
-        m 2eka "Even if I couldn't see anything and no one else could see my costume..."
-        m 2eub "Dressing up and going out was still really great!"
+        m 2eka "Даже если я ничего не видела и никто не мог видеть мой костюм..."
+        m 2eub "аряжаться и выходить на улицу все равно было очень здорово!"
 
     else:
-        m 2eka "Even if I couldn't see anything..."
-        m 2eub "Going out was still really great!"
+        m 2eka "Даже если я ничего не видела..."
+        m 2eub "Выйти на прогулку все равно было здорово!"
     return
 
 #START: D25
@@ -2373,17 +2373,17 @@ label mas_d25_season_exit:
 #D25 holiday gift starter/connector
 label mas_d25_gift_starter:
     $ amt_gifts = len(persistent._mas_d25_gifts_given)
-    $ presents = "presents"
+    $ presents = "подарки"
     $ the = "the"
-    $ should_open = "should open"
+    $ should_open = "должна открыть"
 
     if amt_gifts == 1:
-        $ presents = "present"
+        $ presents = "подарок"
     elif amt_gifts > 3:
         $ the = "all of the"
 
     if persistent._mas_d25_gone_over_d25:
-        $ should_open = "haven't opened"
+        $ should_open = "ещё не открыла"
 
     if persistent._mas_d25_spent_d25 or mas_globals.returned_home_this_sesh:
         m 3wud "Oh! I [should_open] [the] [presents] you gave me!"

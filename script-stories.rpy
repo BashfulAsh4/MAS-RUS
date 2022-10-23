@@ -188,7 +188,7 @@ label monika_short_stories_menu:
         stories_menu_items.sort()
 
         #Add new story
-        stories_menu_items.insert(0, ("A new story", mas_stories.UNLOCK_NEW, True, False))
+        stories_menu_items.insert(0, ("Новая история", mas_stories.UNLOCK_NEW, True, False))
 
         # build switch button
         #TODO: Build a generalized switch for more than just two items
@@ -261,16 +261,16 @@ label monika_short_stories_menu:
 label mas_story_begin:
     python:
         story_begin_quips = [
-            _("Alright, let's start the story."),
-            _("Ready to hear the story?"),
-            _("Ready for story time?"),
-            _("Let's begin~"),
-            _("Are you ready?")
+            _("Хорошо, давай начнём историю."),
+            _("Готов услышать историю?"),
+            _("Готов к рассказу?"),
+            _("Давай начнём~"),
+            _("Ты готов?")
         ]
         story_begin_quip=renpy.random.choice(story_begin_quips)
     $ mas_gainAffection(modifier=0.2)
     m 3eua "[story_begin_quip]"
-    m 1duu "Ahem."
+    m 1duu "Кхм."
     return
 
 
@@ -305,27 +305,27 @@ label mas_scary_story_setup:
 
     python:
         story_begin_quips = [
-            _("Alright let's start the story."),
-            _("Ready to hear the story?"),
-            _("Ready for story time?"),
-            _("Let's begin."),
-            _("Are you ready?")
+            _("Хорошо, давай начнём историю."),
+            _("Готов услышать историю?"),
+            _("Готов к рассказу?"),
+            _("Давай начнём~"),
+            _("Ты готов?")
         ]
         story_begin_quip=renpy.random.choice(story_begin_quips)
 
     m 3eua "[story_begin_quip]"
-    m 1duu "Ahem."
+    m 1duu "Кхм."
     return
 
 label mas_scary_story_cleanup:
 
     python:
         story_end_quips = [
-            _("Scared, [player]?"),
-            _("Did I scare you, [player]?"),
-            _("How was it?"),
-            _("Well?"),
-            _("So...{w=0.5}did I scare you?")
+            _("Испугался, [player]?"),
+            _("Я напугала тебя, [player]?"),
+            _("Ну?"),
+            _("Ну как?"),
+            _("Итак...{w=0.5}я тебя напугала?")
         ]
         story_end_quip=renpy.substitute(renpy.random.choice(story_end_quips))
 
@@ -343,7 +343,7 @@ label mas_scary_story_cleanup:
     call monika_zoom_transition(mas_temp_zoom_level,transition=1.0)
 
     $ play_song(None, 1.0)
-    m 1eua "I hope you liked it, [player]~"
+    m 1eua "Надеюсь, тебе понравилось, [player]~"
     $ mas_DropShield_core()
     $ HKBShowButtons()
     $ mas_scary_story_setup_done = False
@@ -354,7 +354,7 @@ init 5 python:
         Event(
             persistent._mas_story_database,
             eventlabel="mas_story_tyrant",
-            prompt="The Cat and the Cock",
+            prompt="Кот и Петух",
             category=[mas_stories.TYPE_NORMAL],
             unlocked=True
         ),
@@ -363,13 +363,13 @@ init 5 python:
 
 label mas_story_tyrant:
     call mas_story_begin
-    m 1eua "A Cat caught a Cock and thought about reasonable excuses for eating him."
-    m "He accused him of being a nuisance by crowing at night; not letting men sleep."
-    m 3eud "The Cock defended his action by saying this was for the benefit of men, as it wakes them for labor."
-    m 1tfb "The Cat replied, 'you abound in apologies, but it's time for breakfast.'"
-    m 1hksdrb "At that he made a meal of the Cock."
-    m 3eua "The moral of this story is, tyrants need no excuse."
-    m 1hua "I hope you enjoyed this little story, [player]~"
+    m 1eua "Кот поймал Петуха и задумался над разумными основаниями, чтобы съесть его."
+    m "Он обвинил его в том, что он надоедал всем, кукарекая ночью; не давал людям спать."
+    m 3eud "Петух обосновал свой поступок тем, что это было на благо людей, поскольку кукареканье побуждало в людях желание работать."
+    m 1tfb "И Кот сказал ему 'Ты своевольно извиняешься, но уже пора завтракать.'"
+    m 1hksdrb "После этого, он приготовил обед из Петуха."
+    m 3eua "Мораль этой истории такова: тиранам нет оправдания."
+    m 1hua "Надеюсь, тебе понравилась эта небольшая история, [player]~"
     return
 
 init 5 python:
@@ -377,7 +377,7 @@ init 5 python:
         Event(
             persistent._mas_story_database,
             eventlabel="mas_story_despise",
-            prompt="The Fox",
+            prompt="Лиса",
             category=[mas_stories.TYPE_NORMAL],
             unlocked=False
         ),
@@ -386,13 +386,13 @@ init 5 python:
 
 label mas_story_despise:
     call mas_story_begin
-    m 1eud "One hot summer's day, a Fox was strolling through an orchard till he came to a bunch of grapes just ripening on a vine which had been trained over a lofty branch."
-    m 1tfu "'Just the thing to quench my thirst,' said the Fox."
-    m 1eua "Drawing back a few paces, he took a run and a jump, and just missed the bunch."
-    m 3eub "Turning round again with a one,{w=1.0} two,{w=1.0} three,{w=1.0} he jumped up, but with no greater success."
-    m 3tkc "Again and again he tried after the tempting morsel, but at last had to give it up, and walked away with his nose in the air, saying: 'I am sure they are sour.'"
-    m 1hksdrb "The moral of this story is, it's easy to despise what you cannot get."
-    m 1eua "I hope you liked it, [player]~"
+    m 1eud "Однажды жарким летним днем Лис прогуливался по фруктовому саду, пока не подошел к виноградной грозди, только что созревшей на лозе, которая была прикреплена к высокой ветке."
+    m 1tfu "'Как раз то, что нужно, чтобы утолить жажду,' - сказал Лис."
+    m 1eua "Отступив на несколько шагов, он побежал и прыгнул, но промахнулся мимо ветки."
+    m 3eub "Возвращаясь снова и снова, сначала один раз,{w=1.0} потом второй,{w=1.0} третий,{w=1.0} он всё прыгал, но так и не добился успеха."
+    m 3tkc "Снова и снова он пытался ухватиться за заманчивый кусочек, но в конце концов вынужден был сдаться и пошел прочь, задрав нос, со словами: 'Я уверен, что они кислые.'"
+    m 1hksdrb "Мораль этой истории такова: легко презирать то, что не можешь получить."
+    m 1eua "Надеюсь, тебе понравилось, [player]~"
     return
 
 init 5 python:
@@ -400,7 +400,7 @@ init 5 python:
         Event(
             persistent._mas_story_database,
             eventlabel="mas_story_lies",
-            prompt="The Shepherd Boy and the Wolf",
+            prompt="Мальчик-пастух и волк",
             category=[mas_stories.TYPE_NORMAL],
             unlocked=False
         ),
