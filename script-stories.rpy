@@ -409,19 +409,19 @@ init 5 python:
 
 label mas_story_lies:
     call mas_story_begin
-    m 1euc "There was a Shepherd Boy who tended his sheep at the foot of a mountain near a dark forest."
-    m 1lsc "It was lonely for him, so he devised a plan to get a little company."
-    m 4hfw "He rushed down towards the village calling out 'Wolf! Wolf!' and the villagers came out to meet him."
-    m 1hksdrb "This pleased the boy so much that a few days after he tried the same trick, and again the villagers came to his help."
-    m 3wud "Shortly after, a Wolf actually did come out from the forest."
-    m 1ekc "The boy cried out 'Wolf, Wolf!' still louder than before."
-    m 4efd "But this time the villagers, who had been fooled twice before, thought the boy was again lying, and nobody came to his aid."
-    m 2dsc "So the Wolf made a good meal of the boy's flock."
-    m 2esc "The moral of this story is, liars are not believed even when they speak the truth."
-    m 1hksdlb "You shouldn't worry about it, [player]..."
-    m 3hua "You'd never lie to me, right?"
-    m 1hub "Ehehe~"
-    m 1eua "I hope you enjoyed the story, [player]!"
+    m 1euc "Жил мальчик-пастух, который пас своих овец у подножия горы рядом с темным лесом."
+    m 1lsc "Ему было одиноко, и он придумал план, как найти себе компанию."
+    m 4hfw "Он бросился вниз к деревне, крича 'Волк! Волк!', и жители деревни вышли ему навстречу."
+    m 1hksdrb "Это так понравилось мальчику, что через несколько дней он попробовал повторить тот же трюк, и снова жители пришли ему на помощь."
+    m 3wud "Вскоре после этого из леса действительно вышел волк."
+    m 1ekc "Мальчик закричал 'Волк, Волк!' ещё громче, чем раньше."
+    m 4efd "Но на этот раз жители деревни, которых уже дважды обманули, решили, что мальчик снова лжет, и никто не пришел ему на помощ."
+    m 2dsc "Так волк хорошо пообедал стадом мальчика."
+    m 2esc "Мораль этой истории такова: лжецам не верят, даже если они говорят правду."
+    m 1hksdlb "Тебе не стоит волноваться об этом, [player]..."
+    m 3hua "Ты ведь никогда не солжёшь мне, верно, right?"
+    m 1hub "Э-хе-хе"
+    m 1eua "Надеюсь, тебе понравилась эта история, [player]!"
     return
 
 init 5 python:
