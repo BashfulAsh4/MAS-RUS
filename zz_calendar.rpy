@@ -86,7 +86,7 @@ init -1 python:
         NOTE_COLOR = "#181818"
 
         # Font used for the note
-        NOTE_FONT = "mod_assets/font/Comic Sans MS.ttf"
+        NOTE_FONT = "mod_assets/font/Comic.ttf"
 
         # Month names constant array
         MONTH_NAMES = ["Неизвестно", "Январь", "Февраль",
