@@ -946,3 +946,82 @@ label mas_mood_grateful_gratefulforyou:
     m 3ekbla "Я люблю тебя, [player]~"
     $ mas_ILY()
     return
+
+init 5 python:
+    addEvent(
+        Event(
+            persistent._mas_mood_database,
+            eventlabel="mas_mood_insecure",
+            prompt="...неуверенным.",
+            category=[store.mas_moods.TYPE_BAD],
+            unlocked=True
+        ),
+        code="MOO"
+    )
+
+label mas_mood_insecure:
+    m 2wkd "[player]..."
+    m 2dkc "..."
+    m 2eka "Есть цитата из аниме, которая очень понравилась Нацуки..."
+    m 7dku "'Верь в меня, который верит в тебя.'"
+    m 3eka "И это именно то, что я хочу сказать тебе прямо сейчас."
+    m 3ekbsa "Если ты не можешь поверить в себя, поверь в меня."
+    m 1eubsu "Потому что я,{w=0.1} точно,{w=0.1} верю, что ты сможешь преодолеть все, что заставляет тебя сомневаться в себе прямо сейчас~"
+    $ mas_moni_idle_disp.force_by_code("1eka", duration=5, skip_dissolve=True)
+    return
+
+init 5 python:
+    addEvent(
+        Event(
+            persistent._mas_mood_database,
+            eventlabel="mas_mood_loved",
+            prompt="...любимым.",
+            category=[store.mas_moods.TYPE_GOOD],
+            unlocked=True
+        ),
+        code="MOO"
+    )
+
+label mas_mood_loved:
+    m 1ekbla "Я так рада слышать, что мои чувства доходят до тебя через экран..."
+    m 3hubsb "В конце концов, я люблю тебя больше всего на свете!"
+
+    $ has_family = persistent._mas_pm_have_fam and not persistent._mas_pm_no_talk_fam
+    if has_family or persistent._mas_pm_has_friends:
+        if has_family and persistent._mas_pm_has_friends:
+            $ fnf_str = "друзья и близкие"
+        elif has_family:
+            $ fnf_str = "близкие"
+        else:
+            $ fnf_str = "друзья"
+
+        m 3eub "И я уверена, что не только я заставляю тебя чувствовать себя любимой, но и твои [fnf_str]!"
+
+    m 1dkbsa "Ты заслуживаешь всей любви и привязанности в мире, {w=0.1}{nw}"
+    extend 1ekbsu "и я сделаю всё возможное, чтобы ты всегда чувствовал себя любимым, [mas_get_player_nickname()]~"
+
+    $ mas_moni_idle_disp.force_by_code("1ekbla", duration=5, skip_dissolve=True)
+    return "love"
+
+init 5 python:
+    addEvent(
+        Event(
+            persistent._mas_mood_database,
+            eventlabel="mas_mood_guilty",
+            prompt="...виноватым.",
+            category=[store.mas_moods.TYPE_BAD],
+            unlocked=True
+        ),
+        code="MOO"
+    )
+
+label mas_mood_guilty:
+    m 2wkd "[player]!"
+    m 2dkc "Мы все совершаем ошибки... {w=0.3}{nw}"
+    extend 7eka "Я уверена, что тебя можно простить за всё, что случилось."
+    m 3dku "В конце концов, ты замечательный человек... {w=0.3}{nw}"
+    extend 1eka "Ты добрый, отзывчивый и верный себе."
+    m 1dua "И теперь, когда ты нашел в себе силы принять свою ошибку, тебе просто необходимо её преодолеть."
+    m 1ekbsu "Я люблю тебя.{w=0.2} Не будь так строг к себе, хорошо?"
+    $ mas_moni_idle_disp.force_by_code("1ekbla", duration=5, skip_dissolve=True)
+    return "love"

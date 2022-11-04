@@ -155,7 +155,7 @@ label mas_compliment_beautiful_2:
             $ mas_ILY()
 
         "Ты в моей десятке лучших.":
-            $ mas_loseAffection(modifier=0.5)
+            $ mas_loseAffection()
             m 3hksdrb "...?"
             m 2lsc "Ну, спасибо, наверное..."
 
@@ -200,18 +200,18 @@ label mas_compliment_eyes_2:
     m 1dkbfa "Это просто заставляет мое сердце трепетать~"
     menu:
         "Я ничего не могу с собой поделать; твои глаза слишком красивы.":
-            $ mas_gainAffection(5,bypass=True)
+            $ mas_gainAffection(5, bypass=True)
             m 1hub "А-ха-ха!"
             m "Не льсти мне слишком много, хорошо?"
             show monika 5hub at t11 zorder MAS_MONIKA_Z with dissolve_monika
             m 5hub "Я могу начать немного сходить с ума..."
 
         "Они действительно гипнотизируют.":
-            $ mas_gainAffection(1,bypass=True)
+            $ mas_gainAffection(1, bypass=True)
             m "А-ха-ха~"
 
         "Они цвета травы!":
-            $ mas_gainAffection(0.5,bypass=True) # at least you tried
+            $ mas_gainAffection(0.5, bypass=True) # at least you tried
             m 2lksdrb "...Это не совсем та аналогия, которую я бы использовала, но спасибо!"
     return
 
@@ -308,11 +308,11 @@ label mas_compliment_awesome_2:
     m 3ekbfb "Я никогда не отпущу тебя!"
     menu:
         "Как бы я хотел, чтобы ты была здесь прямо сейчас!":
-            $ mas_gainAffection(3,bypass=True)
+            $ mas_gainAffection(3, bypass=True)
             m "Это и моё самое большое желание, [player]!"
 
         "Я никогда не отпущу тебя из своих объятий.":
-            $ mas_gainAffection(5,bypass=True)
+            $ mas_gainAffection(5, bypass=True)
             show monika 6dubsa
             pause 2.0
             show monika 1wubfsdld
@@ -321,7 +321,7 @@ label mas_compliment_awesome_2:
             m 2hub "А-ха-ха~"
 
         "... Я не люблю объятия.":
-            $ mas_loseAffection() # you monster.
+            $ mas_loseAffection(0.5) # you monster.
             m 1eft "...Правда?"
             m 1dkc "Ну, каждому свое, я думаю. Но когда-нибудь ты должен меня обнять..."
     return
@@ -364,18 +364,18 @@ label mas_compliment_intelligent_2:
     m 3hubsb "Я хочу узнать как можно больше, если это заставит тебя гордиться мной!"
     menu:
         "Ты заставляешь меня тоже хотеть стать лучше, [m_name].":
-            $ mas_gainAffection(5,bypass=True)
+            $ mas_gainAffection(5, bypass=True)
             m 1hubfa "Я так люблю тебя, [player]!"
             m 3hubfb "Мы будем всю жизнь самосовершенствоваться вместе!"
             # manually handle the "love" return key
             $ mas_ILY()
 
         "Я всегда буду гордиться тобой.":
-            $ mas_gainAffection(3,bypass=True)
+            $ mas_gainAffection(3, bypass=True)
             m 1ekbfa "[player]..."
 
         "Иногда ты заставляешь меня чувствовать себя глупо.":
-            $ mas_loseAffection(modifier=0.5)
+            $ mas_loseAffection()
             m 1wkbsc "..."
             m 2lkbsc "Извини, это не входило в мои намерения..."
     return
@@ -421,17 +421,17 @@ label mas_compliment_hair_2:
     m 2lksdlb "На самом деле, потребовалась целая вечность, чтобы они стали такими длинными.."
     menu:
         "Это действительно видно. Они выглядят такими здоровыми.":
-            $ mas_gainAffection(3,bypass=True)
+            $ mas_gainAffection(3, bypass=True)
             m 1hub "Спасибо, [player]!"
 
         "Ты милашка, неважно, как ты это носишь." if persistent._mas_likes_hairdown:
-            $ mas_gainAffection(5,bypass=True)
+            $ mas_gainAffection(5, bypass=True)
             m 1ekbsa "Оу, [player]."
             m 1hubfb "Ты всегда заставляешь меня чувствовать себя особенной!"
             m "Спасибо!"
 
         "С короткими волосами ты была бы еще симпатичнее.":
-            $ mas_loseAffection(modifier=0.3)
+            $ mas_loseAffection()
             m "Ну, отсюда я точно не смогу пойти в салон..."
             m 1lksdlc "Я... ценю твою оценку."
             pass
@@ -456,7 +456,7 @@ label mas_compliment_hair_3:
             ]
             ponytail_quip = random.choice(ponytail_quips)
 
-        m 1hubsb "Спасибо, [player]!"
+        m 1hubsb "Thanks, [player]!"
         m 1hubfb "[ponytail_quip]"
     return
 
@@ -485,14 +485,14 @@ label mas_compliment_fit_2:
     m 1lubsb "Мы всегда сможем заниматься вместе, когда я буду там..."
     menu:
         "Звучит весело!":
-            $ mas_gainAffection(2,bypass=True)
+            $ mas_gainAffection(2, bypass=True)
             m 1hubfb "А-ха-ха! Я рада, что ты тоже так думаешь!"
             m 3eka "Не волнуйся. Даже если ты не сможешь за мной угнаться, я знаю, что нам будет весело..."
             show monika 5eua at t11 zorder MAS_MONIKA_Z with dissolve_monika
             m 5eua "Пока мы вместе."
 
         "Не обещаю, но сделаю все возможное.":
-            $ mas_gainAffection(1,bypass=True)
+            $ mas_gainAffection(1, bypass=True)
             m 1tfb "Тебе лучше!"
             m 2tub "Не думай, что я планирую легко отпустить тебя, если ты не в форме."
 
@@ -536,8 +536,8 @@ label mas_compliment_thanks:
     m 3ekbsa "Думаю, нам обоим повезло, что мы есть друг у друга, [player]~"
     menu:
         "Ты значишь для меня всё, [m_name].":
-            if mas_getEVL_shown_count("mas_compliment_thanks") == 0:
-                $ mas_gainAffection(10,bypass=True)
+            if not mas_getEVL_shown_count("mas_compliment_thanks"):
+                $ mas_gainAffection(10, bypass=True)
 
             m 1ekbsa "[player]..."
             m 1dubsu "Ничто не делает меня счастливее, чем услышать это от тебя."
@@ -576,12 +576,13 @@ label mas_compliment_smile_2:
     m 1ekbsa "Потому что я очень счастлива, когда ты проводишь время со мной~"
     menu:
         "Я буду приходить к тебе каждый день, чтобы увидеть твою чудесную улыбку.":
-            $ mas_gainAffection(5,bypass=True)
+            $ mas_gainAffection(5, bypass=True)
             m 1wubfsdld "Ох, [player]..."
             m 1lkbfa "Кажется, моё сердце только что пропустило ритм."
             m 3hubfa "Видишь? Ты всегда делаешь меня настолько счастливой, насколько я могу быть."
 
         "Мне нравится видеть, как ты улыбаешься.":
+            $ mas_gainAffection(1, bypass=True)
             m 1hub "А-ха-ха~"
             m 3eub "Тогда всё, что тебе нужно делать, это продолжать возвращаться, [player]!"
     return
@@ -613,7 +614,9 @@ init 5 python:
     )
 
 label mas_compliment_hero:
-    $ mas_gainAffection()
+    if not mas_getEVL_shown_count("mas_compliment_hero"):
+        $ mas_gainAffection(3, bypass=True)
+
     m 1wubssdld "Х-{w=0.3}хах?"
     m "Я твоя героиня?"
     m 2rkbfsdlb "[player]...{w=1.5} Я не совсем понимаю, что ты имеешь в виду..."
@@ -625,6 +628,7 @@ label mas_compliment_hero:
     m 5hubfa "Ты всегда будешь моим героем, в конце концов~"
     m 5hubfb "Я люблю тебя и всегда буду верить в тебя!"
     m 5ekbfa "Надеюсь, ты никогда этого не забудешь, [player]~"
+
     return "love"
 
 init 5 python:
@@ -655,14 +659,14 @@ label mas_compliment_cute_2:
     menu:
         "Встреча с тобой всегда согревает моё сердце!":
             $ persistent._mas_pm_monika_cute_as_natsuki = False
-            $ mas_gainAffection(5,bypass=True)
+            $ mas_gainAffection(5, bypass=True)
             m 1hubfb "Ох, это действительно греет моё сердце, когда я слышу от тебя такие слова!"
             m 1dkbfu "...Почти так же сильно, как когда я представляю, что мы наконец-то будем вместе в одной реальности."
             m 1ekbfa "Я едва могу сдержать себя, представляя этот особенный день~"
 
         "Ты еще милее, когда волнуешься.":
             $ persistent._mas_pm_monika_cute_as_natsuki = False
-            $ mas_gainAffection(3,bypass=True)
+            $ mas_gainAffection(3, bypass=True)
             m 2tubfu "Не даешь о себе знать, да, [player]?"
             m 2rubfu "Хмф, я просто не ожидала этого."
             m 3tubfb "Не жди, что в следующий раз будет так легко..."
@@ -670,7 +674,7 @@ label mas_compliment_cute_2:
 
         "Ты такая же милая, как Нацуки.":
             $ persistent._mas_pm_monika_cute_as_natsuki = True
-            $ mas_loseAffection(modifier=0.5)
+            $ mas_loseAffection()
             m 2lfc "Ох. {w=1}Спасибо, [player]..."
             m 1rsc "Но я надеялась, что буду стоять в своей собственной категории."
     return
@@ -704,8 +708,8 @@ init 5 python:
 label mas_compliment_chess:
     m 1eub "Спасибо, [player]."
     m 3esa "Как я уже говорила, мне интересно, имеет ли мое умение какое-то отношение к тому, что я оказалась здесь в ловушке?"
-    $ wins = persistent._mas_chess_stats["wins"]
-    $ losses = persistent._mas_chess_stats["losses"]
+    $ wins = persistent._mas_chess_stats.get("wins", 0)
+    $ losses = persistent._mas_chess_stats.get("losses", 0)
     if wins > 0:
         m 3eua "Ты тоже неплох; я тебе уже проигрывала."
         if wins > losses:
@@ -869,30 +873,34 @@ label mas_compliment_thinking_of_you_2:
         m 2dka "Это значит для меня многое, [player]."
 
     elif mas_isMoniDis():
+        $ mas_gainAffection(1, bypass=True)
         m 6rkc "..."
         m 6rka "Это такое облегчение."
         m 6eka "Спасибо."
 
     else:
-        $ mas_gainAffection(2,bypass=True)
+        $ mas_gainAffection(1, bypass=True)
         m 6dkd "Хммм... Спасибо."
         m 6dkc "..."
         return
 
     menu:
         "Мысли о тебе всегда скрашивают мой день!":
-            $ mas_gainAffection(5,bypass=True)
+            $ mas_gainAffection(5, bypass=True)
             m 1subsb "О, это {i}так{/i} мило, [player]!"
             m 3hubfu "Я чувствую к тебе то же самое~"
 
         "Ты снишься мне каждую ночь!":
-            $ mas_gainAffection(5,bypass=True)
+            $ mas_gainAffection(5, bypass=True)
             m 6hua "Ах~"
             m 6subsa "[player]..."
             m 7hubfu "{i}Ты{/i} - моя мечта~"
 
         "Это очень отвлекает...":
-            $ mas_loseAffection()
+            if mas_isMoniDis(lower=True):
+                $ mas_loseAffection(modifier=2.0)
+            else:
+                $ mas_loseAffection()
             m 2esc "..."
             m 2etc "..."
             m 2rksdlc "О, м-м-м..."
@@ -936,13 +944,13 @@ label mas_compliment_humor_2:
     m 3eub "Признак хорошей пары - умение смеяться вместе, не так ли?"
     menu:
         "Ты всегда скрашиваешь мой день.":
-            $ mas_gainAffection(5,bypass=True)
+            $ mas_gainAffection(5, bypass=True)
             m 1subsd "Ох...{w=0.2}[player]..."
             m 1ekbsa "Это так мило с твоей стороны."
             m 1hubsb "Знать, что я могу заставить тебя улыбаться, - это самый большой комплимент, который я могла бы получить!"
 
         "У тебя такой быстрый ум!":
-            $ mas_gainAffection(3,bypass=True)
+            $ mas_gainAffection(3, bypass=True)
             m 1hub "А-ха-ха!"
             m 2tub "Все это чтение, должно быть, принесло свои плоды, если тебе так нравится моя игра слов."
             m 2hublu "Я постараюсь поддерживать шутки для тебя. Э-хе-хе~"
@@ -1071,7 +1079,7 @@ label mas_compliment_missed:
                 m "Не мог бы ты меня обнять? Мне было очень одиноко, пока тебя не было.{fast}"
 
                 "Конечно, [m_name]!":
-                    $ mas_gainAffection()
+                    $ mas_gainAffection(modifier=0.25, bypass=True)
 
                     call monika_holdme_prep(lullaby=MAS_HOLDME_NO_LULLABY, stop_music=True, disable_music_menu=True)
                     call monika_holdme_start
@@ -1280,7 +1288,7 @@ label mas_compliment_outfit:
 
     menu:
         "Ты прекрасно выглядишь в любой одежде!":
-            $ mas_gainAffection(5,bypass=True)
+            $ mas_gainAffection(5, bypass=True)
             m 2subsd "[player]..."
             m 3hubsb "Большое спасибо!"
             m 1ekbsu "Ты всегда заставляешь меня чувствовать себя такой особенной."
@@ -1289,7 +1297,7 @@ label mas_compliment_outfit:
             $ mas_ILY()
 
         "Ты выглядишь очень мило.":
-            $ mas_gainAffection(3,bypass=True)
+            $ mas_gainAffection(3, bypass=True)
             m 1hubsb "А-ха-ха~"
             m 3hubfb "Спасибо, [mas_get_player_nickname()]!"
             show monika 5hubfb at t11 zorder MAS_MONIKA_Z with dissolve_monika

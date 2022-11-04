@@ -1001,6 +1001,8 @@ label mas_reaction_gift_starter_generic:
 label mas_reaction_gift_starter_bday:
     m 1sublo ".{w=0.7}.{w=0.7}.{w=1}"
     m "Э-{w=0.5}это..."
+    # TODO: fix this so we can actually get this path since rn gifts
+    # are added to this before we even get there
     if not persistent._mas_filereacts_historic.get(mas_monika_birthday):
         m "Подарок? Для меня?"
         m 1hka "Я..."
@@ -1024,20 +1026,20 @@ label mas_reaction_gift_starter_neutral:
 # d25
 label mas_reaction_gift_starter_d25:
     m 1sublo ".{w=0.7}.{w=0.7}.{w=1}"
-    m "Э-{w=1}Это..."
-    m "Подарок? Для меня?"
+    m "T-{w=1}This is..."
+    m "A present? For me?"
     if mas_getGiftStatsRange(mas_d25c_start, mas_d25 + datetime.timedelta(days=1))[0] == 0:
-        m 1eka "Тебе действительно не нужно было ничего дарить мне на Рождество..."
-        m 3hua "Но я так счастлива, что ты это сделал!"
+        m 1eka "You really didn't have to get me anything for Christmas..."
+        m 3hua "But I'm so happy that you did!"
     else:
-        m 1eka "Большое спасибо, [player]."
-    m 1sua "А теперь давай посмотрим... Что внутри?"
+        m 1eka "Thank you so much, [player]."
+    m 1sua "Now, let's see... What's inside?"
     return
 
 #f14
 label mas_reaction_gift_starter_f14:
     m 1sublo ".{w=0.7}.{w=0.7}.{w=1}"
-    m "Э-{w=1}Это..."
+    m "T-{w=1}This is..."
     m "Подарок? Для меня?"
     if mas_getGiftStatsForDate(mas_f14) == 0:
         m 1eka "Ты такой милый, что подарил мне что-то на День Святого Валентина..."
@@ -1732,6 +1734,7 @@ label mas_reaction_candycorn:
         m 1hubfa "Э-хе-хе~"
     elif times_candy_given == 2:
         $ mas_loseAffection(modifier=1.5)
+        m 2wfw "[player]!"
         m 2tfc "Я действительно старалась не быть грубой, но..."
         m 2tfc "Я постоянно говорю тебе, что не люблю кукурузные конфеты, а ты все равно продолжаешь их мне давать."
         m 2rfc "Сейчас мне начинает казаться, что ты просто пытаешься надо мной подшутить."

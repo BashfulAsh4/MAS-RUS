@@ -33,7 +33,7 @@ init -1 python in mas_stories:
     TYPE_SCARY = "scary"
 
     # pane constant
-    STORY_RETURN = "Не важно"
+    STORY_RETURN = "Nevermind"
     story_database = dict()
 
     #Time between story unlocks of the same type (in hours). Changes over sessions, but also changes after the next story unlocks
@@ -135,8 +135,8 @@ init 5 python:
         Event(
             persistent.event_database,
             eventlabel="monika_short_stories",
-            category=['литература'],
-            prompt="Можешь рассказать мне историю?",
+            category=['literature'],
+            prompt="Can you tell me a story?",
             pool=True,
             unlocked=True
         )
@@ -188,16 +188,16 @@ label monika_short_stories_menu:
         stories_menu_items.sort()
 
         #Add new story
-        stories_menu_items.insert(0, ("Новая история", mas_stories.UNLOCK_NEW, True, False))
+        stories_menu_items.insert(0, ("A new story", mas_stories.UNLOCK_NEW, True, False))
 
         # build switch button
         #TODO: Build a generalized switch for more than just two items
         if story_type == mas_stories.TYPE_SCARY:
-            switch_str = "короткую"
+            switch_str = "short"
         else:
-            switch_str = "страшную"
+            switch_str = "scary"
 
-        switch_item = ("Я бы хотел услышать " + switch_str + " историю", "monika_short_stories_menu", False, False, 20)
+        switch_item = ("I'd like to hear a " + switch_str + " story", "monika_short_stories_menu", False, False, 20)
 
         final_item = (mas_stories.STORY_RETURN, False, False, False, 0)
 
@@ -205,11 +205,11 @@ label monika_short_stories_menu:
     show monika 1eua at t21
 
     if story_type == mas_stories.TYPE_SCARY:
-        $ which = "Какую"
+        $ which = "Witch"
     else:
-        $ which = "Какую"
+        $ which = "Which"
 
-    $ renpy.say(m, which + " историю ты хотел бы услышать?" + end, interact=False)
+    $ renpy.say(m, which + " story would you like to hear?" + end, interact=False)
 
     # call scrollable pane
     call screen mas_gen_scrollable_menu(stories_menu_items, mas_ui.SCROLLABLE_MENU_TXT_LOW_AREA, mas_ui.SCROLLABLE_MENU_XALIGN, switch_item, final_item)
@@ -261,16 +261,16 @@ label monika_short_stories_menu:
 label mas_story_begin:
     python:
         story_begin_quips = [
-            _("Хорошо, давай начнём историю."),
-            _("Готов услышать историю?"),
-            _("Готов к рассказу?"),
-            _("Давай начнём~"),
-            _("Ты готов?")
+            _("Alright, let's start the story."),
+            _("Ready to hear the story?"),
+            _("Ready for story time?"),
+            _("Let's begin~"),
+            _("Are you ready?")
         ]
         story_begin_quip=renpy.random.choice(story_begin_quips)
     $ mas_gainAffection(modifier=0.2)
     m 3eua "[story_begin_quip]"
-    m 1duu "Кхм."
+    m 1duu "Ahem."
     return
 
 
@@ -285,7 +285,7 @@ label mas_scary_story_setup:
     $ are_masks_changing = mas_current_weather != mas_weather_rain
     $ mas_is_raining = True
 
-    $ play_song(None, fadeout=1.0)
+    $ mas_play_song(None, fadeout=1.0)
     pause 1.0
 
     $ mas_temp_zoom_level = store.mas_sprites.zoom_level
@@ -305,27 +305,27 @@ label mas_scary_story_setup:
 
     python:
         story_begin_quips = [
-            _("Хорошо, давай начнём историю."),
-            _("Готов услышать историю?"),
-            _("Готов к рассказу?"),
-            _("Давай начнём~"),
-            _("Ты готов?")
+            _("Alright let's start the story."),
+            _("Ready to hear the story?"),
+            _("Ready for story time?"),
+            _("Let's begin."),
+            _("Are you ready?")
         ]
         story_begin_quip=renpy.random.choice(story_begin_quips)
 
     m 3eua "[story_begin_quip]"
-    m 1duu "Кхм."
+    m 1duu "Ahem."
     return
 
 label mas_scary_story_cleanup:
 
     python:
         story_end_quips = [
-            _("Испугался, [player]?"),
-            _("Я напугала тебя, [player]?"),
-            _("Ну?"),
-            _("Ну как?"),
-            _("Итак...{w=0.5}я тебя напугала?")
+            _("Scared, [player]?"),
+            _("Did I scare you, [player]?"),
+            _("How was it?"),
+            _("Well?"),
+            _("So...{w=0.5}did I scare you?")
         ]
         story_end_quip=renpy.substitute(renpy.random.choice(story_end_quips))
 
@@ -342,8 +342,8 @@ label mas_scary_story_cleanup:
 
     call monika_zoom_transition(mas_temp_zoom_level,transition=1.0)
 
-    $ play_song(None, 1.0)
-    m 1eua "Надеюсь, тебе понравилось, [player]~"
+    $ mas_play_song(None, 1.0)
+    m 1eua "I hope you liked it, [player]~"
     $ mas_DropShield_core()
     $ HKBShowButtons()
     $ mas_scary_story_setup_done = False
@@ -354,7 +354,7 @@ init 5 python:
         Event(
             persistent._mas_story_database,
             eventlabel="mas_story_tyrant",
-            prompt="Кот и Петух",
+            prompt="The Cat and the Cock",
             category=[mas_stories.TYPE_NORMAL],
             unlocked=True
         ),
@@ -363,13 +363,13 @@ init 5 python:
 
 label mas_story_tyrant:
     call mas_story_begin
-    m 1eua "Кот поймал Петуха и задумался над разумными основаниями, чтобы съесть его."
-    m "Он обвинил его в том, что он надоедал всем, кукарекая ночью; не давал людям спать."
-    m 3eud "Петух обосновал свой поступок тем, что это было на благо людей, поскольку кукареканье побуждало в людях желание работать."
-    m 1tfb "И Кот сказал ему 'Ты своевольно извиняешься, но уже пора завтракать.'"
-    m 1hksdrb "После этого, он приготовил обед из Петуха."
-    m 3eua "Мораль этой истории такова: тиранам нет оправдания."
-    m 1hua "Надеюсь, тебе понравилась эта небольшая история, [player]~"
+    m 1eua "A Cat caught a Cock and thought about reasonable excuses for eating him."
+    m "He accused him of being a nuisance by crowing at night; not letting men sleep."
+    m 3eud "The Cock defended his action by saying this was for the benefit of men, as it wakes them for labor."
+    m 1tfb "The Cat replied, 'you abound in apologies, but it's time for breakfast.'"
+    m 1hksdrb "At that he made a meal of the Cock."
+    m 3eua "The moral of this story is, tyrants need no excuse."
+    m 1hua "I hope you enjoyed this little story, [player]~"
     return
 
 init 5 python:
@@ -377,7 +377,7 @@ init 5 python:
         Event(
             persistent._mas_story_database,
             eventlabel="mas_story_despise",
-            prompt="Лиса",
+            prompt="The Fox",
             category=[mas_stories.TYPE_NORMAL],
             unlocked=False
         ),
@@ -386,13 +386,13 @@ init 5 python:
 
 label mas_story_despise:
     call mas_story_begin
-    m 1eud "Однажды жарким летним днем Лис прогуливался по фруктовому саду, пока не подошел к виноградной грозди, только что созревшей на лозе, которая была прикреплена к высокой ветке."
-    m 1tfu "'Как раз то, что нужно, чтобы утолить жажду,' - сказал Лис."
-    m 1eua "Отступив на несколько шагов, он побежал и прыгнул, но промахнулся мимо ветки."
-    m 3eub "Возвращаясь снова и снова, сначала один раз,{w=1.0} потом второй,{w=1.0} третий,{w=1.0} он всё прыгал, но так и не добился успеха."
-    m 3tkc "Снова и снова он пытался ухватиться за заманчивый кусочек, но в конце концов вынужден был сдаться и пошел прочь, задрав нос, со словами: 'Я уверен, что они кислые.'"
-    m 1hksdrb "Мораль этой истории такова: легко презирать то, что не можешь получить."
-    m 1eua "Надеюсь, тебе понравилось, [player]~"
+    m 1eud "One hot summer's day, a Fox was strolling through an orchard till he came to a bunch of grapes just ripening on a vine which had been trained over a lofty branch."
+    m 1tfu "'Just the thing to quench my thirst,' said the Fox."
+    m 1eua "Drawing back a few paces, he took a run and a jump, and just missed the bunch."
+    m 3eub "Turning round again with a one,{w=1.0} two,{w=1.0} three,{w=1.0} he jumped up, but with no greater success."
+    m 3tkc "Again and again he tried after the tempting morsel, but at last had to give it up, and walked away with his nose in the air, saying: 'I am sure they are sour.'"
+    m 1hksdrb "The moral of this story is, it's easy to despise what you cannot get."
+    m 1eua "I hope you liked it, [player]~"
     return
 
 init 5 python:
@@ -400,7 +400,7 @@ init 5 python:
         Event(
             persistent._mas_story_database,
             eventlabel="mas_story_lies",
-            prompt="Мальчик-пастух и волк",
+            prompt="The Shepherd Boy and the Wolf",
             category=[mas_stories.TYPE_NORMAL],
             unlocked=False
         ),
@@ -409,19 +409,19 @@ init 5 python:
 
 label mas_story_lies:
     call mas_story_begin
-    m 1euc "Жил мальчик-пастух, который пас своих овец у подножия горы рядом с темным лесом."
-    m 1lsc "Ему было одиноко, и он придумал план, как найти себе компанию."
-    m 4hfw "Он бросился вниз к деревне, крича 'Волк! Волк!', и жители деревни вышли ему навстречу."
-    m 1hksdrb "Это так понравилось мальчику, что через несколько дней он попробовал повторить тот же трюк, и снова жители пришли ему на помощь."
-    m 3wud "Вскоре после этого из леса действительно вышел волк."
-    m 1ekc "Мальчик закричал 'Волк, Волк!' ещё громче, чем раньше."
-    m 4efd "Но на этот раз жители деревни, которых уже дважды обманули, решили, что мальчик снова лжет, и никто не пришел ему на помощь."
-    m 2dsc "Так волк хорошо пообедал стадом мальчика."
-    m 2esc "Мораль этой истории такова: лжецам не верят, даже если они говорят правду."
-    m 1hksdlb "Тебе не стоит волноваться об этом, [player]..."
-    m 3hua "Ты ведь никогда не солжёшь мне, верно, right?"
-    m 1hub "Э-хе-хе"
-    m 1eua "Надеюсь, тебе понравилась эта история, [player]!"
+    m 1euc "There was a Shepherd Boy who tended his sheep at the foot of a mountain near a dark forest."
+    m 1lsc "It was lonely for him, so he devised a plan to get a little company."
+    m 4hfw "He rushed down towards the village calling out 'Wolf! Wolf!' and the villagers came out to meet him."
+    m 1hksdrb "This pleased the boy so much that a few days after he tried the same trick, and again the villagers came to his help."
+    m 3wud "Shortly after, a Wolf actually did come out from the forest."
+    m 1ekc "The boy cried out 'Wolf, Wolf!' still louder than before."
+    m 4efd "But this time the villagers, who had been fooled twice before, thought the boy was again lying, and nobody came to his aid."
+    m 2dsc "So the Wolf made a good meal of the boy's flock."
+    m 2esc "The moral of this story is, liars are not believed even when they speak the truth."
+    m 1hksdlb "You shouldn't worry about it, [player]..."
+    m 3hua "You'd never lie to me, right?"
+    m 1hub "Ehehe~"
+    m 1eua "I hope you enjoyed the story, [player]!"
     return
 
 init 5 python:
@@ -1867,5 +1867,52 @@ label mas_scary_story_flowered_lantern_3:
     m 4wuw "...Only to flee from the house crying in horror after seeing him."
     m "Hagiwara was dead, hideously dead, and his face had the expression of uttermost agony of fear..."
     m 2wfc "And lying beside him in the bed were the bones of a woman with its arms clung around his neck as if in an embrace."
+    call mas_scary_story_cleanup
+    return
+
+init 5 python:
+    addEvent(
+        Event(
+            persistent._mas_story_database,
+            eventlabel="mas_scary_story_prison_escape",
+            category=[store.mas_stories.TYPE_SCARY],
+            prompt="Prison Escape",
+            unlocked=False
+        ),
+        code="STY"
+    )
+
+label mas_scary_story_prison_escape:
+    call mas_scary_story_setup
+    m 1ekd "A pretty woman was serving a life sentence in prison for murder."
+    m 2tfc "Angry and resentful about her situation, she decided that she couldn't spend her life in prison. {w=0.2}She began plotting ways to escape."
+    m 7eua "Over time, she became good friends with one of the prison caretakers."
+    m 3esc "His job was to bury any prisoners who died in a graveyard just outside the prison walls."
+    m 3esd "Whenever a prisoner died, the caretaker rang a bell which was heard by all of the inmates."
+    m 3esc "Next, he got the body and put it in a casket, and then entered his office to fill out the death certificate before returning to the nail the casket lid shut."
+    m 3esd "Finally, he put it on a wagon to take to the graveyard and bury it."
+    m 1euc "Knowing this routine, the woman devised an escape plan and shared it with the caretaker..."
+    m 1eud "The next time the bell rang, the woman would leave her cell and sneak into the dark room where the coffins were kept."
+    m 1eud "She would slip into the coffin with the dead body while the caretaker was filling out the death certificate."
+    m 3euc "When the caretaker returned, he would nail the lid shut and take the coffin outside the prison and bury it."
+    m 3euc "The woman knew there would be enough air for her to breathe until later in the evening when the caretaker would return under cover of darkness, dig up the coffin, and set her free."
+    m 2eksdlc "The caretaker was reluctant to go along with this plan, {w=0.1}{nw}"
+    extend 4esa "but since he and the woman had become good friends over the years, he agreed to do it."
+    m 2tsc "The woman waited several months for one of the other inmates to die."
+    m 7dsc "One night, she was asleep in her cell when she heard the death bell ringing."
+    m 3euc "She got up, picked the lock of her cell, and slowly walked down the hallway."
+    m 3wud "She was nearly caught a couple of times...{w=0.3}her heart was beating so fast."
+    m 3ekc "She opened the door to the darkened room where the coffins were kept and quietly found the one that contained the dead body."
+    m 3dkc "After carefully climbing into it, she pulled the lid shut to wait for the caretaker to come and nail the lid down."
+    m 2eka "Soon she heard footsteps and the pounding of the hammer and nails."
+    m 4eksdlc "Even though she was very uncomfortable in the coffin with the dead body beneath her, she knew that with each nail she was one step closer to freedom."
+    m 2eud "The coffin was lifted onto the wagon and taken outside to the graveyard."
+    m 2eksdlc "She didn't make a sound as the coffin hit the bottom of the grave with a thud."
+    m 4eksdlc "Finally she heard the dirt dropping onto the top of the wooden coffin, {w=0.1}{nw}"
+    extend 4eksdla "and she knew that it was only a matter of time until she would be free at last."
+    m 2hksdlb "After a hour of absolute silence, she began to chuckle quietly to herself."
+    m 2eta "Feeling curious, she decided to light a match to find out the identity of the dead prisoner beside her."
+    m 2wusdld "...!"
+    m 2wusdlo "It was the dead caretaker!"
     call mas_scary_story_cleanup
     return

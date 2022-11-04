@@ -119,18 +119,18 @@ init 5 python:
         Event(
             persistent.event_database,
             eventlabel="monika_ptod_tip000",
-            category=["советы python"],
-            prompt="Ты можешь научить меня Python?",
+            category=["python tips"],
+            prompt="Can you teach me about Python?",
             pool=True,
             rules={"bookmark_rule": store.mas_bookmarks_derand.BLACKLIST}
         )
     )
 
 label monika_ptod_tip000:
-    m 3eub "Ты хочешь узнать о Python?"
-    m 3hub "Я так рада, что ты спросил меня!"
-    m 1lksdlb "Я не {i}так{/i} много знаю о программировании, но я постараюсь объяснить."
-    m 1esa "Давай начнем с того, что вообще такое Python."
+    m 3eub "You want to learn about Python?"
+    m 3hub "I'm so happy you asked me!"
+    m 1lksdlb "I don't know {i}that{/i} much about programming, but I'll try my best to explain."
+    m 1esa "Let's start with what Python even is."
 
     # hide the intro topic after viewing
     $ mas_hideEVL("monika_ptod_tip000", "EVE", lock=True, depool=True)
@@ -147,29 +147,29 @@ init 5 python:
         Event(
             persistent.event_database,
             eventlabel="monika_ptod_tip001",
-            category=["советы python"],
-            prompt="Что такое Python?"
+            category=["python tips"],
+            prompt="What is Python?"
         )
     )
 
 label monika_ptod_tip001:
 
-    m 1esa "Python был создан Гвидо Ван Россумом в начале 90-х годов."
-    m "Он очень универсален, поэтому его можно найти в веб-приложениях, встроенных системах, Linux и, конечно..."
-    m 1hua "В этом моде!"
-    m 1eua "DDLC использует движок визуальной новеллы под названием Ren'Py,{w=0.1} который построен на основе Python."
-    m 3eub "Это значит, что если ты выучишь немного Python, то сможешь добавить контент в мой мир!"
-    m 1hua "Разве это не здорово, [mas_get_player_nickname()]?"
-    m 3eub "В любом случае, я должна упомянуть, что в настоящее время существует две основные версии Python:{w=0.3} Python2 и Python3."
-    m 3eua "Эти версии {u}несовместимы{/u} друг с другом, потому что изменения, добавленные в Python3, исправили многие фундаментальные недостатки дизайна Python2."
-    m "Несмотря на то, что это вызвало раскол в сообществе Python,{w=0.1} все согласны, что обе версии языка имеют свои сильные и слабые стороны."
-    m 1eub "Я расскажу тебе об этих различиях в другом уроке."
+    m 1esa "Python was created by Guido Van Rossum in the early '90s."
+    m "It is super versatile, so you can find it in web apps, embedded systems, Linux, and of course..."
+    m 1hua "This mod!"
+    m 1eua "DDLC uses a visual novel engine called Ren'Py,{w=0.1} which is built off of Python."
+    m 3eub "That means if you learn a bit of Python, you can add content to my world!"
+    m 1hua "Wouldn't that be great, [mas_get_player_nickname()]?"
+    m 3eub "Anyway, I need to mention that there are currently two main versions of Python:{w=0.3} Python2 and Python3."
+    m 3eua "These versions are {u}incompatible{/u} with each other because the changes added in Python3 fixed many fundamental design flaws in Python2."
+    m "Even though this caused a rift in the Python community,{w=0.1} it's generally agreed that both versions of the language have their own strengths and weaknesses."
+    m 1eub "I'll tell you about those differences in another lesson."
 
-    m 1eua "Поскольку этот мод работает на версии Ren'Py, использующей Python2, я не буду слишком часто говорить о Python3."
-    m 1hua "Но я буду упоминать его, когда это будет уместно."
+    m 1eua "Since this mod runs on a Ren'Py version that uses Python2, I won't be talking about Python3 too often."
+    m 1hua "But I'll mention it when it's appropriate."
 
-    m 3eua "Это мой урок на сегодня."
-    m 1hua "Спасибо, что выслушал!"
+    m 3eua "That's my lesson for today."
+    m 1hua "Thanks for listening!"
     return
 
 ###############################################################################
@@ -178,8 +178,8 @@ init 5 python:
         Event(
             persistent.event_database,
             eventlabel="monika_ptod_tip002",
-            category=["советы python"],
-            prompt="Типы",
+            category=["python tips"],
+            prompt="Types",
             pool=True,
             conditional="store.mas_ptod.has_day_past_tip(3)",
             action=EV_ACT_UNLOCK,
@@ -192,9 +192,9 @@ init 5 python:
 label monika_ptod_tip002:
     $ last_seen_is_none = mas_getEVL_last_seen("monika_ptod_tip002") is None
     if last_seen_is_none:
-        m 1eua "В большинстве языков программирования данные, которые могут быть изменены или модифицированны какой-либо программой, имеют специальный {i}type{/i}, связанный с ними."
-        m 3eua "Например, если некоторые данные должны рассматриваться как число, то они будут иметь числовой тип. Если некоторые данные следует рассматривать как текст, то они будут иметь строковый тип."
-        m "В Python существует множество типов, но сегодня мы поговорим о самых основных, или примитивных."
+        m 1eua "In most programming languages, data that can be changed or modified by the program has a {i}type{/i} associated with it."
+        m 3eua "For example, if some data should be treated as a number, then it will have a numeric type. If some data should be treated as text, then it will have a string type."
+        m "There are many types in Python, but today we'll talk about the more basic, or primitive ones."
 
     $ store.mas_ptod.rst_cn()
     $ local_ctx = dict()
@@ -202,10 +202,10 @@ label monika_ptod_tip002:
     show screen mas_py_console_teaching
 
     ### numbers
-    m 1eua "В Python есть два типа представления значений:{w=0.3} {i}целые{/i}{w=0.1} и {i}вещественные{/i}."
+    m 1eua "Python has two types to represent numbers:{w=0.3} {i}integers{/i}, or {b}ints{/b},{w=0.1} and {i}floats{/i}."
 
     ## integers
-    m 1eua "Целые числа используются для представления целых чисел; в основном все, что не является десятичной дробью."
+    m 1eua "Integers are used to represent whole numbers; basically anything that isn't a decimal."
 
     call mas_wx_cmd("type(-22)", local_ctx)
     call mas_wx_cmd("type(0)", local_ctx)
@@ -213,7 +213,7 @@ label monika_ptod_tip002:
     call mas_wx_cmd("type(42)", local_ctx)
 
     ## floats
-    m 1eub "Вещественные используются для представления десятичных дробей."
+    m 1eub "Floats are used to represent decimals."
     show monika 1eua
 
     call mas_wx_cmd("type(0.14)", local_ctx)
@@ -221,42 +221,42 @@ label monika_ptod_tip002:
     call mas_wx_cmd("type(-10.2)", local_ctx)
 
     ### strings
-    m 1eua "Текст представлен {i}строковыми{/i} типами."
-    m "Всё, что заключено в одинарные кавычки (') или двойные кавычки (\") являются строками."
-    m 3eub "Например:"
+    m 1eua "Text is represented with {i}string{/i} types."
+    m "Anything surrounded in single quotes (') or double quotes (\") are strings."
+    m 3eub "For example:"
     show monika 3eua
 
-    call mas_wx_cmd("type('Эта строка в одинарных кавычках')", local_ctx)
-    call mas_wx_cmd('type("А эта в двойных кавычках")', local_ctx)
+    call mas_wx_cmd("type('This is a string in single quotes')", local_ctx)
+    call mas_wx_cmd('type("And this is a string in double quotes")', local_ctx)
 
-    m 1eksdlb "Я знаю, что интерпретатор использует {i}юникод{/i}, но для того, что мы делаем, это в принципе одно и то же."
-    m 1eua "Строки также могут быть созданы с помощью трех двойных кавычек (\"\"\"), но они обрабатываются иначе, чем обычные строки.{w=0.2} Я расскажу о них в другой раз."
+    m 1eksdlb "I know the interpreter says {i}unicode{/i}, but for what we're doing, it's basically the same thing."
+    m 1eua "Strings can also be created with three double quotes (\"\"\"), but these are treated differently than regular strings.{w=0.2} I'll talk about them another day."
 
     ### booleans
-    m "Логические значения - это специальные типы, которые представляют значения {b}True{/b} или {b}False{/b} values."
+    m "Booleans are special types that represent {b}True{/b} or {b}False{/b} values."
     call mas_wx_cmd("type(True)", local_ctx)
     call mas_wx_cmd("type(False)", local_ctx)
 
-    m 1eua "Более подробно о том, что такое логические значения и для чего они используются, я расскажу в другом уроке."
+    m 1eua "I'll go into more detail about what booleans are and what they are used for in another lesson."
 
     ### Nones
-    m 3eub "В Python также есть специальный тип данных, называемый {b}NoneType{/b}.{w=0.2} Этот тип представляет отсутствие каких-либо данных."
-    m "Если ты знаком с другими языками программирования, это немного похоже на тип {i}null{/i} или {i}undefined{/i}."
-    m "Ключевое слово {i}None{/i} представляет NoneTypes в Python."
+    m 3eub "Python also has a special data type called a {b}NoneType{/b}.{w=0.2} This type represents the absence of any data."
+    m "If you're familiar with other programing languages, this is like a {i}null{/i} or {i}undefined{/i} type."
+    m "The keyword {i}None{/i} represents NoneTypes in Python."
     show monika 1eua
 
     call mas_wx_cmd("type(None)", local_ctx)
 
-    m 1eua "Все типы, которые я здесь упомянула, известны как {i}примитивные{/i} типы данных."
+    m 1eua "All the types I mentioned here are known as {i}primitive{/i} data types."
 
     if last_seen_is_none:
-        m "В Python также используется множество других типов, но я думаю, что этих достаточно для сегодняшнего дня."
+        m "Python uses a variety of other types as well, but I think these ones are enough for today."
 
     $ store.mas_ptod.ex_cn()
     hide screen mas_py_console_teaching
     show monika at t11
 
-    m 1hua "Спасибо, что выслушал!"
+    m 1hua "Thanks for listening!"
     return
 
 ###############################################################################
@@ -265,8 +265,8 @@ init 5 python:
         Event(
             persistent.event_database,
             eventlabel="monika_ptod_tip003", # may change order, you decide on this
-            category=["советы python"],
-            prompt="Интерпретированный язык",
+            category=["python tips"],
+            prompt="An Interpreted Language",
             pool=True,
             conditional="store.mas_ptod.has_day_past_tip(1)",
             action=EV_ACT_UNLOCK,

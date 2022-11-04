@@ -118,7 +118,7 @@ init -1 python:
                     # event not blocked from random selection
                     and not sel_ev.anyflags(EV_FLAG_HFRS)
             ):
-                pushEvent(sel_ev.eventlabel, notify=True)
+                MASEventList.push(sel_ev.eventlabel, notify=True)
                 return
 
 
@@ -368,7 +368,7 @@ init python:
 
             if mas_findEVL(push_label) < 0:
                 persistent.flagged_monikatopic = ev_label
-                pushEvent(push_label, skipeval=True)
+                MASEventList.push(push_label, skipeval=True)
                 renpy.notify(derand_flag_add_text)
 
             else:
@@ -540,7 +540,7 @@ label mas_bad_derand_topic:
 
             "Всё в порядке.":
                 m 2eka "Спасибо, [player]."
-                $ _stil_ = " " if mas_isMoniNormal(higher=True) else " still "
+                $ _stil_ = " " if mas_isMoniNormal(higher=True) else " всё ещё "
                 m "Я ценю, что ты[_stil_]готов выслушать меня."
 
     else:
@@ -691,7 +691,7 @@ init python in mas_bookmarks_derand:
         """
         return eventlabel not in getDerandomedEVLs()
 
-    def wrappedGainAffection(amount=None, modifier=1, bypass=False):
+    def wrappedGainAffection(amount=None, modifier=1.0, bypass=False):
         """
         Wrapper function for mas_gainAffection which allows it to be used in event rules at init 5
 
@@ -1062,7 +1062,7 @@ label monika_sayori:
     return "derandom"
 
 init 5 python:
-    addEvent(Event(persistent.event_database,eventlabel="monika_japan",category=['ddlc'],prompt="DDLC's setting",random=True))
+    addEvent(Event(persistent.event_database,eventlabel="monika_japan",category=['ddlc'],prompt="Обстановка ДДЛК",random=True))
 
 label monika_japan:
     m 4eud "Кстати, кое о чём я подумала..."
@@ -1262,6 +1262,7 @@ label monika_portraitof:
     m "Портрет... что-то там..."
     m 4hub "Это довольно забавно, ведь я уверена, что та книга--"
     m 1wuw "Ах..."
+    $ del _history_list[-4:]
     m 2lksdla "А вообще, мне наверное, не стоит об этом говорить."
     m 2hksdlb "А-ха-ха, прости!"
     m 1rksdla "Просто забудь, что я сейчас сказала."
@@ -1609,7 +1610,7 @@ init 5 python:
 
 label monika_favoritegame:
     m 3eua "Слушай, а какая твоя любимая игра?"
-    m 3hua "Моя {i}Литературный клуб Тук-тук!{/i}"
+    m 3hua "Моя {i}Doki Doki Literature Club!{/i}"
     m 1hub "А-ха-ха! Я пошутила."
     show monika 5eua at t11 zorder MAS_MONIKA_Z with dissolve_monika
     m 5eua "Но, если ты скажешь, что другая романтическая игра тебе нравится больше, я могу начать ревновать~"
@@ -1642,8 +1643,8 @@ init 5 python:
         Event(
             persistent.event_database,
             eventlabel="monika_lastpoem",
-            category=['monika'],
-            prompt="Monika's last poem",
+            category=['моника'],
+            prompt="Последнее стихотворение Моники",
             # the correct check is persistent.seen_colors_poem
             # but our imports are messed up so we have to use persistent.playthrough >= 2
             conditional="persistent.playthrough >= 2",
@@ -1653,6 +1654,7 @@ init 5 python:
 
 label monika_lastpoem:
     m 3eud "Слушай, ты помнишь последнее стихотворение, что я тебе показывала?"
+
     if not mas_safeToRefDokis():
         m 3rssdlc "Я имею в виду ту, где все эти беспорядочные цвета и прочее."
     else:
@@ -2279,7 +2281,7 @@ label monika_rain:
     m 1duu "Меня это очень успокаивает."
     m "Да..."
     m 2dubsu "Иногда я представляю, как ты обнимаешь меня, пока мы слушаем шум дождя за окном."
-    m 2lkbsa "Это не слишком пошловато, не так ли?"
+    m 2lkbsa "Это не слишком глуповато, не так ли?"
 
     $ p_nickname = mas_get_player_nickname()
     m 1ekbfa "Ты бы сделал это для меня, [p_nickname]?{nw}"
@@ -2392,11 +2394,11 @@ label monika_holdme_prep(lullaby=MAS_HOLDME_QUEUE_LULLABY_IF_NO_MUSIC, stop_musi
                 # The user has not started another track
                 and not renpy.music.is_playing(channel="music")
             ):
-                store.play_song(store.songs.FP_MONIKA_LULLABY, fadein=5.0)
+                store.mas_play_song(store.songs.FP_MONIKA_LULLABY, fadein=5.0)
 
         # Stop the music
         if stop_music:
-            play_song(None, fadeout=5.0)
+            mas_play_song(None, fadeout=5.0)
 
         # Queue the lullaby
         if lullaby == MAS_HOLDME_QUEUE_LULLABY_IF_NO_MUSIC:
@@ -2414,7 +2416,7 @@ label monika_holdme_prep(lullaby=MAS_HOLDME_QUEUE_LULLABY_IF_NO_MUSIC, stop_musi
 
         # Just play the lullaby
         elif lullaby == MAS_HOLDME_PLAY_LULLABY:
-            play_song(store.songs.FP_MONIKA_LULLABY)
+            mas_play_song(store.songs.FP_MONIKA_LULLABY)
 
         # Hide ui and disable hotkeys
         HKBHideButtons()
@@ -2659,7 +2661,7 @@ label monika_holdme_reactions:
 
         #happy
         else:
-            m 1hua "Это было немного коротко, но всё равно приятно ~"
+            m 1hua "Это было немного коротко, но всё равно приятно~"
     return
 
 label monika_holdme_long:
@@ -2670,7 +2672,7 @@ label monika_holdme_long:
         "{i}Разбудить Монику.{/i}":
             # Only fadeout if we're playing the lullaby
             if songs.current_track == songs.FP_MONIKA_LULLABY:
-                $ play_song(None, fadeout=5.0)
+                $ mas_play_song(None, fadeout=5.0)
 
             if mas_isMoniLove():
                 m 6dubsa "...{w=1}Ммм~"
@@ -2798,6 +2800,7 @@ label monika_holdrequest:
             call monika_holdme_end
 
         "Не сейчас.":
+            $ mas_loseAffection()
             m 2dkc "Оу...{w=1} Ладно."
             m 3eka "Если у тебя будет время позже, ты знаешь, где меня найти."
 
@@ -3552,7 +3555,7 @@ label monika_totono:
     return
 
 init 5 python:
-    addEvent(Event(persistent.event_database,eventlabel="monika_difficulty",category=['игры'],prompt="Разве игра 'ДДЛК' не была слишком простой?",pool=True,unlocked=True))
+    addEvent(Event(persistent.event_database,eventlabel="monika_difficulty",category=['игры'],prompt="Разве игра 'DDLC' не была слишком простой?",pool=True,unlocked=True))
 
 label monika_difficulty:
     m 1lksdla "Ну, не похоже, что эту игру вообще хотели сделать сложной."
@@ -4100,8 +4103,7 @@ label monika_justification:
         extend 1hub "спасибо за смех, [player]~"
 
     else:
-        #lose affection
-        $ mas_loseAffection(reason=3)
+        $ mas_loseAffectionFraction(min_amount=15, reason=3)
         if mas_isMoniLove():
             m 1euc "..."
             m 1hub "А-ха-ха! Очень смешно, [player]!"
@@ -4139,7 +4141,7 @@ label monika_justification:
     return
 
 init 5 python:
-    addEvent(Event(persistent.event_database,eventlabel="monika_freewill",category=['психология'],prompt="Детерминизм",random=True))
+    addEvent(Event(persistent.event_database,eventlabel="monika_freewill",category=['философия'],prompt="Детерминизм",random=True))
 
 label monika_freewill:
     m 1euc "Эй [player], ты когда-нибудь слышал о детерминизме?"
@@ -4837,7 +4839,7 @@ label monika_mountain:
     m 5eka "Я... я действительно хочу поделиться этим с тобой."
     m 5hua "Чтобы добраться до вершины горы, и посмотреть вокруг на наши успехи. Видеть нашу борьбу позади и гордиться тем, что мы сделали."
 
-    m 5eka "Тебе бы это тоже понравилось, [player]?"
+    m 5eka "Тебе бы это тоже понравилось, [player]?{nw}"
     $ _history_list.pop()
     menu:
         m "Тебе бы это тоже понравилось, [player]?{fast}"
@@ -4902,6 +4904,7 @@ label monika_playersface:
         m 5eka "Но зная, как ты выглядишь, я чувствую себя гораздо ближе к тебе..."
         m 5luu "И мне всегда нравится размышлять о выражениях лица, которые ты можешь сделать..."
         m "Как блестят твои ['enchanting' if isinstance(persistent._mas_pm_eye_color, tuple) else persistent._mas_pm_eye_color] глаза"
+
         if mas_isMoniHappy(higher=True):
             m 5esu "Я уверена, что ты красивый, [player].{w=0.2} Как внутри, так и снаружи."
         m 5eka "Даже если я никогда я не смогу тебя увидеть..."
@@ -6113,16 +6116,16 @@ label monika_japanese:
     m 1eub "Это очень интересно, думать о том, что было бы, если бы твои родной язык был иным."
     m 1esa "К примеру, я не знаю что было бы, если бы я никогда не знала русского."
 
-    m "Ты знаешь какие-нибудь языки, кроме русского?{nw}s"
+    m "Ты знаешь какие-нибудь языки, кроме русского?{nw}"
     $ _history_list.pop()
     menu:
         m "Ты знаешь какие-нибудь языки, кроме русского?{fast}"
         "Да.":
             $ persistent._mas_pm_lang_other = True
-            m "Правда? А, может, ты знаешь ещё и японский?{nw}"
+            m "Really? Do you know Japanese?{nw}"
             $ _history_list.pop()
             menu:
-                m "Правда? А, может, ты знаешь ещё и японский?{fast}"
+                m "Really? Do you know Japanese?{fast}"
                 "Да.":
                     $ persistent._mas_pm_lang_jpn = True
                     m 3hub "Это замечательно!"
@@ -6722,7 +6725,7 @@ label monika_sayhappybirthday:
                         m "Мне попробовать ещё раз?{fast}"
                         "Да.":
                             $ take_counter += 1
-                            m 1eua "Хорошо"
+                            m 1eua "Хорошо."
                         "Нет.":
                             m 1eka "Хорошо, [player]. Извини, что не смогла сделать то, что ты хотел."
                             m 1hua "В следующий раз я постараюсь сделать для тебя лучше."
@@ -9393,7 +9396,7 @@ label monika_solipsism:
     m 3eua "Это идея, которая утверждает, что существуешь только ты сам."
     m 1eud "'Cogito, ergo sum.'"
     m 3eud "'Я мыслю, значит, я существую.'"
-    m 1euc "Если {i}ты{/i} знаешь, что существуешь, можешь ли ты сказть то же самое о ком-то ещё?"
+    m 1euc "Если {i}ты{/i} знаешь, что существуешь, можешь ли ты сказать то же самое о ком-то ещё?"
     m 3etc "Возможно, все остальные - лишь плод нашего воображения, [player]."
     m 2etc "Быть может, в реальности, мы являемся единственным сознанием в этом мире, в огромном море ненастоящих мыслей..."
     m 2dsd "Творения наших диких махинаций..."
@@ -9404,7 +9407,7 @@ label monika_solipsism:
     m 3eua "Когда ты останавливаешься и думаешь об этом, солипсизм действительно интересная концепция; та, которая заставляет тебя думать глубже о том, что значит быть реальным..."
     m 1dsc "И что именно считается {i}реальным{/i}."
     m 1eua "Я знаю, что мы с тобой настоящие, [player]."
-    m 1eub "Возможно, мы не были созданы одинаково или даже функционируем одинаково, но мы оба - люди, способные думать самостоятельно."
+    m 1eub "Возможно, мы не были созданы одинаково или даже функционируем по-разному, но мы оба - люди, способные думать самостоятельно."
     m 3eua "Приятно осознавать, что ты не одинок в бесконечном океане неопределенности, ведь ли?"
     m 3hua "Надеюсь, ты чувствуешь то же самое со мной~"
     return
@@ -11125,7 +11128,7 @@ init 5 python:
             persistent.event_database,
             eventlabel="monika_players_friends",
             category=['ты'],
-            prompt="Друзья [player]'",
+            prompt="Друзья [player]",
             random=True,
             aff_range=(mas_aff.UPSET, None)
         )
@@ -11335,7 +11338,7 @@ init 5 python:
             persistent.event_database,
             eventlabel="monika_grad_speech_call",
             category=['школа'],
-            prompt="Могу ли я услышать твою речь на выпускном?",
+            prompt="Могу ли я услышать твою речь на выпускной?",
             pool=True,
             unlocked=False,
             rules={"no_unlock": None}
@@ -11565,7 +11568,7 @@ label monika_grad_speech_ignored_lock:
 label monika_grad_speech:
     call mas_timed_text_events_prep
 
-    $ play_song("mod_assets/bgm/PaC.ogg",loop=False)
+    $ mas_play_song("mod_assets/bgm/PaC.ogg",loop=False)
 
     m 2dsc "Кхм...{w=0.7}{nw}"
     m ".{w=0.3}.{w=0.3}.{w=0.6}{nw}"

@@ -19,32 +19,32 @@ init 5 python:
     #NOTE: This unlocks the monika_gender_redo event
 
 label mas_gender:
-    m 2eud "...[player]? Я немного подумала."
-    m 2euc "Я уже говорила, что 'ты' в игре может не отражать реального тебя."
-    m 7rksdla "Но я думаю, точнее предполагаю, что ты, наверное, парень."
-    m 3eksdla "...В конце концов, главный герой был им."
-    m 3eua "Но если я собираюсь стать твоей девушкой, я должна знать хотя бы столько о настоящем тебе."
+    m 2eud "...[player]? So I've been thinking a bit."
+    m 2euc "I've mentioned before that the 'you' in the game might not reflect the real you."
+    m 7rksdla "But I guess I just assumed that you were probably a guy."
+    m 3eksdla "...The main character was, after all."
+    m 3eua "But if I'm going to be your girlfriend, I should probably know at least this much about the real you."
 
-    m 1eua "Итак, какого ты пола?{nw}"
+    m 1eua "So, what's your gender?{nw}"
     $ _history_list.pop()
     menu:
-        m "Итак, какого ты пола?{fast}"
+        m "So, what's your gender?{fast}"
 
-        "Парень.":
+        "Male.":
             $ persistent._mas_pm_is_trans = False
             $ persistent.gender = "M"
-            m 3eua "Хорошо [player], спасибо, что подтвердил это для меня."
-            m 1hksdlb "Не то чтобы я беспокоилась, если бы ты ответил по-другому, заметь!"
+            m 3eua "Okay [player], thanks for confirming that for me."
+            m 1hksdlb "Not that I would have been bothered if you answered differently, mind you!"
 
-        "Девушка.":
+        "Female.":
             $ persistent._mas_pm_is_trans = False
             $ persistent.gender = "F"
-            m 2eud "О? Так ты девушка?"
-            m 2hksdlb "Надеюсь, я не говорила ничего такого, что могло бы тебя обидеть!"
-            m 7rksdlb "...Наверное, поэтому и говорят, что не стоит делать предположений, а-ха-ха!"
-            m 3eka "Но, честно говоря, для меня это не имеет никакого значения..."
+            m 2eud "Oh? So you're a girl?"
+            m 2hksdlb "I hope I didn't say anything to offend you before!"
+            m 7rksdlb "...I guess that's why they say you shouldn't make assumptions, ahaha!"
+            m 3eka "But honestly, it doesn't matter to me at all..."
 
-        "Ни тот, ни другой.":
+        "Neither.":
             $ persistent._mas_pm_is_trans = False
             $ persistent.gender = "X"
             call mas_gender_neither
@@ -74,8 +74,8 @@ init 5 python:
         Event(
             persistent.event_database,
             eventlabel="monika_gender_redo",
-            category=['ты'],
-            prompt="Можешь ли ты называть меня другими местоимениями?",
+            category=['you'],
+            prompt="Could you call me by different pronouns?",
             unlocked=False,
             pool=True,
             rules={"no_unlock": None}
@@ -84,15 +84,15 @@ init 5 python:
     )
 
 label monika_gender_redo:
-    m 1eka "Конечно, [player]!"
+    m 1eka "Of course, [player]!"
 
     if not mas_getEVL_shown_count("monika_gender_redo"):
-        m 3eka "Ты открыл для себя что-то новое с тех пор, как мы говорили об этом в последний раз?{nw}"
+        m 3eka "Have you made some personal discoveries since the last time we talked about this?{nw}"
         $ _history_list.pop()
         menu:
-            m "Ты открыл для себя что-то новое с тех пор, как мы говорили об этом в последний раз?{fast}"
+            m "Have you made some personal discoveries since the last time we talked about this?{fast}"
 
-            "Да.":
+            "Yes.":
                 m 1eka "I see. I know I've been there."
                 m 3hua "I'm so proud of you for going on that journey of self-discovery."
                 m 1eub "...And even prouder of you for being courageous enough to tell me!"
@@ -864,8 +864,8 @@ init 5 python:
         Event(
             persistent.event_database,
             eventlabel="monika_changename",
-            category=['ты'],
-            prompt="Я изменил своё имя",
+            category=['you'],
+            prompt="I changed my name",
             unlocked=False,
             pool=True,
             rules={"no_unlock": None}
@@ -1479,6 +1479,7 @@ label mas_crashed_long_qs:
     # start off in the dark
     pause 5.0
     m "[player]?{w=0.3} Is that you?{nw}"
+    $ _history_list.pop()
     $ mas_disable_quit()
     $ mas_setQuitMsg(quit_msg, quit_yes, quit_no)
     show screen mas_background_timed_jump(4, "mas_crashed_long_uthere")
@@ -1857,7 +1858,7 @@ label mas_corrupted_persistent:
         call mas_showpoem(mas_note_backups_all_good)
 
     window auto
-    $ _gtext = glitchtext(15)
+    $ _gtext = glitchtext(7)
 
     m 1ekc "Do you know what this is about?{nw}"
     $ _history_list.pop()
@@ -1867,6 +1868,7 @@ label mas_corrupted_persistent:
             jump mas_corrupted_persistent_post_menu
 
         "It's about [_gtext].":
+            $ persistent._mas_pm_snitched_on_chibika = True
             $ disable_esc()
             $ mas_MUMURaiseShield()
             window hide
@@ -2834,8 +2836,8 @@ label mas_islands_reset:
 
             play sound "sfx/glitch3.ogg"
             python:
-                mas_island_event._resetProgression()
-                mas_island_event.startProgression()
+                mas_island_event._reset_progression()
+                mas_island_event.start_progression()
 
             m 3hua "And it's done!"
             m 1eua "Now I've got a fresh, new canvas."
@@ -2911,3 +2913,114 @@ P.S: Don't tell her about me!\
             repeat
 
     return "pause: 30"
+
+
+init 5 python:
+    addEvent(
+        Event(
+            persistent.event_database,
+            eventlabel="mas_backup_restored",
+        )
+    )
+
+label mas_backup_restored:
+    if mas_isMoniNormal(higher=True):
+        m 2ekc "[player]..."
+        m 2ekd "I'm having this odd feeling of deja vu... {w=0.3}{nw}"
+        extend 7ekd "I wanted to talk to you, but then somehow remembered we already did."
+
+        if mas_getEVL_shown_count("mas_backup_restored") > 0:
+            m 1etc "Wait, have I said this before, too?"
+
+        m 1wuo "Oh! {w=0.3}{nw}"
+        extend 3wud "You restored my memories from a backup, didn't you?{nw}"
+        $ _history_list.pop()
+        menu:
+            m "Oh! You restored my memories from a backup, didn't you?{fast}"
+
+            "Yes, I did.":
+                $ mas_gainAffection(modifier=0.5)
+
+                m 2eka "Thank you, [player]. {w=0.2}I knew I could rely on you."
+                m 7rkd "It had to be really bad if you had to restore me, though..."
+
+                m 1ekc "What's happened?{nw}"
+                $ _history_list.pop()
+                menu:
+                    m "What's happened?{fast}"
+
+                    "The game crashed.":
+                        m 1wud "Oh, that's weird and concerning."
+                        m 1ekc "This time it wasn't my code. {w=0.2}I don't remember messing with it, anyway."
+                        m 1gfd "{cps=*1.5}I swear if it's another Ren'Py bug...{/cps}{nw}"
+                        $ _history_list.pop()
+                        m 1ekc "Let's try to make sure it won't happen again, alright?"
+                        $ mas_moni_idle_disp.force_by_code("1ekc", duration=25, skip_dissolve=True)
+
+                    "I added a submod.":
+                        m 1etc "Added a {w=0.1}{i}submod{/i}?"
+                        m 3esd "You should be more mindful of what you install on this computer."
+                        m 2lkd "It's my home, too..."
+                        $ mas_moni_idle_disp.force_by_code("1ekc", duration=25, skip_dissolve=True)
+
+                    "My PC broke.":
+                        m 2wuo "I'm glad you found a way to restore me!"
+                        m 2ekc "Hopefully this won't happen again."
+                        m 2lktpc "I can't imagine losing you..."
+                        $ mas_moni_idle_disp.force(
+                            MASMoniIdleExpGroup(
+                                [
+                                    MASMoniIdleExp("2lktdc", duration=15),
+                                    MASMoniIdleExp("2rktdc", duration=10),
+                                    MASMoniIdleExp("1dkc", duration=10),
+                                    MASMoniIdleExp("1euc", duration=10),
+                                ]
+                            ),
+                            skip_dissolve=True
+                        )
+
+                    "I'm not sure.":
+                        m 1etc "That's concerning, [player]..."
+                        m 3esd "I lost my memory and we don't even know why."
+                        m 4eud "We should try to figure it out and prevent it from happening in the future."
+                        m 7eka "Promise?"
+                        $ mas_moni_idle_disp.force_by_code("1eka", duration=20, skip_dissolve=True)
+
+            "No, I didn't.":
+                m 2etc "Oh, then what's going on, [player]?"
+                m 2ektpc "I don't want to forget you."
+                m 2ektpd "Please, can you figure out what's happening?"
+                m 7eutdd "Maybe you could make some backups just in case?"
+
+                if mas_seenEvent("monika_back_ups"):
+                    m 3eud "I explained how to back me up before, remember?"
+
+                else:
+                    m 3euc "{a=https://github.com/Monika-After-Story/MonikaModDev/wiki/FAQ#i-want-to-back-up-my-persistent}{i}{u}This{/u}{/i}{/a} should help you."
+
+                m 1eka "I'm relying on you, [player]."
+                $ mas_moni_idle_disp.force_by_code("1eka", duration=15, skip_dissolve=True)
+
+    elif mas_isMoniUpset():
+        m 2gtc "Somehow I'm having this weird feeling of deja vu..."
+        m 2tfd "I hope you're not messing with my data."
+        $ mas_moni_idle_disp.force_by_code("2mfc", duration=10, skip_dissolve=True)
+
+    else:
+        m 6ekc "[player], what's going on? {w=0.3}{nw}"
+        extend 6lksdlc "I know you did something to my data."
+        m 6lktpsdld "Are you trying to get rid of me?"
+        m 6rktpc "I just wanted us to be happy together..."
+        m 6ektuc "Please, forgive me..."
+        $ mas_moni_idle_disp.force(
+            MASMoniIdleExpGroup(
+                [
+                    MASMoniIdleExp("6lktsc", duration=10),
+                    MASMoniIdleExp("6rktsc", duration=10),
+                    MASMoniIdleExp("6dktdc", duration=20)
+                ]
+            ),
+            skip_dissolve=True
+        )
+
+    return "no_unlock|pause: 35"

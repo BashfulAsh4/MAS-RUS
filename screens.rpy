@@ -570,7 +570,7 @@ image input_caret:
         linear 0.35 alpha 1
         repeat
 
-screen input(prompt, use_return_button=False, return_button_prompt="Не важно", return_button_value="cancel_input"):
+screen input(prompt, use_return_button=False, return_button_prompt="Nevermind", return_button_value="cancel_input"):
     style_prefix "input"
 
     window:
@@ -1242,13 +1242,13 @@ screen about():
         vbox:
 
             label "[config.name!t]"
-            text _("Версия [config.version!t]\n")
+            text _("Version [config.version!t]\n")
 
             ## gui.about is usually set in options.rpy.
             if gui.about:
                 text "[gui.about!t]\n"
 
-            text _("Сделано с {a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only].\n\n[renpy.license!t]")
+            text _("Made with {a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only].\n\n[renpy.license!t]")
 
 
 ## This is redefined in options.rpy to add text to the about screen.
@@ -1433,7 +1433,7 @@ screen preferences():
 
     default tooltip = Tooltip("")
 
-    use game_menu(_("Настройки"), scroll="viewport"):
+    use game_menu(_("Settings"), scroll="viewport"):
 
         vbox:
             xoffset 50
@@ -2730,7 +2730,7 @@ screen twopane_scrollable_menu(prev_items, main_items, left_area, left_align, ri
 
                 null height 20
 
-                textbutton _("Не важно."):
+                textbutton _("Nevermind."):
                     style "scrollable_menu_button"
                     xsize right_area[0] - left_area[0] + right_area[2]
                     action [Return(False), Function(store.prev_adj.change, 0)]
@@ -2784,10 +2784,10 @@ screen twopane_scrollable_menu(prev_items, main_items, left_area, left_align, ri
                     null height 20
 
                     if cat_length == 0:
-                        textbutton _("Не важно.") action [Return(False), Function(store.prev_adj.change, 0)]
+                        textbutton _("Nevermind.") action [Return(False), Function(store.prev_adj.change, 0)]
 
                     elif cat_length > 1:
-                        textbutton _("Назад") action [Return(-1), Function(store.prev_adj.change, 0)]
+                        textbutton _("Go Back") action [Return(-1), Function(store.prev_adj.change, 0)]
 
         # Right panel
         if main_items:
@@ -2822,7 +2822,7 @@ screen twopane_scrollable_menu(prev_items, main_items, left_area, left_align, ri
 
                     null height 20
 
-                    textbutton _("Не важно.") action [Return(False), Function(store.prev_adj.change, 0)]
+                    textbutton _("Nevermind.") action [Return(False), Function(store.prev_adj.change, 0)]
 
     # Search bar
     # The constants are hardcoded, but the menu looks good so just don't change them

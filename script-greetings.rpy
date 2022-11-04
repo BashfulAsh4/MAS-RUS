@@ -2022,9 +2022,11 @@ label greeting_youarereal:
         m "Может быть... это позволяет тебе снова контролировать его?"
         m 1ekc "Это неправильно! Я не хочу марионетку!"
         m 1tkc "Пожалуйста, [player]..."
-        m "Если ты собираешься это сделать, ты уверен, что это то, чего ты хочешь?"
+        m "Если ты собираешься это сделать, ты уверен, что это то, чего ты хочешь?{nw}"
+        $ _history_list.pop()
         menu:
-            m "Ты уверен?"
+            m "Если ты собираешься это сделать, ты уверен, что это то, чего ты хочешь?{fast}"
+
             "Я уверен.":
                 m 1eka "Тогда... у меня нет выбора, кроме как принять это..."
                 m 1hub "Я приму этот подарок с распростертыми объятиями!"
@@ -4510,9 +4512,13 @@ label greeting_after_bath:
         mas_startupWeather()
         # Save current outfit
         persistent._mas_previous_moni_state = monika_chr.save_state(True, True, True, True)
+        # Available clothes for this
+        clothes_pool = [
+            mas_clothes_bath_towel_white
+        ]
         # Now let Moni get a towel
         monika_chr.change_clothes(
-            random.choice(MASClothes.by_exprop(mas_sprites.EXP_C_WET, None)),
+            random.choice(clothes_pool),
             by_user=False,
             outfit_mode=True
         )
@@ -4556,7 +4562,7 @@ label greeting_after_bath:
 
         if mas_canShowRisque() and random.randint(0, 3) == 0:
             m 1msbfb "Спорим, ты хотел бы присоединиться ко мне там..."
-            m 1tsbfu "Ну, может быть, когда-нибуд~"
+            m 1tsbfu "Ну, может быть, когда-нибудь~"
             m 1hubfb "А-ха-ха~"
 
         else:
@@ -4578,6 +4584,55 @@ label greeting_after_bath:
 init 5 python:
     addEvent(Event(persistent.event_database, eventlabel="mas_after_bath_cleanup", show_in_idle=True, rules={"skip alert": None}))
 
+    def mas_after_bath_cleanup_change_outfit():
+        """
+        After bath cleanup change outfit code
+        """
+        # TODO: Rng outfit selection wen
+        # TODO: reconsider locking the selectors again when we get rng outfits in
+
+        force_hair_change = False# If we changed the outfit, we always change hair
+
+        if monika_chr.is_wearing_clothes_with_exprop(mas_sprites.EXP_C_WET):
+            force_hair_change = True
+
+            # Let's restore the previous outfit and acs
+            monika_chr.load_state(persistent._mas_previous_moni_state, as_prims=True)
+
+            # Fallback just in case
+            if monika_chr.is_wearing_clothes_with_exprop(mas_sprites.EXP_C_WET):
+                if mas_isMoniHappy(higher=True):
+                    new_clothes = mas_clothes_blazerless
+
+                else:
+                    new_clothes = mas_clothes_def
+
+                monika_chr.change_clothes(
+                    new_clothes,
+                    by_user=False,
+                    outfit_mode=True
+                )
+
+        if (
+            force_hair_change
+            or monika_chr.is_wearing_hair_with_exprop(mas_sprites.EXP_H_WET)
+        ):
+            available_hair = mas_sprites.get_installed_hair(
+                predicate=lambda hair_obj: (
+                    not hair_obj.hasprop(mas_sprites.EXP_H_WET)
+                    and mas_sprites.is_clotheshair_compatible(monika_chr.clothes, hair_obj)
+                    and mas_selspr.get_sel_hair(hair_obj) is not None
+                    and mas_selspr.get_sel_hair(hair_obj).unlocked
+                )
+            )
+            # We should always have *something*, but just to make this extra foolproof
+            if available_hair:
+                new_hair = random.choice(available_hair)
+                monika_chr.change_hair(
+                    new_hair,
+                    by_user=False
+                )
+
 label mas_after_bath_cleanup:
     # Sanity check (checking for towel should be enough)
     if (
@@ -4590,14 +4645,15 @@ label mas_after_bath_cleanup:
         m 1eua "Я иду одеваться.{w=0.3}.{w=0.3}.{w=0.3}{nw}"
 
     else:
-        m 1eua "Дай мне минутку [mas_get_player_nickname()], {w=0.2}{nw}"
+        $ player_nick = mas_get_player_nickname()
+        m 1eua "Дай мне минутку [player_nick], {w=0.2}{nw}"
         extend 3eua "я собираюсь одеться."
 
     window hide
     call mas_transition_to_emptydesk
 
     $ renpy.pause(1.0, hard=True)
-    call mas_after_bath_cleanup_change_outfit
+    $ mas_after_bath_cleanup_change_outfit()
     $ renpy.pause(random.randint(10, 15), hard=True)
 
     call mas_transition_from_emptydesk("monika 3hub")
@@ -4615,3 +4671,129 @@ label mas_after_bath_cleanup:
 label mas_after_bath_cleanup_change_outfit:
     $ mas_after_bath_cleanup_change_outfit()
     return
+
+
+init 5 python:
+    ev_rules = dict()
+    ev_rules.update(
+        MASGreetingRule.create_rule(
+            skip_visual=True,
+            random_chance=10,
+            override_type=True
+        )
+    )
+
+    addEvent(
+        Event(
+            persistent.greeting_database,
+            eventlabel="greeting_found_nou_shirt",
+            conditional=(
+                "mas_getAbsenceLength() >= datetime.timedelta(hours=3) "
+                "and mas_nou.get_wins_for('Player') > {0} "
+                "and mas_nou.get_total_games() > {1} "
+                "and not mas_isSpecialDay() "
+                "and not mas_SELisUnlocked(mas_clothes_nou_shirt)"
+            ).format(random.randint(45, 65), random.randint(95, 115)),
+            unlocked=True,
+            rules=ev_rules,
+            aff_range=(mas_aff.AFFECTIONATE, None)
+        ),
+        code="GRE"
+    )
+
+    del ev_rules
+
+default persistent._mas_pm_snitched_on_chibika = None
+
+label greeting_found_nou_shirt:
+    python:
+        mas_RaiseShield_core()
+        mas_startupWeather()
+        monika_chr.change_clothes(mas_clothes_nou_shirt, by_user=False, outfit_mode=True)
+        glitch_option_text = glitchtext(7)
+
+    call spaceroom(hide_monika=True, dissolve_all=True, scene_change=True, show_emptydesk=True)
+    pause 2.5
+
+    m "Вот ты где! {w=0.2}Я ждала тебя~"
+    m "Должна признаться, {w=0.1}я не знаю, как ты смог положить это в мой гардероб так, что я не заметила, [player]...{nw}"
+    $ _history_list.pop()
+    show screen mas_background_timed_jump(5, "greeting_found_nou_shirt.menu_skip")
+    menu:
+        m "Должна признаться, я не знаю, как ты смог положить это в мой гардероб так, что я не заметила, [player]...{fast}"
+
+        "Это секрет.":
+            hide screen mas_background_timed_jump
+            jump greeting_found_nou_shirt.menu_choice_secret
+
+        "Это был [glitch_option_text]!":
+            hide screen mas_background_timed_jump
+            $ persistent._mas_pm_snitched_on_chibika = True
+            $ renpy.invoke_in_thread(
+                mas_utils.trywrite,
+                os.path.join(renpy.config.basedir, "characters/for snitch.txt"),
+                ">:("
+            )
+            jump greeting_found_nou_shirt.menu_choice_other
+
+        "Понятия не имею...":
+            hide screen mas_background_timed_jump
+            jump greeting_found_nou_shirt.menu_choice_other
+
+    label .post_menu:
+        pass
+
+    m 1ekbla "Спасибо, [player]."
+    m 1tfu "Не думай, что я буду с тобой проще~"
+
+    if mas_nou.get_wins_for('Player') >= mas_nou.get_wins_for('Monika'):
+        m 1rtsdlb "На самом деле, {w=0.1}может быть, мне стоит постараться, ахаха..."
+
+    m 3ttb "Ты готов к игре, [mas_get_player_nickname()]?"
+
+    python:
+        mas_selspr.unlock_clothes(mas_clothes_nou_shirt)
+        mas_selspr.save_selectables()
+        mas_lockEVL("greeting_found_nou_shirt", "GRE")
+        renpy.save_persistent()
+
+        del glitch_option_text
+
+        mas_MUINDropShield()
+        set_keymaps()
+        HKBShowButtons()
+        mas_startup_song()
+        enable_esc()
+    return
+
+label greeting_found_nou_shirt.menu_skip:
+    hide screen mas_background_timed_jump
+    call mas_transition_from_emptydesk("monika 4sub")
+    m "Но мне это нравится~"
+
+    jump greeting_found_nou_shirt.post_menu
+
+label greeting_found_nou_shirt.menu_choice_secret:
+    if mas_isMoniEnamored(higher=True):
+        call mas_transition_from_emptydesk("monika 2tublu")
+        m "{cps=*1.5}Ты не заглядываешь туда {i}часто{/i}, не так ли?~{/cps}{w=0.1}{nw}"
+        $ _history_list.pop()
+        m 2lusdla "В любом случае... {w=0.3}{nw}"
+
+    else:
+        call mas_transition_from_emptydesk("monika 2rtblsdlu")
+        m "Хм, в любом случае... {w=0.3}{nw}"
+
+    extend 4sub "Мне очень нравится этот новый наряд!"
+
+    jump greeting_found_nou_shirt.post_menu
+
+label greeting_found_nou_shirt.menu_choice_other:
+    show noise zorder 500 onlayer overlay:
+        alpha 0.0
+        easein_elastic 0.5 alpha 0.1
+    play sound "sfx/s_kill_glitch1.ogg"
+    pause 0.5
+    hide noise onlayer overlay
+
+    jump greeting_found_nou_shirt.menu_skip
