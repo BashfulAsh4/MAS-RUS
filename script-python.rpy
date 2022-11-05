@@ -147,8 +147,8 @@ init 5 python:
         Event(
             persistent.event_database,
             eventlabel="monika_ptod_tip001",
-            category=["python tips"],
-            prompt="What is Python?"
+            category=["советы по Python'у"],
+            prompt="Что такое Python?"
         )
     )
 
