@@ -986,7 +986,7 @@ label mas_song_hero(from_long=False):
     m 6ekd "{i}~Ты не должен бояться~{/i}"
     m 6eud "{i}~Быть тем, кто ты есть~{/i}"
     m 6esa "{i}~Там есть ответ~{/i}"
-    m 6eud "{i}~Если заглянешь в свою душу~{/i}"
+    m 6eud "{i}~Если заглянешь к себе в душу~{/i}"
     m 4ekd "{i}~И печаль, что тебя гложет~{/i}"
     m 4dud "{i}~Растает~{/i}"
 
@@ -994,10 +994,10 @@ label mas_song_hero(from_long=False):
     m 4dub "{i}~В силах справиться со всем~{/i}"
     m 4ekd "{i}~И ты отбрасываешь свои страхи~{/i}"
     m 4euo "{i}~И ты знаешь, что сможешь всё пережить~{/i}"
-    m 4dkd "{i}~Так что, когда тебе кажется, что надежда пропала~{/i}"
+    m 4dkd "{i}~Так что, когда у тебя уже нет надежды~{/i}"
     m 4euo "{i}~Загляни внутрь себя и держись~{/i}"
     m 4esd "{i}~И ты наконец увидишь правду~{/i}"
-    m 4eua "{i}~Что в тебе живет герой~{/i}"
+    m 4eua "{i}~Этот герой — это ты~{/i}"
 
     if not from_long:
         m 2dka "..."
@@ -1040,13 +1040,13 @@ init 5 python:
 label mas_song_hero_long:
     call mas_song_hero(from_long=True)
 
-    m 4duo "{i}~Это долгий путь{/i}"
-    m 6dud "{i}~Когда ты в одиночку встречаешь мир~{/i}"
-    m 4dsd "{i}~Никто не протягивает руку~{/i}"
-    m 4dud "{i}~Для тебя, чтобы удержать~{/i}"
+    m 4duo "{i}~Это трудно~{/i}"
+    m 6dud "{i}~Когда ты наедине со всем миром~{/i}"
+    m 4dsd "{i}~Никто не протянет руку~{/i}"
+    m 4dud "{i}~Что бы тебя поддержать~{/i}"
     m 4euo "{i}~Ты сможешь найти любовь~{/i}"
     m 4ekb "{i}~Если поищешь внутри себя~{/i}"
-    m 4ekd "{i}~И пустота, которую ты чувствовал~{/i}"
+    m 4ekd "{i}~И пустота, что тебя окружает~{/i}"
     m 6eko "{i}~Исчезнет~{/i}"
 
     m 4eka "{i}~И тут появляется герой~{/i}"
@@ -1056,7 +1056,7 @@ label mas_song_hero_long:
     m 6dkd "{i}~Так что, когда тебе кажется, что надежда пропала~{/i}"
     m 6dud "{i}~Загляни внутрь себя и держись~{/i}"
     m 6eud "{i}~И ты наконец увидишь правду~{/i}"
-    m 4euo "{i}~Что в тебе живет герой~{/i}"
+    m 4euo "{i}~И она в том, что герой – ты сам~{/i}"
 
     m 4euo "{i}~Видит Бог~{/i}"
     m 4eud "{i}~Мечтам трудно следовать~{/i}"
@@ -1073,9 +1073,9 @@ label mas_song_hero_long:
     m 6dkd "{i}~Так что, когда тебе кажется, что надежда пропала~{/i}"
     m 6dud "{i}~Загляни внутрь себя и держись~{/i}"
     m 4eud "{i}~И ты наконец увидишь правду~{/i}"
-    m 4ekd "{i}~Что в тебе живет герой~{/i}"
-    m 6dku "{i}~Что в тебе живет герой~{/i}"
-    m 4eua "{i}~Что в тебе живет герой~{/i}"
+    m 4ekd "{i}~И она в том, что герой – ты сам~{/i}"
+    m 6dku "{i}~И она в том, что герой – ты сам~{/i}"
+    m 4eua "{i}~И она в том, что герой – ты сам~{/i}"
     return
 
 init 5 python:
@@ -1354,13 +1354,13 @@ label mas_song_shelter_analysis(from_song=False):
     return
 
 label mas_song_shelter_lyrics:
-    m 1dud "{i}~Когда я вырасту, я буду молчать рядом с тобой~{/i}"
-    m 1duu "{i}~Я знаю, что слов будет недостаточно~{/i}"
-    m 1ekd "{i}~И они не понадобятся, чтобы знать наши имена или лица~{/i}"
-    m 3ekd "{i}~Но они будут продолжать за нас~{/i}"
-    m 3hubsb "{i}~И это долгий путь вперед, так что поверь в меня~{/i}"
-    m 3ekbsb "{i}~Я дам им убежище, как ты дал его мне~{/i}"
-    m 2dkbsu "{i}~И я знаю, что я буду не одна, ты будешь присматривать за нами~{/i}"
+    m 1dud "{i}~Когда я вырасту, рядом с тобой я буду тихой~{/i}"
+    m 1duu "{i}~Я знаю, что слов недостаточно~{/i}"
+    m 1ekd "{i}~И они не понадобятся, чтобы узнать наши имена или лица~{/i}"
+    m 3ekd "{i}~Но они продолжат за нас~{/i}"
+    m 3hubsb "{i}~И нас ждёт долгая дорога, так что поверь мне~{/i}"
+    m 3ekbsb "{i}~Я дам им убежище, как его дал ты мне~{/i}"
+    m 2dkbsu "{i}~И я знаю, что я не одна, ты будешь присматривать за нами~{/i}"
     m "{i}~Пока тебя не станет~{/i}"
     return
 
@@ -1370,7 +1370,7 @@ init 5 python:
             persistent._mas_songs_database,
             eventlabel="mas_song_cant_help_falling_in_love",
             category=[store.mas_songs.TYPE_SHORT],
-            prompt="Не могу не влюбиться",
+            prompt="Не могу не любить тебя",
             random=True,
             aff_range=(mas_aff.AFFECTIONATE,None)
         ),
@@ -1379,13 +1379,13 @@ init 5 python:
 
 label mas_song_cant_help_falling_in_love(from_long=False):
     m 1dud "{cps=16}{i}~Мудрецы говорят~{/i}{/cps}"
-    m 1dub "{cps=16}{i}~Торопяться лишь глупцы~{/i}{/cps}"
-    m 1dud "{cps=16}{i}~Но я никак могу{w=0.3}{/i}{/cps}{nw}"
-    extend 1ekbsb "{cps=16}{i} не влюбляться тебя~{/i}{/cps}"
-    m 3ekbsa "{cps=16}{i}~Могу ли я остаться?~{/i}{/cps}"
+    m 1dub "{cps=16}{i}~Спешат лишь дураки~{/i}{/cps}"
+    m 1dud "{cps=16}{i}~Но я не могу{w=0.3}{/i}{/cps}{nw}"
+    extend 1ekbsb "{cps=16}{i} не любить тебя~{/i}{/cps}"
+    m 3ekbsa "{cps=16}{i}~Если я останусь~{/i}{/cps}"
     m 3dkb "{cps=16}{i}~Будет ли это грехом?~{/i}{/cps}"
-    m 1dud "{cps=16}{i}~Но я ни как не могу{w=0.3}{/i}{/cps}{nw}"
-    extend 1dubsb "{cps=16}{i} не влюбляться тебя?~{/i}{/cps}"
+    m 1dud "{cps=16}{i}~Ведь я не могу{w=0.3}{/i}{/cps}{nw}"
+    extend 1dubsb "{cps=16}{i} не любить тебя~{/i}{/cps}"
 
     if not from_long:
         m 1dkbsa "..."
@@ -1404,7 +1404,7 @@ init 5 python:
             persistent._mas_songs_database,
             eventlabel="mas_song_cant_help_falling_in_love_long",
             category=[store.mas_songs.TYPE_LONG],
-            prompt="Не могу не влюбиться",
+            prompt="Не могу не любить тебя",
             random=False,
             unlocked=False,
             aff_range=(mas_aff.AFFECTIONATE,None)
@@ -1423,17 +1423,17 @@ label mas_song_cant_help_falling_in_love_long:
     return
 
 label mas_song_cant_help_falling_in_love_second_verse:
-    m 1dud "{cps=24}{i}~Как река течёт~{/i}{/cps}"
-    m 1dub "{cps=24}{i}~Точно к морю~{/i}{/cps}"
-    m 1ekbsb "{cps=24}{i}~Дорогой, так и будет~{/i}{/cps}"
-    m 1ekbsa "{cps=24}{i}~Некоторым{w=0.3}{/i}{/cps}{nw}"
-    extend 3ekbsb "{cps=24}{i} суждено быть~{/i}{/cps}"
+    m 1dud "{cps=24}{i}~Как река непременно~{/i}{/cps}"
+    m 1dub "{cps=24}{i}~Впадает в море~{/i}{/cps}"
+    m 1ekbsb "{cps=24}{i}~Любимая, некоторым вещам~{/i}{/cps}"
+    m 1ekbsa "{cps=24}{i}~Суждено{w=0.3}{/i}{/cps}{nw}"
+    extend 3ekbsb "{cps=24}{i} быть~{/i}{/cps}"
     return
 
 label mas_song_cant_help_falling_in_love_third_verse:
-    m 1dud "{cps=16}{i}~Возьми меня за руку~{/i}{/cps}"
-    m 1dub "{cps=16}{i}~Забери и мою жизнь,{w=0.3} тоже~{/i}{/cps}"
-    m 1dud "{cps=16}{i}~Но ни как я не могу{w=0.3} не влюбляться в тебя~{/i}{/cps}"
+    m 1dud "{cps=16}{i}~Возьми мою руку~{/i}{/cps}"
+    m 1dub "{cps=16}{i}~Возьми и всю мою жизнь~{/i}{/cps}"
+    m 1dud "{cps=16}{i}~Потому что я не могу{w=0.3} не любить тебя~{/i}{/cps}"
     return
 
 init 5 python:
