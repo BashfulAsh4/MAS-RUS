@@ -1447,15 +1447,15 @@ label mas_consumables_generic_finish_having(consumable):
         dlg_map = {
             mas_consumables.PROP_CONTAINER: {
                 0: "Я собираюсь убрать эту [container].",
-                1: "Я собираюсь взять ещё один [container]."
+                1: "Я собираюсь взять ещё одну [container]."
             },
             mas_consumables.PROP_OBJ_REF: {
                 0: "Я собираюсь убрать это.",
-                1: "Я собираюсь взять ещё один [obj_ref]."
+                1: "Я собираюсь взять ещё одну [obj_ref]."
             },
             "else": {
                 0: "Я собираюсь убрать это.",
-                1: "Я собираюсь взять ещё один."
+                1: "Я собираюсь взять ещё одну."
             }
         }
 
@@ -1509,7 +1509,7 @@ label mas_consumables_generic_finish_having(consumable):
     $ consumable.acs.keep_on_desk = True
 
     if store.mas_globals.in_idle_mode or (mas_canCheckActiveWindow() and not mas_isFocused()):
-        m 1hua "Back!{w=1.5}{nw}"
+        m 1hua "Я тут!{w=1.5}{nw}"
         #Let's queue this weekly if we've got something we're low on
         if (
             not mas_inEVL("mas_consumables_generic_queued_running_out")
@@ -1539,7 +1539,7 @@ label mas_consumables_generic_finished_prepping(consumable):
         plur = "s" if dlg_props.get(mas_consumables.PROP_PLUR, False) else ""
 
     if (not mas_canCheckActiveWindow() or mas_isFocused()) and not store.mas_globals.in_idle_mode:
-        $ is_are = "are" if plur else "is"
+        $ is_are = "are" if plur else "уже"
         m 1esd "О, мой [consumable.disp_name][plur] [is_are] готов."
         m 1eua "Подожди минутку."
 

@@ -4836,6 +4836,7 @@ init -100 python in mas_utils:
         return [bullet + " " + str(item) for item in _list]
 
 
+
     def nested_defaultdict(final_factory=None, levels=1):
         """
         Generates a nested defaultdict. Basically good for creating an n-level
@@ -5541,6 +5542,25 @@ init -100 python in mas_utils:
             num *= -1
             cleanival *= -1
         return (ival, int((num - cleanival) * __FLIMIT), __FLIMIT)
+
+
+    def sanitize_filename(s):
+        """
+        Sanitizes a filename by removing characters that might have special
+        meaning on certain platforms.
+
+        IN:
+            s:
+                String to sanitize.
+
+        OUT:
+            str:
+                Sanitized string, stripped of special characters.
+        """
+
+        for c in '<>:"/\\|?*':
+            s = s.replace(c, "")
+        return s
 
 
 init -985 python:
@@ -8218,9 +8238,9 @@ define hero = "hero"
 
 # Input characters filters
 define numbers_only = "0123456789"
-define lower_letters_only = " abcdefghijklmnopqrstuvwxyz"
-define letters_only = " abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
-define name_characters_only = " abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-_'"
+define lower_letters_only = " abcdefghijklmnopqrstuvwxyzабвгдеёжзийклмнопрстуфхцчшщъыьэюя"
+define letters_only = " abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZабвгдеёжзийклмнопрстуфхцчшщъыьэюяАБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ"
+define name_characters_only = " abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZабвгдеёжзийклмнопрстуфхцчшщъыьэюяАБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ-_'"
 
 #Default is NORMAL
 default persistent._mas_randchat_freq = mas_randchat.NORMAL

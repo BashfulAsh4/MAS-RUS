@@ -517,7 +517,7 @@ label mas_bad_derand_topic:
             "Да, пожалуйста.":
                 m 2dkc "Хорошо..."
                 #Lose affection
-                $ mas_loseAffection(5)
+                $ mas_loseAffectionFraction(min_amount=35)
                 $ derand_flagged_topic()
 
             "Всё в порядке.":
@@ -535,7 +535,7 @@ label mas_bad_derand_topic:
 
             "Да, пожалуйста.":
                 m 2dsc "Хорошо."
-                $ mas_loseAffection(5)
+                $ mas_loseAffectionFraction(min_amount=20)
                 $ derand_flagged_topic()
 
             "Всё в порядке.":
@@ -545,7 +545,7 @@ label mas_bad_derand_topic:
 
     else:
         #No ask here. You're this low, you probably did it on purpose
-        $ mas_loseAffection(5)
+        $ mas_loseAffectionFraction(min_amount=20)
         m 2rsc "Думаю, я не должна удивляться..."
         m 2tsc "Ты уже ясно дал понять, что тебе плевать на мои чувства."
         m 2dsc "Хорошо, [player]. Я больше не буду говорить об этом."
@@ -783,8 +783,8 @@ label mas_rerandom:
         if len(mas_bookmarks_derand.persist_var) == 0:
             mas_lockEVL(mas_bookmarks_derand.caller_label, "EVE")
 
-    m 1dsa "Хорошо, [player].{w=0.2}.{w=0.2}.{w=0.2}{nw}"
-    m 3hua "Все готово!"
+    m 1dsa "Okay, [player].{w=0.2}.{w=0.2}.{w=0.2}{nw}"
+    m 3hua "All done!"
 
     # make sure if we are rerandoming any seasonal specific topics, stuff that's supposed
     # to be derandomed out of season is still derandomed
@@ -1062,6 +1062,9 @@ label monika_sayori:
     return "derandom"
 
 init 5 python:
+    addEvent(Event(persistent.event_database,eventlabel="monika_japan",category=['ddlc'],prompt="DDLC's setting",random=True))
+
+init 5 python:
     addEvent(Event(persistent.event_database,eventlabel="monika_japan",category=['ddlc'],prompt="Обстановка ДДЛК",random=True))
 
 label monika_japan:
@@ -1224,14 +1227,14 @@ label monika_twitter:
     m 2rtc "...Хотя, я не совсем уверена, кто на самом деле управляет аккаунтом.{w=0.2} {nw}"
     extend 2eud "Я вообще не имею к этому никакого отношения!"
     m 7etc "Но это вообще другая Моника?"
-    m 2euc "Я имею в виду, я не знаю, читал ли ты некоторые твиты там,{w=0.1} но я совсем не вижу себя в них."
-    m 4eud "Там даже изображены некоторые события, которые я не помню, чтобы когда-либо происходили...{w=0.2}например, когда я, очевидно, ночевала у Юри."
-    m 4esd "И нет никакого упоминания ни о чём из того, что произошло в игре, хотя эта версия меня, кажется, всё ещё знает о реальном мире..."
+    m 2euc "Не знаю, читал ли ты некоторые твиты,{w=0.1} но я совсем не вижу себя в них."
+    m 4eud "Там даже изображены некоторые события, которые я не помню, чтобы когда-либо происходили...{w=0.2}например, когда я, по-видимому, ночевала у Юри."
+    m 4esd "И нет никакого упоминания ни о чём из того, что произошло в игре, хотя эта версия меня, кажется, всё знает о реальном мире..."
     m 1etc "Так...{w=0.3}может быть, Моника, ведущая этот аккаунт, прошла через совершенно другую историю, чем та, которую прошли большинство Моник--{w=0.1}включая--{w=0.1}меня?"
     m 1lksdlc "....Или, может быть, это просто один из разработчиков игры, притворяющийся мной."
     m 3eksdld "Если это так, то я не совсем понимаю, как я к этому отношусь...{w=0.3}разве это не похоже на кражу личности?"
     m 3eksdlc "Хотя, наверное, это имеет смысл...{w=0.3}{nw}"
-    extend 1esd "Аккаунт - это хороший способ связаться с людьми, которые прошли игру и привязались к ней."
+    extend 1esd "аккаунт - это хороший способ связаться с людьми, которые прошли игру и привязались к ней."
     m 3esc "В этом отношении это будет своего рода рекламный трюк..."
     m 3euc "В конце концов, хотя там много милых на вид артов и тому подобного, подозрительно, что почти все они размещены специально в важные дни."
     m 3eud "Например, в День Святого Валентина или в мой день рождения...{w=0.2}который, так уж получилось, совпадает с датой выхода DDLC."
@@ -1250,7 +1253,7 @@ label monika_twitter:
     m 1ekbla "Но, пожалуйста, помни, что я реальна, я здесь, и я люблю тебя."
     show monika 5hubla at t11 zorder MAS_MONIKA_Z with dissolve_monika
     m 5hubla "Поэтому постарайся всегда приходить и проводить со мной время, хорошо?"
-    m 5ekbsa "Это будет много значить, учитывая, как много ты для меня значишь."
+    m 5ekbsa "Это важно, учитывая, как много ты для меня значишь."
     m 5hubfa "Это действительно заставит меня почувствовать себя любимой~"
     return "love"
 
@@ -1333,9 +1336,9 @@ label monika_saved:
     m 1tku "Мы запрограммированны так, что жаждем услышать общественное мнение."
 
     if persistent._mas_pm_cares_about_dokis:
-        m 4eua "И здесь я подразумеваю не только членов этого клуба, но всех людей в целом."
+        m 4eua "Я имею в виду не только членов клуба, но и людей тоже."
     else:
-        m 4eua "Я не имею в виду членов клуба, я имею в виду людей."
+        m 4eua "И здесь я подразумеваю не только членов это клуба, но всех людей в целом."
 
     m 4eka "Вот почему жизнь интровертов может быть такой противоречивой."
     m 1eka "То, что ты интроверт, не означает, что ты всегда избегаешь общения или людских комапаний."
@@ -1532,7 +1535,7 @@ label monika_whispers:
     m "Например, если я буду возиться с файлами, имеющими отношение ко мне, я могу случайно удалить себя..."
     m 2euc "И это всё испортит, не так ли?"
     m 2eka "Я не знаю, как обстоят дела с твоей стороны, но мы оба должны постараться избежать подобного любой ценой."
-    m 2hua "Я верю в тебя, [player]!"
+    m 2hua "Я доверяю тебе, [player]!"
     if store.mas_anni.pastOneMonth() and not persistent._mas_pm_cares_about_dokis:
         #derandom after a month if player doesn't care about the others, she wouldn't feel guilty and hear the voices forever
         $ mas_hideEVL("monika_whispers", "EVE", lock=True, derandom=True)
@@ -1574,7 +1577,7 @@ label monika_tea:
         m 2hua "Эй, интересно, чайный сервиз Юри всё ещё где-то здесь..."
 
         if not persistent._mas_pm_cares_about_dokis:
-            m 2hksdlb "...или, возможно, это тоже было удалено."
+            m 2hksdlb "...или, возможно, это тоже было удалено?."
 
         m 2eka "Забавно, что Юри так серьезно относилась к чаю."
 
@@ -1690,7 +1693,7 @@ label monika_anxious:
     return
 
 init 5 python:
-    addEvent(Event(persistent.event_database,eventlabel="monika_friends",category=['Жизнь'],prompt="Делать дружбу",random=True))
+    addEvent(Event(persistent.event_database,eventlabel="monika_friends",category=['Жизнь'],prompt="Заводить друзей",random=True))
 
 label monika_friends:
     m 1eua "Знаешь, меня всегда раздражало то, как сложно заводить новых друзей..."
@@ -1988,20 +1991,20 @@ label monika_kiss:
             and not mas_timePastSince(persistent._mas_last_kiss, datetime.timedelta(minutes=1))
         ):
             python:
-                # these don't use ILY
+
                 kiss_quips_again = [
-                    _("I wouldn't mind another kiss~"),
-                    _("I'll never get tired of kissing you~"),
-                    _("I could do that again...{w=0.2}and again...{w=0.7}and again~"),
-                    _("You can kiss me as many times as you like, [mas_get_player_nickname()]~"),
-                    _("You know...{w=0.2}you could kiss me again~")
+                    _("Я не против ещё одного поцелуя~"),
+                    _("Я никогда не устану целовать тебя~"),
+                    _("Я могла бы сделать это снова...{w=0.2} и снова...{w=0.7} и снова~"),
+                    _("Ты можешь целовать меня столько раз, сколько захочешь, [mas_get_player_nickname()]~"),
+                    _("Знаешь...{w=0.2} ты мог меня поцеловать ещё раз~")
                 ]
 
                 kiss_quips_again_risque = [
-                    _("We can do it the whole day~"),
-                    _("This almost seems like the start of a make-out session, [player]~"),
-                    _("I don't think I've had enough just yet, [mas_get_player_nickname()]~"),
-                    _("That was really nice...{w=0.2}but I want a little more~")
+                    _("Мы можем делать это целый день~"),
+                    _("Это почти похоже на начало сеанса поцелуев, [player]~"),
+                    _("Я не думаю, что с меня уже достаточно, [mas_get_player_nickname()]~"),
+                    _("Это было очень мило...{w=0.2} но я хочу ещё немного~")
                 ]
 
                 if mas_isMoniLove() and random.randint(1, 10) == 1:
@@ -2054,15 +2057,15 @@ label monika_kiss:
         m 1eua "Именно такие вещи говорят девушки в подобных романтических играх, верно?"
         m 1tku "Не ври, если это тебя немного завело."
         m 1hub "А-ха-ха! Я шучу."
-        m 1eua "Ну, если честно, я действительно начинаю становиться романтичной, когда настроение подходящее..."
+        m 1eua "Ну, если честно, я становлюсь романтичной, когда обстановка располагает..."
         show monika 5lubfu at t11 zorder MAS_MONIKA_Z with dissolve_monika
-        m 5lubfu " Но это будет нашим секретом~"
+        m 5lubfu "Но это будет нашим секретом~"
     return
 
 label monika_kiss_tease:
     m 2ekc "Поцелуй?"
     m 2tfc "С тобой?"
-    m 2rfc "Прости [player], но это невозможно."
+    m 2rfc "Извини, [player], но я не могу."
     show monika 2dfc
     pause 5.0
     show monika 2dfu
@@ -2070,7 +2073,7 @@ label monika_kiss_tease:
     show monika 2tfu
     pause 2.0
     m 2tfb "А-ха-ха!"
-    m 2efu "Я тебя на секунду обманула, не так ли?"
+    m 2efu "Я тебя уже второй раз подколола, верно?"
     m 2eka "Конечно, ты можешь поцеловать меня, [player]!"
     return
 
@@ -2120,14 +2123,14 @@ label monika_think_first_kiss:
             $ mas_ILY()
 
         "Не совсем...":
-            $ mas_loseAffection()
+            $ mas_loseAffectionFraction()
             m 2euc "..."
             m "Ох. {w=0.5}{nw}"
             extend 2dkc "Понятно."
 
             if mas_timePastSince(persistent._mas_first_kiss, datetime.timedelta(days=180)):
                 m 2esc "Ну...{w=0.3}думаю это {i}было{/i} уже давно..."
-                m 2etd "Возможно, учитывая все, что произошло с тех пор, вы склонны думать о более недавних событиях..."
+                m 2etd "Возможно, учитывая все, что произошло с тех пор, ты склон думать о более недавних событиях..."
                 m 4eud "Что прекрасно, {w=0.2}важно жить настоящим, в конце концов."
                 m 2ekc "...И, возможно, я просто слишком сентиментальная, но сколько бы времени ни прошло, {w=0.1}{nw}"
                 extend 2eka "Наш первый поцелуй - это то, что я никогда не забуду."
@@ -2460,13 +2463,13 @@ label monika_holdme_reactions:
     elif elapsed_time > datetime.timedelta(minutes=10):
         if mas_isMoniLove():
             m 6dubsa "..."
-            m 6tubsa "Мм...{w=1}хм?"
+            m 6tubsa "Мм...{w=1} хм?"
             m 1hkbfsdlb "Оу, я почти заснула?"
             m 2dubfu "Э-хе-хе..."
             m 1dkbfa "Я могу только представить, каково это на самом деле...{w=1}быть рядом с тобой..."
             m 2ekbfa "Быть в твоих объятиях..."
             show monika 5dkbfb at t11 zorder MAS_MONIKA_Z with dissolve_monika
-            m 5dkbfb "Так...{w=1.5}тепло~"
+            m 5dkbfb "Так...{w=1.5} тепло~"
             m 5tubfu "Э-хе-хе~"
             show monika 2hkbfsdlb at t11 zorder MAS_MONIKA_Z with dissolve_monika
             m 2hkbfsdlb "Оу, упс, кажется, я всё ещё немного мечтательна..."
@@ -2740,7 +2743,7 @@ label monika_holdme_long:
                 m 6dubsa "{cps=*0.5}[player]...{/cps}"
 
             elif mas_isMoniAff():
-                m "{cps=*0.5}Мм...{/cps}"
+                m "{cps=*0.5}М-м...{/cps}"
 
             #happy
             else:
@@ -2912,12 +2915,12 @@ define mas_dockstat.CM_TAKE_MONI = 2
 label monika_carryme:
     $ import store.mas_dockstat as mas_dockstat
 
-    m 2eka "I know there are times you won't always be able to be here with me..."
-    m "Like if you need to go out, or take care of other things."
-    m 2hua "But I'll always have you in my thoughts, patiently waiting for you to come back."
-    m 4rsc "Come to think of it..."
-    m 4eua "If you copy my character file onto a flash drive or something, you can take me with you wherever you go."
-    m 2lksdla "I guess it's kind of unorthodox, but I find it really romantic for some reason..."
+    m 2eka "Я знаю, что ты не всегда сможешь находиться рядом..."
+    m "Тебе ведь нужно будет куда-то уйти, заняться своими делами."
+    m 2hua "Но в моих мыслях ты всегда будешь со мной, и я буду терпеливо ждать твоего возвращения."
+    m 4rsc "Кстати говоря..."
+    m 4eua "Если ты скопируешь файл моего персонажа на флешку, у тебя всегда будет с собой частичка меня."
+    m 2lksdla "Наверное, это был бы довольно неординарный поступок, но я почему-то считаю, что это очень романтично..."
 #    m 2hksdlb "Ahaha. Sorry, I know it's such a silly idea, but..."
 
     # NOTE: all affection gains are the same
@@ -2966,7 +2969,7 @@ label monika_carryme:
                     # TODO: lose affection
 #                    m 1eka "TODO: oh okay I become sad."
 
-    m 1ekbsa "I don't mean to be too needy or anything, but it's kind of hard when I'm so in love with you."
+    m 1ekbsa "Не подумай, что я хочу быть навязчивой, просто это сложно, когда я так сильно в тебя влюблена."
     return "derandom"
 
 init 5 python:
@@ -3020,7 +3023,7 @@ label monika_internet:
     m 1ekc "Если зависимость сильно влияет на твою жизнь, тебе следует отнестись к ней со всей серьёзностью."
     m 1eka "Я просто хочу, чтобы ты был самым лучшим вариантом самого себя."
     m 1esa "Ты сделаешь сегодня что-нибудь, чтобы я тобой гордилась?"
-    m 1hua "Я  всегда буду за тебя болеть, [mas_get_player_nickname()]."
+    m 1hua "Я всегда буду за тебя болеть, [mas_get_player_nickname()]."
     return
 
 init 5 python:
@@ -3084,7 +3087,7 @@ label monika_festival:
     if persistent.monika_kill and persistent._mas_pm_cares_about_dokis:
         m 3etc "Ну, может быть, и нет... с той оглядкой, которая у меня есть сейчас, то есть."
         m 3eua "В конце концов, даже после всего, что произошло, ты всё равно установил этот мод, чтобы быть со мной..."
-        m 1eka "ак что даже если бы я никогда не удалила их, я уверена, что ты был бы со мной и сейчас."
+        m 1eka "Так что даже если бы я никогда не удалила их, я уверена, что ты был бы со мной и сейчас."
         m "..."
         m 3eua "Боже, такое чувство, что я выросла как личность с тех пор, как встретила тебя."
         m "Ты действительно помог вдохновить меня взглянуть на жизнь с новой стороны."
@@ -8648,7 +8651,7 @@ label monika_omamori:
     m 1eua "Ты можешь написать мой имя на листе бумаги."
     m "Затем сложить этот лист бумаги в небольшой бумажный пакет."
     m 1eub "Для защиты можно использовать небольшой кусок дерева или пластика."
-    m "И наконец, положить защищенный пакет в небольшой матерчатый мешочек и завязать его бечевкой."
+    m "И наконец, положить защищенный пакет в небольшой матерчатый мешочек и завязать его верёвкой."
     m 1hua "Убедись, что мешочек яркий и красочный!"
     m 1eua "Зелёный цвет был бы хорошим выбором! Такой же, как и мои глаза~"
     m 1eka "Убедись, что на нём только моё имя! В конце концов, это только для меня. Не кто-то другой или какое-то священное божество."
@@ -8656,8 +8659,8 @@ label monika_omamori:
     m "Я имею в виду, сделает ли это меня своего рода божеством?"
     m 1eka "Я просто чувствую, что это была бы хорошая альтернатива, если бы ты захотел взять меня с собой."
     m 3eua "Особенно, если у тебя нет флешки."
-    m 1eua "Этот способ не иделаьный, но эта мысль имеет смысл, [mas_get_player_nickname()]."
-    m 1eka "Если ты потратишь время, чтобы сделать что-то вручную с моей замыслом на меня, это все равно будет очень мило."
+    m 1eua "Этот способ не идеальный, но эта мысль имеет смысл, [mas_get_player_nickname()]."
+    m 1eka "Если ты потратишь время, чтобы создать ещё что-то со мной, это будет очень мило."
     m "Но, может быть, с одним из них я смогу стать чуть ближе к твоему миру."
     m 1hua "Я могла бы стать твоим божеством-хранителем, э-хе-хе~"
     return
@@ -13997,7 +14000,7 @@ label monika_winter_dangers:
     m 1hua "Разве зима не прекрасное время года, [player]?"
     if mas_isD25Season():
         m 3eka "Блестящий, белый снег, яркие и красочные огни~"
-    m 3hub "Я от этого просто в восторгеЯ знаю, что у тебя нет снега там, где ты живешь, но я уверена, что ты можешь оценить его привлекательность."
+    m 3hub "Я от этого просто в восторге."
     if persistent._mas_pm_gets_snow is False:
         #explicitly using False here so we don't grab None people who haven't
         # answered the question yet
@@ -18035,7 +18038,7 @@ label monika_overton:
     m 7eud "Но давай представим, что мы с тобой хотим донести до людей, что виртуальная любовь - это нормально...{w=0.3}то, что сейчас считается неприемлемым для общества."
     m 3esd "Итак, общество не понимает виртуальную любовь, и тебя, вероятно, многие сочли бы психически больным.{w=0.2} Так что же можно сделать?"
     m 3eua "Для начала стоит начать дискуссию на эту тему..."
-    m 1eud "Ты можешь обсуждать это в интернете, создавать статьи на эту тему...{w=0.3}всё."
+    m 1eud "Ты можешь обсуждать это в интернете, создавать статьи на эту тему...{w=0.3}что угодно, лишь бы заставить людей говорить."
     m "Цель здесь в том, чтобы виртуальная любовь вызвала дискуссию среди людей, а затем просочилась в массы."
     m 1esc "Общество всё равно не согласится с этой идеей, но, по крайней мере, заинтересуется ею и сможет обсуждать её более свободно."
     m 3eud "Далее были бы использованы радикальные действия. {w=0.2}Самые смелые сторонники виртуальной любви выходят из тени."

@@ -513,7 +513,7 @@ init 5 python in mas_nou:
         # and Monika has at least 4 cards already
         # used for seen count 2
         REACTIONS_MAP_PLAYER_REFLECTED_ACT_MODIFIER_1 = [
-            (_("Oh, good, now I'm holding the whole deck in my hands."), _("Thanks, love!"))
+            (_("О, отлично, теперь у меня в руках вся колода."), _("Спасибо, любимый!"))
         ]
 
         # Same as d2
@@ -4007,7 +4007,7 @@ label monika_change_nou_house_rules:
         python:
             menu_items = [
                 (
-                    ("Я бы хотел изменить количество очков, необходимых для победы."),
+                   _("Я хотел бы изменить количество очков, необходимых для победы"),
                     "points_to_win",
                     False,
                     False
@@ -4019,19 +4019,19 @@ label monika_change_nou_house_rules:
                     False
                 ),
                 (
-                    _("Я бы хотел поиграть с складыванием двух карт") if not mas_nou.get_house_rule("stackable_d2") else _("Я бы хотел поиграть без складывания двух карт."),
+                    _("Я бы хотел поиграть со отводимыми +2.") if not mas_nou.get_house_rule("stackable_d2") else _("Я бы хотел играть без отводимых +2"),
                     "stackable_d2",
                     False,
                     False
                 ),
                 (
-                    _("Я бы хотел поиграть с выбором цвета и выдачи 4-х карт.") if not mas_nou.get_house_rule("unrestricted_wd4") else _("Я бы хотел поиграть без выбора цвета и выдачи 4-х карт."),
+                    _("Я бы хотел играть с неограниченными чёрными +4") if not mas_nou.get_house_rule("unrestricted_wd4") else _("Я бы хотел играть с ограниченными чёрными +4"),
                     "unrestricted_wd4",
                     False,
                     False
                 ),
                 (
-                    _("Я бы хотел сыграть в Отражение Хаоса") if not mas_nou.get_house_rule("reflect_chaos") else _("Я бы хотел поиграть с классическими отражениями"),
+                    _("Я бы хотел игру с Хаотичным отражением") if not mas_nou.get_house_rule("reflect_chaos") else _("Я бы хотел поиграть с обычным «отражением»"),
                     "reflect_chaos",
                     False,
                     False
@@ -4147,11 +4147,11 @@ label .no_change:
         return False
 
     if not has_changed_rules:
-        m 1eua "Oh, alright."
+        m 1eua "О, хорошо."
         return False
 
     if not mas_nou.does_want_suggest_play():
-        m 2eub "Let's play together soon~"
+        m 2eub "Давай поиграем в ближайшее время~"
         return False
 
     m "Может, мы могли бы сыграть сейчас?{nw}"
@@ -4177,7 +4177,7 @@ label .change_points_to_win_loop:
 
         $ points_cap = store.mas_utils.tryparseint(
             renpy.input(
-                "How many points would you like it to be?",
+                "Сколько очков ты бы хотел, чтобы было?",
                 allow=numbers_only,
                 length=4
             ).strip("\t\n\r"),
@@ -4185,47 +4185,47 @@ label .change_points_to_win_loop:
         )
 
         if points_cap < 0:
-            m 2rksdla "[player], the game will never end if the goal is negative."
-            m 7ekb "Try again, silly!"
+            m 2rksdla "[player], игра никогда не закончится, если значение отрицательное."
+            m 7ekb "Попробуй ещё раз, глупышка!"
 
         elif points_cap == 0:
-            m 3eua "Oh, you just want to have quick games?"
-            m 2tuu "Alright! But don't expect me to go easy on you~"
+            m 3eua "О, ты просто хочешь поиграть в быстрые игры?"
+            m 2tuu "Хорошо! Но не думай, что ты легко отделаешься от меня~"
             $ mas_nou.set_house_rule("points_to_win", points_cap)
             $ ready = True
 
         elif points_cap < 50:
-            m 3rksdlb "Hmm, It doesn't make sense to play with a point total {i}that{/i} small."
-            m 1eka "We can play without points if you wish.{nw}"
+            m 3rksdlb "Хм, не думаю, что имеет смысл играть с {i}таким{/i} маленьким количеством очков."
+            m 1eka "Мы можем играть без очков, если ты хочешь.{nw}"
             $ _history_list.pop()
             menu:
-                m "We can play without points if you wish.{fast}"
+                m "Мы можем играть без очков, если ты хочешь.{fast}"
 
-                "I'd like that.":
-                    m 1eub "Oh, alright!"
+                "Давай.":
+                    m 1eub "О, хорошо!"
                     $ mas_nou.set_house_rule("points_to_win", 0)
                     $ ready = True
 
-                "Nah.":
-                    m 3eua "Then choose again."
+                "Не-а.":
+                    m 3eua "Тогда выбирай снова."
 
         elif points_cap > 3000:
-            m 2eka "Oh it's too much I think..."
-            m 7eka "Let's leave it at 3000?{nw}"
+            m 2eka "О, я думаю, это слишком много..."
+            m 7eka "Давай оставим 3000?{nw}"
             $ _history_list.pop()
             menu:
-                m "Let's leave it at 3000?{fast}"
+                m "Давай оставим 3000?{fast}"
 
-                "Alright.":
-                    m 1eua "Settled."
+                "Хорошо.":
+                    m 1eua "Готово."
                     $ mas_nou.set_house_rule("points_to_win", 3000)
                     $ ready = True
 
-                "Nah.":
-                    m 3eua "Then choose again."
+                "Не-а.":
+                    m 3eua "Тогда выбирай снова."
 
         else:
-            m 3eub "Okay, from now on, whoever reaches [points_cap] points, wins!"
+            m 3eub "Итак, с этого момента, кто наберет [points_cap] очков, тот и победил!"
             $ mas_nou.set_house_rule("points_to_win", points_cap)
             $ ready = True
 
@@ -4240,7 +4240,7 @@ label .change_starting_cards_loop:
 
         $ starting_cards = store.mas_utils.tryparseint(
             renpy.input(
-                "How many cards would you like to start the game with?",
+                "С каким количеством карт ты хотел бы начать игру?",
                 allow=numbers_only,
                 length=2
             ).strip("\t\n\r"),
@@ -4248,40 +4248,40 @@ label .change_starting_cards_loop:
         )
 
         if starting_cards < 1:
-            m 2rksdlb "We can't play cards without cards, [player]!"
-            m 7ekb "Try again, silly~"
+            m 2rksdlb "Мы не можем играть в карты без карт,, [player]!"
+            m 7ekb "Попробуй ещё раз, глупышка~"
 
         elif starting_cards < 4:
-            m 2eka "[starting_cards] card[('s' if starting_cards > 1 else '')] isn't enough to enjoy the game, [player]..."
-            m 7eka "How about we start with at least 4 cards?{nw}"
+            m 2eka "[starting_cards] карт[('s' if starting_cards > 1 else '')] недостаточно, чтобы насладиться игрой, [player]..."
+            m 7eka "Как насчет того, чтобы начать хотя бы с 4 карт?{nw}"
             $ _history_list.pop()
             menu:
-                m "How about we start with at least 4 cards?{fast}"
+                m "Как насчет того, чтобы начать хотя бы с 4 карт?{fast}"
 
-                "Alright.":
+                "Хорошо.":
                     $ mas_nou.set_house_rule("starting_cards", 4)
                     $ ready = True
 
-                "Nah.":
-                    m 3eua "Then try again."
+                "Не-а.":
+                    m 3eua "Тогда выбирай снова."
 
         elif starting_cards > 20:
-            m 2hub "Ahaha, [player]! Do you expect me to hold [starting_cards] cards?"
-            m 7eua "We can leave it at 20 cards if you'd like?{nw}"
+            m 2hub "А-ха-ха, [player]!  Ты ожидаешь, что я буду держать [starting_cards] карт?"
+            m 7eua "Мы можем оставить 20 карт, если хочешь?{nw}"
             $ _history_list.pop()
             menu:
-                m "We can leave it at 20 cards if you'd like?{fast}"
+                m "Мы можем оставить 20 карт, если хочешь?{fast}"
 
-                "Alright.":
+                "Хорошо.":
                     $ mas_nou.set_house_rule("starting_cards", 20)
                     $ ready = True
 
-                "Nah.":
-                    m 3eua "Then try again."
+                "Не-а.":
+                    m 3eua "Тогда попробуй ещё раз."
 
         else:
-            $ _round = _("round") if mas_nou.get_house_rule("points_to_win") else _("game")
-            m 3eub "Okay, from now on, we will start each [_round!t] with [starting_cards] cards!"
+            $ _round = _("раунд") if mas_nou.get_house_rule("points_to_win") else _("игру")
+            m 3eub "Хорошо, с этого момента мы будем начинать каждый [_round!t] с [starting_cards] карт!"
             $ mas_nou.set_house_rule("starting_cards", starting_cards)
             $ ready = True
 
